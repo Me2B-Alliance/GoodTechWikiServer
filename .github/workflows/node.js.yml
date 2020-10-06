@@ -8,7 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy NodeJS app
+      - name: Update Production Server
         uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.PROD_SSH_HOST}}
