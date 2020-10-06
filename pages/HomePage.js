@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
+import Container from '@material-ui/core/Container'
 
 import Filters from '../components/Filters'
 import ItemList from '../components/ItemList'
@@ -24,10 +25,12 @@ export default function HomePage(props) {
     <React.Fragment>
       <div className={classes.root}>
         {/*<Sidebar />*/}
-        <div className={classes.body}>
-          <Filters filters={filters} />
-          <ItemList />
-        </div>
+        <Container>
+          <div className={classes.body}>
+            <Filters filters={filters} />
+            <ItemList />
+          </div>
+        </Container>
       </div>
     </React.Fragment>
   )
