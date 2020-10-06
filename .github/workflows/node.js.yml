@@ -17,4 +17,4 @@ jobs:
           script: |
             cd ~/GoodTechWikiServer/
             git pull
-            npm run build
+            npm run update
