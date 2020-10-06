@@ -12,7 +12,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.PROD_SSH_HOST}}
-          username: ${{ secrets.PROD_SSH_USERNAME }}
+          username: ${{ secrets.PROD_SSH_USER }}
           key: ${{ secrets.PROD_SSH_KEY }}
           script: |
             cd ~/GoodTechWikiServer/
