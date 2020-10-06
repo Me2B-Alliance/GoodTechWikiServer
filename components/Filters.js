@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-end',
+    justifyContent: 'center',
     padding: '10px',
   },
   formControl: {
@@ -28,7 +29,15 @@ const useStyles = makeStyles((theme) => ({
 export default function Filters(props) {
   const classes = useStyles()
 
-  const { filters: { engagement, purpose, tag, text } } = props
+  const { filters } = props
+
+  let filter = {}
+
+  if (filters === undefined || JSON.stringify(filters) === '{}') {
+    filter = { engagement: 'Engagement 1', purpose: 'Purpose 1', tag: 'Tag 1', text: '' }
+  } else {
+    filter = filters
+  }
 
   return (
     <div className={classes.filterRoot}>
@@ -52,7 +61,7 @@ export default function Filters(props) {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={0}>{engagement}</MenuItem>
+          <MenuItem value={0}>{filter.engagement}</MenuItem>
           <MenuItem value={1}>Engagement 2</MenuItem>
         </Select>
       </FormControl>
@@ -68,7 +77,7 @@ export default function Filters(props) {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={0}>{purpose}</MenuItem>
+          <MenuItem value={0}>{filter.purpose}</MenuItem>
           <MenuItem value={1}>Purpose 2</MenuItem>
           <MenuItem value={2}>Purpose 3</MenuItem>
         </Select>
@@ -85,7 +94,7 @@ export default function Filters(props) {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={0}>{tag}</MenuItem>
+          <MenuItem value={0}>{filter.tag}</MenuItem>
           <MenuItem value={1}>Concept Tag 2</MenuItem>
           <MenuItem value={2}>Concept Tag 3</MenuItem>
         </Select>
@@ -95,7 +104,7 @@ export default function Filters(props) {
           label="Text Search"
           id="search-text-input"
           InputLabelProps={{ shrink: true }}
-          value={text}
+          value={filter.text}
         />
       </FormControl>
     </div>
