@@ -1,5 +1,5 @@
-import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core/styles'
+import PropTypes from 'prop-types'
 
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -11,16 +11,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function Home() {
+export async function getServerSideProps(ctx) {
+  // Fetch data from external API
+  //const res = await fetch(`https://.../data`)
+  //const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { filters: ctx.query } }
+}
+
+export default function App({ filters }) {
   const classes = useStyles()
 
   return (
     <React.Fragment>
       { /*<Container maxWidth="xl" className={classes.root}> */}
       <Header />
-      <HomePage />
+      <HomePage filters={filters} />
       <Footer />
       {/*</Container> */}
     </React.Fragment >
   )
+}
+
+
+App.propTypes = {
+  filters: PropTypes.object,
 }

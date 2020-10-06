@@ -5,6 +5,7 @@ import Select from '@material-ui/core/Select'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
+import PropTypes from 'prop-types'
 
 const useStyles = makeStyles((theme) => ({
   filterRoot: {
@@ -24,8 +25,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function Header(props) {
+export default function Filters(props) {
   const classes = useStyles()
+
+  const { filters: { engagement, purpose, tag, text } } = props
 
   return (
     <div className={classes.filterRoot}>
@@ -49,7 +52,7 @@ export default function Header(props) {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={0}>Engagement 1</MenuItem>
+          <MenuItem value={0}>{engagement}</MenuItem>
           <MenuItem value={1}>Engagement 2</MenuItem>
         </Select>
       </FormControl>
@@ -65,7 +68,7 @@ export default function Header(props) {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={0}>Purpose 1</MenuItem>
+          <MenuItem value={0}>{purpose}</MenuItem>
           <MenuItem value={1}>Purpose 2</MenuItem>
           <MenuItem value={2}>Purpose 3</MenuItem>
         </Select>
@@ -82,7 +85,7 @@ export default function Header(props) {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={0}>Concept Tag 1</MenuItem>
+          <MenuItem value={0}>{tag}</MenuItem>
           <MenuItem value={1}>Concept Tag 2</MenuItem>
           <MenuItem value={2}>Concept Tag 3</MenuItem>
         </Select>
@@ -92,8 +95,13 @@ export default function Header(props) {
           label="Text Search"
           id="search-text-input"
           InputLabelProps={{ shrink: true }}
+          value={text}
         />
       </FormControl>
     </div>
   )
+}
+
+Filters.propTypes = {
+  filters: PropTypes.object,
 }

@@ -40,14 +40,11 @@ const items = [
 function buildItemList(items) {
   const classes = useStyles()
 
-  let builtList = []
-
-  items.map(item => {
-    builtList.push(<ItemCard item={item}/>)
+  const builtList = items.map(item => {
+    return (<ItemCard key={`item-card-${item.organization}`} item={item} />)
   })
 
   return builtList
-
 }
 
 export default function ItemList(props) {
