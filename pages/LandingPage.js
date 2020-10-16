@@ -96,7 +96,7 @@ export default function LandingPage(props) {
       <Container className={classes.body}>
         <Typography className={classes.aboutTypography}>
           This wiki was developed by the Me2b Alliance and is offered
-          as a public utility to help people find organization who are working on
+          as a public utility to help people find organizations who are working on
           more ethical technology.
         </Typography>
         <FormControl className={classes.searchForm} >
