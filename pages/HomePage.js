@@ -24,7 +24,6 @@ export default function HomePage(props) {
   return (
     <React.Fragment>
       <div className={classes.root}>
-        {/*<Sidebar />*/}
         <Container>
           <div className={classes.body}>
             <Filters filters={filters} />
