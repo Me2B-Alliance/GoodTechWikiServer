@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary">
+    <Typography variant="body2">
       {`© ${new Date().getFullYear()} Good Tech Wiki. `}
       <Link href="https://github.com/Me2B-Alliance">
         Me2b Alliance
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
-    backgroundColor: theme.palette.grey[ 300 ]
+    backgroundColor: theme.palette.grey[ 400 ]
     //backgroundColor:
     //  theme.palette.type === 'light' ? theme.palette.grey[ 200 ] : theme.palette.grey[ 800 ],
   },
@@ -45,10 +45,8 @@ export default function StickyFooter() {
   return (
     <div className={classes.root}>
       <footer className={classes.footer}>
-        <Container maxWidth="sm">
-          <Typography variant="body1">Footer info</Typography>
-          <Copyright />
-        </Container>
+        <Typography variant="body1">Powered by NextJs, React and Material UI</Typography>
+        <Copyright />
       </footer>
     </div>
   )
