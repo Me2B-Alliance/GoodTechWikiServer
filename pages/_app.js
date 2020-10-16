@@ -1,7 +1,8 @@
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
-import Head from 'next/head'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+
 import theme from '../components/theme'
 
 export default function App(props) {
@@ -17,11 +18,11 @@ export default function App(props) {
 
   return (
     <React.Fragment>
-      <Head>
+      <Helmet>
         <title>Good Tech Wiki</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-      </Head>
+      </Helmet>
 
       <ThemeProvider theme={theme}>
         <CssBaseline />
