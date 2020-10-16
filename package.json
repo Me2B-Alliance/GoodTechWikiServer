@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node ./server/index.js",
+    "dev": "npx pm2 start -f -n app-dev server/index.js",
     "build": "next build",
-    "start": "npx pm2 start -n app server/index.js",
+    "start": "NODE_ENV=production npx pm2 start -n app server/index.js",
     "export": "next export",
     "update": "npm i && npm run build && npx pm2 restart app"
   },
@@ -18,7 +18,8 @@
     "express-session": "^1.17.1",
     "next": "9.5.3",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
