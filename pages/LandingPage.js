@@ -45,9 +45,10 @@ const useStyles = makeStyles((theme) => ({
 
 function buildActivities() {
   const activities = [
-    'None', 'Certification', 'Compliance Auditing', 'Creative', 'Events and Convening',
-    'Formal Training and Classes', 'Funding', 'Outreach', 'Publication',
-    'Regulation', 'Software Development', 'Service Provider', 'Policy Development'
+    'None', 'Product Design & Dev Practices', 'Technology Standards',
+    'Industry Advocacy and Education', 'Tools/Infrastructure/Services Development for B-s',
+    'Tools Development for Me-s', 'Product Testing', 'Org Compliance and Testing',
+    'Regulation, Legal, Policy', 'Consumer Advocacy and Education', 'Other'
   ]
 
   return activities.map(item => {
@@ -124,7 +125,6 @@ export default function LandingPage(props) {
           >
             {buildActivities()}
           </Select>
-          <FormHelperText>Some important helper text</FormHelperText>
         </FormControl>
       </Container>
       <Footer />
