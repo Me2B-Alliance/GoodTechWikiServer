@@ -21,8 +21,15 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    fontFamily: 'Encode Sans',
+    fontFamily: 'Encode Sans Condensed',
     fontSize: 14,
+    fontWeightBold: 800,
+    fontWeightLight: 200,
+    fontWeightMedium: 400,
+    fontWeightRegular: 300,
+    h4: {
+      fontWeight: 700,
+    }
   },
   breakpoints: {
     values: {
