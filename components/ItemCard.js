@@ -77,7 +77,7 @@ export default function ItemCard(props) {
       <React.Fragment>
         {ItemHeader(doc, doc[ '@type' ])}
         <Typography variant="body1">
-          {doc.about}
+          {doc.description}
         </Typography>
         <Typography className={classes.itemInfoEnd} variant="subtitle2">
           <Link variant="body2" color={doc.hasOwnProperty('website') ? 'initial' : 'error'} href={doc.website}>
