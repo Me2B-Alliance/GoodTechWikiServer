@@ -1,0 +1,501 @@
+{
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://goodtech.wiki/schemas/Event.json",
+    "title": "Event",
+    "description": "A event",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "uuid": {
+        "type": "string"
+      },
+      "category": {
+        "type": "array"
+      },
+      "hostOrganization": {
+        "type": "string"
+      },
+      "website": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array"
+      },
+      "relevantPublications": {
+        "type": "string"
+      }
+    }
+  },
+  "docs": [
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/20thInternationalConferenceOnPracticeAndTheoryOfPublickeyCryptography",
+      "@type": "Event",
+      "name": "20th International Conference on Practice and Theory of Public-Key Cryptography",
+      "uuid": "73dd93b1-5b1b-4cc9-87c7-a16c616dd388",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "international Association for Cryptologic Research",
+      "website": "http://www.iacr.org/workshops/pkc2017/",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/2ndIeeeEuropeanSymposiumOnSecurityAndPrivacy",
+      "@type": "Event",
+      "name": "2nd IEEE European Symposium on Security and Privacy",
+      "uuid": "5d793745-4e26-4af4-923c-c70670499c55",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "IEEE Technical Committee on Security and Privacy",
+      "website": "http://www.ieee-security.org/tc/eurosp2017/",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/38thIeeeSymposiumOnSecurityAndPrivacy",
+      "@type": "Event",
+      "name": "38th IEEE Symposium on Security and Privacy",
+      "uuid": "ec63938e-b880-4a13-985f-61a33822583f",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "IEEE Technical Committee on Security and Privacy",
+      "website": "http://www.ieee-security.org/tc/sp2017/",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/AcmConferenceOnFairnessAccountabilityAndTransparency",
+      "@type": "Event",
+      "name": "ACM Conference on Fairness, Accountability, and Transparency",
+      "uuid": "64a9e0c8-1ec5-4f75-b501-8fd8f390c29d",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "ACM",
+      "tags": [
+        "Acm Fat"
+      ],
+      "website": "https://fatconference.org/",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/AlgorithmsAndAccountabilityConference",
+      "@type": "Event",
+      "name": "Algorithms and Accountability Conference",
+      "uuid": "882971af-94c3-48d6-88cb-95099a7de684",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "New York University | Information Law Institute",
+      "website": "https://www.law.nyu.edu/centers/ili/AlgorithmsConference",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/AlgorithmsAndExplanations",
+      "@type": "Event",
+      "name": "Algorithms and Explanations",
+      "uuid": "2308e360-831e-42d0-a00f-ce082db27b46",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "New York University | Information Law Institute",
+      "website": "https://www.law.nyu.edu/centers/ili/events/algorithms-and-explanations"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/AnnualPrivacyForum",
+      "@type": "Event",
+      "name": "Annual Privacy Forum",
+      "uuid": "b95f37d3-bcd5-46e1-ac3e-0003f7a79ec8",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Chair of Mobile Business & Multilateral Security",
+      "website": "http://privacyforum.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/Asiacrypt",
+      "@type": "Event",
+      "name": "AsiaCrypt",
+      "uuid": "98cfdbb2-0d7d-47fa-b18c-b63c00d2fcee",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "international Association for Cryptologic Research",
+      "website": "http://www.asiacrypt2016.com"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/AuditingAlgorithmsFromTheOutsideMethodsAndImplications",
+      "@type": "Event",
+      "name": "Auditing Algorithms From the Outside: Methods and Implications",
+      "uuid": "555d3ded-0ac4-4302-9487-fe4881df8d2d",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "ICWSM",
+      "website": "https://auditingalgorithms.wordpress.com"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/DataGovernanceDesignConference",
+      "@type": "Event",
+      "name": "Data Governance Design Conference",
+      "uuid": "6ca86cd9-a681-488b-b824-250487404cd1",
+      "category": [
+        "To Be Determined"
+      ],
+      "website": "https://www.governingdata.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/Eurocrypt2017",
+      "@type": "Event",
+      "name": "EuroCrypt 2017",
+      "uuid": "4e589c2c-349b-4c74-a0d7-fa6169dec578",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "international Association for Cryptologic Research",
+      "website": "https://eurocrypt2017.di.ens.fr"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/FilmFestival",
+      "@type": "Event",
+      "name": "Film Festival",
+      "uuid": "3ddf3ef6-e879-44aa-b338-f0530ed143a2",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Auditing Algorithms",
+      "tags": [
+        "Publications",
+        "Parent"
+      ],
+      "website": "http://auditingalgorithms.science/?p=264"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/FutureSecuritySecurityResearchConference",
+      "@type": "Event",
+      "name": "Future Security: Security Research Conference",
+      "uuid": "4386bc10-311c-4dbe-b10c-2ed1384d57d7",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Fraunhofer Group for Defense and Security VVS",
+      "tags": [
+        "Europe"
+      ],
+      "website": "http://www.future-security2016.de"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/GoverningAlgorithmsAConferenceOnComputationAutomationAndControl",
+      "@type": "Event",
+      "name": "Governing Algorithms A conference on computation: automation: and control",
+      "uuid": "6c52214b-7e93-4beb-afcb-ff7bbe954134",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Governing Algorithms",
+      "tags": [
+        "Publications",
+        "Parent"
+      ],
+      "website": "https://governingalgorithms.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/HealthPrivacySummit",
+      "@type": "Event",
+      "name": "Health Privacy Summit",
+      "uuid": "78bdf0d8-b20c-4bd5-b6d5-da36379482c2",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Patient Privacy Rights",
+      "website": "https://patientprivacyrights.org/health-privacy-summit/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/IdentityLawPolicyWorkshopAmsterdam",
+      "@type": "Event",
+      "name": "Identity Law & Policy Workshop Amsterdam",
+      "uuid": "dd41e857-f10a-442e-ac78-116afe8d7a85",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Open Identity Exchange"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/IeeeSecdev2016",
+      "@type": "Event",
+      "name": "IEEE SecDev 2016",
+      "uuid": "09b6dd90-2447-43d2-80d1-c0fd7ca54473",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "IEEE Computer Society",
+      "website": "http://secdev.ieee.org"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/IeeeTechnologyTimeMachine",
+      "@type": "Event",
+      "name": "IEEE Technology Time Machine",
+      "uuid": "b9f2831e-ecda-4f3f-b96a-2e67ccf7b1e2",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "IEEE Future Directions Committee",
+      "website": "http://sites.ieee.org/ttm/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/IfipSummerSchool2016",
+      "@type": "Event",
+      "name": "IFIP Summer School 2016",
+      "uuid": "82d3a3e6-6aee-45c2-8135-21db41712953",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "International Federation for Information Processing"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/InternationalConferenceOnWebAndSocialMedia",
+      "@type": "Event",
+      "name": "International Conference on Web and Social Media",
+      "uuid": "b18d12dc-04c5-4433-b5b2-6d92e047240f",
+      "category": [
+        "To Be Determined"
+      ],
+      "tags": [
+        "Icwsm"
+      ],
+      "website": "https://icwsm.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/InternationalIdentityLawAndPolicyWorkshop",
+      "@type": "Event",
+      "name": "International Identity Law and Policy Workshop",
+      "uuid": "d1a3833f-548b-4f18-a62c-2c31ae30ec83",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Open Identity Exchange",
+      "website": "http://openidentityexchange.org/2016/01/international-identity-law-policy-workshop/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/IntlWorkshopOnSecureIotsiot2016",
+      "@type": "Event",
+      "name": "Intl Workshop on Secure IoT (SIOT 2016)",
+      "uuid": "60aa5d86-0370-4af2-a864-3b1ee3296821",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "IEEE Internet of Things",
+      "website": "http://siot-workshop.org"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/IsseInformationSecuritySolutionsEurope",
+      "@type": "Event",
+      "name": "ISSE Information Security Solutions Europe",
+      "uuid": "e6712801-8237-44b2-b4c7-3692c02d9228",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "EEMA",
+      "website": "http://www.isse.eu.com"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/MultipleViewsOnBlockchainTechnologyUseCasesEconomicsAndPolicies",
+      "@type": "Event",
+      "name": "Multiple Views on Blockchain: Technology, Use Cases, Economics and Policies",
+      "uuid": "24af604b-0b8f-4677-b45f-318290c5acef",
+      "category": [
+        "To Be Determined"
+      ],
+      "website": "http://staging1.trustindigitallife.eu/events/past-events/multiple-views-on-blockchain-technology-use-cases-economics-and-policies/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/NdssSymposiumNetworkAndDistributedSystemSecuritySymposium2017",
+      "@type": "Event",
+      "name": "NDSS Symposium Network and Distributed System Security Symposium 2017",
+      "uuid": "3dbf99d4-0278-438e-a00e-26b346579483",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Internet Society ISOC"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/OauthSecurityWorkshop2016",
+      "@type": "Event",
+      "name": "OAuth Security Workshop 2016",
+      "uuid": "dc090d1f-2bbc-461a-98b7-46f044775f16",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Chair for Information Security and Cryptography at the University of Trier",
+      "website": "https://infsec.uni-trier.de/events/osw2016"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/OpenIdentitySummit",
+      "@type": "Event",
+      "name": "Open, Identity Summit",
+      "uuid": "88f9d20a-5b78-464e-9819-f59da1829aa0",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "SSEDIC.2020 - Scoping the Single European Digital Identity Community for the next decade",
+      "tags": [
+        "Europe"
+      ],
+      "website": "http://www.openidentity2016.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/TechEquityBookClub",
+      "@type": "Event",
+      "name": "Tech Equity Book Club",
+      "uuid": "5ae35a10-2125-48b4-b145-5bde15280711",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "TechEquity",
+      "website": "https://techequitycollaborative.org/events/book-club/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/TheEconomicsOfPersonalDataAndPrivacy30YearsAfterTheOecdPrivacyGuidelines",
+      "@type": "Event",
+      "name": "The Economics of Personal Data and Privacy: 30 Years after the OECD Privacy Guidelines",
+      "uuid": "7188f61a-8cbf-40c8-b092-03f87f018800",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Working Party on Communications and Infrastructure Services Policy (CISP)",
+      "website": "http://www.oecd.org/internet/ieconomy/theeconomicsofpersonaldataandprivacy30yearsaftertheoecdprivacyguidelines.htm"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/TheEvolvingRoleOfTheIndividualInPrivacyProtection30YearsAfterTheOecdPrivacyGuidelines",
+      "@type": "Event",
+      "name": "The Evolving Role of the Individual in Privacy Protection: 30 Years after the OECD Privacy Guidelines",
+      "uuid": "d8d91b74-958f-46a4-9295-617dd7c1f643",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Israeli Law, Information and Technology Authority",
+      "website": "http://www.oecd.org/internet/ieconomy/theevolvingroleoftheindividualinprivacyprotection30yearsaftertheoecdprivacyguidelines.htm"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/TheInternationalConferenceOfDataProtectionAndPrivacyCommissioners",
+      "@type": "Event",
+      "name": "The International Conference of Data Protection and Privacy Commissioners",
+      "uuid": "4d0d3601-80e2-4f21-b9f6-a7997aaa067c",
+      "category": [
+        "To Be Determined"
+      ],
+      "website": "https://icdppc.org"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/Thingscon",
+      "@type": "Event",
+      "name": "ThingsCon",
+      "uuid": "b99035ee-0e03-458d-ab67-9d243e4317d0",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Mozilla: ThingsCon",
+      "website": "https://thingscon.com"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/TrustInDigitalWorld",
+      "@type": "Event",
+      "name": "Trust in Digital World",
+      "uuid": "2b3de8b7-3f8a-4624-9278-b94c3bcbe0b4",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "EEMA"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/Voteid2015",
+      "@type": "Event",
+      "name": "VoteID 2015",
+      "uuid": "a6832925-4943-4d39-b358-1035ccd878f1",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Bern University of Applied Sciences",
+      "website": "http://www.voteid15.org"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/Workshop",
+      "@type": "Event",
+      "name": "Workshop",
+      "uuid": "9cb3e7d8-f015-455b-bf28-a191f000f00f",
+      "category": [
+        "Workshop"
+      ],
+      "hostOrganization": "Data & Society Research Institute",
+      "relevantPublications": "https://datasociety.net/algorithms-and-publics/",
+      "tags": [
+        "Publications",
+        "Parent",
+        "Algorithms And Publics"
+      ],
+      "website": "https://datasociety.net/events/who-controls-public-sphere/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/WorkshopOnDataAndAlgorithmicTransparency",
+      "@type": "Event",
+      "name": "Workshop on Data and Algorithmic Transparency",
+      "uuid": "c7604836-05de-45f9-96d3-f48e6927ddc1",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "New York University | Information Law Institute",
+      "website": "http://datworkshop.org"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Event/WorkshopOnTrustworthyAlgorithmicDecisionmaking",
+      "@type": "Event",
+      "name": "Workshop on Trustworthy Algorithmic Decision-Making",
+      "uuid": "82782299-9584-46dc-839c-c312ca37d522",
+      "category": [
+        "To Be Determined"
+      ],
+      "hostOrganization": "Trustworthy Algorithmic Decision-Making",
+      "website": "http://trustworthy-algorithms.org"
+    }
+  ]
+}

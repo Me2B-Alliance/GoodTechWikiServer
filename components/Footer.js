@@ -1,4 +1,3 @@
-import Container from '@material-ui/core/Container'
 import Link from '@material-ui/core/Link'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -14,28 +13,15 @@ function Copyright() {
   )
 }
 
-function About() {
-  return (
-    <Typography variant="body2" color="textSecondary">
-      This Wiki was developed by the Me2B Alliance and is offered as a public
-      utility to help people find organizations who are working on more ethical
-      technology.
-    </Typography>
-  )
-}
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '20vh',
   },
   footer: {
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
-    backgroundColor: theme.palette.grey[ 400 ]
-    //backgroundColor:
-    //  theme.palette.type === 'light' ? theme.palette.grey[ 200 ] : theme.palette.grey[ 800 ],
+    backgroundColor: theme.palette.grey[ 400 ],
   },
 }))
 

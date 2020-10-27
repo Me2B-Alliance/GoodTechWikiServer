@@ -1,0 +1,397 @@
+{
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://goodtech.wiki/schemas/Person.json",
+    "title": "Person",
+    "description": "A person",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "uuid": {
+        "type": "string"
+      },
+      "website": {
+        "type": "string"
+      }
+    }
+  },
+  "docs": [
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/AdamCooper",
+      "@type": "Person",
+      "name": "Adam Cooper",
+      "uuid": "2d68835f-0359-4f14-8efb-7cff4bb9b542",
+      "website": "https://identityassurance.blog.gov.uk/author/adam-cooper/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/AndrewNash",
+      "@type": "Person",
+      "name": "Andrew Nash",
+      "uuid": "f7e447cb-01e3-4333-9396-44991131c2ab"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/AnoopSaxena",
+      "@type": "Person",
+      "name": "Anoop Saxena",
+      "uuid": "acf01caf-a6d4-4d8f-a946-a217b40c15ee"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/AnthonyNadalin",
+      "@type": "Person",
+      "name": "Anthony Nadalin",
+      "uuid": "58ab4aef-b516-4080-948b-4759006cdde3",
+      "website": "https://www.linkedin.com/in/anoop-saxena-5200641"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/BCampbell",
+      "@type": "Person",
+      "name": "B. Campbell",
+      "uuid": "de2e191d-a103-4d31-9269-6302fdb4f6c1"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/BDeMedeiros",
+      "@type": "Person",
+      "name": "B. de Medeiros",
+      "uuid": "5be09016-3131-4be2-a32a-cc95919a3404"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/BHjelm",
+      "@type": "Person",
+      "name": "B. Hjelm",
+      "uuid": "f0ad0ce8-ea8b-45a4-bfc4-0fbb12685024"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/BobWest",
+      "@type": "Person",
+      "name": "Bob West",
+      "uuid": "f2a27a11-824b-4a64-a993-6af860782207"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/ChuckMortimore",
+      "@type": "Person",
+      "name": "Chuck Mortimore",
+      "uuid": "e6eee7e3-39c8-402d-9c48-d8390d7fc128"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/DSalama",
+      "@type": "Person",
+      "name": "D. Salama",
+      "uuid": "860c3232-aeee-47b9-8a1b-361c67bb8a4d"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/DaleOlds",
+      "@type": "Person",
+      "name": "Dale Olds",
+      "uuid": "16877ded-4555-4791-964c-072bcdac1c55"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/DanielaMerella",
+      "@type": "Person",
+      "name": "Daniela Merella",
+      "uuid": "0a99b070-86a9-427f-9ad5-91980709dd09",
+      "website": "http://www.itu.int/en/itu-t/academia/kaleidoscope/2014/pages/daniela-marella.aspx"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/DavidSinger",
+      "@type": "Person",
+      "name": "David Singer",
+      "uuid": "768526f3-18fd-4b95-9000-6ee7b84d9001"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/DickHardt",
+      "@type": "Person",
+      "name": "Dick Hardt",
+      "uuid": "87158af6-39c0-40fa-b547-b7ed79ecadd7"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/DomenicoCatalano",
+      "@type": "Person",
+      "name": "Domenico Catalano",
+      "uuid": "4e8b65df-0036-4ca2-96c9-58af8cccdcd4"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/DonThibeau",
+      "@type": "Person",
+      "name": "Don Thibeau",
+      "uuid": "811795fd-0e01-41ff-920a-1c2868521d4e"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/EdmundJay",
+      "@type": "Person",
+      "name": "Edmund Jay",
+      "uuid": "3f96ee71-2fdb-4cab-bcfd-18c7a5de09bc"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/EveMaler",
+      "@type": "Person",
+      "name": "Eve Maler",
+      "uuid": "c94d24bd-93ef-408c-b5db-14142a08ba65"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/GershonJanssen",
+      "@type": "Person",
+      "name": "Gershon Janssen",
+      "uuid": "8b54e05b-8611-4f89-9aae-657836e15d67"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/HannesTschofenig",
+      "@type": "Person",
+      "name": "Hannes Tschofenig",
+      "uuid": "69c28b8c-2217-4452-891f-f2eb76bc54c4",
+      "website": "http://www.tschofenig.priv.at"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/IanHenderson",
+      "@type": "Person",
+      "name": "Ian Henderson",
+      "uuid": "fd1367da-f866-46d7-8196-ba8fd992fef3"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/JConnotte",
+      "@type": "Person",
+      "name": "J. Connotte",
+      "uuid": "1d98c8cb-6798-4f57-95e7-6bed7386129b"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/JimHazard",
+      "@type": "Person",
+      "name": "Jim Hazard",
+      "uuid": "5011a1c3-be3f-4dbc-8235-d8cf4fdd498b"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/JohnBradley",
+      "@type": "Person",
+      "name": "John Bradley",
+      "uuid": "cf164694-4a8a-4056-8426-57e9af3c02be",
+      "website": "http://www.thread-safe.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/JoshMandel",
+      "@type": "Person",
+      "name": "Josh Mandel",
+      "uuid": "09cb7858-d73b-4643-b69f-dac371fffa46"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/JustinRicher",
+      "@type": "Person",
+      "name": "Justin Richer",
+      "uuid": "822e58b1-a3f0-45d0-986e-16a7eaa99bda",
+      "website": "http://justin.richer.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/KaiRannenberg",
+      "@type": "Person",
+      "name": "Kai Rannenberg",
+      "uuid": "660761d8-742d-4c59-a99a-c2bc3378de17",
+      "website": "https://www.m-chair.de/index.php/staff/1"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/KylaReid",
+      "@type": "Person",
+      "name": "Kyla Reid",
+      "uuid": "addaf78f-871d-479f-b74c-b82177bd9b07"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/LucileGirollet",
+      "@type": "Person",
+      "name": "Lucile Girollet",
+      "uuid": "0066002b-1973-4e39-8bf2-e12b22219071"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/MScurtescu",
+      "@type": "Person",
+      "name": "M. Scurtescu",
+      "uuid": "7bbe4ec7-313f-4ac6-8640-22b308454768"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/MaciejMachulak",
+      "@type": "Person",
+      "name": "Maciej Machulak",
+      "uuid": "120927da-1b02-457a-b837-5885cea7eb89"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/MarkLizar",
+      "@type": "Person",
+      "name": "Mark Lizar",
+      "uuid": "4217087c-0761-4aab-9b1c-3f6029f7b6bf"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/MikeJones",
+      "@type": "Person",
+      "name": "Mike Jones",
+      "uuid": "78bc7cfb-7a80-43c2-9e3e-c56b4c83bff9"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/NAgarwal",
+      "@type": "Person",
+      "name": "N. Agarwal",
+      "uuid": "ae43d2d7-1dd8-4547-a7e3-136f2cd87877"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/NatSakimura",
+      "@type": "Person",
+      "name": "Nat Sakimura",
+      "uuid": "9e87ae3e-042e-4c45-99bf-be51b4b248c4",
+      "website": "https://nat.sakimura.org"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/NeerajSuri",
+      "@type": "Person",
+      "name": "Neeraj Suri",
+      "uuid": "ed7bf4df-f773-4470-aff2-f9141a491fd9",
+      "website": "https://www.deeds.informatik.tu-darmstadt.de/deeds/homepages/suri/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/PTarjan",
+      "@type": "Person",
+      "name": "P. Tarjan",
+      "uuid": "56731b1b-8bce-49b6-a46c-731cb6a347ac"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/PamDingle",
+      "@type": "Person",
+      "name": "Pam Dingle",
+      "uuid": "f0551cdf-7f91-41f9-a875-0b09cf63881e",
+      "website": "http://eternallyoptimistic.com"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/PaulGrassi",
+      "@type": "Person",
+      "name": "Paul Grassi",
+      "uuid": "669beb33-cede-4f41-945f-2066bd6fe4fe"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/PaulSimmonds",
+      "@type": "Person",
+      "name": "Paul Simmonds",
+      "uuid": "1a66ed4c-9874-4161-a2ff-e8e702ff6226"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/PhilHunt",
+      "@type": "Person",
+      "name": "Phil Hunt",
+      "uuid": "80560d36-e5df-4974-b66a-dd4b853b1efb"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/RHedberg",
+      "@type": "Person",
+      "name": "R. Hedberg",
+      "uuid": "022b0b28-0a70-4ffc-bb75-817b50a6ff32"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/RainerHoerbe",
+      "@type": "Person",
+      "name": "Rainer Hoerbe",
+      "uuid": "d297f62d-3034-4575-9441-696e8e4a070b"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/RebeckaGulliksson",
+      "@type": "Person",
+      "name": "Rebecka Gulliksson",
+      "uuid": "0e6922b7-ce88-4e4d-b3f7-3dc35812154b"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/RoyTFielding",
+      "@type": "Person",
+      "name": "Roy T. Fielding",
+      "uuid": "cd022154-47ab-4f32-ac2c-d3dd6916ab3f"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/SteveMoyle",
+      "@type": "Person",
+      "name": "Steve Moyle",
+      "uuid": "e6bda179-13d3-455c-ae02-5f97cf359d2c"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/TLodderstedt",
+      "@type": "Person",
+      "name": "T. Lodderstedt",
+      "uuid": "d2156032-b336-41cd-b25f-36553abab331"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/ThomasHardjono",
+      "@type": "Person",
+      "name": "Thomas Hardjono",
+      "uuid": "c02f1d7c-df8d-48e9-a121-13566149ea07",
+      "website": "http://www.kerberos.org/people/hardjono.html"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/ThomasJSmedinghoff",
+      "@type": "Person",
+      "name": "Thomas J. Smedinghoff",
+      "uuid": "564c71a5-a03e-47bb-ba52-779d518d4bf3"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/TimBray",
+      "@type": "Person",
+      "name": "Tim Bray",
+      "uuid": "1d04a8ad-6a63-4eb2-9b8a-d1de46ba73ce"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/TonyNadalin",
+      "@type": "Person",
+      "name": "Tony Nadalin",
+      "uuid": "66ed2ba9-5c89-413a-91d9-4fad9b32a008"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Person/VyjayantiDesai",
+      "@type": "Person",
+      "name": "Vyjayanti Desai",
+      "uuid": "152a0817-0185-4e94-8739-075c2567ea0b"
+    }
+  ]
+}

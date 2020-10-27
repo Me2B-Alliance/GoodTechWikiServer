@@ -1,4 +1,6 @@
+import Button from '@material-ui/core/Button'
 import FormControl from '@material-ui/core/FormControl'
+import Grid from '@material-ui/core/Grid'
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
@@ -6,111 +8,156 @@ import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
-import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles((theme) => ({
   filterRoot: {
-    padding: '10px',
+    paddingTop: '10px',
+    paddingLeft: '15px',
+    paddingRight: '15px',
     justifyContent: 'space-between',
   },
-  formControl: {
-    //margin: theme.spacing(1),
-    //    minWidth: 120,
-    //    width: 180,
+  filterGrid: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
-  inputLabel: {
-    //width: '100%',
-    //minWidth: 110,
+  filterButton: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-end'
   },
 }))
 
 export default function Filters(props) {
   const classes = useStyles()
 
-  const { filters } = props
+  const { filters, type } = props
+
+  const [ selectedEngagement, setSelectedEngagement ] = React.useState('')
+  const [ textSearch, setTextSearch ] = React.useState('')
 
   let filter = {}
 
   if (filters === undefined || JSON.stringify(filters) === '{}') {
-    filter = { engagement: 'Engagement 1', purpose: 'Purpose 1', tag: 'Tag 1', text: '' }
+    filter = { engagement: 'Engagement 1', text: 'test' }
   } else {
     filter = filters
   }
 
+  function buildEngagements() {
+    const engagements = [
+      'None', 'Product Design & Dev Practices', 'Technology Standards',
+      'Industry Advocacy and Education', 'Tools/Infrastructure/Services Development for B-s',
+      'Tools Development for Me-s', 'Product Testing', 'Org Compliance and Testing',
+      'Regulation, Legal, Policy', 'Consumer Advocacy and Education', 'Other'
+    ]
+
+    return engagements.map(engagement => {
+      if (engagement === 'None') {
+        return (
+          <MenuItem value="" key={'menu-item-activity-none'}>
+            <em>None</em>
+          </MenuItem>
+        )
+      } else {
+        return (
+          <MenuItem value={engagement} key={`menu-item-activity-${engagement}`} >
+            {engagement}
+          </MenuItem >
+        )
+      }
+    })
+  }
+
+  const handleEngagementSelect = (event) => {
+    setSelectedEngagement(event.target.value)
+  }
+
+  const handleTextSearchChange = (event) => {
+    setTextSearch(event.target.value)
+  }
+
+  const handleSearch = () => {
+    window.location.href = window.location.href + `/s?eng=${selectedEngagement}&text=${textSearch}`
+  }
+
+  function buildfilters(type) {
+
+    const InitialText = () => (
+      <Grid item xs={12} md>
+        <Typography variant="body1">
+          Enter a category or search string
+        </Typography>
+      </Grid>
+    )
+
+    const SearchButton = () => (
+      <Grid className={classes.filterButton} item xs={12} md={2}>
+        <Button onClick={handleSearch} variant="outlined" >Search</Button>
+      </Grid>
+    )
+
+    if (type === 'organizations') {
+      return (
+        <React.Fragment>
+          <InitialText />
+          <Grid item xs={12} md>
+            <FormControl fullWidth className={classes.formControl}>
+              <InputLabel className={classes.inputLabel} id="engagement-select-label">Engagement</InputLabel>
+              <Select
+                labelId="engagement-select-label"
+                id="engagement-select"
+                value={selectedEngagement}
+                fullWidth
+                onChange={handleEngagementSelect}
+              >
+                {buildEngagements()}
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} md>
+            <FormControl fullWidth className={classes.formControl}>
+              <TextField
+                label="Text Search"
+                id="search-text-input"
+                InputLabelProps={{ shrink: true }}
+                value={textSearch}
+                onChange={handleTextSearchChange}
+              />
+            </FormControl>
+          </Grid>
+          <SearchButton />
+        </React.Fragment>
+      )
+    } else {
+      return (
+        <React.Fragment>
+          <Grid item xs={12} md={2}>
+            <Typography variant="body1">
+              Enter search string
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={8}>
+            <FormControl fullWidth className={classes.formControl}>
+              <TextField
+                label="Text Search"
+                id="search-text-input"
+                InputLabelProps={{ shrink: true }}
+                value={textSearch}
+                onChange={handleTextSearchChange}
+              />
+            </FormControl>
+          </Grid>
+          <SearchButton />
+        </React.Fragment>
+      )
+    }
+  }
+
   return (
     <div className={classes.filterRoot}>
-      <Grid container spacing={4}>
-        <Grid item xs={12} sm={2}>
-          <Typography variant="h4">
-            Filter
-            </Typography>
-        </Grid>
-        <Grid item xs={12} sm>
-          <FormControl fullWidth className={classes.formControl}>
-            <InputLabel className={classes.inputLabel} id="engagement-select-label">Organization Engagement</InputLabel>
-            <Select
-              labelId="engagement-select-label"
-              id="engagement-select"
-              value={0}
-              fullWidth
-              onChange={() => console.log('changed')}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={0}>{filter.engagement}</MenuItem>
-              <MenuItem value={1}>Engagement 2</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} sm>
-          <FormControl fullWidth className={classes.formControl}>
-            <InputLabel className={classes.inputLabel} id="purpose-select-label">Organization Purpose</InputLabel>
-            <Select
-              labelId="purpose-select-label"
-              id="purpose-select"
-              value={0}
-              fullWidth
-              onChange={() => console.log('changed')}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={0}>{filter.purpose}</MenuItem>
-              <MenuItem value={1}>Purpose 2</MenuItem>
-              <MenuItem value={2}>Purpose 3</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs>
-          <FormControl fullWidth className={classes.formControl}>
-            <InputLabel className={classes.inputLabel} id="concept-select-label">Concept Tag</InputLabel>
-            <Select
-              labelId="concept-select-label"
-              id="concept-select"
-              value={0}
-              fullWidth
-              onChange={() => console.log('changed')}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={0}>{filter.tag}</MenuItem>
-              <MenuItem value={1}>Concept Tag 2</MenuItem>
-              <MenuItem value={2}>Concept Tag 3</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} sm>
-          <FormControl fullWidth className={classes.formControl}>
-            <TextField
-              label="Text Search"
-              id="search-text-input"
-              InputLabelProps={{ shrink: true }}
-              value={filter.text}
-            />
-          </FormControl>
-        </Grid>
+      <Grid className={classes.filterGrid} container spacing={4}>
+        {buildfilters(type)}
       </Grid>
     </div>
   )
@@ -118,4 +165,5 @@ export default function Filters(props) {
 
 Filters.propTypes = {
   filters: PropTypes.object,
+  type: PropTypes.string,
 }

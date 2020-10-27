@@ -24,15 +24,17 @@ export default function App(props) {
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Helmet>
 
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap" rel="stylesheet"/>
+
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
     </React.Fragment>
   )
 }
 
 App.propTypes = {
-  Component: PropTypes.elementType.isRequired,
+        Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
 }

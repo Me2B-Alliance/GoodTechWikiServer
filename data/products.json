@@ -1,0 +1,3351 @@
+{
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://goodtech.wiki/schemas/Product.json",
+    "title": "Product",
+    "description": "A product",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "uuid": {
+        "type": "string"
+      },
+      "parentOrg": {
+        "type": "string"
+      },
+      "category": {
+        "type": "array"
+      },
+      "purpose": {
+        "type": "array"
+      },
+      "url": {
+        "type": "string"
+      },
+      "githubProfile": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array"
+      },
+      "people": {
+        "type": "array"
+      },
+      "activities": {
+        "type": "array"
+      },
+      "me2bParticipation": {
+        "type": "string"
+      },
+      "relevantPublications": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "partners": {
+        "type": "string"
+      },
+      "workingGroup": {
+        "type": "string"
+      },
+      "digitalHarmsAddressed": {
+        "type": "string"
+      },
+      "dateBegun": {
+        "type": "string"
+      },
+      "dateEnded": {
+        "type": "string"
+      }
+    }
+  },
+  "docs": [
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/getsafe",
+      "@type": "Product",
+      "name": "#getsafe",
+      "uuid": "23a36436-5727-47fe-9539-6fbc28030fd1",
+      "parentOrg": "Fight for the Future",
+      "category": [
+        "Software Product Application"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "url": "https://www.letsgetsafe.org/",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/morethancode",
+      "@type": "Product",
+      "name": "#MoreThanCode",
+      "uuid": "bd571562-7fed-4f72-a362-9834dc0df05a",
+      "parentOrg": "#MoreThanCode",
+      "category": [
+        "Research"
+      ],
+      "githubProfile": "https://github.com/opentechinstitute/morethancode",
+      "url": "https://morethancode.cc/",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Abc4trust",
+      "@type": "Product",
+      "name": "ABC4Trust",
+      "uuid": "10e32314-aead-4e10-a4d3-bb2e03d44ef9",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "tags": [
+        "Europe",
+        "Over"
+      ],
+      "url": "https://abc4trust.eu",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ActivateCaas",
+      "@type": "Product",
+      "name": "Activate CaaS",
+      "uuid": "9daf9d1b-8e25-4a04-9393-a07a2ef3ad16",
+      "parentOrg": "Digital Life Collective",
+      "category": [
+        "Service",
+        "Research"
+      ],
+      "purpose": [
+        "Governance",
+        "Education"
+      ],
+      "tags": [
+        "Cross Organizational Collaboration"
+      ],
+      "url": "https://diglife.com/activate-caas/",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/AiOnTheGround",
+      "@type": "Product",
+      "name": "AI on the Ground",
+      "uuid": "afb5fa65-05a1-4fbb-967c-aab198ffe8c6",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Madeleine Clare Elish",
+        "Mark Latonero",
+        "Andrew Selbst",
+        "Alexandra Mateescu",
+        "Elizabeth Anne Watkins"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/research/ai-on-the-ground/",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/AlgorithmsAndPublics",
+      "@type": "Product",
+      "name": "Algorithms and Publics",
+      "uuid": "7c3a9576-c119-4978-a9bc-2dca93466660",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Media Manipulation",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/algorithms-and-publics/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Amiunique",
+      "@type": "Product",
+      "name": "AmIUnique",
+      "uuid": "df3038f1-2350-4985-a0e1-47ad53f0533f",
+      "parentOrg": "AmIUnique",
+      "activities": [
+        "Research",
+        "Service Provider"
+      ],
+      "category": [
+        "Software Product Application"
+      ],
+      "purpose": [
+        "Consumer Education"
+      ],
+      "tags": [
+        "Web App"
+      ],
+      "url": "https://amiunique.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Atamid",
+      "@type": "Product",
+      "name": "Atam.ID",
+      "uuid": "5ab1ae83-e584-489b-9fda-cb051cadb356",
+      "parentOrg": "ATAM ID",
+      "category": [
+        "Software Product Application"
+      ],
+      "purpose": [
+        "Usability"
+      ],
+      "url": "https://atam.id"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Attestations",
+      "@type": "Product",
+      "name": "Attestations",
+      "uuid": "14f5ef11-8928-474c-9377-c22055436028",
+      "parentOrg": "Decentralized Identity Foundation",
+      "category": [
+        "Open Source"
+      ],
+      "url": "https://github.com/decentralized-identity/attestations/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/BanFacialRecognition",
+      "@type": "Product",
+      "name": "Ban Facial Recognition",
+      "uuid": "4e52200e-d6be-42c3-ae6b-66397cb11e49",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.banfacialrecognition.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/BattleForTheNet",
+      "@type": "Product",
+      "name": "Battle for the Net",
+      "uuid": "5228746b-11e5-49c0-b09e-9626288f9fb8",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.battleforthenet.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/BraveBrowser",
+      "@type": "Product",
+      "name": "Brave Browser",
+      "uuid": "03d9f03f-0beb-40ef-a786-e21687a25869",
+      "parentOrg": "Brave",
+      "category": [
+        "Software Product Application"
+      ],
+      "me2bParticipation": "certification candidate",
+      "purpose": [
+        "Usability"
+      ],
+      "tags": [
+        "Web Browser"
+      ],
+      "url": "https://brave.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CefEnergy",
+      "@type": "Product",
+      "name": "CEF Energy",
+      "uuid": "d5bb210d-2b22-43f1-a8d7-6ba35adc3d20",
+      "category": [
+        "Research"
+      ],
+      "url": "http://ec.europa.eu/inea/connecting-europe-facility/cef-energy"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CefTelecom",
+      "@type": "Product",
+      "name": "CEF Telecom",
+      "uuid": "550c7a5f-d61a-48f6-bb52-ab0e8358542a",
+      "category": [
+        "Research"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CefTransportation",
+      "@type": "Product",
+      "name": "CEF Transportation",
+      "uuid": "9b55c085-e8d7-414d-8c2d-52849920495d",
+      "category": [
+        "Research"
+      ],
+      "url": "https://ec.europa.eu/inea/en/connecting-europe-facility/cef-transport"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CfrgCryptoForumResearchGroup",
+      "@type": "Product",
+      "name": "CFRG Crypto Forum Research Group",
+      "uuid": "742e81a7-e73b-47e2-a172-d5acd50cb4e3",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/cfrg"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ChupadatostheDataSucker",
+      "@type": "Product",
+      "name": "Chupadatos (\"The Data Sucker\")",
+      "uuid": "277c9847-1987-4671-b87a-285987934abe",
+      "parentOrg": "CodingRights",
+      "activities": [
+        "Outreach"
+      ],
+      "category": [
+        "Research"
+      ],
+      "purpose": [
+        "Consumer Education"
+      ],
+      "url": "https://chupadados.codingrights.org/en/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Commidfyus",
+      "@type": "Product",
+      "name": "commidfy.us",
+      "uuid": "012f3e59-7dfe-40e6-ade6-803813031179",
+      "parentOrg": "Commodify Inc",
+      "category": [
+        "Software Product Service"
+      ],
+      "me2bParticipation": "certification candidate",
+      "purpose": [
+        "Consumer Support"
+      ],
+      "tags": [
+        "Open Data",
+        "Personal Data Management"
+      ],
+      "url": "http://commodify.us"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CommonTerms",
+      "@type": "Product",
+      "name": "Common Terms",
+      "uuid": "5224c0d2-97d8-432f-af4e-ee74c6dac2c8",
+      "parentOrg": "Metamatrix AB",
+      "activities": [
+        "Research",
+        "Publication",
+        "Standard Development"
+      ],
+      "category": [
+        "Terms"
+      ],
+      "purpose": [
+        "Usability",
+        "Consumer Support",
+        "Transparency And Accountability"
+      ],
+      "relevantPublications": "https://web.archive.org/web/20161021120859/http://www.commonterms.net/",
+      "url": "http://commonterms.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ConnectSmart",
+      "@type": "Product",
+      "name": "Connect Smart",
+      "uuid": "f63db63e-0f82-4764-9f13-2ee406824912",
+      "parentOrg": "Consumers International",
+      "activities": [
+        "Publication"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Consumer Support"
+      ],
+      "relevantPublications": "https://www.internetsociety.org/wp-content/uploads/2018/11/ConnectSmart.pdf",
+      "url": "https://www.consumersinternational.org/what-we-do/digital/internet-of-things/connect-smart/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CookieClearinghouse",
+      "@type": "Product",
+      "name": "Cookie Clearinghouse",
+      "uuid": "d7c11860-c1c6-477a-a9a4-22edfb8758c3",
+      "category": [
+        "Service"
+      ],
+      "tags": [
+        "Dead"
+      ],
+      "url": "http://cch.law.stanford.edu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CookieConsentAndWebsiteScanning",
+      "@type": "Product",
+      "name": "Cookie Consent and Website Scanning",
+      "uuid": "6e6ae5bc-11f2-4ba2-ab32-ed3ef254fbd2",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/cookies/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Credential",
+      "@type": "Product",
+      "name": "CREDENTIAL",
+      "uuid": "77195c11-fe2e-4f86-833c-e167f4d3b491",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Europe"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CustomerCommons",
+      "@type": "Product",
+      "name": "Customer Commons",
+      "uuid": "3dab9d7e-3891-4d3b-b49f-e2cb6cfceeb1",
+      "parentOrg": "Customer Commons: Project VRM: Berkman Klein Center for Internet and Society at Harvard University",
+      "category": [
+        "Research",
+        "Terms"
+      ],
+      "purpose": [
+        "Education",
+        "Consumer Support"
+      ],
+      "url": "http://customercommons.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CyberSecureAssessmentPreferencesOfFinancialInstitutions",
+      "@type": "Product",
+      "name": "Cyber secure assessment preferences of financial institutions",
+      "uuid": "7007b237-33ab-4c63-8dfb-41803677eb45",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "url": "http://www.cyberwiser.eu/content/cyber-secure-assessment-preferences-financial-institutions-0"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/CyberSecureInnovativeSmartEnergyProducts",
+      "@type": "Product",
+      "name": "Cyber secure, innovative smart energy products",
+      "uuid": "d749b8e8-3d60-4154-bd04-251b63709f6c",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "url": "http://www.cyberwiser.eu/pilots/cyber-secure-innovative-smart-energy-products"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DataDesignByCnil",
+      "@type": "Product",
+      "name": "Data & Design by CNIL",
+      "uuid": "8bd23581-a22b-4b27-8776-6643149c8560",
+      "parentOrg": "Data & Design by CNIL",
+      "activities": [
+        "Publication",
+        "Outreach"
+      ],
+      "category": [
+        "Research",
+        "Service",
+        "Publication"
+      ],
+      "purpose": [
+        "Education"
+      ],
+      "url": "https://design.cnil.fr/en/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DataSocietyResearch",
+      "@type": "Product",
+      "name": "Data & Society Research",
+      "uuid": "99cb49e6-88bd-4238-a6f9-aed7971157e1",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Products Projects",
+        "Parent"
+      ],
+      "url": "https://datasociety.net/research/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DataAndEquityInSchoolChoice",
+      "@type": "Product",
+      "name": "Data and Equity in School Choice",
+      "uuid": "f8883107-4201-43fc-b9d0-1ff8dc2d934a",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Enabling Connected Learning",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/initiatives/enabling-connected-learning/data-and-equity-in-school-choice/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DataCommonsGraphdcg",
+      "@type": "Product",
+      "name": "Data Commons Graph (DCG)",
+      "uuid": "9d171e5a-9fa1-4bb0-ba4a-4642eb9c380b",
+      "parentOrg": "Datacommons.org: Google",
+      "category": [
+        "Research"
+      ],
+      "purpose": [
+        "Education",
+        "Consumer Support"
+      ],
+      "url": "https://browser.datacommons.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DataMappingAutomation",
+      "@type": "Product",
+      "name": "Data Mapping Automation",
+      "uuid": "e6a25001-702d-4e0b-8d3d-fffea6a45266",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/data-mapping-automation/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DataHumanRightsAndHumanSecurity",
+      "@type": "Product",
+      "name": "Data, Human Rights and Human Security",
+      "uuid": "395ff17b-3ae8-4c45-8a63-e04b8d0dcec1",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Mark Latonero"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/initiatives/data-human-rights/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DataguidanceByOnetrust",
+      "@type": "Product",
+      "name": "DataGuidance by OneTrust",
+      "uuid": "e09933aa-207d-4e9b-91e8-674754b8e0ca",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/dataguidance-by-onetrust/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DataportabilityOrg",
+      "@type": "Product",
+      "name": "Dataportability . org",
+      "uuid": "75c01783-a1fb-49ae-a45d-3f373713961c",
+      "parentOrg": "Dataportability . org",
+      "category": [
+        "Research",
+        "Terms"
+      ],
+      "purpose": [
+        "Tech Interoperability",
+        "Usability"
+      ],
+      "relevantPublications": "https://web.archive.org/web/20120625101216/http://wiki.dataportability.org/display/dpmain/How+to+Get+Involved",
+      "status": "Inactive(?)",
+      "url": "http://dataportability.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DecentralizedIdentityFoundationReferenceImplementations",
+      "@type": "Product",
+      "name": "Decentralized Identity Foundation - Reference Implementations",
+      "uuid": "e087275f-a6b1-4cdc-8cd0-5be3fee0cc90",
+      "parentOrg": "Decentralized Identity Foundation",
+      "activities": [
+        "Software Development",
+        "Movement Building"
+      ],
+      "category": [
+        "Open Source",
+        "Software Product Application"
+      ],
+      "partners": "1kosmos|accenture|aetna|authenteq|auth0|bigchaindb|blockpass|blockchain-foundry|blockstack|british columbia ministry of citizens services|botlabs|civic|consent|danube|datum|distributed id|diwala|dominode|enigma|enterprise ethereum alliance|evernym|equinix|gamecredits[ϟ]|gem|gs1|humanized-internet|hyperledger|id2020|ideo|identos|ibm|iota|jolocom|kyc-chain|lnk-e|mastercard|meeco|metax|microsoft|mooti|netki|nuid|nuggets|ockam|onfido|ontology|pillar|r_block|r3|remme|rsa|securekey|<sitekit>|sovrin|suru|taqanu|tierion|trusted key|uport|validatedid|veridium|zinc",
+      "purpose": [
+        "Tech Interoperability"
+      ],
+      "tags": [
+        "Technical Specs",
+        "Reference Implementations",
+        "Cross Organizational Collaboration Products Projects Parent"
+      ],
+      "url": "https://github.com/decentralized-identity",
+      "workingGroup": "Identifiers and Discovery: Storage and Compute: Authentication: Claims and Credentials"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DefendCrypto",
+      "@type": "Product",
+      "name": "Defend Crypto",
+      "uuid": "6a0bed65-fedb-4eb3-87e2-64be8588fc32",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.defendcrypto.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DetroitCommunityTechnologyProject",
+      "@type": "Product",
+      "name": "Detroit Community Technology Project",
+      "uuid": "a2830b8f-5a70-436e-95f9-cde821c463dc",
+      "parentOrg": "Detroit Digital Justice Coalition",
+      "activities": [
+        "Outreach"
+      ],
+      "category": [
+        "Research"
+      ],
+      "partners": "allied media projects",
+      "purpose": [
+        "Consumer Education"
+      ],
+      "relevantPublications": "https://alliedmedia.org/ddjc/discotech",
+      "url": "https://alliedmedia.org/dctp"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DriversLicenseDataVerificationdldvService",
+      "@type": "Product",
+      "name": "Driver's License Data Verification (DLDV) Service",
+      "uuid": "b920c616-417b-4e5f-8ad1-e20e6c97de91",
+      "category": [
+        "Service"
+      ],
+      "url": "http://www.aamva.org/dldv/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DropSalesforce",
+      "@type": "Product",
+      "name": "Drop Salesforce",
+      "uuid": "daae1641-1f5f-4700-b9fe-fc65d49f364b",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.dropsalesforce.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/DssXsdSupportingItutX509CertificateVersion3RulesInTheEidasTrustedList",
+      "@type": "Product",
+      "name": "DSS - XSD supporting ITU-T X.509 certificate version 3 rules in the eIDAS trusted list",
+      "uuid": "5e1a4de7-9192-4555-b72b-f5ffbf2d52e2",
+      "category": [
+        "Open Source"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Duckduckgo",
+      "@type": "Product",
+      "name": "DuckDuckGo",
+      "uuid": "23d52c1d-5960-4ea8-bdba-42755e68362e",
+      "parentOrg": "DuckDuckGo",
+      "category": [
+        "Software Product Service"
+      ],
+      "me2bParticipation": "certification candidate",
+      "tags": [
+        "Search"
+      ],
+      "url": "https://duckduckgo.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Ecodex",
+      "@type": "Product",
+      "name": "e-CODEX",
+      "uuid": "cfc93913-16d0-411b-8fc1-1eb822b79360",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "tags": [
+        "Europe",
+        "Over"
+      ],
+      "url": "http://www.e-codex.eu/home.html"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/EsensElectronicSimpleEuropeanNetworkedServices",
+      "@type": "Product",
+      "name": "e-SENS   Electronic Simple European Networked Services",
+      "uuid": "dcce6699-284e-4315-b3ad-9b1116221084",
+      "category": [
+        "Research"
+      ],
+      "url": "http://www.esens.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/EdaaPrivacyCertification",
+      "@type": "Product",
+      "name": "EDAA Privacy Certification",
+      "uuid": "05936c4f-4656-4ac6-b064-c8d5441a2f8a",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.trustarc.com/products/edaa-certification/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Edelivery",
+      "@type": "Product",
+      "name": "eDelivery",
+      "uuid": "b9c69529-8038-48a3-8744-8fd12a6a8bf5",
+      "category": [
+        "Service"
+      ],
+      "url": "https://ec.europa.eu/cefdigital/wiki/display/cefdigital/edelivery"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Eid",
+      "@type": "Product",
+      "name": "eID",
+      "uuid": "361c3451-9942-4abc-8064-96cd61277d88",
+      "category": [
+        "Service"
+      ],
+      "url": "https://ec.europa.eu/cefdigital/wiki/display/cefdigital/eid"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Eidasnode",
+      "@type": "Product",
+      "name": "eIDAS-Node",
+      "uuid": "d327a27d-31b8-4f88-8540-e8691d0e4381",
+      "category": [
+        "Open Source"
+      ],
+      "url": "https://ec.europa.eu/cefdigital/wiki/display/cefdigital/eidas-node+v1.1"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Einvoicing",
+      "@type": "Product",
+      "name": "eInvoicing",
+      "uuid": "d79bc5b7-5e43-4939-a89a-2aeaf6ddbadb",
+      "category": [
+        "Service"
+      ],
+      "url": "https://ec.europa.eu/cefdigital/wiki/display/cefdigital/einvoicing"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ElectronicVerificationOfVitalEventsevve",
+      "@type": "Product",
+      "name": "Electronic Verification of Vital Events (EVVE)",
+      "uuid": "b98277cb-40f7-4680-b4b2-dc1e7b6200a0",
+      "category": [
+        "Service"
+      ],
+      "url": "http://www.naphsis.org/about-evve"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Elsa",
+      "@type": "Product",
+      "name": "ELSA",
+      "uuid": "af7714aa-f9dd-4041-bde5-7237f0e162b8",
+      "category": [
+        "Research"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Emanciterms",
+      "@type": "Product",
+      "name": "EmanciTerms",
+      "uuid": "f976c9c8-7fda-42a3-aa1d-cff1546b6403",
+      "parentOrg": "Project VRM",
+      "category": [
+        "Terms"
+      ],
+      "purpose": [
+        "Human Rights"
+      ],
+      "relevantPublications": "https://blogs.harvard.edu/vrm/category/emanciterm/",
+      "url": "https://cyber.harvard.edu/projectvrm/EmanciTerm"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/EnablingConnectedLearning",
+      "@type": "Product",
+      "name": "Enabling Connected Learning",
+      "uuid": "b4f4abbc-08cc-4a8b-b761-b50b84b7f477",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Monica Bulger",
+        "Claire Fontaine",
+        "Kinjal Dave"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/initiatives/enabling-connected-learning/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Epsos",
+      "@type": "Product",
+      "name": "epSOS",
+      "uuid": "b30f8d45-33b8-4d07-82a0-83c01e6fc654",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "tags": [
+        "Europe",
+        "Health",
+        "Over"
+      ],
+      "url": "http://www.epsos.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/EquitableInternetInitiative",
+      "@type": "Product",
+      "name": "Equitable Internet Initiative",
+      "uuid": "c11f9e0a-ca6e-426b-ac6d-3eb613eb8343",
+      "parentOrg": "Allied Media Projects: Detroit Community Technology Project",
+      "activities": [
+        "Outreach"
+      ],
+      "category": [
+        "Service"
+      ],
+      "url": "https://alliedmedia.org/dctp/eii"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Esignature",
+      "@type": "Product",
+      "name": "eSignature",
+      "uuid": "5a5fa64a-2a13-4494-8914-e5efe90aeed8",
+      "category": [
+        "Service"
+      ],
+      "url": "https://ec.europa.eu/cefdigital/wiki/display/cefdigital/esignature"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Essence",
+      "@type": "Product",
+      "name": "ESSENCE",
+      "uuid": "86895b99-3d86-408c-869f-e31c7d8a4668",
+      "category": [
+        "Research"
+      ],
+      "url": "https://www.essence-network.com/essence-events/como-summerschool/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Etranslation",
+      "@type": "Product",
+      "name": "eTranslation",
+      "uuid": "f3ea3128-62c9-441d-963b-728285ac3bf7",
+      "category": [
+        "Service"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/EuTrustedListSchemeOperators",
+      "@type": "Product",
+      "name": "EU Trusted List Scheme Operators",
+      "uuid": "798905dd-6a2e-46e6-9b0e-f56355d1a8ea",
+      "category": [
+        "Service"
+      ],
+      "url": "https://ec.europa.eu/cefdigital/wiki/display/cefdigital/eu+trusted+list+scheme+operators"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/EuropeanTrustServiceStatusListtsl",
+      "@type": "Product",
+      "name": "European Trust Service Status List (TSL)",
+      "uuid": "862365da-3558-4506-ba88-9e691ddd8fcc",
+      "category": [
+        "Service"
+      ],
+      "url": "https://ec.europa.eu/digital-single-market/en/eu-trusted-list-certificate-providers-further-info-and-policy"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Expand",
+      "@type": "Product",
+      "name": "EXPAND",
+      "uuid": "ead9ac75-aa38-4c73-b5c9-f72f7ad8e6d7",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "tags": [
+        "Europe",
+        "Health",
+        "Over"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ExpediteProject",
+      "@type": "Product",
+      "name": "Expedite Project",
+      "uuid": "d5fff437-240d-4632-a4c9-3421e273fe39",
+      "parentOrg": "EXPEDiTE",
+      "activities": [
+        "Outreach"
+      ],
+      "category": [
+        "Research"
+      ],
+      "purpose": [
+        "Education"
+      ],
+      "url": "https://www.expedite-project.eu/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ExploreUsablePrivacy",
+      "@type": "Product",
+      "name": "Explore Usable Privacy",
+      "uuid": "90a52aa6-035d-4957-b15c-62b199286c86",
+      "parentOrg": "The Usable Privacy Policy Project",
+      "category": [
+        "Terms",
+        "Research"
+      ],
+      "purpose": [
+        "Education",
+        "Transparency And Accountability"
+      ],
+      "url": "https://explore.usableprivacy.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/FairnessInAlgorithmicMachineTranslation",
+      "@type": "Product",
+      "name": "Fairness in Algorithmic Machine Translation",
+      "uuid": "1e6a2104-d41b-485d-a84d-801eb3327e91",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Data Society Research",
+        "Law Ethics In Computational Social Science"
+      ],
+      "url": "https://datasociety.net/research/#law_ethics_in_comp"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/FairnessInPrecisionMedicine",
+      "@type": "Product",
+      "name": "Fairness in Precision Medicine",
+      "uuid": "0a42fda9-88de-4e3a-95cb-4d8744dedc25",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Kadija Ferryman",
+        "Mikaela Pitcan"
+      ],
+      "tags": [
+        "Health And Data"
+      ],
+      "url": "https://datasociety.net/research/fairness-precision-medicine/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Fastpass",
+      "@type": "Product",
+      "name": "FastPass",
+      "uuid": "fbd6ce5a-8705-4229-974f-6faff944893b",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "tags": [
+        "Europe"
+      ],
+      "url": "https://www.fastpass-project.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/FightForTheFutureProjects",
+      "@type": "Product",
+      "name": "Fight for the Future Projects",
+      "uuid": "b7e1aa7f-f756-4530-a211-c10e103a8179",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development",
+        "Events And Convening",
+        "Research"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Consumer Support"
+      ],
+      "tags": [
+        "Products Projects",
+        "Parent"
+      ],
+      "url": "https://www.fightforthefuture.org/projects/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/FireMarkZuckerburg",
+      "@type": "Product",
+      "name": "Fire Mark Zuckerburg",
+      "uuid": "b9969334-91da-4bc1-bb9e-94e6b2c1acf1",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.firemarkzuckerberg.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Firefox",
+      "@type": "Product",
+      "name": "FIrefox",
+      "uuid": "cb51a871-0eb2-4314-abaa-a0dd22620b9d",
+      "parentOrg": "Mozilla (Corporation)",
+      "category": [
+        "Software Product Application"
+      ],
+      "me2bParticipation": "certification candidate",
+      "purpose": [
+        "Usability"
+      ],
+      "tags": [
+        "Web Browser"
+      ],
+      "url": "https://www.mozilla.org/en-US/firefox/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/FutureOfIdentityInTheInformationSocietyfidis",
+      "@type": "Product",
+      "name": "Future of Identity in the Information Society (FIDIS)",
+      "uuid": "bfd04874-58f3-4c65-bacb-8a73c47d7712",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Europe",
+        "Over"
+      ],
+      "url": "http://www.fidis.net/about/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/FutureTrust",
+      "@type": "Product",
+      "name": "Future Trust",
+      "uuid": "20463f7d-3a99-4a99-81d8-a1ec4fa7040c",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Europe"
+      ],
+      "url": "https://www.futuretrust.eu/home/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Futureid",
+      "@type": "Product",
+      "name": "FutureID",
+      "uuid": "7f360554-cf25-4cc7-9c9c-8a8f4b85a6d1",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Europe",
+        "Over"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/GaiaGlobalAccessToTheInternetForAllResearchGroup",
+      "@type": "Product",
+      "name": "GAIA Global Access to the Internet for All Research Group",
+      "uuid": "875f7a86-b780-4d10-b767-c2dd69050030",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/gaia"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/GamersForFreedom",
+      "@type": "Product",
+      "name": "GAMERS FOR FREEDOM",
+      "uuid": "c7ca884b-3c48-4fa6-a0d7-97e61665d234",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.gamersforfreedom.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/GsmaImeiServices",
+      "@type": "Product",
+      "name": "GSMA IMEI Services",
+      "uuid": "d2cc23f7-0218-44b8-9098-f70c4100826f",
+      "parentOrg": "GSMA",
+      "category": [
+        "To Be Determined"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Gsma Working Groups"
+      ],
+      "url": "https://www.gsma.com/services/gsma-imei/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Hatdex",
+      "@type": "Product",
+      "name": "HATDex",
+      "uuid": "d0fdcf5b-30e5-4e10-b280-72c96f2fc718",
+      "parentOrg": "Dataswift",
+      "category": [
+        "To Be Determined"
+      ],
+      "url": "https://hatdex.dataswift.io"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/HealthAndData",
+      "@type": "Product",
+      "name": "Health and Data",
+      "uuid": "753624f0-9025-4d2f-b103-096838cc64e3",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Kadija Ferryman",
+        "Mary Madden",
+        "Erin Mcaweeney",
+        "Alex Rosenblat",
+        "Mikaela Pitcan"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/research/health-and-data/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/HelmPersonalServer",
+      "@type": "Product",
+      "name": "Helm Personal Server",
+      "uuid": "bbbc96a7-d970-4cd9-8a37-978432ef4f81",
+      "parentOrg": "Helm",
+      "category": [
+        "Software Product Service",
+        "Hardware Product"
+      ],
+      "githubProfile": "https://github.com/HelmSecure",
+      "tags": [
+        "Personal Data Management"
+      ],
+      "url": "https://www.thehelm.com/technology"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/HideMyAss",
+      "@type": "Product",
+      "name": "Hide My Ass",
+      "uuid": "7b96cd16-3bb8-41b2-9246-642064410538",
+      "parentOrg": "Avast.com",
+      "category": [
+        "Software Product Application"
+      ],
+      "digitalHarmsAddressed": "exposure|surveillance",
+      "me2bParticipation": "certification candidate",
+      "purpose": [
+        "Consumer Support"
+      ],
+      "url": "https://www.hidemyass.com/en-us/internet-privacy-tools"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/HowDataPortabilityInBigDataAffectsIndividualsInnovationAndCompetition",
+      "@type": "Product",
+      "name": "How Data Portability in Big Data affects Individuals, Innovation and Competition",
+      "uuid": "92739ff8-ea3e-4ab6-bb2c-d0ad5f5f75c1",
+      "category": [
+        "Research"
+      ],
+      "url": "http://www.tilburguniversity.edu/research/institutes-and-research-groups/tilt/news-data-science-funding/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/HrpcHumanRightsProtocolConsiderationsResearchGroup",
+      "@type": "Product",
+      "name": "HRPC Human Rights Protocol Considerations Research Group",
+      "uuid": "868fcf9d-a6f2-4232-8dea-c4d2630349b4",
+      "category": [
+        "Research"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/HubReference",
+      "@type": "Product",
+      "name": "Hub Reference",
+      "uuid": "ae635396-ab5c-4c76-8df8-14908a0b65e8",
+      "parentOrg": "Decentralized Identity Foundation",
+      "category": [
+        "Open Source"
+      ],
+      "githubProfile": "https://github.com/decentralized-identity/identity-hub",
+      "url": "https://github.com/decentralized-identity/hub-reference",
+      "workingGroup": "Storage & Compute Working Group"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/HumanRightsDataAndMigration",
+      "@type": "Product",
+      "name": "Human Rights, Data, and Migration",
+      "uuid": "12c0dee7-4287-4b59-b7e7-61eb3f621e44",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Data",
+        "Human Rights And Human Security",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/human-rights-data-and-migration/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IAgreeTo",
+      "@type": "Product",
+      "name": "I Agree To...",
+      "uuid": "2585ac6a-55dd-4525-a474-328f177e7406",
+      "parentOrg": "Independent",
+      "category": [
+        "Terms"
+      ],
+      "me2bParticipation": "ux reference",
+      "partners": "kantara initiative",
+      "people": [
+        "Gregg Bernstein"
+      ],
+      "purpose": [
+        "Usability"
+      ],
+      "tags": [
+        "Simplified Ux For Terms Of Service",
+        "Masters Thesis"
+      ],
+      "url": "http://gregg.io/mfa/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ISharedWhat",
+      "@type": "Product",
+      "name": "I Shared What?!",
+      "uuid": "4b5c0b05-3ced-44e5-9d2f-3b17f1568ac3",
+      "parentOrg": "Independent",
+      "category": [
+        "Software Product Application"
+      ],
+      "people": [
+        "Joe Andrieu"
+      ],
+      "tags": [
+        "Facebook"
+      ],
+      "url": "https://web.archive.org/web/20190809094343/http://isharedwhat.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IccrgInternetCongestionControlResearchGroup",
+      "@type": "Product",
+      "name": "ICCRG Internet Congestion Control Research Group",
+      "uuid": "cad056af-2c88-42e5-b59e-600a68a1ad35",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/iccrg"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IcnrgInformationcentricNetworkingResearchGroup",
+      "@type": "Product",
+      "name": "ICNRG Information-Centric Networking Research Group",
+      "uuid": "c09a8845-a2d1-4cc8-a0b6-6a39a1a80c21",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/icnrg"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IncidentBreachManagement",
+      "@type": "Product",
+      "name": "Incident & Breach Management",
+      "uuid": "25b82bb7-5576-430e-97d0-cbc2805d745d",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/incident-breach-management/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IncorporateYourCompany",
+      "@type": "Product",
+      "name": "Incorporate your company",
+      "uuid": "4de9887b-5441-4750-9443-f5f5cb5b558e",
+      "parentOrg": "iubenda",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.iubenda.com/en/srl"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IntelligenceAndAutonomy",
+      "@type": "Product",
+      "name": "Intelligence and Autonomy",
+      "uuid": "c45671c0-9d64-4169-95f6-d830aa3f6a10",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Ai On The Ground",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/intelligence-and-autonomy/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IntelligentThirdPartyRiskManagement",
+      "@type": "Product",
+      "name": "Intelligent Third- Party Risk Management",
+      "uuid": "7c0ef02c-c470-4ac4-a878-c5bfa3529024",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/solutions/vendor-third-party-risk/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/InvestigateAmazon",
+      "@type": "Product",
+      "name": "Investigate Amazon",
+      "uuid": "a76d3f33-b62b-4948-8098-5e23458a67eb",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.investigateamazon.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IotTrustFramework",
+      "@type": "Product",
+      "name": "IoT Trust Framework",
+      "uuid": "1e0db333-c663-4db4-9a0c-8267ad133941",
+      "parentOrg": "Internet Society: Online Trust Alliance",
+      "category": [
+        "Service",
+        "Terms"
+      ],
+      "people": [
+        "Steve Olshansky"
+      ],
+      "purpose": [
+        "Certification And Compliance",
+        "Transparency And Accountability",
+        "Governance"
+      ],
+      "relevantPublications": "https://www.internetsociety.org/resources/doc/2018/iot-trust-by-design",
+      "url": "https://www.internetsociety.org/iot/trust-framework/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IubendaConsentSolution",
+      "@type": "Product",
+      "name": "iubenda Consent Solution",
+      "uuid": "19462457-00e5-4b31-954c-af5cc2f590e9",
+      "parentOrg": "iubenda",
+      "category": [
+        "Software Product Application",
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.iubenda.com/en/consent-solution"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IubendaCookieSolution",
+      "@type": "Product",
+      "name": "IUBENDA COOKIE SOLUTION",
+      "uuid": "f0e65615-7d3f-4d1d-9d2d-7631a64161ad",
+      "parentOrg": "iubenda",
+      "category": [
+        "Software Product Application",
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.iubenda.com/en/cookie-solution"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IubendaInternalPrivacyManagement",
+      "@type": "Product",
+      "name": "Iubenda Internal Privacy Management",
+      "uuid": "6d3a4c36-bfc5-4a8e-9f08-fc94db59dfa7",
+      "parentOrg": "iubenda",
+      "category": [
+        "Software Product Application",
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.iubenda.com/en/internal-privacy-management"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IubendaOnlineComplianceSolutions",
+      "@type": "Product",
+      "name": "iubenda Online Compliance Solutions",
+      "uuid": "bd3fff84-c7fc-487b-a5b8-2f700de680b1",
+      "parentOrg": "iubenda",
+      "category": [
+        "Service"
+      ],
+      "githubProfile": "https://github.com/iubenda",
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "tags": [
+        "Products Projects",
+        "Parent"
+      ],
+      "url": "https://www.iubenda.com/en/overview"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IubendaPrivacyAndCookiePolicyGenerator",
+      "@type": "Product",
+      "name": "IUBENDA PRIVACY AND COOKIE POLICY GENERATOR",
+      "uuid": "ba1c2c7a-4bb7-4568-80d7-b8c0f3ea5561",
+      "parentOrg": "iubenda",
+      "category": [
+        "Software Product Application",
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.iubenda.com/en/privacy-and-cookie-policy-generator"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/IubendaTermsAndConditionsGenerator",
+      "@type": "Product",
+      "name": "IUBENDA TERMS AND CONDITIONS GENERATOR",
+      "uuid": "9db5ad20-6708-4d1c-b781-167b35a9a7e2",
+      "parentOrg": "iubenda",
+      "category": [
+        "Software Product Application",
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.iubenda.com/en/terms-and-conditions-generator"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/LawEthicsInComputationalSocialScience",
+      "@type": "Product",
+      "name": "Law & Ethics in Computational Social Science",
+      "uuid": "2f9b4fd1-cfb0-4fbf-b34e-6830da49e7b3",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Jake Metcalf",
+        "Bonnie Tijerina",
+        "Sorelle Friedler",
+        "Suresh Venkatasubramanian",
+        "Andrew Selbst"
+      ],
+      "tags": [
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/research/#law_ethics_in_comp"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/LibrariesAndPrivacy",
+      "@type": "Product",
+      "name": "Libraries and Privacy",
+      "uuid": "199952e0-abf4-4d3f-a467-7598f3ecbd20",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Bonnie Tijerina"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/initiatives/privacy/digital-privacy-data-literacy/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Lifescope",
+      "@type": "Product",
+      "name": "Lifescope",
+      "uuid": "b43196eb-4989-4a76-b308-9511c67f09f6",
+      "parentOrg": "Lifescope",
+      "category": [
+        "Open Source"
+      ],
+      "githubProfile": "https://github.com/lifescopelabs",
+      "me2bParticipation": "certification candidate",
+      "purpose": [
+        "Usability"
+      ],
+      "tags": [
+        "Personal Data Management"
+      ],
+      "url": "https://lifescope.io/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Lightest",
+      "@type": "Product",
+      "name": "LIGHTEST",
+      "uuid": "a78289ed-90c7-49b8-8c42-d5f7af615822",
+      "category": [
+        "Research"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/LumenDatabase",
+      "@type": "Product",
+      "name": "Lumen Database",
+      "uuid": "0f6d981b-e8af-4917-8b21-fde73cc54a24",
+      "parentOrg": "Berkman Klein Center for Internet and Society at Harvard University",
+      "category": [
+        "Software Product Service",
+        "Research"
+      ],
+      "purpose": [
+        "Education",
+        "Consumer Support"
+      ],
+      "status": "Inactive",
+      "tags": [
+        "Dmca"
+      ],
+      "url": "https://lumendatabase.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/MappingInequalitiesAcrossTheOndemandEconomy",
+      "@type": "Product",
+      "name": "Mapping Inequalities Across the On-Demand Economy",
+      "uuid": "8129a337-88e9-409a-a9db-8c694f088be1",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Social Instabilities In Labor Futures",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/labor_futures/mapping-inequalities-across-the-on-demand-economy/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/MaprgMeasurementAndAnalysisForProtocolsResearchGroup",
+      "@type": "Product",
+      "name": "MAPRG Measurement and Analysis for Protocols Research Group",
+      "uuid": "baf73659-3525-4c15-8e05-883b411c92f7",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/maprg"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/MeaningfulConsent",
+      "@type": "Product",
+      "name": "Meaningful Consent",
+      "uuid": "29f1ff23-d4ae-4e01-b631-264988ea6bd1",
+      "parentOrg": "Southampton University",
+      "category": [
+        "Research"
+      ],
+      "me2bParticipation": "certification candidate",
+      "people": [
+        "M C Schraefel",
+        "Enrico Gerding"
+      ],
+      "purpose": [
+        "Education",
+        "Human Rights"
+      ],
+      "status": "Active",
+      "tags": [
+        "Workshop"
+      ],
+      "url": "http://www.meaningfulconsent.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/MeaningfulConsentInTheDigitalEconomymcde",
+      "@type": "Product",
+      "name": "Meaningful Consent in the Digital Economy (MCDE)",
+      "uuid": "7b5ec5c1-d304-438a-b68b-c5d8feb717ae",
+      "parentOrg": "South Hampton University",
+      "category": [
+        "Research"
+      ],
+      "dateBegun": "2014",
+      "dateEnded": "2017",
+      "digitalHarmsAddressed": "breach of confidentiality",
+      "purpose": [
+        "Consumer Support",
+        "Transparency And Accountability"
+      ],
+      "status": "Inactive",
+      "url": "http://www.meaningfulconsent.org"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/MediaManipulation",
+      "@type": "Product",
+      "name": "Media Manipulation",
+      "uuid": "26f6356a-6d8c-41a2-a44e-cca7c3dce37a",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Joan Donovan",
+        "Alice E Marwick",
+        "Becca Lewis",
+        "Caroline Jack",
+        "Francesca Tripodi",
+        "Mark Ackerman",
+        "Matt Goerzen",
+        "Robyn Caplan",
+        "Whitney Phillips",
+        "Jeanna Neefe Matthews",
+        "Rishab Nithyan",
+        "Pete Krafft",
+        "Lauren Hanson",
+        "Patrick Davison",
+        "Leon Yin",
+        "Kinjal Dave"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/research/media-manipulation/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/MobileAppConsent",
+      "@type": "Product",
+      "name": "Mobile App Consent",
+      "uuid": "5eaf7d87-36b5-49d1-a0a7-0f9eb0e1a9f4",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/mobile-app-consent/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Mobilepass",
+      "@type": "Product",
+      "name": "MobilePass",
+      "uuid": "3307e6e6-5142-46c8-bad4-68a40f9d3f8c",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "tags": [
+        "Europe"
+      ],
+      "url": "http://mobilepass-project.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Modentity",
+      "@type": "Product",
+      "name": "Modentity",
+      "uuid": "5f2c4a42-c911-4464-be3e-30a641a6b256",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "url": "http://www.kiras.at/projects/detail/?tx_ttnews[tt_news]=349&chash=d7686250a3fb9e6b2806a07d5d7664e3&l=1"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/NfvrgNetworkFunctionVirtualizationResearchGroup",
+      "@type": "Product",
+      "name": "NFVRG Network Function Virtualization Research Group",
+      "uuid": "28eab72a-de75-48a9-baed-3aa4f3a67177",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/nfvrg"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/NmrgNetworkManagementResearchGroup",
+      "@type": "Product",
+      "name": "NMRG Network Management Research Group",
+      "uuid": "5e7fef89-70b8-44ec-bdfb-46dbcd16b897",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/nmrg"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/NwcrgNetworkCodingResearchGroup",
+      "@type": "Product",
+      "name": "NWCRG Network Coding Research Group",
+      "uuid": "5523193d-2238-4904-ab75-a764fa4808b2",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/nwcrg"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Ockto",
+      "@type": "Product",
+      "name": "OCKTO",
+      "uuid": "a47c3f25-bc66-402a-8208-4f9dbc2ca658",
+      "category": [
+        "To Be Determined"
+      ],
+      "url": "https://www.ockto.nl/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OneTrust",
+      "@type": "Product",
+      "name": "One Trust",
+      "uuid": "aeb0355f-123b-4a86-9d99-e5baacb6e860",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "tags": [
+        "Products Projects",
+        "Parent"
+      ],
+      "url": "https://www.onetrust.com/products/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Onethingless",
+      "@type": "Product",
+      "name": "One.thing.Less",
+      "uuid": "2e52f98e-6f27-4d5c-88fd-96cb6b088233",
+      "parentOrg": "One.Thing.Less AG",
+      "activities": [
+        "Outreach"
+      ],
+      "category": [
+        "Service"
+      ],
+      "me2bParticipation": "certification candidate",
+      "purpose": [
+        "Usability",
+        "Consumer Support"
+      ],
+      "url": "https://www.onethingless.com"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OnetrustConsumerDataSubjectRightsManagement",
+      "@type": "Product",
+      "name": "OneTrust Consumer & Data Subject Rights Management",
+      "uuid": "52db19d1-22f1-434c-a1ec-1975261298b7",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/data-subject-access-requests-portal/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OnetrustDataguidance",
+      "@type": "Product",
+      "name": "OneTrust DataGuidance",
+      "uuid": "163e0955-f97d-4dc7-9a99-dcb758d2a561",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://free.dataguidance.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OnetrustGovernanceRiskAndComplianceSolution",
+      "@type": "Product",
+      "name": "OneTrust Governance, Risk and Compliance Solution",
+      "uuid": "d432eab2-32f2-4606-b5a8-7245c150695a",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/solutions/governance-risk-compliance/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OnetrustIntegrationsMarketplace",
+      "@type": "Product",
+      "name": "OneTrust Integrations Marketplace",
+      "uuid": "14ad0cd0-a8a7-4929-b73b-be605f47dde5",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/integrations/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OnetrustMaturityPlanning",
+      "@type": "Product",
+      "name": "OneTrust Maturity & Planning",
+      "uuid": "c36983c7-51b8-4f5f-8c1f-92ca1b6b7c61",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/maturity-planning/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OnetrustTargetedDataDiscoverySolution",
+      "@type": "Product",
+      "name": "OneTrust Targeted Data Discovery™ Solution",
+      "uuid": "3034475f-dac1-460e-88dc-fb5932a9de4e",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/targeted-data-discovery/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Onlinecensorshiporg",
+      "@type": "Product",
+      "name": "OnlineCensorship.org",
+      "uuid": "35ad73ee-561d-429d-8ef8-5f029d6b5761",
+      "parentOrg": "Electronic Frontier Foundation; Visualizing Impact",
+      "category": [
+        "Service"
+      ],
+      "githubProfile": "https://github.com/EFForg/onlinecensorship/",
+      "me2bParticipation": "content source for me2b certification?",
+      "purpose": [
+        "Consumer Support"
+      ],
+      "status": "Active",
+      "url": "https://onlinecensorship.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OpenDataToolkitWorldbank",
+      "@type": "Product",
+      "name": "Open Data ToolKit - Worldbank",
+      "uuid": "e7208dfe-2890-4178-9024-436e64dccd7a",
+      "parentOrg": "The World Bank",
+      "category": [
+        "Research"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Tech Interoperability"
+      ],
+      "url": "http://opendatatoolkit.worldbank.org/en/index.html"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OpenHumans",
+      "@type": "Product",
+      "name": "Open Humans",
+      "uuid": "d218a599-3ccb-4872-9fa7-f72f699d85c5",
+      "parentOrg": "Open Humans Foundation",
+      "activities": [
+        "Research"
+      ],
+      "category": [
+        "Software Product Service"
+      ],
+      "githubProfile": "https://github.com/OpenHumans",
+      "purpose": [
+        "Ecosystem Building"
+      ],
+      "relevantPublications": "https://blog.openhumans.org/",
+      "url": "https://www.openhumans.org"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OpenNotice",
+      "@type": "Product",
+      "name": "Open Notice",
+      "uuid": "e2c7cabf-200c-4e10-9138-d0ae2c26453f",
+      "parentOrg": "MIT/Law",
+      "category": [
+        "Terms"
+      ],
+      "githubProfile": "https://github.com/OpenNotice/ConceptualArchitecture",
+      "purpose": [
+        "Usability"
+      ],
+      "url": "https://github.com/HumanDynamics/law.MIT.edu/tree/master/OpenNotice"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OpenWpmwebPrivacyMeasurement",
+      "@type": "Product",
+      "name": "Open WPM (Web Privacy Measurement)",
+      "uuid": "b641bfe7-df4e-4862-a1f7-cdaecc19b4a8",
+      "parentOrg": "Mozilla Foundation",
+      "category": [
+        "Software Plugin",
+        "Open Source"
+      ],
+      "githubProfile": "https://github.com/mozilla/OpenWPM",
+      "purpose": [
+        "Transparency And Accountability",
+        "Consumer Support",
+        "Certification And Compliance"
+      ],
+      "relevantPublications": "https://webtap.princeton.edu/software/",
+      "url": "https://github.com/mozilla/OpenWPM"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OpenWpmMobile",
+      "@type": "Product",
+      "name": "Open WPM Mobile",
+      "uuid": "17717ce7-f63a-4e0e-85fb-531419d37b46",
+      "parentOrg": "Mozilla Foundation",
+      "category": [
+        "Software Product Application",
+        "Open Source"
+      ],
+      "githubProfile": "https://github.com/citp/OpenWPM",
+      "purpose": [
+        "Transparency And Accountability",
+        "Consumer Support",
+        "Certification And Compliance"
+      ],
+      "relevantPublications": "https://sensor-js.xyz/",
+      "url": "https://github.com/sensor-js/OpenWPM-mobile"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OpenYourItalianVatOnline",
+      "@type": "Product",
+      "name": "Open your Italian VAT online",
+      "uuid": "f6812aa3-c3eb-47ae-9fc3-c427c2e72343",
+      "parentOrg": "iubenda",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.iubenda.com/it/fide/partita-iva"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Opennpc",
+      "@type": "Product",
+      "name": "OpenNPC",
+      "uuid": "db728214-6d97-4097-8e87-9f813e3c56d3",
+      "category": [
+        "Open Source"
+      ]
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/OurDataBodies",
+      "@type": "Product",
+      "name": "Our Data Bodies",
+      "uuid": "c81f29e0-e4ad-4b64-ad64-d188e2a8aa80",
+      "parentOrg": "Detroit Community Technology Project",
+      "activities": [
+        "Outreach"
+      ],
+      "category": [
+        "Research"
+      ],
+      "partners": "allied media projects|new america foundation|detroit digital justice coalition",
+      "purpose": [
+        "Consumer Education"
+      ],
+      "url": "https://alliedmedia.org/dctp/datajustice"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PiaDpiaAutomation",
+      "@type": "Product",
+      "name": "PIA & DPIA Automation",
+      "uuid": "104a9251-e897-4052-9622-ace587c71047",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/assessment-automation/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PlatformCooperativismConsortium",
+      "@type": "Product",
+      "name": "Platform Cooperativism Consortium",
+      "uuid": "b6275ee7-7ce7-4404-8d10-8223e76ebba4",
+      "parentOrg": "Platform Cooperativism Consortium",
+      "activities": [
+        "Movement Building"
+      ],
+      "category": [
+        "Service"
+      ],
+      "partners": "center for civic media mit|oxford internet institute|united states federation of worker cooperatives (usfwc)|berkman klein center for internet and society at harvard university|the u.s. solidarity economy network|civic hall|sustainable economies law center|dimmons.net|national cooperative business association|ig metall|cooperative university college of kenya|ica group|febe coop|p2p foundation|smart|ver.di|institute for the study of employee ownership and profit sharing at the school of management and labor relations at rutgers university|the national domestic workers alliance (ndwa)|alexander von humboldt institute for internet society|commons transition coalition|business council of co-operatives and mutuals (australia)",
+      "purpose": [
+        "Governance",
+        "Education"
+      ],
+      "url": "https://platform.coop/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PolicyAndNoticeManagement",
+      "@type": "Product",
+      "name": "Policy and Notice Management",
+      "uuid": "ef6c1c78-eb31-499d-8181-d12be282ce2d",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/onetrust-policy-and-notice-management/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PreferenceCenterManagement",
+      "@type": "Product",
+      "name": "Preference Center Management",
+      "uuid": "6cf42b92-cea7-4ec1-bed3-6eaaafe09c42",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/preference-center-management/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Prismacloud",
+      "@type": "Product",
+      "name": "PRISMACLOUD",
+      "uuid": "47a5716e-4f28-43b0-be89-997d3d858e0a",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Europe"
+      ],
+      "url": "https://prismacloud.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PrivacyBadger",
+      "@type": "Product",
+      "name": "Privacy Badger",
+      "uuid": "a4abe0bf-4d71-4f9a-acb1-31648d4009c3",
+      "category": [
+        "Open Source"
+      ],
+      "url": "https://www.eff.org/privacybadger"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PrivacyCommons",
+      "@type": "Product",
+      "name": "Privacy Commons",
+      "uuid": "0e86758b-ccd2-4798-9c70-7c33951df118",
+      "parentOrg": "Privacy Commons",
+      "activities": [
+        "Standard Development"
+      ],
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Consumer Support"
+      ],
+      "status": "inactive",
+      "url": "https://web.archive.org/web/20190214082741/http://privacycommons.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PrivacyIcons",
+      "@type": "Product",
+      "name": "Privacy Icons",
+      "uuid": "a5a13ad4-057c-484e-82ae-b26e4f578f69",
+      "parentOrg": "Mozilla Foundation",
+      "category": [
+        "Icons For Meaning Making",
+        "Terms"
+      ],
+      "people": [
+        "Aza Raskin",
+        "Gerrit Betz",
+        "Alex Fowler",
+        "Ben Moskowitz",
+        "Mark Surman",
+        "Sid Stamm",
+        "Alexandra Moss",
+        "Ben Adida",
+        "Mike Hanson",
+        "Elizabeth Stark",
+        "Dennys Antonialli",
+        "David Kettler",
+        "Tony Lai",
+        "Brian Kennish",
+        "Casey Oppenheim"
+      ],
+      "purpose": [
+        "Consumer Support",
+        "Usability"
+      ],
+      "url": "https://wiki.mozilla.org/Privacy_Icons"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PrivacySimplified",
+      "@type": "Product",
+      "name": "Privacy Simplified",
+      "uuid": "14b84aba-d97a-4705-a51e-dbc744f3dcfc",
+      "parentOrg": "Yale",
+      "category": [
+        "Terms",
+        "Icons For Meaning Making"
+      ],
+      "me2bParticipation": "ux reference",
+      "purpose": [
+        "Usability",
+        "Consumer Support",
+        "Transparency And Accountability"
+      ],
+      "relevantPublications": "https://www.macleans.ca/society/technology/privacy-simplified/",
+      "status": "defunct?",
+      "url": "https://web.archive.org/web/20150524205519/http://yale.edu/self/psindex.html"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PrivacyToolkit",
+      "@type": "Product",
+      "name": "Privacy Toolkit",
+      "uuid": "17a8289f-d5ed-40ca-872f-d3303b33647d",
+      "parentOrg": "Sage Bionetworks",
+      "activities": [
+        "Publication",
+        "Software Development"
+      ],
+      "category": [
+        "Open Source",
+        "Research"
+      ],
+      "githubProfile": "https://github.com/Sage-Bionetworks/DesignSystem",
+      "purpose": [
+        "Education",
+        "Governance",
+        "Usability"
+      ],
+      "url": "https://designmanual.sagebionetworks.org/privacy_toolkit.html"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Privacymonitor",
+      "@type": "Product",
+      "name": "PrivacyMonitor",
+      "uuid": "3d7f33da-3b66-48bb-b6e9-0aa9731cfa74",
+      "parentOrg": "Osano",
+      "category": [
+        "Software Plugin",
+        "Open Source"
+      ],
+      "githubProfile": "https://github.com/osano",
+      "me2bParticipation": "certification candidate",
+      "purpose": [
+        "Usability",
+        "Transparency And Accountability"
+      ],
+      "url": "https://www.privacymonitor.com"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Privacymonitor",
+      "@type": "Product",
+      "name": "PrivacyMonitor",
+      "uuid": "b4d0a8a2-46e3-4a93-8c97-24676134f428",
+      "parentOrg": "Osano",
+      "category": [
+        "Software Product Application",
+        "Software Plugin",
+        "Terms"
+      ],
+      "githubProfile": "https://github.com/osano",
+      "purpose": [
+        "Transparency And Accountability",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Browser Extension"
+      ],
+      "url": "https://www.privacymonitor.com"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/PrivateIdentityAsAService",
+      "@type": "Product",
+      "name": "Private Identity as a Service",
+      "uuid": "0fc7e33a-adde-4fcc-9744-a53b176889e8",
+      "category": [
+        "Proof Of Concept"
+      ],
+      "tags": [
+        "Europe"
+      ],
+      "url": "http://www.pidaas.eu/cms/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Privicons",
+      "@type": "Product",
+      "name": "Privicons",
+      "uuid": "b5912c1a-747f-4064-ad54-ba31003df6a4",
+      "parentOrg": "Privicons",
+      "category": [
+        "Icons For Meaning Making",
+        "Software Plugin"
+      ],
+      "me2bParticipation": "certification candidate",
+      "purpose": [
+        "Consumer Support",
+        "Usability"
+      ],
+      "tags": [
+        "Browser Extension"
+      ],
+      "url": "http://privicons.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ProjectVrmDevelopment",
+      "@type": "Product",
+      "name": "Project VRM - Development",
+      "uuid": "1df04121-3261-4ee7-8db9-305e783fe1d9",
+      "parentOrg": "Project VRM",
+      "activities": [
+        "Software Development"
+      ],
+      "category": [
+        "Software Product Application"
+      ],
+      "purpose": [
+        "Usability",
+        "Consumer Support"
+      ],
+      "relevantPublications": "https://blogs.harvard.edu/vrm/development/",
+      "tags": [
+        "Cross Organizational Collaboration"
+      ],
+      "url": "https://cyber.harvard.edu/projectvrm/VRM_Development_Work"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ReadinessAccountabilityTool",
+      "@type": "Product",
+      "name": "Readiness & Accountability Tool",
+      "uuid": "df972e37-e0f9-4ebb-b182-7cd29c3078c2",
+      "parentOrg": "One Trust",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.onetrust.com/products/readiness-self-assessments/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/RecordsAndInformationFromDmvsForEverifyride",
+      "@type": "Product",
+      "name": "Records and Information from DMVs for E-Verify (RIDE)",
+      "uuid": "08caeef8-58a7-499c-9933-8e6ed7afb220",
+      "category": [
+        "Service"
+      ],
+      "url": "http://www.aamva.org/ride/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/RespectsYourFreedomCertification",
+      "@type": "Product",
+      "name": "Respects Your Freedom Certification",
+      "uuid": "2ac87239-b239-4d9d-8853-77c08b74e6a2",
+      "parentOrg": "Free Software Foundation",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.fsf.org/resources/hw/endorsement/respects-your-freedom"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Rvoke",
+      "@type": "Product",
+      "name": "Rvoke",
+      "uuid": "dd185257-574e-4352-9777-72f39d139598",
+      "parentOrg": "ATAM ID",
+      "category": [
+        "Software Product Application",
+        "Service"
+      ],
+      "purpose": [
+        "Transparency And Accountability"
+      ],
+      "tags": [
+        "Quickly And Easily Manage Your Data Requests In Bulk",
+        "Saving You Stress",
+        "Time And Money"
+      ],
+      "url": "https://rvoke.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/SaveSecurity",
+      "@type": "Product",
+      "name": "Save Security",
+      "uuid": "99e85d5e-745e-4467-9119-a072025f172e",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.savesecurity.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ScanCongress",
+      "@type": "Product",
+      "name": "Scan Congress",
+      "uuid": "86a79ee7-e447-49dd-a6d0-a8e3340bf019",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.scancongress.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/SdnrgSoftwaredefinedNetworkingResearchGroup",
+      "@type": "Product",
+      "name": "SDNRG Software-Defined Networking Research Group",
+      "uuid": "b461e7eb-7ad9-44b3-ae07-a22b06ccced8",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/sdnrg"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/SecurityPledge",
+      "@type": "Product",
+      "name": "Security Pledge",
+      "uuid": "08834efc-2252-48d0-a19b-ef343ddeb590",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.securitypledge.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Showmefirst",
+      "@type": "Product",
+      "name": "ShowMeFirst",
+      "uuid": "4c623498-96b1-444a-9b0e-fa559915da36",
+      "parentOrg": "Independent",
+      "category": [
+        "Software Product Application"
+      ],
+      "people": [
+        "Joe Andrieu"
+      ],
+      "purpose": [
+        "Consumer Support"
+      ],
+      "tags": [
+        "Facebook"
+      ],
+      "url": "https://web.archive.org/web/20110609095518/http://www.showmefirst.info/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Signal",
+      "@type": "Product",
+      "name": "Signal",
+      "uuid": "73cb7f27-9d35-4c16-b768-34b49fe090d3",
+      "parentOrg": "Signal",
+      "category": [
+        "Software Product Application",
+        "Open Source"
+      ],
+      "me2bParticipation": "certification candidate",
+      "url": "https://signal.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/SitraFairDataEconomy",
+      "@type": "Product",
+      "name": "SITRA - Fair Data Economy",
+      "uuid": "a1aa2c80-487e-46e4-8dfd-87986eeef2f1",
+      "parentOrg": "Sitra",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Consumer Support",
+        "Transparency And Accountability"
+      ],
+      "relevantPublications": "https://www.sitra.fi/en/publications/roadmap-fair-data-economy/",
+      "url": "https://www.sitra.fi/en/topics/fair-data-economy/#latest"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/SmartSocietyProject",
+      "@type": "Product",
+      "name": "Smart Society Project",
+      "uuid": "0d2ab5eb-0c76-4fbc-8f35-f69eb858e21a",
+      "category": [
+        "Research"
+      ],
+      "url": "http://www.smart-society-project.eu/consortium/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/SocialInstabilitiesInLaborFutures",
+      "@type": "Product",
+      "name": "Social Instabilities in Labor Futures",
+      "uuid": "c4a08bb5-6ce3-493b-b35e-8491400efc75",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Aiha Nguyen",
+        "Alexandra Mateescu",
+        "Alex Rosenblat",
+        "Julia Ticona"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/labor_futures/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/SocialSecurityOnlineVerificationssolv",
+      "@type": "Product",
+      "name": "Social Security Online Verification (SSOLV)",
+      "uuid": "fa0c281c-3f4c-4f29-aa35-0e5193eae9c1",
+      "category": [
+        "Service"
+      ],
+      "url": "http://www.aamva.org/ssolv/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Solid",
+      "@type": "Product",
+      "name": "Solid",
+      "uuid": "71c09a62-e64c-4acc-9caa-93d681bda12b",
+      "parentOrg": "Inrupt",
+      "category": [
+        "Open Source"
+      ],
+      "me2bParticipation": "certification candidate",
+      "purpose": [
+        "Usability"
+      ],
+      "tags": [
+        "Personal Data Management"
+      ],
+      "url": "https://solid.inrupt.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/SsedicScopingTheSingleEuropeanDigitalIdentityCommunity",
+      "@type": "Product",
+      "name": "SSEDIC - Scoping the Single European Digital Identity Community",
+      "uuid": "10c403d6-6a00-4438-aee2-aedb09801ffe",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Europe",
+        "Over"
+      ],
+      "url": "http://www.eid-ssedic.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Ssedic2020ScopingTheSingleEuropeanDigitalIdentityCommunityForTheNextDecade",
+      "@type": "Product",
+      "name": "SSEDIC.2020 - Scoping the Single European Digital Identity Community for the next decade",
+      "uuid": "c9119330-495d-4252-855d-b606654e42a2",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Europe"
+      ],
+      "url": "http://www.ssedic2020.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Standardlabel",
+      "@type": "Product",
+      "name": "StandardLabel",
+      "uuid": "ed51a1fa-2d39-482c-8895-99dbbd6ccb13",
+      "parentOrg": "Independent",
+      "activities": [
+        "Standard Development"
+      ],
+      "category": [
+        "Icons For Meaning Making",
+        "Terms"
+      ],
+      "githubProfile": "https://github.com/jandrieu/Standard-Label",
+      "me2bParticipation": "ux reference",
+      "people": [
+        "Joe Andrieu"
+      ],
+      "purpose": [
+        "Usability"
+      ],
+      "tags": [
+        "A Nutrition Facts Label For The Information We Share Online"
+      ],
+      "url": "https://standardlabel.org",
+      "workingGroup": "Consent & Information Sharing Work Group (CISWG)"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Stork",
+      "@type": "Product",
+      "name": "STORK",
+      "uuid": "925e1a11-7618-419f-afed-25cd7df9aa71",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Europe"
+      ],
+      "url": "https://www.eid-stork.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Stork20",
+      "@type": "Product",
+      "name": "STORK 2.0",
+      "uuid": "bc3a709e-0227-4c43-b72d-726f663732ef",
+      "category": [
+        "Research"
+      ],
+      "url": "https://www.eid-stork.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/SupportingEthicsInDataResearch",
+      "@type": "Product",
+      "name": "Supporting Ethics in Data Research",
+      "uuid": "f2ce74de-484b-48f8-b18e-d2900a4917ad",
+      "parentOrg": "Data & Society Research Institute",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Publications",
+        "Parent",
+        "Data Society Research",
+        "Law Ethics In Computational Social Science"
+      ],
+      "url": "https://datasociety.net/initiatives/ethics-big-data-research/supporting-ethics-data-research/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/T2trgThingtothingResearchGroup",
+      "@type": "Product",
+      "name": "T2TRG Thing-to-Thing Research Group",
+      "uuid": "07831d4b-2e8f-4bd5-a6aa-89ecfaf5778c",
+      "category": [
+        "Research"
+      ],
+      "url": "https://irtf.org/t2trg"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TechWeTrust",
+      "@type": "Product",
+      "name": "Tech We Trust",
+      "uuid": "b5354804-ad14-407d-bd34-f9be58be3c7b",
+      "parentOrg": "Digital Life Collective",
+      "category": [
+        "Service",
+        "Research"
+      ],
+      "purpose": [
+        "Consumer Support",
+        "Education"
+      ],
+      "url": "https://diglife.com/tech-we-trust/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TermsafeReviews",
+      "@type": "Product",
+      "name": "TermSafe Reviews",
+      "uuid": "46fe6578-6d3b-4571-aaff-a5ebda7dd67d",
+      "parentOrg": "TermSafe",
+      "category": [
+        "Terms",
+        "Service"
+      ],
+      "purpose": [
+        "Consumer Support",
+        "Transparency And Accountability",
+        "Certification And Compliance"
+      ],
+      "url": "http://termsafe.com/requestreview.aspx"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ThatOnePrivacySiteVpnComparison",
+      "@type": "Product",
+      "name": "That One Privacy Site - VPN Comparison",
+      "uuid": "06828fde-2b39-45e5-9c18-5fc11be83e4a",
+      "parentOrg": "That One Privacy Site",
+      "activities": [
+        "Publication"
+      ],
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "That One Privacy Guy"
+      ],
+      "purpose": [
+        "Consumer Education"
+      ],
+      "url": "https://thatoneprivacysite.net/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TheCodedGaze",
+      "@type": "Product",
+      "name": "The Coded Gaze",
+      "uuid": "f65ef006-6aee-448f-8681-8f7c17dc436a",
+      "parentOrg": "Algorithmic Justice League",
+      "category": [
+        "Research"
+      ],
+      "people": [
+        "Joy Buolamwini"
+      ],
+      "tags": [
+        "Publications",
+        "Parent"
+      ],
+      "url": "https://www.ajlunited.org/resources"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TheDigitalStandard",
+      "@type": "Product",
+      "name": "The Digital Standard",
+      "uuid": "f6705ff3-88fe-4ba4-97fb-28428dbdcece",
+      "parentOrg": "The Digital Standard",
+      "activities": [
+        "Standard Development",
+        "Publication"
+      ],
+      "category": [
+        "Research",
+        "Open Source"
+      ],
+      "partners": "consumer reports|disconnect|ranking digital rights|the cyber independent testing lab",
+      "purpose": [
+        "Usability",
+        "Certification And Compliance"
+      ],
+      "url": "https://www.thedigitalstandard.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TheEthicsCertificationProgramForAutonomousAndIntelligentSystemsecpais",
+      "@type": "Product",
+      "name": "The Ethics Certification Program for Autonomous and Intelligent Systems (ECPAIS)",
+      "uuid": "3efa7cbf-2d04-44bd-9af9-af0e266aaef7",
+      "parentOrg": "IEEE",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance",
+        "Human Rights"
+      ],
+      "url": "https://standards.ieee.org/industry-connections/ecpais.html"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Thedatamap",
+      "@type": "Product",
+      "name": "theDataMap",
+      "uuid": "e16fdab7-1d4b-4503-a48f-e32b3c9807c4",
+      "parentOrg": "Patient Privacy Rights",
+      "category": [
+        "Software Product Application"
+      ],
+      "relevantPublications": "https://patientprivacyrights.org/thedatamap/",
+      "tags": [
+        "Personal Data Management"
+      ],
+      "url": "http://thedatamap.org/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TosdrBrowserExtensions",
+      "@type": "Product",
+      "name": "TOSDR - Browser Extensions",
+      "uuid": "ae31ff42-37fa-444a-9af2-aed99f974779",
+      "parentOrg": "Terms of Service Didn't Read",
+      "category": [
+        "Terms",
+        "Service",
+        "Software Plugin"
+      ],
+      "githubProfile": "https://github.com/tosdr/browser-extensions",
+      "purpose": [
+        "Consumer Support",
+        "Transparency And Accountability"
+      ],
+      "tags": [
+        "Browser Extension"
+      ],
+      "url": "https://tosdr.org/downloads.html"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TriedisecTrustawareReliableAndDistributedInformationSecurityInTheCloud",
+      "@type": "Product",
+      "name": "triedisec Trust-aware, REliable and Distributed Information SEcurity in the Cloud",
+      "uuid": "f2e28efb-84f2-4284-9fae-d8a69ea98cea",
+      "category": [
+        "Research"
+      ],
+      "url": "http://www.tredisec.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrustableTechnologyMark",
+      "@type": "Product",
+      "name": "Trustable Technology Mark",
+      "uuid": "f121060b-f60d-4584-8713-4f9e865016d5",
+      "parentOrg": "Trustable Technology Mark",
+      "activities": [
+        "Research",
+        "Publication"
+      ],
+      "category": [
+        "Research"
+      ],
+      "purpose": [
+        "Transparency And Accountability",
+        "Education",
+        "Consumer Education"
+      ],
+      "url": "https://trustabletech.org/products/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrustarcGdprValidation",
+      "@type": "Product",
+      "name": "TrustArc GDPR Validation",
+      "uuid": "ee38a9ab-a4f2-4f6f-8410-8a7bed4d56d1",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.trustarc.com/products/gdpr-certification-validation/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrustarcPrivacyPlatform",
+      "@type": "Product",
+      "name": "TrustArc Privacy Platform",
+      "uuid": "43d0df1c-e3b0-4b22-8845-37292ff50dfb",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Software Product Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.trustarc.com/products/privacy-platform/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrusteApecCbprAndPrp",
+      "@type": "Product",
+      "name": "TRUSTe APEC CBPR and PRP",
+      "uuid": "2fbde551-e691-4a60-93f2-243ffb5f1919",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.trustarc.com/products/apec-certification/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrusteChildrensPrivacyCoppa",
+      "@type": "Product",
+      "name": "TRUSTe Children's Privacy / COPPA",
+      "uuid": "eb38bc93-25aa-4f83-af48-3ab701b40a26",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.trustarc.com/products/coppa-certification/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrusteDataCollectionCertification",
+      "@type": "Product",
+      "name": "TRUSTe Data Collection Certification",
+      "uuid": "10ddab2f-ed8e-4301-9d37-0e87c6eb2085",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.trustarc.com/products/data-certification/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrusteEnterprisePrivacyCertification",
+      "@type": "Product",
+      "name": "TRUSTe Enterprise Privacy Certification",
+      "uuid": "9796b9ea-c330-498e-ab9c-8755054e28be",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.trustarc.com/products/enterprise-privacy-certification/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrusteEuusPrivacyShieldSolutions",
+      "@type": "Product",
+      "name": "TRUSTe EU-US Privacy Shield Solutions",
+      "uuid": "877ec015-d75c-4088-a1ef-6de59164aaa2",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.trustarc.com/products/eu-us-privacy-shield/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrustePrivacyCertificationServices",
+      "@type": "Product",
+      "name": "TRUSTe Privacy Certification Services",
+      "uuid": "593add9c-1501-4cb4-a3ec-a71614c9f157",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "tags": [
+        "Products Projects",
+        "Parent"
+      ],
+      "url": "https://www.trustarc.com/products/certifications/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/TrustePrivacyDisputeResolution",
+      "@type": "Product",
+      "name": "TRUSTe Privacy Dispute Resolution",
+      "uuid": "ba380890-f7f4-4efa-8e60-7427c927e202",
+      "parentOrg": "TrustArc / Trust-e",
+      "category": [
+        "Service"
+      ],
+      "purpose": [
+        "Certification And Compliance"
+      ],
+      "url": "https://www.trustarc.com/products/dispute-resolution-services/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/UsPassportVerificationServicesuspvs",
+      "@type": "Product",
+      "name": "U.S. Passport Verification Services (USPVS)",
+      "uuid": "7152ee4f-e713-4da9-b57c-8d60fdc49c7a",
+      "category": [
+        "Service"
+      ],
+      "url": "http://www.aamva.org/us-passport-verification-services/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/UnderstandingPrivacyAsAMeansOfEconomicRedistribution",
+      "@type": "Product",
+      "name": "Understanding Privacy as a Means of Economic Redistribution",
+      "uuid": "b202ce5f-7fa7-4c33-82f9-60c570fd4e0c",
+      "category": [
+        "To Be Determined"
+      ],
+      "tags": [
+        "Social Instabilities In Labor Futures",
+        "Data Society Research"
+      ],
+      "url": "https://datasociety.net/initiatives/future-of-labor/privacy-economic-redistribution/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/UniversalRegistrar",
+      "@type": "Product",
+      "name": "Universal Registrar",
+      "uuid": "018fddb2-e4cc-4b91-8131-a6a0d6452fe8",
+      "parentOrg": "Decentralized Identity Foundation",
+      "category": [
+        "Open Source"
+      ],
+      "githubProfile": "https://github.com/decentralized-identity/universal-registrar",
+      "tags": [
+        "Implementation And Drivers"
+      ],
+      "url": "https://uniregistrar.io/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/UniversalResolver",
+      "@type": "Product",
+      "name": "Universal Resolver",
+      "uuid": "82d8f9dd-0889-49df-b562-25f13bd5a978",
+      "parentOrg": "Decentralized Identity Foundation",
+      "category": [
+        "Service",
+        "Open Source"
+      ],
+      "githubProfile": "https://github.com/decentralized-identity/universal-resolver",
+      "relevantPublications": "https://medium.com/decentralized-identity/a-universal-resolver-for-self-sovereign-identifiers-48e6b4a5cc3c",
+      "tags": [
+        "Implementation And Drivers"
+      ],
+      "url": "https://uniresolver.io/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/VerificationOfLawfulStatusvls",
+      "@type": "Product",
+      "name": "Verification of Lawful Status (VLS)",
+      "uuid": "a71e878a-ae04-494c-a85d-8115c304d559",
+      "category": [
+        "Service"
+      ],
+      "url": "http://www.aamva.org/vls/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/WebPolyfills",
+      "@type": "Product",
+      "name": "Web Polyfills",
+      "uuid": "ee80a43d-e105-407f-b997-b5cc6136572a",
+      "parentOrg": "Decentralized Identity Foundation",
+      "category": [
+        "Open Source"
+      ],
+      "url": "https://github.com/decentralized-identity/web-polyfills"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/WiserWideimpactCyberSecurityRiskFramework",
+      "@type": "Product",
+      "name": "WISER Wide-Impact cyber Security Risk framework",
+      "uuid": "d2bfab1e-032c-4b47-ac19-4c06f8fdabac",
+      "category": [
+        "Research"
+      ],
+      "tags": [
+        "Europe"
+      ],
+      "url": "http://www.cyberwiser.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/WitdomempoweringPrivacyAndSecurityInNontrustedEnvironments",
+      "@type": "Product",
+      "name": "WITDOM (empoWering prIvacy and securiTy in non-trusteD envirOnMents)",
+      "uuid": "76cc2536-9fb3-4fbd-90a9-315841b46d20",
+      "category": [
+        "Research"
+      ],
+      "url": "http://witdom.eu"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/YouAreNotAlone",
+      "@type": "Product",
+      "name": "You are not alone",
+      "uuid": "e81225a2-8842-40fa-9302-65f97f8f7369",
+      "parentOrg": "Fight for the Future",
+      "activities": [
+        "Policy Development"
+      ],
+      "category": [
+        "To Be Determined"
+      ],
+      "purpose": [
+        "Human Rights",
+        "Consumer Support"
+      ],
+      "tags": [
+        "Petition"
+      ],
+      "url": "https://www.speakout.tech/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/Youluh",
+      "@type": "Product",
+      "name": "Youluh",
+      "uuid": "ce3ede1a-8643-48f1-85fe-a7ddf2174011",
+      "parentOrg": "Independent",
+      "category": [
+        "Terms"
+      ],
+      "me2bParticipation": "content source for customer commons terms creation",
+      "purpose": [
+        "Consumer Support"
+      ],
+      "status": "Inactive?",
+      "url": "http://www.x2xroads.com/"
+    },
+    {
+      "@context": "https://goodtech.wiki/",
+      "@id": "https://goodtech.wiki/Product/ZyngasPrivacyville",
+      "@type": "Product",
+      "name": "Zynga's Privacyville",
+      "uuid": "e4f2182a-62a4-4472-9146-7acb6f997bfc",
+      "parentOrg": "Zynga",
+      "category": [
+        "Terms",
+        "Proof Of Concept"
+      ],
+      "partners": "facebook",
+      "relevantPublications": "https://readwrite.com/2011/07/07/privacyville_zyngas_new_game_to_educate_users_abou/",
+      "url": "https://www.facebook.com/PrivacyVille/"
+    }
+  ]
+}

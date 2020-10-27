@@ -1,24 +1,37 @@
 import Button from '@material-ui/core/Button'
+import Grid from '@material-ui/core/Grid'
+import Hidden from '@material-ui/core/Hidden'
 import IconButton from '@material-ui/core/IconButton'
 import { makeStyles } from '@material-ui/core/styles'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import Grid from '@material-ui/core/Grid'
-
-import GithubIcon from '@material-ui/icons/GitHub'
-import SearchIcon from '@material-ui/icons/Search'
+import MenuIcon from '@material-ui/icons/Menu'
 
 const useStyles = makeStyles((theme) => ({
   headerRoot: {
-    backgroundColor: 'white',
-    padding: '0px 10px 20px 10px',
-    border: '1px solid #dbdcdc',
+    boxShadow: '0 0 2px 1px #686868'
   },
   toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
+    paddingRight: '10px'
+  },
+  avatarLarge: {
+    width: '',
+    height: '70px',
+    paddingLeft: '10px'
   },
   toolbarTitle: {
     flex: 1,
+    textAlign: 'center'
+  },
+  toolbarLoginButtonRoot: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignSelf: 'center',
+    paddingTop: '5px',
+  },
+  toolbarLoginButton: {
+    backgroundColor: '#ff9900',
+    color: 'white'
   },
 }))
 
@@ -28,25 +41,33 @@ export default function Header(props) {
 
   return (
     <div className={classes.headerRoot}>
-      <Toolbar disableGutters className={classes.toolbar}>
-        <Grid container>
-          <Grid item xs={3} sm={1}>
-            <Button variant="outlined" size="small" startIcon={<GithubIcon />}>Feedback</Button>
-          </Grid>
-          <Grid item xs={6} sm={10}>
+      <Toolbar position="fixed" disableGutters className={classes.toolbar}>
+        <Grid alignItems="center" container>
+          <Hidden smDown>
+            <Grid item xs={3} sm={2}>
+              <img className={classes.avatarLarge} src="/header_logo.png"></img>
+            </Grid>
+          </Hidden>
+          <Hidden mdUp>
+            <Grid item xs={3} sm={1}>
+              <IconButton aria-label="delete" className={classes.margin} size="small">
+                <MenuIcon fontSize="large" />
+              </IconButton>
+            </Grid>
+          </Hidden>
+          <Grid item xs={6} sm={8}>
             <Typography
-              variant="h5"
-              color="inherit"
-              align="center"
+              variant="h4"
               noWrap
               className={classes.toolbarTitle}
+              color="textSecondary"
             >
               {'Good Tech Wiki'}
             </Typography>
 
           </Grid>
-          <Grid item xs={3} sm={1} style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button variant="outlined" size="small">
+          <Grid item className={classes.toolbarLoginButtonRoot} xs={3} sm={2}>
+            <Button className={classes.toolbarLoginButton} variant="text" size="medium">
               Login
             </Button>
           </Grid>
