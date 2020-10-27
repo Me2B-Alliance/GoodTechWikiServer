@@ -7,24 +7,31 @@
     "type": "object",
     "properties": {
       "name": {
+        "title": "Name",
         "type": "string"
       },
       "uuid": {
+        "title": "Uuid",
         "type": "string"
       },
       "category": {
+        "title": "Category",
         "type": "array"
       },
       "hostOrganization": {
+        "title": "Host Organization",
         "type": "string"
       },
       "website": {
+        "title": "Website",
         "type": "string"
       },
       "tags": {
+        "title": "Tags",
         "type": "array"
       },
       "relevantPublications": {
+        "title": "Relevant Publications",
         "type": "string"
       }
     }
@@ -41,7 +48,7 @@
       ],
       "hostOrganization": "international Association for Cryptologic Research",
       "website": "http://www.iacr.org/workshops/pkc2017/",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "The IACR International Conference on Practice and Theory of Public-Key Cryptography (PKC) is the main annual conference focusing on all aspects of public-key cryptography, attracting cutting-edge results from world-renowned researchers in the area. Previous editions of PKC were held in Japan, Australia, Korea, France, USA, Singapore, Switzerland, China, Spain, Italy, Argentina, and Taiwan.\n\nPKC 2017 will be held in Amsterdam, The Netherlands. It is organized by CWI Amsterdam and sponsored by the International Association for Cryptologic Research (IACR).\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -54,7 +61,7 @@
       ],
       "hostOrganization": "IEEE Technical Committee on Security and Privacy",
       "website": "http://www.ieee-security.org/tc/eurosp2017/",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "Since 1980, the IEEE Symposium on Security and Privacy has been the premier forum for presenting developments in computer security and electronic privacy, and for bringing together researchers and practitioners in the field. Following this story of success, IEEE initiated the European Symposium on Security and Privacy (EuroS&P), which is organized every year in an European city.\nThe 2nd EuroS&P edition will be held on April 26-28, 2017 in Paris at UPMC Campus Jussieu, which is located right in the center of Paris, about 10 minutes walk from Notre Dame. April 26-28 is right before EUROCRYPT 2017, which will also happen in Paris (about 10 minutes walk away). The affiliated events will be organized jointly with EUROCRYPT on April 29-30, 2017, also at UPMC Campus Jussieu.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -67,7 +74,7 @@
       ],
       "hostOrganization": "IEEE Technical Committee on Security and Privacy",
       "website": "http://www.ieee-security.org/tc/sp2017/",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "Since 1980, the IEEE Symposium on Security and Privacy has been the premier forum for presenting developments in computer security and electronic privacy, and for bringing together researchers and practitioners in the field. The 2017 Symposium will mark the 38th annual meeting of this flagship conference.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -83,7 +90,7 @@
         "Acm Fat"
       ],
       "website": "https://fatconference.org/",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "A computer science conference with a cross-disciplinary focus that brings together researchers and practitioners interested in fairness: accountability: and transparency in socio-technical systems.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -96,7 +103,7 @@
       ],
       "hostOrganization": "New York University | Information Law Institute",
       "website": "https://www.law.nyu.edu/centers/ili/AlgorithmsConference",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -108,7 +115,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "New York University | Information Law Institute",
-      "website": "https://www.law.nyu.edu/centers/ili/events/algorithms-and-explanations"
+      "website": "https://www.law.nyu.edu/centers/ili/events/algorithms-and-explanations",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -120,7 +128,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "Chair of Mobile Business & Multilateral Security",
-      "website": "http://privacyforum.eu"
+      "website": "http://privacyforum.eu",
+      "description": "The event encourages dialog with panel discussions and provides room for exchange of ideas in between scientific sessions. Participate to the discussions during APF days, but also by being involved online on our community channels!\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -132,7 +141,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "international Association for Cryptologic Research",
-      "website": "http://www.asiacrypt2016.com"
+      "website": "http://www.asiacrypt2016.com",
+      "description": "Asiacrypt 2016, the 22nd Annual International Conference on the Theory and Applications of Cryptology and Information Security, will be organized by Vietnam Institute for Advanced Study in Mathematics (VIASM). Asiacrypt is one of the three most prestigious venues in cryptology that are held as flagship conferences of International Association of Cryptologic Research (IACR). This is the first Asiacrypt in Hanoi, the beautiful capital of Vietnam, with more than a thousand years of history and a unique culture blending Oriental and Western influences.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -144,7 +154,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "ICWSM",
-      "website": "https://auditingalgorithms.wordpress.com"
+      "website": "https://auditingalgorithms.wordpress.com",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -155,7 +166,8 @@
       "category": [
         "To Be Determined"
       ],
-      "website": "https://www.governingdata.org/"
+      "website": "https://www.governingdata.org/",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -167,7 +179,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "international Association for Cryptologic Research",
-      "website": "https://eurocrypt2017.di.ens.fr"
+      "website": "https://eurocrypt2017.di.ens.fr",
+      "description": "Eurocrypt 2017 is the 36th Annual International Conference on the Theory and Applications of Cryptographic Techniques. It is devoted to all aspects of cryptology. Eurocrypt 2017 is one of the three flagship conferences of the International Association for Cryptologic Research (IACR), and is organized by the Crypto Group at ENS Paris.\n\nEUROCRYPT 2017 will be held on 30 April – 4 May in Paris, France.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -183,7 +196,8 @@
         "Publications",
         "Parent"
       ],
-      "website": "http://auditingalgorithms.science/?p=264"
+      "website": "http://auditingalgorithms.science/?p=264",
+      "description": "A short (compressed) program of video about the representation of algorithms. We considered depictions of algorithms or computing in popular entertainment, educational video about algorithms, and artistic work produced algorithmically.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -198,7 +212,8 @@
       "tags": [
         "Europe"
       ],
-      "website": "http://www.future-security2016.de"
+      "website": "http://www.future-security2016.de",
+      "description": "»Sensor Systems for Safety and Security«\nIn most industrialized countries, in particular within Europe, a high level of both safety and security has been reached. However, it becomes increasingly challenging to maintain or to increase this standard even further, given the great challenges and current threats Europe is facing. Upholding and restoring the necessary level of safety and security we are accustomed to requires the development and implementation of innovative technical solutions such as intelligent sensing systems and sensor networks. These hold the promise that hazards and threats can be detected early enough to avoid severe adverse impact, while still allowing people to travel and move freely as well as maintaining free trade and circulation of goods.\n\nAt the same time, smart factories and intelligent logistics based on cyber-physical systems and the internet of things (IoT), also referred to as Industry 4.0, pose new challenges with respect to operational safety. Advanced sensors and sensor networks are required e.g. for the safe operation of autonomous mobile systems.  \n\nTo provide valid solutions to all these challenges, a cross-disciplinary collaboration of researchers from natural sciences, engineering, humanities and social sciences is required. To foster the communication and interaction among these different communities on this very topic, the »Future Security« conference series provides an interdisciplinary exchange platform for scientists, experts and actors from research, industry, public bodies and authorities. This conference provides direct insight into current security research activities and hot topics in this field.    \n\nWe look forward to welcoming you to the 11th »Future Security« Conference.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -214,7 +229,8 @@
         "Publications",
         "Parent"
       ],
-      "website": "https://governingalgorithms.org/"
+      "website": "https://governingalgorithms.org/",
+      "description": "Algorithms are increasingly invoked as powerful entities that control, govern, sort, regulate, and shape everything from financial trades to news media. Nevertheless, the nature and implications of such orderings are far from clear. What exactly is it that algorithms “do”? What is the role attributed to “algorithms” in these arguments? How can we turn the “problem of algorithms” into an object of productive inquiry?\n\nThis conference sets out to explore the recent rise of algorithms as an object of interest in scholarship, policy, and practice. Taking a fresh view on the current wave of interest in the topic, we aim to discuss themes such as:\n\n    the very idea of “algorithms” as a subject and object of analysis\n    issues of methodology and the kind of knowledge claims that come with algorithms\n    the rhetoric of problems and solutions, in which algorithms are mobilized\n    questions of agency and automation\n    conceptions of secrecy or inscrutability\n    normative concerns\n    rules and regulations surrounding development and implementation\n\nThe conference is over now, but you can still sign up for the Mailing list and enjoy the various Resources we assembled.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -226,7 +242,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "Patient Privacy Rights",
-      "website": "https://patientprivacyrights.org/health-privacy-summit/"
+      "website": "https://patientprivacyrights.org/health-privacy-summit/",
+      "description": "First, our thanks for your support and willingness to participate in the Patient Privacy Rights Summit 2019. And thank you also for your continued interest in our mission. It is very much appreciated.\nNow, we must share with you the news that for several weeks the Peel family has been facing medical challenges, and it is now clear that dealing with this must be the priority for Deborah in the months to come. In order to support the Peels, we have made the difficult decision to cancel the Summit planned for January 28-29, 2019 at Georgetown Law Center, Washington, DC.\nWe will be back to you as soon as we have a clear path forward. In the meantime, we again say thank you and look forward to connecting and moving onward with our important mission to work together to protect the privacy rights of all patients.\nWe know that you share with us our best wishes for the Peel family,\nPatient Privacy Rights Board and Leadership\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -237,7 +254,8 @@
       "category": [
         "To Be Determined"
       ],
-      "hostOrganization": "Open Identity Exchange"
+      "hostOrganization": "Open Identity Exchange",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -249,7 +267,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "IEEE Computer Society",
-      "website": "http://secdev.ieee.org"
+      "website": "http://secdev.ieee.org",
+      "description": "In this first year, IEEE Cybersecurity Development (SecDev) 2016 is soliciting short papers that present innovations, experience-based insights, or a vision. The goal is to share useful and thought provoking ideas, to push forward the art and science of secure development. In future years, the academic portion of SecDev will expand to include more complete articles.\n\nSecDev is a new venue for presenting ideas, research, and experience about how to develop secure systems.\n\nSecDev is distinguished by its focus on how to “build security in” (and not simply discover the absence of security). Its goal is to encourage and disseminate ideas for secure system development among both academia and industry. Developers have valuable experiences and ideas that can inform academic research, and researchers have concepts, studies, and even code and tools that could benefit developers. We anticipate that attendees from academic conferences like IEEE S&P, USENIX Security, PLDI, FSE, ISSTA, SOUPS, and many others could contribute ideas to SecDev, as could attendees of industrial conferences like AppSec, RSA, Black Hat, and Shmoocon.\n\nPapers have the option of appearing in the conference’s formal proceedings, or not. SecDev is also interested in tutorials on processes, frameworks, languages, and tools. The goal is to propose useful and thought provoking ideas, and to share knowledge on the art and science of secure system development.\n\nAreas of interest include (but are not limited to):\n* Security engineering processes, from requirements to maintenance\n* Dynamic/static analysis and runtime approaches towards application security\n* Programming languages and frameworks supporting security\n* Testing strategies to ensure security\n* Explorations of formal verification and other high-assurance methods for security\n* Code reviews, red teams, and other human-centered assurance\n* Security-focused system (HW/SW/architecture) designs\n* Human-centered design for systems security\n* Distributed systems design and implementation for security\n\nWhat makes SecDev different than other conferences?\nSecDev is interested in work that has a demonstrated connection to building systems that are more secure. It is not enough to show that an existing system, however prominent, is insecure. Nor is it enough to propose a new cryptosystem or formal security model with nice mathematical properties but no concrete exploration of how it would be used to build systems more securely. Instead, papers should be about (as a few examples) how a development library, tool, or process can produce systems resilient against certain attacks; how a formal foundation could underpin a language, tool, or testing strategy that can help produce stronger systems; and experience, designs, or applications showing how cryptography can be used effectively to secure systems.\n\nA good SecDev paper may resemble an elaborated vision statement, a grant proposal, or a mini-keynote summarizing prior work and directions. We are not interested in complete works that manage to fit in a few pages; rather we want bigger ideas (previously published or not) that will lead to a stimulating, thoughtful, and perhaps (gently) provocative discussion. A good SecDev tutorial will introduce interested practitioners and researchers to technologies (e.g., languages, tools, frameworks) that show promise in aiding the development of secure systems.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -261,7 +280,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "IEEE Future Directions Committee",
-      "website": "http://sites.ieee.org/ttm/"
+      "website": "http://sites.ieee.org/ttm/",
+      "description": "The IEEE Technology Time Machine (TTM) is IEEE’s flagship symposium on future technology directions. The overall theme of TTM 2016 is “Making the Future.” Building upon IEEE’s major technology initiatives, TTM 2016 will bring together high level renowned experts from research and industry to provide an overview of these technologies and explore how they may be leveraged towards “making the future” through their research, products and services.  Participants will not only get a glimpse into that “future” but also see its relevance to “today.”\n \nAre you ready to set your eyes on the future and explore the reality of the impossible?\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -272,7 +292,8 @@
       "category": [
         "To Be Determined"
       ],
-      "hostOrganization": "International Federation for Information Processing"
+      "hostOrganization": "International Federation for Information Processing",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -286,7 +307,8 @@
       "tags": [
         "Icwsm"
       ],
-      "website": "https://icwsm.org/"
+      "website": "https://icwsm.org/",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -298,7 +320,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "Open Identity Exchange",
-      "website": "http://openidentityexchange.org/2016/01/international-identity-law-policy-workshop/"
+      "website": "http://openidentityexchange.org/2016/01/international-identity-law-policy-workshop/",
+      "description": "Attendees were lawyers, business leaders, policy experts, and technologists representing a broad spectrum of public sector, private sector, and NGO leaders in identity. Participants also included experts involved in drafting the recently-enacted identity legislation in the EU and Virginia, and experts currently involved in planned and proposed upcoming legislative initiatives relating to identity management in both the U.S. and internationally.\nThe impetus for the meeting was several recent developments relating to identity management legislation. They included the following recently adopted identity management legislation:\n• The European Union eIDAS Regulation adopted in 2014, and\n• The Virginia Electronic Identity Management Act adopted in 2015;\nand the following planned or proposed projects to develop new identity management legislation:\n• The United Nations Commission on International Trade Law (International) project to develop international rules providing “a basic legal framework covering identity management transactions;”\n• The Uniform Law Commission (United States) proposal to develop uniform identity management legislation for the 50 U.S. states; and\n• The Virginia Identity Management Standards Advisory Council (Virginia) project to advise the Virginia Secretary of Technology on the identity management standards to be adopted as regulations in Virginia under its new Identity Management Act.\n\nThe goal of the meeting was to discuss the direction that such new identity management legislation should take, the issues it should address, and desired approaches.\nA key theme reiterated throughout the event was the importance of focusing on outcome-based legislation. Participants voiced concern that legislation prescribing a specific technical process to implement identity standards would hinder innovation and ultimately prevent the success of a new legal regime.\nThis Report summarizes at a high-level the robust, thought-provoking and productive discussion in which the participants engaged.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -310,7 +333,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "IEEE Internet of Things",
-      "website": "http://siot-workshop.org"
+      "website": "http://siot-workshop.org",
+      "description": "The International Workshop on Secure Internet of Things 2016 (SIoT 2016) will be held in conjunction with the European Symposium on Research in Computer Security (ESORICS 2016) in Heraklion, Crete - Greece, at the Institute of Computer Science of the Foundation for Research and Technology - Hellas, on 27th September 2016.\n\nSIoT 2016 is a community where interested stakeholders, from academia and industry, can present their original work on providing a secure environment for connecting systems in an Internet-specific structure. The wide spread of mobile and embedded devices, able to connect to a network and share information, requires a careful look at the security risks taken by end users. In this context, the workshop will focus on contributions related to the security of mesh and machine-to-machine networks, secure software stacks running on ubiquitous network nodes, and algorithms used to provide secure end-to-end communication between nodes.\n\nThe focus of this workshop is to create a secure environment for connecting systems in an Internet-specific structure. These may include, but are not limited to, the following topics:\n* Threat Models in Internet of Things\n* Attack Strategies for Internet of Things\n* Security Architectures\n* Secure Mobile Applications\n* Secure Mobility Management\n* Intrusion and Malware Detection\n* Security in Wireless Sensor Networks\n* Reliable Interactions with Network Services\n* System and Data Integrity\n* Scalability and Robustness for Internet of Things\n* **Identity Management in Internet of Things**\n* **Trustworthiness in Internet of Things**\n* Secure Operating Systems\n* **Privacy in Internet of Things**\n* Adaptive Security in Internet of Things\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -322,7 +346,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "EEMA",
-      "website": "http://www.isse.eu.com"
+      "website": "http://www.isse.eu.com",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -333,7 +358,8 @@
       "category": [
         "To Be Determined"
       ],
-      "website": "http://staging1.trustindigitallife.eu/events/past-events/multiple-views-on-blockchain-technology-use-cases-economics-and-policies/"
+      "website": "http://staging1.trustindigitallife.eu/events/past-events/multiple-views-on-blockchain-technology-use-cases-economics-and-policies/",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -344,7 +370,8 @@
       "category": [
         "To Be Determined"
       ],
-      "hostOrganization": "Internet Society ISOC"
+      "hostOrganization": "Internet Society ISOC",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -356,7 +383,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "Chair for Information Security and Cryptography at the University of Trier",
-      "website": "https://infsec.uni-trier.de/events/osw2016"
+      "website": "https://infsec.uni-trier.de/events/osw2016",
+      "description": "In context of the recent findings from researchers related to OAuth, see announcement, the IETF OAuth Working Group (WG) is convinced that the wider Internet security community can help to improve the security of Internet protocols.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -371,7 +399,8 @@
       "tags": [
         "Europe"
       ],
-      "website": "http://www.openidentity2016.eu"
+      "website": "http://www.openidentity2016.eu",
+      "description": "The aim of Open Identity Summit 2016 is to link practical experiences and requirements with academic innovations. Focus areas will be Research and Applications in the area of Identity Management, Trust Services, Open Source, End-to-End Encryption and Cloud Computing.\n\nOpen standards and interfaces as well as open source technologies play a central role in the current identity management landscape as well as in emerging future scenarios in the area of electronic identification and trust services for electronic transactions according to the eIDAS regulation (2014/910/EC), trustworthy end-to-end encryption and innovative applications in the area of e-health, e-government and cloud computing for example. While there are already plenty of successful applications in which those techniques are used to safeguard the authenticity, integrity and confidentiality, there are still many closely related areas which demand further research.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -383,7 +412,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "TechEquity",
-      "website": "https://techequitycollaborative.org/events/book-club/"
+      "website": "https://techequitycollaborative.org/events/book-club/",
+      "description": "Three or four times a year we’ll be selecting a book that helps us deepen our knowledge on how we build a more equitable community and hosting an event to discuss the topic further. Book Club is open to all and we look forward to seeing you at a future event. Stay in the loop and enter your email below to be notified when we schedule our next book club event.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -395,7 +425,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "Working Party on Communications and Infrastructure Services Policy (CISP)",
-      "website": "http://www.oecd.org/internet/ieconomy/theeconomicsofpersonaldataandprivacy30yearsaftertheoecdprivacyguidelines.htm"
+      "website": "http://www.oecd.org/internet/ieconomy/theeconomicsofpersonaldataandprivacy30yearsaftertheoecdprivacyguidelines.htm",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -407,7 +438,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "Israeli Law, Information and Technology Authority",
-      "website": "http://www.oecd.org/internet/ieconomy/theevolvingroleoftheindividualinprivacyprotection30yearsaftertheoecdprivacyguidelines.htm"
+      "website": "http://www.oecd.org/internet/ieconomy/theevolvingroleoftheindividualinprivacyprotection30yearsaftertheoecdprivacyguidelines.htm",
+      "description": "The second anniversary event was a conference on the Evolving Role of the Individual for Privacy Protection, held in Jerusalem, Israel on 25-26 October, back-to-back with the 32nd International Conference of Data Protection and Privacy Commissioners. The event was hosted by the Israeli Law, Information and Technology Authority, and brought together government officials and privacy authorities, together with representatives of international organisations, business, civil society, the Internet technical community, and academia.\n \nIsraeli Prime Minister Benjamin Netanyahu and OECD Deputy Secretary-General Richard Boucher opened the conference with welcome speeches, leading into a broad-ranging panel discussion on “Privacy in the Context of the Internet:  Recording Everything and Forgetting Nothing?”  The second day of the Conference was divided into 4 main topics, each the focus of a moderated panel discussion: (I) The Individual as Creator and Disseminator of Personal Data (II) Aggregation, Analytics, Identity and the Individual (III) Awareness, Choice and the Individual, and (IV) Innovations in Privacy Protection.  A final session considered the broader implications of the issues raised for protecting privacy and key principles.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -418,7 +450,8 @@
       "category": [
         "To Be Determined"
       ],
-      "website": "https://icdppc.org"
+      "website": "https://icdppc.org",
+      "description": "The International Conference of Data Protection and Privacy Commissioners first met in 1979 and has been the premier global forum for data protection authorities for over 3 decades.\nThe Conference seeks to provide leadership at international level in data protection and privacy. It does this by connecting the efforts of about 110 privacy and data protection authorities from across the globe.\nThis website provides a permanent repository of core Conference documentation and select information about the Conference’s past and current activities and future plans.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -430,7 +463,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "Mozilla: ThingsCon",
-      "website": "https://thingscon.com"
+      "website": "https://thingscon.com",
+      "description": "ThingsCon is a global community & event platform for IoT practitioners. Our mission is to foster the creation of a human-centric & responsible Internet of Things (IoT).\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -441,7 +475,8 @@
       "category": [
         "To Be Determined"
       ],
-      "hostOrganization": "EEMA"
+      "hostOrganization": "EEMA",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -453,7 +488,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "Bern University of Applied Sciences",
-      "website": "http://www.voteid15.org"
+      "website": "http://www.voteid15.org",
+      "description": "The 5th International Conference on E-Voting and Identity will be held in Bern, Switzerland, 2-4 September 2015, with proceedings published by Springer, volume 9269. \n\nThey have a DEMO list of companies with various products in the space http://www.voteid15.org/system-demo-session/\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -471,7 +507,8 @@
         "Parent",
         "Algorithms And Publics"
       ],
-      "website": "https://datasociety.net/events/who-controls-public-sphere/"
+      "website": "https://datasociety.net/events/who-controls-public-sphere/",
+      "description": "On February 26, 2016, Data & Society held a workshop, Who Controls the Public Sphere in an Era of Algorithms? to drill into the assumptions, values, and tensions at the core of growing concerns about the control and shaping of the public sphere in an era of algorithms.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -483,7 +520,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "New York University | Information Law Institute",
-      "website": "http://datworkshop.org"
+      "website": "http://datworkshop.org",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -495,7 +533,8 @@
         "To Be Determined"
       ],
       "hostOrganization": "Trustworthy Algorithmic Decision-Making",
-      "website": "http://trustworthy-algorithms.org"
+      "website": "http://trustworthy-algorithms.org",
+      "description": "\n\n\n\n"
     }
   ]
 }

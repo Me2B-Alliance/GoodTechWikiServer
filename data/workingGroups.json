@@ -7,24 +7,31 @@
     "type": "object",
     "properties": {
       "uuid": {
+        "title": "Uuid",
         "type": "string"
       },
       "name": {
+        "title": "Name",
         "type": "string"
       },
       "parentOrg": {
+        "title": "Parent Org",
         "type": "string"
       },
       "category": {
+        "title": "Category",
         "type": "array"
       },
       "url": {
+        "title": "Url",
         "type": "string"
       },
       "dateFounded": {
+        "title": "Date Founded",
         "type": "string"
       },
       "purpose": {
+        "title": "Purpose",
         "type": "array"
       }
     }
@@ -40,7 +47,7 @@
       "category": [
         "Specification Work"
       ],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "OpenID Connect WG is a combined WG of Artifact Binding (AB) WG and Connect WG\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -53,7 +60,7 @@
         "Specification Work"
       ],
       "url": "http://accountchooser.net",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "Account Chooser is an industry effort to standardize that approach on both mobile and the desktop. It also provides a way for applications to start supporting identity providers to improve security without requiring a large user experience change. That security improvement is becoming more important as hackers become more sophisticated.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -65,7 +72,7 @@
       "category": [
         "Specification Work"
       ],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "The IETF has recently developed protocols for use in constrained\nenvironments, where network nodes are limited in CPU, memory and power. \nREST architecture is widely used for such constrained environments.\nIt has been observed that Internet protocols can be applied to these\nconstrained environments, often only requiring minor tweaking and\nprofiling. In other cases, new protocols have been defined to address\nthe specific requirements of constrained environments. An example of\nsuch a protocol is the Constrained Application Protocol (CoAP).\n\nAs in other environments, authentication and authorization questions\nalso arise in constrained environments. For example, a door lock has to\nauthorize the person seeking access using a \"digital key\". Where is the\nauthorization policy stored? How does the digital key communicate with\nthe lock? Does the lock interact with an authorization server to obtain\nauthorization information? How can access be temporarily granted to\nother persons? How can access be revoked? These types of questions have\nbeen answered by existing protocols for use cases outside constrained\nenvironments, however in constrained environments, additional and\ndifferent requirements pose challenges for the use of various security\nprotocols. In particular, the need arises for a dynamic and fine grained\naccess control mechanism, where clients and/or resource servers are\nconstrained.\n\nThe IETF has a long history in developing three-party authentication and\nauthorization protocols for distributed environments. Examples include\nKerberos, the Public Key Infrastructure (PKI), the Authentication,\nAuthorization and Accounting (AAA) infrastructure, and the Web\nAuthorization Protocol (OAuth). All these protocols enjoy widespread\ndeployment on the Internet. Although they all aim to solve a similar\ngoal, at an abstract level, they offer quite different functions and\nutilize different message exchanges. These differences result from the\nmain deployment use cases they were designed for respectively.\n\nRequirements derived from use cases may indicate that existing work is\nuseful as basis for a solution for constrained environments. These \nprotocols, however, were not optimized for constrained environments. \nAdditional requirements that need to be taken into account are the lack \nof a suitable user-interface and the inability of embedded devices to \ncontact an authorization server in real-time with every resource access \nrequest due to intermittent connectivity, etc.\n\nThis working group therefore aims to produce a standardized solution for\nauthentication and authorization to enable authorized access (Get, Put,\nPost, Delete) to resources identified by a URI and hosted on a resource\nserver in constrained environments. As a starting point, the working\ngroup will assume that access to resources at a resource server by a\nclient device takes place using CoAP and is protected by DTLS. Both\nresource server and client may be constrained. This access will be\nmediated by an authorization server, which is not considered to be\nconstrained.\n\nExisting authentication and authorization protocols will be evaluated \nand used where applicable to build the constrained-environment solution. \nThis requires relevant specifications to be reviewed for suitability, \nselecting a subset of them and restricting the options within each of \nthe specifications. Some functionality, however, may not be available in\nexisting protocols, in which case the solution may also involve new\nprotocol work. Leveraging existing work means the working group benefits\nfrom available security analysis, implementation, and deployment\nexperience. Moreover, a standardized solution for federated\nauthentication and authorization will help to stimulate the deployment\nof constrained devices that provide increased security.\n\nOnce progress in identifying suitable candidate solutions has been made,\nthe working group will verify whether the same mechanisms are also\napplicable beyond the use of CoAP and DTLS, which are the two main\nprotocols the group will focus on for access to resources. In \nparticular, the ability to use the developed solution over HTTP and TLS\nwill be investigated. Note that the initial focus is on CoAP and HTTP \nwith DTLS and TLS. Other security protocols may be considered as long as \nthe primary focus is maintained. The group is scoped to work only on the \nweb protocols and data carried within them. Furthermore, to guarantee \nsmooth transition, the integration with existing deployments will be \nstudied, particularly concerning the use of protocol translation \nproxies.\n\nThis work does not make the assumption that the party offering\napplication layer services is always the same party offering network\naccess services. ACE will need to interact with CORE and LWIG to\nensure coordination.\n\nThe working group has the following tasks:\n\n1) Produce use cases and requirements\n\n2) Identify authentication and authorization mechanisms suitable for\nresource access in constrained environments.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -78,7 +85,7 @@
         "Guidelines"
       ],
       "url": "http://www.atis.org/01_committ_forums/aidc/about.asp",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "AIDC delivers solutions to simplify receiving, shipping, transportation and tracing processes for telecommunications products. Its work helps the industry achieve greater efficiencies in transactions between companies and throughout the global supply chain.\n\nAIDC delivers essential guidelines for common shipping labels, product marking labels, RFID tagging, product changes and software issuance standards. It also acts as a critical liaison with several groups to ensure integration of U.S. and global standards.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -90,7 +97,7 @@
       "category": [
         "Specification Work"
       ],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -101,7 +108,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "Interoperability for interindustry and government applications using personal identification technologies, e.g. biometrics. Excludes generic biometrics as undertaken by SC37.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -112,7 +120,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "https://kantarainitiative.org/confluence/display/bsc/home"
+      "url": "https://kantarainitiative.org/confluence/display/bsc/home",
+      "description": "This Kantara DG launched on July 5, 2016 and intends to meet for six months. It plans to deliver a report at the end of that time that offers recommendations and observations to Kantara regarding solving use cases for empowering traditionally disempowered parties (such as individuals) to \"contract and transact\" e.g. with parties that traditionally hold greater power (such as companies and large countries), given the new landscape of decentralization and distributed technologies and techniques and their mixture with identity.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -124,7 +133,8 @@
       "category": [
         "Community Group"
       ],
-      "url": "http://staging1.trustindigitallife.eu/what-we-do/working-groups/blockchain/"
+      "url": "http://staging1.trustindigitallife.eu/what-we-do/working-groups/blockchain/",
+      "description": "The emergence and success of Bitcoin propelled blockchain technologies into prominence. Since then, financial institutions have explored the potential of Bitcoin-like systems; the Open Source community has delved into the Open Source implementations, and the research community has worked on developing and optimizing associated cryptographic protocols, improving architectural solutions, and understanding the economics of systems like Bitcoin. Governments have started looking at the regulatory space for distributed financial systems and requirements for integrity; civil society organizations have looked into privacy support in blockchain systems, and law enforcement agencies have examined the new potential for financial crime. As work on exploring all the potential diverse uses of blockchain technology has expanded, applications for e-government, storage, document notarization, identity protection, real estate, and enterprise have emerged.\n\nAt the Paris working group meeting in September 2015, Intel took the initiative to lead a working group on blockchain with an initial focus on crypto-currencies but subsequently broadening out the discussion to be multi-disciplinary. Since then the group has expanded and attracted other TDL members as well as a number of high profile non-members as participants.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -136,7 +146,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://datatracker.ietf.org/doc/draft-ietf-cose-msg/"
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-cose-msg/",
+      "description": "Concise Binary Object Representation (CBOR) is data format designed\n   for small code size and small message size.  There is a need for the\n   ability to have the basic security services defined for this data\n   format.  This document defines the CBOR Object Signing and Encryption\n   (COSE) specification.  This specification describes how to create and\n   process signature, message authentication codes and encryption using\n   CBOR for serialization.  This specification additionally specifies\n   how to represent cryptographic keys using CBOR.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -148,7 +159,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xspa"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xspa",
+      "description": "The XSPA Technical Committee has regrouped and expanded its focus to develop data segmentation and healthcare security classification profiles in harmony with HL7 and IHE. The TC has elected new leadership and is starting a new round of activities. New members are welcome.\n\nParticipation in the XSPA TC is open to all interested parties. Organizations that support healthcare providers, healthcare regulators, hospitals, pharmacies, patients and anyone with an interest in defining how security and privacy controls should be used in the exchange and access of healthcare information are invited to join. Contact member-services@oasis-open.org for more information.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -160,7 +172,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cloudauthz"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cloudauthz",
+      "description": "The CloudAuthZ TC develops enhanced models for managing authorizations and entitlements in SaaS, PaaS, and IaaS contexts. CloudAuthZ enables contextual attributes and contextual entitlements sets to be delivered to Policy Enforcement Points in real time. With CloudAuthZ, authorization decisions can be informed by data such as where users are, what they are doing, which device they are using, etc.\n\nThe TC welcomes contributions of relevant use cases for authorization and entitlements. Existing standards (e.g. XACML, OAuth, etc.) will be used wherever possible.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -171,7 +184,8 @@
       "parentOrg": "ISO/TC 292 Security and Resilience",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -182,7 +196,8 @@
       "parentOrg": "ISO/TC 292 Security and Resilience",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -194,7 +209,8 @@
       "category": [
         "General"
       ],
-      "url": "http://ec.europa.eu/transparency/regexpert/index.cfm?do=groupdetail.groupdetail&groupid=3001"
+      "url": "http://ec.europa.eu/transparency/regexpert/index.cfm?do=groupdetail.groupdetail&groupid=3001",
+      "description": "Assist the Commission in: monitoring the implementation of the Regulation No 1316/2013; taking account of national plans or national strategies, where applicable; undertaking measures to evaluate the implementation of the work programmes on a financial and technical level; addressing existing or emerging project implementation problems; defining strategic orientations prior to drawing up of the annual and multiannual work programmes.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -206,7 +222,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://kantarainitiative.org/confluence/display/infosharing/home"
+      "url": "https://kantarainitiative.org/confluence/display/infosharing/home",
+      "description": "This group identifies and documents use cases and scenarios to illustrate the various sub-sets of user driven information, the benefits therein, and specify policy and technology enablers needed to enable this information to flow. Project VRM and other partner groups seek individual autonomy over personal information. Frameworks and tools enable personal data flow, to improve the relationship between demand and supply. When individuals are forced to sign organization-centric privacy policies / terms of use, limitations are naturally placed on personal information on both sides of the transaction. If these constraints were removed or rebalanced, individuals would more autonomous capabilities. We think this would lead to new, rich information flows - including actual demand data (as opposed to derived / predicted demand).\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -217,7 +234,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "The scope of WG8 is to develop standards for the Contactless Integrated Circuit(s) Card which do not preclude the incorporation of other Standard technologies on the card.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -228,7 +246,8 @@
       "parentOrg": "ISO/TC 292 Security and Resilience",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -240,7 +259,8 @@
       "category": [
         "To Be Determined"
       ],
-      "url": "https://www.w3.org/community/credentials/"
+      "url": "https://www.w3.org/community/credentials/",
+      "description": "The mission of the W3C Credentials Community Group is to explore the creation, storage, presentation, verification, and user control of credentials. We focus on a verifiable credential (a set of claims) created by an issuer about a subject—a person, group, or thing—and seek solutions inclusive of approaches such as: self-sovereign identity; presentation of proofs by the bearer; data minimization; and centralized, federated, and decentralized registry and identity systems. Our tasks include drafting and incubating Internet specifications for further standardization and prototyping and testing reference implementations.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -251,7 +271,8 @@
       "parentOrg": "OASIS",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -262,7 +283,8 @@
       "parentOrg": "ISO/IEC JTC 1 / SC27 IT Security Techniques",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "WG 2 provides a center of expertise for the standardization of IT Security techniques and mechanisms within JTC 1.\nTerms of Reference:\n* identify the need and requirements for these techniques and mechanisms in IT systems and applications;\n* develop terminology, general models and standards for these techniques and mechanisms for use in security services.\n\nThe scope covers both cryptographic and non-cryptographic techniques and mechanisms including:\n* confidentiality;\n* entity authentication;\n* non-repudation;\n* key management;\n* data integrity such as message authentication;\n** hash-functions;\n** digital signatures.\nThe mechanisms in general include several options with respect to the techniques used including symmetric cryptographic, asymmetric cryptographic and non-cryptographic.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -273,7 +295,8 @@
       "parentOrg": "ISO/TC 292 Security and Resilience",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -285,7 +308,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "http://www.gsma.com/mobilefordevelopment/programmes/digital-identity"
+      "url": "http://www.gsma.com/mobilefordevelopment/programmes/digital-identity",
+      "description": "Enabling digital identity through the power of mobileOur mission is to leverage mobile as a solution for a unique, secure and scalable form of identity, catalysing greater socio-economic impact in emerging markets. \nProof of identity is a prerequisite to socio-economic development and essential to accessing basic services, adding value to millions of lives. The GSMA Digital Identity programme is working with mobile operators, governments and the development community to demonstrate the opportunities, barriers and value of mobile as a scalable and trusted solution to providing a unique and secure identification.\nWe aim to use mobile to enable a trusted and robust digital identity for the underserved, leading to greater social, political and economic inclusion and bringing visibility to the people and places where it matters most.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -297,7 +321,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=dss"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=dss",
+      "description": "SS v1.0 has been now been fully ratified as OASIS Specifications.\n\nThe DSS OASIS Specifications are available below. This consists:\nDigital Signature Service Core Protocols, Elements, and Bindings\nand the following profiles of the OASIS Digital Signature Services:\n\nXML Timestamping Profile\nSignature Gateway Profile\nGerman Signature Law Profile\nEntity Seal Profile\nElectronic PostMark (EPM) Profile\nAbstract Code-Signing Profile\nJ2ME Code-Signing Profile\nAsynchronous Processing Abstract Profile\nAdvanced Electronic Signature Profiles\n\n\nThe OASIS Digital Signature Services (DSS) TC will develop techniques to support the processing of digital signatures. This includes defining an interface for requesting that a web service produce and/or verify a digital signature on a given piece of data and techniques for proving that a signature was created within its key validity period.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -308,7 +333,8 @@
       "parentOrg": "OASIS",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -319,7 +345,8 @@
       "parentOrg": "OASIS",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -331,7 +358,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "https://joinup.ec.europa.eu/node/145983"
+      "url": "https://joinup.ec.europa.eu/node/145983",
+      "description": "The e-Government Core Vocabularies are simplified, re-usable and extensible data models that capture the fundamental characteristics of an entity, such as a person, a business, a location or a public service, in a context-neutral way. They can be used by public administrations to attain a minimum level of semantic interoperability for e-Government systems.\n\nCore Vocabularies are simplified, re-usable and extensible data models that capture the fundamental characteristics of an entity in a context-neutral fashion. Public administrations can use and extend the Core Vocabularies in the following contexts:\n\nDevelopment of new systems: the Core Vocabularies can be used as a default starting point for designing the conceptual and logical data models in newly developed information systems.\n\nInformation exchange between systems: the Core Vocabularies can become the basis of a context-specific data model used to exchange data among existing information systems.\n\nData integration: the Core Vocabularies can be used to integrate data that comes from disparate data sources and create a data mesh-up.\n\nOpen data publishing: the Core Vocabularies can be used as the foundation of a common export format for data in base registries like cadastres, business registers and public service portals.\n\nCORE Business Vocabulary\nCORE Location Vocabulary\nCORE Person Vocabulary\nCORE Public Service Vocabulary\nCORE Criterion & Evidence Vocabulary\nCORE Public Organization Vocabulary\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -342,7 +370,8 @@
       "parentOrg": "Secure Identity Alliance",
       "category": [
         "General"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -353,7 +382,8 @@
       "parentOrg": "Secure Identity Alliance",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -365,7 +395,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://kantarainitiative.org/confluence/display/egov/home"
+      "url": "https://kantarainitiative.org/confluence/display/egov/home",
+      "description": "The eGovernment Work Group (eGov WG) will be responsible for:\n* Facilitating collaboration and discussion among Kantara members with an interest in eGovernment identity management applications and services\n* Acting as a forum to discuss best practices by government organizations on national, regional and municipal levels\n* Presenting \"a government view\" into other Kantara Initiative Work Groups so that these views may be taken into account in the development of Kantara Initiative * Policy Recommendations and Specifications for future contribution to an appropriate Standards Setting Organization\n* Promoting the development, adoption and support for eGovernment deployment profiles of open specifications\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -377,7 +408,8 @@
       "category": [
         "Community Group"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=trust-el"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=trust-el",
+      "description": "The OASIS Trust Elevation TC works to define a set of standardized protocols that service providers may use to elevate the trust in an electronic identity credential presented to them for authentication. The Trust Elevation TC is intended to respond to suggestions from the public sector, including the U.S. National Strategy for Trusted Identities in Cyberspace (NSTIC). The Trust Elevation TC promotes interoperability among multiple identity providers--and among multiple identity federations and frameworks--by facilitating clear communication about common and comparable operations to present, evaluate and apply identity [data/assertions] to sets of declared authorization levels.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -388,7 +420,8 @@
       "parentOrg": "ISO/TC 292 Security and Resilience",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -400,7 +433,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://openid.net/wg/eap/"
+      "url": "http://openid.net/wg/eap/",
+      "description": "The purpose of this working group is to develop a security and privacy profile of the OpenID Connect specifications that enable users to authenticate to OpenID Providers using strong authentication specifications. The resulting profile will enable use of IETF Token Binding specifications with OpenID Connect and integration with FIDO relying parties and/or other strong authentication technologies.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -411,7 +445,8 @@
       "parentOrg": "Secure Identity Alliance",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -423,7 +458,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.atis.org/01_committ_forums/esif/about.asp"
+      "url": "http://www.atis.org/01_committ_forums/esif/about.asp",
+      "description": "ESIF develops Next Generation 911 (NG911) and location accuracy requirements and solutions and is where the industry comes together in a voluntary open forum to identify and resolve technical and operational issues to facilitate interconnection of emergency services networks with other networks (e.g., wireline, cable, satellite, Internet, etc.). ESIF members comprise industry, government, standards, and public safety organizations.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -435,7 +471,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://openid.net/wg/fastfed/"
+      "url": "http://openid.net/wg/fastfed/",
+      "description": "The purpose of this Working Group is to develop a meta-data document specification, APIs, and workflow to enable an administrator to federate an identity provider and a hosted application that supports one or more of OpenID Connect, SAML, and SCIM and enable configuration changes to be communicated between the identity provider and hosted application.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -447,7 +484,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://openid.net/wg/fapi/"
+      "url": "http://openid.net/wg/fapi/",
+      "description": "In many cases, Fintech services such as aggregation services uses screen scraping and stores user passwords. This model is both brittle and insecure. To cope with the brittleness, it should utilize an API model with structured data and to cope with insecurity, it should utilize a token model such as OAuth [RFC6749, RFC6750].\n\nThis working group aims to rectify the situation by developing a REST/JSON model protected by OAuth. Specifically, the FAPI WG aims to provide JSON data schemas, security and privacy recommendations and protocols to:\n* enable applications to utilize the data stored in the financial account,\n* enable applications to interact with the financial account, and\n* enable users to control the security and privacy settings.\n\nBoth commercial and investment banking account as well as insurance, and credit card accounts are to be considered.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -458,7 +496,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "To maintain and revise where necessary, ISO/IEC 4909 and ISO/IEC 7813.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -470,7 +509,8 @@
       "category": [
         "To Be Determined"
       ],
-      "url": "https://www.gsma.com/aboutus/workinggroups/fraud-security-group"
+      "url": "https://www.gsma.com/aboutus/workinggroups/fraud-security-group",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -481,7 +521,8 @@
       "parentOrg": "IETF",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -493,7 +534,8 @@
       "category": [
         "To Be Determined"
       ],
-      "url": "https://www.gsma.com/aboutus/workinggroups/"
+      "url": "https://www.gsma.com/aboutus/workinggroups/",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -504,7 +546,8 @@
       "parentOrg": "OpenID Foundation",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "The HEART Working Group intends to harmonize and develop a set of privacy and security specifications that enable an individual to control the authorization of access to RESTful health-related data sharing APIs, and to facilitate the development of interoperable implementations of these specifications by others.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -516,7 +559,8 @@
       "category": [
         "General"
       ],
-      "url": "http://www.icao.int/security/mrtd/pages/tagmrtd.aspx"
+      "url": "http://www.icao.int/security/mrtd/pages/tagmrtd.aspx",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -528,7 +572,8 @@
       "category": [
         "Guidelines"
       ],
-      "url": "https://www.ansi.org/standards_activities/standards_boards_panels/idsp/overview.aspx?menuid=3"
+      "url": "https://www.ansi.org/standards_activities/standards_boards_panels/idsp/overview.aspx?menuid=3",
+      "description": "The ANSI Identity Theft Prevention and Identity Management Standards Panel (IDSP) is a cross-sector coordinating body whose objective is to facilitate the timely development, promulgation and use of voluntary consensus standards and guidelines that will equip and assist the private sector, government and consumers in minimizing the scope and scale of identity theft and fraud.\n\nThe IDSP, in partnership with The Santa Fe Group's Shared Assessments Program and its Healthcare Working Group, and the Internet Security Alliance, has released a report The Financial Impact of Breached Protected Health Information: A Business Case for Enhanced PHI Security. The report is designed to help healthcare industry stakeholders entrusted with safeguarding PHI to understand the potentially devastating repercussions of a PHI breach and to provide them with a methodology for determining an appropriate level of investment needed to secure PHI [see related article](https://www.ansi.org/news_publications/news_story.aspx?menuid=7&articleid=3173).\n\nThe IDSP also has released workshop reports on best practices for measuring identity theft [see related article](https://www.ansi.org/news_publications/news_story.aspx?menuid=7&articleid=2345) and calling for a national identity verification standard [see related article](https://www.ansi.org/news_publications/news_story.aspx?menuid=7&articleid=2351). In addition, the panel has produced a comprehensive report for businesses, government agencies, and other organizations in the fight against the theft of personal and financial information [see related article](http://www.ansi.org/news_publications/news_story.aspx?menuid=7&articleid=1723).\n\nIDSP workshops typically involve making an inventory of existing standards and industry guidelines in a subject area, identifying gaps where new or updated guidance may be needed, and making recommendations regarding best practices or the desirability and feasibility of undertaking standards development activity. Workshops generally have at least one face-to-face kick-off meeting. While additional meetings may be held, usually much of the work can be accomplished electronically in a working group environment. Workshops culminate in the publication of a report that presents the workshop’s consensus-based findings and recommendations, which in turn may drive future standards development activity. The IDSP itself does not develop standards.\n\nPeriodically, the IDSP has convened plenary meetings which are conferences that include reports on the progress of IDSP work underway, discussion of related identity issues, and exploration of topics that might be suitable for future workshops.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -539,7 +584,8 @@
       "parentOrg": "Secure Identity Alliance",
       "category": [
         "General"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -551,7 +597,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://kantarainitiative.org/confluence/display/idassurance/home"
+      "url": "https://kantarainitiative.org/confluence/display/idassurance/home",
+      "description": "The Identity Assurance Work Group (IAWG) has been formed within the Kantara Initiative to foster the adoption of trusted on-line identity services. To advance this goal, the IAWG will provide a forum for identifying and resolving obstacles to market and commercial acceptance that have limited broad deployment and adoption of trusted identity services thus far.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -563,7 +610,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://datatracker.ietf.org/doc/draft-hunt-idevent-distribution/"
+      "url": "https://datatracker.ietf.org/doc/draft-hunt-idevent-distribution/",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -575,7 +623,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/id-cloud/"
+      "url": "https://www.oasis-open.org/committees/id-cloud/",
+      "description": "he OASIS IDCloud TC works to address the serious security challenges posed by identity management in cloud computing. The TC identifies gaps in existing identity management standards and investigates the need for profiles to achieve interoperability within current standards. It performs risk and threat analyses on collected use cases and produces guidelines for mitigating vulnerabilities.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -586,7 +635,8 @@
       "parentOrg": "Future of Identity in the Information Society (FIDIS)",
       "category": [
         "General"
-      ]
+      ],
+      "description": "The terms of reference of this working group are:\n\nThe scope of SC 27/WG 5 covers the development and maintenance of standards and guidelines addressing security aspects of identity management, biometrics and the protection of personal data.\nThis includes:\n\n1. Current SC 27 projects:\n* Framework for Identity Management (ISO/IEC 24760)\n* Biometric template protection (ISO/IEC 24745)\n* Authentication context for biometrics (ISO/IEC 24761)\n\n2. Identification of requirements for and development of future standards and guidelines in these areas. For example in the area of Identity Management, topics such as:\n* Role based access control\n* Provisioning\n* Identifiers\n* Single sign-on\n\nIn the area of Privacy, topics such as\n* A Privacy Framework\n* A Privacy Reference Architecture\n* Privacy infrastructures\n* Anonymity and credentials\n* Specific Privacy Enhancing Technologies (PETs)\n* Privacy Engineering\n\nIn the area of Biometrics, topics such as\n* Protection of biometric data\n( Authentication techniques\n\n3. Collaboration with other Working Groups in SC 27, e.g., WG 1 on management aspects, WG 2 on specific cryptographic techniques and WG 3 on evaluation aspects.\n\n4. Liaison and collaboration with those organizations and committees dealing with specific requirements and guidelines for services and applications in this area, for example:\n\nISO/IEC SC 37 Biometrics\nECRYPT\nISO/TC68/SC2 Financial Services Security\nISO/TC68/SC6/WG10 Financial Services-Retail Financial Services-Privacy\nITU-T SG17 Security, languages and telecommunication software\nFuture of Identity in the Information Society (FIDIS)\nThe International Conference of Data Protection and Privacy Commissioners\nThe Open Group (IdM Forum and Jericho Forum)\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -598,7 +648,8 @@
       "category": [
         "General"
       ],
-      "url": "http://uniformlaws.org/committee.aspx?title=identity%20management%20in%20electronic%20commerce"
+      "url": "http://uniformlaws.org/committee.aspx?title=identity%20management%20in%20electronic%20commerce",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -609,7 +660,8 @@
       "parentOrg": "OASIS",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "The OASIS IMI TC works to enable the use of Information Cards to universally manage personal digital identities. A Web 2.0-friendly method for shared light authentication, Information Cards let people authenticate themselves on multiple web sites without maintaining passwords for each site.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -620,7 +672,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "https://kantarainitiative.org/confluence/display/idot/home"
+      "url": "https://kantarainitiative.org/confluence/display/idot/home",
+      "description": "Object IdM addresses the handling of identities of things (IDoT), goods and objects. The Internet of Things (IoT) is beginning to evolve and early solutions are now being implemented. In the context of IoT, some Object Identities are managed with proprietary solutions or niche standards that have not been mapped to each other nor interoperate. As a consequence, there is no overall framework how to recognize and manage identities across different solutions.\nThe purpose of the Identities of Things DG is to start the evolution of an overarching Identity Framework for the IoT.  \nThe discussion group intends to deliver the following:\n* Deliver “Landscape document” / State-of-the-art analysis of the current Object IdM approaches\n* Describe the Object IdM problem with exemplary use-cases\n* Submit article proposal to IEEE about identities in the internet of things\n* Prepare the foundation for a working group to develop an Object IdM \n* Framework for the IDoT, in support of IoT broader landscape.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -632,7 +685,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.naspo.info/naspo-idpv-project"
+      "url": "http://www.naspo.info/naspo-idpv-project",
+      "description": "Developing minimum requirements for (a) Reconciling an asserted identity to a single individual (b) Proofing the asserted identity by verifying corroborative evidence and by looking for symptoms of fraud\nProviding guidance for implementation and privacy concerns\nThe proposed standard identifies sets of core identity attributes across the dimensions of Name, Location, Time and Identifier that in most cases, allows for resolution to a single identity. It also provides a list of supplemental attributes that can be used to prevent collisions in cases where the core attributes are not enough. The basis of these core and supplemental attributes are not theoretical, but based on extensive data modeling and analysis done on data sets that covered the U.S. population.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -642,7 +696,8 @@
       "name": "IDTrust Member Section",
       "category": [
         "Discussion Group"
-      ]
+      ],
+      "description": "The OASIS Identity and Trusted Infrastructure (IDtrust) Member Section promotes greater understanding and adoption of standards-based identity and trusted infrastructure technologies, policies, and practices. The group provides a neutral setting where government agencies, companies, research institutes, and individuals work together to advance the use of trusted infrastructures, including the Public Key Infrastructure (PKI).\n\nIDtrust was founded in 1999 as PKI Forum. It transitioned its work to the international standards consortium, OASIS, in 2002, where it continued to operate as an independent body focused on broadening adoption for PKI. In 2007, the group expanded its charter and was renamed the OASIS IDtrust Member Section.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -654,7 +709,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.ieee.org/about/technologies/index.html"
+      "url": "http://www.ieee.org/about/technologies/index.html",
+      "description": "The IEEE Future Directions Committee (FDC), in association with Societies, Councils, and OUs, anticipates and determines the direction of existing, new, and emerging technologies and related issues, and spearheads their investigation and development by IEEE. Taking a holistic view, the FDC emphasizes new, emerging technical areas and drives them to maturity within the IEEE infrastructure. Additionally, the FDC serves as a liaison to and fosters cooperative efforts among Societies, Councils, and industry to develop new products and services in emerging topics.\n \nThe primary working objective of the IEEE Future Directions Committee:\n* incubates emerging technologies and new applications of current technologies;\n* identifies opportunities to engage the engineering community and the general public;\n* works with IEEE members and staff to focus on emerging technologies through technical, professional, and educational activities;\n* serves as a catalyst for new conferences, publications, standards, educational products, forums, white papers, grants, and projects to support new technologies.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -666,7 +722,8 @@
       "category": [
         "General"
       ],
-      "url": "http://iot.ieee.org/about.html"
+      "url": "http://iot.ieee.org/about.html",
+      "description": "The mission of the IEEE IoT Initiative is to serve as the gathering place for the global technical community working on the Internet of Things; to provide the platform where professionals learn, share knowledge, and collaborate on this sweeping convergence of technologies, markets, applications, and the Internet, and together change the world.\n\nThe IEEE Internet of Things is one of IEEE’s important, multi-disciplinary, cross-platform Initiatives. The Internet of Things (IoT) is one of the most exciting technological developments in the world today and the global technical community is coalescing around the thought-leading content, resources, and collaborative opportunities provided by the IEEE IoT Initiative.\n\nMore information is revealed daily about the Internet of Things and its potential to transform how we communicate with machines and each other. To bring clarity to and disseminate information globally, IEEE Future Directions launched the IEEE IoT Initiative in 2014. It serves as a home for the global community of engineering and technology professionals in industry, academia, and government working in related technologies. Here, professionals learn, share knowledge, and collaborate on this sweeping convergence of technologies, markets, applications, and the Internet. Participants in the community have access to the most trusted resources developed including publications, videos, articles, and interviews, as well as webinars, Hangouts, presentations, workshops, and conferences, this web portal, and much more.\n\nYou are invited to join, participate, and enjoy the benefits of becoming part of this cutting-edge Initiative.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -677,7 +734,8 @@
       "parentOrg": "ATIS   The Alliance for Telecommunications Industry Solutions, USA",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "To really understand the Internet of Things (IoT) requires application, implementation, and execution in the real world. IEEE IoT recently launched a program to provide the IoT community an interactive platform on which to engage with use cases, service descriptions, business models, and reference implementations that will be key to developing a vibrant IoT industry. This is a fantastic opportunity for you to contribute to the IoT cause, as well as get excellent exposure for your projects and ideas.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -689,7 +747,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://smartcities.ieee.org"
+      "url": "http://smartcities.ieee.org",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -700,7 +759,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "http://www.ieee-security.org"
+      "url": "http://www.ieee-security.org",
+      "description": "The goal of the TCSP is to foster excellence in computer security and privacy research. We provide three of the finest conferences in the field. We are also \"information central\" for announcements of all research conferences in our field through continuously updated online resources. Our newsletter, published six times a year, contains recent announcements, news from the headlines, and other news about TCSP.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -711,7 +771,8 @@
       "parentOrg": "IETF",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -723,7 +784,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://openid.net/wg/igov/"
+      "url": "https://openid.net/wg/igov/",
+      "description": "The purpose of this working group is to develop a security and privacy profile of the OpenID Connect specifications that allow users to authenticate and share consented attribute information with public sector services across the globe. The resulting profile will enable standardized integration with public sector relying parties in multiple jurisdictions. The profile will be applicable to, but not exclusively targeted at, identity broker-based implementations.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -735,7 +797,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.atis.org/01_committ_forums/inc/about.asp"
+      "url": "http://www.atis.org/01_committ_forums/inc/about.asp",
+      "description": "INC is recognized as the industry’s only open forum for addressing and developing solutions for numbering issues. Currently, it is where steps to address numbering issues associated with the PSTN transition are being identified. INC is a key industry venue for addressing and resolving all industry-wide issues associated with planning, administration, allocation, assignment and use of the North American Numbering Plan (NANP) numbering resources within the NANP area. INC guidelines and recommendations are used by the North American Numbering Plan Administration (NANPA), the Number Pool Administration (PA), and the Canadian Radio-Television and Telecommunications Commission (CRTC) in the management of numbering resources.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -746,7 +809,8 @@
       "parentOrg": "ISO/IEC",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "The scope of WG 1 covers the development of ISMS (Information Security Management System) standards and guidelines (see SC 27 N5114). This includes:\n\n1. Development and maintenance of the ISO/IEC 27000 ISMS standards family\n2. Identification of requirements for future ISMS standards and guidelines\n3.On-going maintenance of WG1 standing document SD WG 1/1 (WG 1 Roadmap)\n4. Collaboration with other Working Groups in SC 27, in particular with WG 4 on standards addressing the implementation of control objectives and controls as defined in ISO/IEC 27001.\n\nLiaison and collaboration with those organizations and committees dealing with specific requirements and guidelines for ISMS, for example:\n\nITU-T Telecoms\nISO/TC 215 Healthcare\nISO/TC 68 Banking\nISO/TC 204 Intelligent transport systems\nISO/TC 223 Civil defense\nISSEA\nAerospace\nAutomotive industry\nStandards bodies, such as IETF, IEEE\nInternational institutions, e.g. OECD, APEC, EU\nIAF and CASCO, and other relevant groups regarding the development of accreditation and certification standards and guidelines\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -757,7 +821,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "To define specifications related to the Integrated Circuits Card with Contacts within the area of SC17\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -769,7 +834,8 @@
       "category": [
         "General"
       ],
-      "url": "https://datenschutz-berlin.de/content/europa-international/international-working-group-on-data-protection-in-telecommunications-iwgdpt/working-papers-and-common-positions-adopted-by-the-working-group"
+      "url": "https://datenschutz-berlin.de/content/europa-international/international-working-group-on-data-protection-in-telecommunications-iwgdpt/working-papers-and-common-positions-adopted-by-the-working-group",
+      "description": "The International Working Group on Data Protection in Telecommunications (IWGDPT, a.k.a. “Berlin Group”) includes representatives from Data Protection Authorities and international organisations dealing with privacy matters from all over the world. It was founded in 1983 in the framework of the International Conference of Data Protection and Privacy Commissioners at the initiative of the Berlin Commissioner for Data Protection, who has since then been chairing the Group. The Group has since 1983 adopted numerous recommendations (“Common Positions” and “Working Papers”) aimed at improving the protection of privacy in telecommunications. Since the beginning of the 90s the Group has in particular focused on the protection of privacy on the Internet. More information about the Work of the Group and the documents adopted by the Group are available for download on the website of the Group at http://www.berlin-privacy-group.org\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -782,7 +848,8 @@
         "Specification Work"
       ],
       "dateFounded": "1979-01-01",
-      "url": "https://www.iab.org"
+      "url": "https://www.iab.org",
+      "description": "The Internet Architecture Board provides long-range technical direction for Internet development, ensuring the Internet continues to grow and evolve as a platform for global communication and innovation.\n\nIn its work, the IAB strives to:\n* Ensure that the Internet is a trusted medium of communication that provides a solid technical foundation for privacy and security, especially in light of pervasive surveillance,\n* Establish the technical direction for an Internet that will enable billions more people to connect, support the vision for an Internet of Things, and allow mobile networks to flourish, while keeping the core capabilities that have been a foundation of the Internet’s success, and\n* Promote the technical evolution of an open Internet without special controls, especially those which hinder trust in the network.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -795,7 +862,8 @@
         "Specification Work"
       ],
       "dateFounded": "2012-04-17",
-      "url": "https://irtf.org"
+      "url": "https://irtf.org",
+      "description": "Distributing and manipulating named information is a major application in the Internet today. In addition to web-based content distribution, other distribution technologies (such as P2P and CDN) have emerged and are promoting a communication model of accessing data by name, regardless of origin server location.\n\nIn order to respond to increasing traffic volume in the current Internet for applications such as mobile video and cloud computing, a set of disparate technologies and distribution services are employed that employ caching, replication and content distribution in different specific ways. These approaches are currently deployed in separate silos – different CDN providers and P2P applications rely on proprietary distribution technologies. It is not possible to uniquely and securely identify named information independently of the distribution channel; and the different distribution approaches are typically implemented as an overlay, leading to unnecessary inefficiency.\n\nInformation-centric networking (ICN) is an approach to evolve the Internet infrastructure to directly support this use by introducing uniquely named data as a core Internet principle. Data becomes independent from location, application, storage, and means of transportation, enabling in-network caching and replication. The expected benefits are improved efficiency, better scalability with respect to information/bandwidth demand and better robustness in challenging communication scenarios. These concepts are known under different terms, including but not limited to: Network of Information (NetInf), Named Data Networking (NDN) and Publish/Subscribe Networking.\n\nICN concepts can be applied to different layers of the protocol stack: name-based data access can be implemented on top of the existing IP infrastructure, e.g., by providing resource naming, ubiquitous caching and corresponding transport services, or it can be seen as a packet-level internetworking technology that would cause fundamental changes to Internet routing and forwarding. In summary, ICN is expected to evolve the Internet architecture at different layers.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -807,7 +875,8 @@
       "category": [
         "To Be Determined"
       ],
-      "url": "https://www.gsma.com/aboutus/workinggroups/working-groups/interoperability-data-specifications-and-settlement-group/"
+      "url": "https://www.gsma.com/aboutus/workinggroups/working-groups/interoperability-data-specifications-and-settlement-group/",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -819,7 +888,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.atis.org/01_committ_forums/ioc/about.asp"
+      "url": "http://www.atis.org/01_committ_forums/ioc/about.asp",
+      "description": "IOC is an open industry council of telecommunications companies and other organizations with a direct interest in the management of IMSI codes—the critical 15-digit number used within mobile phones that allows service operators to identify mobile terminals for purposes of international roaming. The IOC oversees the management of IMSI codes that have been assigned to the United States and its possessions as authorized by the U.S. Department of State since 1996.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -831,7 +901,8 @@
       "category": [
         "Community Group"
       ],
-      "url": "https://secure.edps.europa.eu/edpsweb/edps/edps/ipen"
+      "url": "https://secure.edps.europa.eu/edpsweb/edps/edps/ipen",
+      "description": "The purpose of IPEN is to bring together developers and data protection experts with a technical background from different areas in order to launch and support projects that build privacy into everyday tools and develop new tools which can effectively protect and enhance our privacy.\n\nThe IPEN initiative was founded in 2014. It supports the creation of engineer groups working on (re)-usable building blocks, design patterns and other tools for selected Internet use cases where privacy is at stake.\nIPEN invites participants from different areas such as data protection authorities, academia, open source and business development, and other individuals who are committed to finding engineering solutions to privacy challenges. The objective of the work should be to integrate data protection and privacy into all phases of the development process, from the requirements phase to production, as it is most appropriate for the development model and the application environment.\n\nIt supports networking between engineer groups and existing initiatives for engineering privacy into the Internet. This network facilitates exchange in order to coordinate work and avoid duplication, in addition to discussing which privacy oriented use cases should be addressed with priority.\n\nIPEN is building a repository of relevant resources, making its findings and knowledge base accessible to all participants, developers and privacy experts.\n\nA core group takes care of collection and distribution of information, liaises with other relevant initiatives, facilitates the dialogue on engineering solutions, and organises online and offline events.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -843,7 +914,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.sc17.com/"
+      "url": "http://www.sc17.com/",
+      "description": "ISO/IEC JTC1 has accordingly developed and maintains its own procedures.\nJTC1 comprises of some 19 sub-committees covering the area of Information Technology. Sub-Committee 17 (SC17) has responsibility for developing standards for Identification Cards and personal identification.\nThe scope for ISO/IEC JTC1/SC17 Cards and Personal identification is:\nStandardization in the area of:\na) identification and related documents,\nb) cards, and\nc) devices associated with their use in inter-industry applications and international interchange.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -854,7 +926,8 @@
       "parentOrg": "ISO/IEC",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -865,7 +938,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "To serve as the RMG for ISO/IEC 7812 Parts 1 & 2 and ISO/IEC 7816-5. Responsibility for maintenance of ISO/IEC 7812 Parts 1 & 2. Responsible for Registration of Application providers under ISO/IEC 7816-5. To liaise, when necessary with Working Group 4 on matters relating to ISO/IEC 7816-5.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -876,7 +950,8 @@
       "parentOrg": "Global Identity Foundation",
       "category": [
         "Policy Work"
-      ]
+      ],
+      "description": "Jericho Forum is the leading international IT security thought-leadership association dedicated to advancing secure business in a global open-network environment. Members include top IT security officers from multi-national Fortune 500s & entrepreneurial user companies, major security vendors, government, & academics. Working together, members drive approaches and standards for a secure, collaborative online business world.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -888,7 +963,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://datatracker.ietf.org/doc/rfc7515/"
+      "url": "https://datatracker.ietf.org/doc/rfc7515/",
+      "description": "JSON Web Signature (JWS) represents content secured with digital signatures or Message Authentication Codes (MACs) using JSON-based data structures.  Cryptographic algorithms and identifiers for use with this specification are described in the separate JSON Web Algorithms (JWA) specification and an IANA registry defined by that specification.  Related encryption capabilities are described in the separate JSON Web Encryption (JWE) specification.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -900,7 +976,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=kmip"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=kmip",
+      "description": "The OASIS KMIP TC works to define a single, comprehensive protocol for communication between encryption systems and a broad range of new and legacy enterprise applications, including email, databases, and storage devices. By removing redundant, incompatible key management processes, KMIP will provide better data security while at the same time reducing expenditures on multiple products.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -911,7 +988,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "To prepare a revised text of ISO/IEC 7501; monitor the standards referenced; consider and define standards for machine readable travel documents and related machine readable cards; co-ordination of JTC1 liaison with ICAO for maintenance of ICAO 9303, machine readable passports and related ICAO documents.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -922,7 +1000,8 @@
       "parentOrg": "MEF",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -933,7 +1012,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "http://www.gsma.com/personaldata/mobile-connect"
+      "url": "http://www.gsma.com/personaldata/mobile-connect",
+      "description": "Mobile Connect is a secure universal log-in solution. Simply by matching the user to their mobile phone, Mobile Connect allows them to log-in to websites and applications quickly without the need to remember passwords and usernames. It’s safe, secure and no personal information is shared without permission. The digital age has led to an unprecedented level of access to information and services. However, access to such information and services often requires the user to sign-up to websites and applications, resulting in the need to remember user names and passwords. With such a high proportion of users forgetting log-in details, there is a need for a secure solution that bypasses the issue of forgetting passwords, thereby keeping the user engaged.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -945,7 +1025,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://openid.net/wg/mobile/"
+      "url": "http://openid.net/wg/mobile/",
+      "description": "MODRNA (pronounced modernah) stands for Mobile Operator Discovery, Registration &  autheNticAtion. The MODRNA WG will develop a profile of OpenID Connect intended to be appropriate for use by mobile network operators (MNOs) providing identity services to RPs and for RPs in consuming those services as well as any other party wishing to be interoperable with this profile. Moreover, the WG will develop extensions to OpenID Connect as needed in the context of GSMA’s Mobile Connect initiative, such as server-initiated authentication, transaction authorization, and account migration. Additionally, it will identify and make recommendations for additional standards items.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -956,7 +1037,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "Draft Terms of Reference: Standardization in the filed of Motor vehicle driver licences.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -967,7 +1049,8 @@
       "parentOrg": "IETF",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -978,7 +1061,8 @@
       "parentOrg": "OpenID Foundation",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -989,7 +1073,8 @@
       "parentOrg": "IETF",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1001,7 +1086,8 @@
       "category": [
         "To Be Determined"
       ],
-      "url": "https://www.gsma.com/aboutus/workinggroups/working-groups/networks-group"
+      "url": "https://www.gsma.com/aboutus/workinggroups/working-groups/networks-group",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1012,7 +1098,8 @@
       "category": [
         "To Be Determined"
       ],
-      "url": "http://www.oasis-open.org/committees/coel/"
+      "url": "http://www.oasis-open.org/committees/coel/",
+      "description": "The OASIS COEL specification provides a privacy-by-design framework for the collection and processing of behavioural data. It is uniquely suited to the transparent use of dynamic data for personalised digital services, IoT applications where devices are collecting information about identifiable individuals and the coding of behavioural data in identity solutions. The specification pseudonymises personal data at source and maintains a separation of different data types with clearly defined roles & responsibilities for all actors. All behavioural data are defined as event-based packets. Every packet is connected directly to an individual and can contain a summary of the consent they provided for the processing of the data. A combination of a taxonomy of all human behaviours (the COEL model) and the event-based protocol provide a universal template for data portability. Simple interface specifications enforce the separation of roles and provide system-level interoperability.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1024,7 +1111,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://oauth.net/"
+      "url": "http://oauth.net/",
+      "description": "https://datatracker.ietf.org/doc/rfc6749/\n\nThe OAuth 2.0 authorization framework enables a third-party\n   application to obtain limited access to an HTTP service, either on\n   behalf of a resource owner by orchestrating an approval interaction\n   between the resource owner and the HTTP service, or by allowing the\n   third-party application to obtain access on its own behalf.  This\n   specification replaces and obsoletes the OAuth 1.0 protocol described\n   in RFC 5849.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1035,7 +1123,8 @@
       "parentOrg": "OECD (The Organisation for Economic Co-operation and Development)",
       "category": [
         "Policy Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1047,7 +1136,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "http://www.internetsociety.org/what-we-do/internet-issues/online-identity"
+      "url": "http://www.internetsociety.org/what-we-do/internet-issues/online-identity",
+      "description": "The Internet Society works in both the technical and policy arenas to support the development of tools and policies that empower people to manage their online identities.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1058,7 +1148,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "Enhanced OMC technologies enabling more data capacity, fast access and high reliability based on existing standard technologies or new technologies. Software or programming interface for accessing OMC data contents. (Host application program will be able to use this interface for easier implementation. Access method software of OMCs application program.) Physical assignment and /or logical assignment for OMC media use. Logical data structures in OMCs data (file structure etc).\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1070,7 +1161,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.w3.org/owl/"
+      "url": "https://www.w3.org/owl/",
+      "description": "The W3C Web Ontology Language (OWL) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things. OWL is a computational logic-based language such that knowledge expressed in OWL can be exploited by computer programs, e.g., to verify the consistency of that knowledge or to make implicit knowledge explicit. OWL documents, known as ontologies, can be published in the World Wide Web and may refer to or be referred from other OWL ontologies. OWL is part of the W3C’s Semantic Web technology stack, which includes RDF, RDFS, SPARQL, etc.\n\nThe current version of OWL, also referred to as “OWL 2”, was developed by the [W3C OWL Working Group] (now closed) and published in 2009, with a Second Edition published in 2012. OWL 2 is an extension and revision of the 2004 version of OWL developed by the [W3C Web Ontology Working Group] (now closed) and published in 2004. The deliverables that make up the OWL 2 specification include a Document Overview, which serves as an introduction to OWL 2, describes the relationship between OWL 1 and OWL 2, and provides an entry point to the remaining deliverables via a Documentation Roadmap.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1082,7 +1174,8 @@
       "category": [
         "General"
       ],
-      "url": "http://www.gsma.com/personaldata/"
+      "url": "http://www.gsma.com/personaldata/",
+      "description": "As the digital economy expands, both individuals and businesses are looking for ways to interact easily online without compromising security and privacy. Building on the successes and strategic insights delivered by the GSMA Mobile Identity programme, the GSMA Personal Data programme aims to help digital service providers and consumers find the optimum balance between privacy, security and convenience.\nIn line with the objectives of the GSMA Board, the programme and its operator partners have prioritised the development of digital identity services. Working together, they aim to bring to market digital identity solutions that provide a safe, seamless and convenient consumer experience, a consistent user interface and low barriers to entry across the digital identity ecosystem.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1093,7 +1186,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "Physical characteristics, embossing, magnetic stripe, and test methods for conformance and card durability.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1105,7 +1199,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=pkcs11"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=pkcs11",
+      "description": "Enhancing PKCS #11 standard for cryptographic tokens controlling authentication information (personal identity, cryptographic keys, certificates, digital signatures, biometric data)\n\nThe OASIS PKCS 11 Technical Committee develops enhancements to improve the PKCS #11 standard for ease of use in code libraries, open source applications, wrappers, and enterprise/COTS products: implementation guidelines, usage tutorials, test scenarios and test suites, interoperability testing, coordination of functional testing, development of conformance profiles, and providing reference implementations.\n\nThe updated standard provides additional support for mobile and cloud computing use cases: for distributed/federated applications involving key management functions (key generation, distribution, translation, escrow, re-keying); session-based models; virtual devices and virtual keystores; evolving wireless/sensor applications using near field communication (NFC), RFID, Bluetooth, and Wi-Fi.\n\nTC members are also designing new mechanisms for API instrumentation, suitable for use in prototyping, profiling, and testing in resource-constrained application environments. These updates enable support for easy integration of PKCS #11 with other cryptographic key management system (CKMS) standards, including a broader range of cryptographic algorithms and CKMS cryptographic service models.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1116,7 +1211,8 @@
       "parentOrg": "Internet Society ISOC",
       "category": [
         "General"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1128,7 +1224,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/pbd-se/"
+      "url": "https://www.oasis-open.org/committees/pbd-se/",
+      "description": "The OASIS PbD-SE TC provides privacy governance and documentation standards for software engineers. It enables software organizations to embed privacy into the design and architecture of IT systems, without diminishing system functionality.\n\nThe PbD-SE TC work follows the Seven Foundational Principles of Privacy by Design:\n\nProactive not Reactive; Preventative Not Remedial\nPrivacy as the Default Setting\nPrivacy Embedded into Design\nFull Functionality - Positive-Sum, Not Zero-Sum\nEnd-to-End Security - Full Lifecycle Protection\nVisibility and Transparency - Keep It Open\nRespect for User Privacy - Keep It User-Centric\nPbD-SE offers a privacy extension/complement to OMG’s Unified Modeling Language (UML) and serves as a complement to OASIS’ eXtensible Access Control Mark-up Language (XACML) and Privacy Management Reference Model (PMRM).\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1140,7 +1237,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://csrc.nist.gov/projects/privacy_engineering/"
+      "url": "http://csrc.nist.gov/projects/privacy_engineering/",
+      "description": "Privacy is a challenging subject that spans a number of domains, including law, policy and technology. Unlike other fields such as safety risk management and cybersecurity, system designers and engineers currently lack well-characterized, reusable, standards-based tools and practices to understand and mitigate privacy risks and integrate appropriate privacy controls into information systems.\n\nNIST’s work on Privacy Engineering focuses on providing guidance that can be used to decrease privacy risks, and enable organizations to make purposeful decisions about resource allocation and effective implementation of controls in information systems.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1152,7 +1250,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.w3.org/privacy/"
+      "url": "http://www.w3.org/privacy/",
+      "description": "The group monitors ongoing privacy issues that affect the Web, investigates potential areas for new privacy work, and provides guidelines and advice for addressing privacy in standards development.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1164,7 +1263,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=pmrm"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=pmrm",
+      "description": "The OASIS PMRM TC works to provide a standards-based framework that will help business process engineers, IT analysts, architects, and developers implement privacy and security policies in their operations. PMRM picks up where broad privacy policies leave off. Most policies describe fair information practices and principles but offer little insight into actual implementation. PMRM provides a guideline or template for developing operational solutions to privacy issues. It also serves as an analytical tool for assessing the completeness of proposed solutions and as the basis for establishing categories and groupings of privacy management controls.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1176,7 +1276,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=pmrm"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=pmrm",
+      "description": "The OASIS PMRM TC works to provide a standards-based framework that will help business process engineers, IT analysts, architects, and developers implement privacy and security policies in their operations. PMRM picks up where broad privacy policies leave off. Most policies describe fair information practices and principles but offer little insight into actual implementation. PMRM provides a guideline or template for developing operational solutions to privacy issues. It also serves as an analytical tool for assessing the completeness of proposed solutions and as the basis for establishing categories and groupings of privacy management controls.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1187,7 +1288,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1199,7 +1301,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.w3.org/2001/sw/wiki/rdf"
+      "url": "https://www.w3.org/2001/sw/wiki/rdf",
+      "description": "RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed.\n\nRDF extends the linking structure of the Web to use URIs to name the relationship between things as well as the two ends of the link (this is usually referred to as a “triple”). Using this simple model, it allows structured and semi-structured data to be mixed, exposed, and shared across different applications.\n\nThis linking structure forms a directed, labeled graph, where the edges represent the named link between two resources, represented by the graph nodes. This graph view is the easiest possible mental model for RDF and is often used in easy-to-understand visual explanations.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1211,7 +1314,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://openid.net/wg/risc/"
+      "url": "http://openid.net/wg/risc/",
+      "description": "The goal of RISC is to provide data sharing schemas, privacy recommendations and protocols to:\n* Share information about important security events in order to thwart attackers from leveraging compromised accounts from one Service Provider to gain access to accounts on other Service Providers (mobile or web application developers and owners).\n* Enable users and providers to coordinate in order to securely restore accounts following a compromise.\n\nInternet accounts that use email addresses or phone numbers as the primary identifier for the account will be the initial focus.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1223,7 +1327,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=security"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=security",
+      "description": "Defining and maintaining a standard, XML-based framework for creating and exchanging security information between online partners.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1235,7 +1340,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://tools.ietf.org/html/rfc7643"
+      "url": "https://tools.ietf.org/html/rfc7643",
+      "description": "The System for Cross-domain Identity Management (SCIM) specifications\n   are designed to make identity management in cloud-based applications\n   and services easier.  The specification suite builds upon experience\n   with existing schemas and deployments, placing specific emphasis on\n   simplicity of development and integration, while applying existing\n   authentication, authorization, and privacy models.  Its intent is to\n   reduce the cost and complexity of user management operations by\n   providing a common user schema and extension model as well as binding\n   documents to provide patterns for exchanging this schema using HTTP.\n\n   This document provides a platform-neutral schema and extension model\n   for representing users and groups and other resource types in JSON\n   format.  This schema is intended for exchange and use with cloud\n   service providers.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1246,7 +1352,8 @@
       "parentOrg": "ISO/IEC JTC 1 / SC27 IT Security Techniques",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "The terms of reference of this working group are:\n\nThe scope of WG 4 covers the development and maintenance of standards and guidelines addressing services and applications supporting the implementation of control objectives and controls as defined in ISO/IEC 27001. This includes:\n\n1. Current SC 27 projects:\n* IT Network security (ISO/IEC 18028)\n* Information security incident management (ISO/IEC TR 18044)\n* Guidelines for information and communications technology disaster recovery services (ISO/IEC 24762)\n* Selection, deployment and operation of Intrusion Detection Systems (IDS) (ISO/IEC 18043)\n* Guidelines on use and management of Trusted Third Party services (ITU-T X.842 I ISO/IEC TR 14516)\n* Specification of TTP services to support the application of digital signatures (ITU-T X.843 I ISO/IEC 15945)\n* Security information objects for access control (ITU-T X.841 I ISO/IEC 15816)\n\n2. Identification of requirements for and development of future service and applications standards and guidelines, for example in the areas of\n* Business Continuity\n* Cyber Security\n* Outsourcing\n\n3. On-going maintenance of WG4 standing document SD WG 4/1 (WG 4 Road Map)\n\n4. Collaboration with other Working Groups in SC 27, in particular with WG1 on ISMS standards and guidelines\n\n5. Liaison and collaboration with those organizations and committees dealing with specific requirements and guidelines for services and applications, for example:\n\nITU-T Telecoms\nISO/TC 215 Health informatics\nISO/TC 68 Banking\nISSEA\nAerospace\nAutomotive industry\nStandards bodies, such as IETF, IEEE\nInternational institutions, e.g. OECD, APEC, EU\nIAF and CASCO, and other relevant groups regarding the development of accreditation and certification standards and guidelines\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1257,7 +1364,8 @@
       "parentOrg": "ISO/IEC JTC1/SC17",
       "category": [
         "W In A Working Group"
-      ]
+      ],
+      "description": "The terms of reference of this working group are:\n\nThe scope covers aspects related to security engineering, with particular emphasis on, but not limited to standards for IT security specification, evaluation, testing and certification of IT systems, components, and products. This will include consideration of computer networks, distributed systems, associated application services, biometrics, etc.\nThe following aspects may be distinguished:\n* security evaluation criteria;\n* methodology for application of the criteria;\n* security functional and assurance specification of IT systems, components and products;\n* testing methodology for determination of security functional and assurance conformance;\n* administrative procedures for testing, evaluation, certification, and accreditation schemes.\n\nThis work will reflect the needs of relevant sectors in society, as represented through ISO/IEC National Bodies and other organizations in liaison, expressed in standards for security functionality and assurance.\nAccount will be taken of related ISO/IEC and ISO standards for quality management and testing so as not to duplicate these efforts.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1268,7 +1376,8 @@
       "parentOrg": "IETF",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1280,7 +1389,8 @@
       "category": [
         "To Be Determined"
       ],
-      "url": "https://www.gsma.com/aboutus/workinggroups/working-groups/sim-working-group/embedded-sim"
+      "url": "https://www.gsma.com/aboutus/workinggroups/working-groups/sim-working-group/embedded-sim",
+      "description": "The SIM Working Group (SIM) is comprised of smart card experts from GSMA member organisations and the group guides GSMA’s SIM related activities where a common approach can create value for operators, service providers and customers. The scope of work includes a range of applications from access management to network resources to standalone transaction and identity management services. Such applications require a high degree of security, reliability and personalisation offered by modern SIM based platforms.\n\nThe SIM Working Group provides a forum for consensus building amongst all GSMA membership categories in relation to support and advice on the promotion, implementation and adoption of smart card technology and identity services. It also provides strategic guidance to GSMA projects on SIM matters and manages a programme of related activities, typically through sub-groups, set up for particular purposes.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1292,7 +1402,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.itu.int/en/itu-t/studygroups/2013-2016/17/pages/default.aspx"
+      "url": "http://www.itu.int/en/itu-t/studygroups/2013-2016/17/pages/default.aspx",
+      "description": "Work to build confidence and security in the use of information and communication technologies (ICTs) continues to intensify in a bid to facilitate more secure network infrastructure, services and applications. Over seventy standards (ITU-T Recommendations) focusing on security have been published.\n\nITU-T Study Group 17 (SG17) coordinates security-related work across all ITU-T Study Groups. Often working in cooperation with other standards development organizations (SDOs) and various ICT industry consortia, SG17 deals with a broad range of standardization issues.\n\nTo give a few examples, SG17 is currently working on cybersecurity; security management; security architectures and frameworks; countering spam; identity management; the protection of personally identifiable information; and the security of applications and services for the Internet of Things (IoT), smart grid, smartphones, web services, social networks, cloud computing, mobile financial systems, IPTV and telebiometrics.\n\nOne key reference for security standards in use today is Recommendation ITU-T X.509 for electronic authentication over public networks. ITU-T X.509, a cornerstone in designing applications relating to public key infrastructure (PKI), is used in a wide range of applications; from securing the connection between a browser and a server on the web, to providing digital signatures that enable e-commerce transactions to be conducted with the same confidence as in a traditional system. Without wide acceptance of the standard, the rise of e-business would have been impossible.\n\nCybersecurity remains high on SG17’s agenda. Additionally, SG17 is coordinating standardization work covering e-health, open identity trust framework, Near Field Communication (NFC) security, and Child Online Protection.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1304,7 +1415,8 @@
       "category": [
         "To Be Determined"
       ],
-      "url": "https://www.gsma.com/aboutus/workinggroups/working-groups/terminal-steering-group/"
+      "url": "https://www.gsma.com/aboutus/workinggroups/working-groups/terminal-steering-group/",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1315,7 +1427,8 @@
       "parentOrg": "ISO/TC 292 Security and Resilience",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1327,7 +1440,8 @@
       "category": [
         "To Be Determined"
       ],
-      "url": "https://www.gsma.com/aboutus/workinggroups/"
+      "url": "https://www.gsma.com/aboutus/workinggroups/",
+      "description": "Portability format JSON structure\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1342,7 +1456,8 @@
       "purpose": [
         "Governance"
       ],
-      "url": "https://ieee.memberclicks.net/index.php?option=com_mc&view=formlogin&form=83703"
+      "url": "https://ieee.memberclicks.net/index.php?option=com_mc&view=formlogin&form=83703",
+      "description": "Participation in this program requires IEEE SA Corporate Membership. The following link provides details about the IEEE SA membership program, and information on how to register for corporate membership. All interested participants must complete the membership process by March 31, 2019 to maintain participation rights for this program. Register here for IEEE SA Corporate Membership.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1354,7 +1469,8 @@
       "category": [
         "General"
       ],
-      "url": "http://www.internetac.org"
+      "url": "http://www.internetac.org",
+      "description": "Building together the future economy and society supported by the Internet\n\nThe Internet Technical Advisory Committee (ITAC) to the OECD brings together the counsel and technical expertise of technically focused organizations, in a decentralized networked approach to policy formulation for the Internet economy.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1366,7 +1482,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.w3.org/2011/tracking-protection/"
+      "url": "http://www.w3.org/2011/tracking-protection/",
+      "description": "The Tracking Protection Working Group is chartered to improve user privacy and user control by defining mechanisms for expressing user preferences around Web tracking and for blocking or allowing Web tracking elements. The group seeks to standardize the technology and meaning of Do Not Track, and of Tracking Selection Lists.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1378,7 +1495,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/trust-el/"
+      "url": "https://www.oasis-open.org/committees/trust-el/",
+      "description": "The OASIS Trust Elevation TC works to define a set of standardized protocols that service providers may use to elevate the trust in an electronic identity credential presented to them for authentication. The Trust Elevation TC is intended to respond to suggestions from the public sector, including the U.S. National Strategy for Trusted Identities in Cyberspace (NSTIC). The Trust Elevation TC promotes interoperability among multiple identity providers--and among multiple identity federations and frameworks--by facilitating clear communication about common and comparable operations to present, evaluate and apply identity [data/assertions] to sets of declared authorization levels.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1389,7 +1507,8 @@
       "parentOrg": "FIDO Alliance",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "Second Factor UX (U2F)\n\nUser carries U2F device with built-in support in web browsers\nUser presents U2F device\nWebsite can simplify password (e.g. – 4 digit pin)\nThe second factor FIDO experience is supported by the Universal Second Factor (U2F) protocol. This experience allows online services to augment the security of their existing password infrastructure by adding a strong second factor to user login. The user logs in with a username and password as before. The service can also prompt the user to present a second factor device at any time it chooses. The strong second factor allows the service to simplify its passwords (e.g. 4–digit PIN) without compromising security.\n\nDuring registration and authentication, the user presents the second factor by simply pressing a button on a USB device or tapping over NFC. The user can use their FIDO U2F device across all online services that support the protocol leveraging built–in support in web browsers.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1400,7 +1519,8 @@
       "parentOrg": "FIDO Alliance",
       "category": [
         "Specification Work"
-      ]
+      ],
+      "description": "Passwordless UX (UAF)\n\nUser carries client device with UAF stack installed\nUser presents a local biometric or PIN\nWebsite can choose whether to retain password\nThe passwordless FIDO experience is supported by the Universal Authentication Framework (UAF) protocol. In this experience, the user registers their device to the online service by selecting a local authentication mechanism such as swiping a finger, looking at the camera, speaking into the mic, entering a PIN, etc. The UAF protocol allows the service to select which mechanisms are presented to the user.\n\nOnce registered, the user simply repeats the local authentication action whenever they need to authenticate to the service. The user no longer needs to enter their password when authenticating from that device. UAF also allows experiences that combine multiple authentication mechanisms such as fingerprint + PIN.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1412,7 +1532,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://kantarainitiative.org/confluence/display/umadev/home"
+      "url": "http://kantarainitiative.org/confluence/display/umadev/home",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1424,7 +1545,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://kantarainitiative.org/confluence/display/uma/home"
+      "url": "https://kantarainitiative.org/confluence/display/uma/home",
+      "description": "User-Managed Access (UMA) is an award-winning OAuth-based protocol designed to give a web user a unified control point for authorizing who and what can get access to their online personal data, content, and services, no matter where all those things live on the web.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1436,7 +1558,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "http://www.w3.org/2011/webappsec/"
+      "url": "http://www.w3.org/2011/webappsec/",
+      "description": "As stated in its charter, the mission of the Web Application Security Working Group is to develop technical and policy mechanisms to improve the security of and enable secure cross-site communications for applications on the Web.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1448,7 +1571,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.w3.org/blog/webauthn/"
+      "url": "https://www.w3.org/blog/webauthn/",
+      "description": "The mission of the Web Authentication Working Group, in the Security Activity, is to define a client-side API providing strong authentication functionality to Web Applications.\n\nThe Web Authentication Working Group will develop recommendation-track specifications defining an API, as well as signature and attestation formats which provide an asymmetric cryptography-based foundation for authentication of users to Web Applications.\n\nOverall goals include obviating the use of shared secrets, i.e. passwords, as authentication credentials, facilitating multi-factor authentication support as well as hardware-based key storage while respecting the Same Origin Policy.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1459,7 +1583,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "https://www.w3.org/community/wot/"
+      "url": "https://www.w3.org/community/wot/",
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1470,7 +1595,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "https://www.w3.org/wot/ig/"
+      "url": "https://www.w3.org/wot/ig/",
+      "description": "The Internet of Things (IoT) suffers from a lack of interoperability across platforms. As a result developers are faced with data silos, high costs and limited market potential. This can be likened to the situation before the Internet when there were competing non-interoperable networking technologies. The Internet makes it easy to develop networked applications independently of those technologies. W3C is seeking to do the same for the Internet of Things.\n\nTo achieve this goal, we need platform independent APIs for application developers, and a means for different platforms to discover how to inter-operate with one another. The approach we are taking is based upon rich metadata that describes the data and interaction models exposed to applications, and the communications and security requirements for platforms to communicate effectively. A further aspect is the need to enable platforms to share the same meaning when they exchange data. We are therefore seeking to enable expression of the semantics of things and the domain constraints associated with them, building upon W3C's extensive work on RDF and Linked Data.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1481,7 +1607,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "http://www.w3.org/payments/"
+      "url": "http://www.w3.org/payments/",
+      "description": "Payment is an essential element of trade and commerce, and \"digital interactions are expected to influence 64 cents of every dollar spent in retail stores by the end of 2015. However, behind these impressive numbers, the payment landscape is quickly changing, and new challenges are appearing. For instance, the average shopping cart abandonment rate is 69% across all devices, and even higher on mobile. A variety of factors are limiting the potential of ecommerce, from the high level fraud related to credit card payments, to the fragmentation of payment solutions available on the Web but not available on all merchant sites or on all devices.\nAt the same time, there is a growing interest from businesses to find alternatives to business models based on advertisement. These alternatives include e.g. in-app payments, or micropayments that are today challenging due to a variety of factors such as heterogeneity and number of payment options to support, or the inability for existing payment systems to cope with very small payments.\nIn order to address these issues, and for greater interoperability in the area of payments, the vision behind this activity is to enable: 1) Users to choose their preferred payment solutions across all their devices; 2) Merchants to transparently support a growing number of payment solutions; 3) Developers to monetize applications more easily; 4) New payment solution providers to enter the market more easily with innovative solutions and payment schemes; 5) Society to decrease online fraud; 6) New payment models such as micropayments & paywalls to take-off.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1492,7 +1619,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "http://www.w3.org/payments/ig/"
+      "url": "http://www.w3.org/payments/ig/",
+      "description": "The mission of the Web Payments Interest Group, part of the Web Payments Activity, is to provide a forum for Web Payments technical discussions to identify use cases and requirements for existing and/or new specifications to ease payments on the Web for users (payers) and merchants (payees), and to establish a common ground for payment service providers on the Web Platform. The overall objective of this group is to identify and leverage the conditions for greater uptake and wider use of Web Payments through the identification of standardization needs to increase interoperability between the different stakeholders and the different payment methods.\n\n\nThe Web Payments Interest Group's scope covers payment transactions using Web technologies on all computer devices (desktop, laptop, mobile, tablet, etc.) running a Web user-agent (a Web browser, a hybrid app, or an installed Web application) and using all possible legal payments methods. For instance, this includes:\n\n* Traditional payment methods: e.g.credit and debit cards, credit transfer, direct debit, ACH, e-check, prepaid cards, etc.\n* Non-traditional currencies (this term covers multiple cases such as the commonly called cryptocurrencies, digital currencies, or virtual currencies. This category is sometimes designated as \"non-governmental units-of-account\" by some International organizations )\n* Newer front-end payment initiating systems (e.g. various flavors of online digital wallets, contactless payments based on various technologies such as NFC or BTLE)\n* Other value transfer methods such as loyalty points, coupons, etc.\n* New person-to-person payment systems such as Mobile Money in the developing world.\n\nThe Web Payments IG will cover a variety of scenarios including Web-mediated Business-to-Consumer (B2C), Business-to-Business (B2B), Business-to-Business to Consumer (B2B2C), and Person-to-Person (P2P) transactions in the case of physical (payment at physical shops) and online payments for physical or digital goods, including in-app payments. It will also cover one-time payments as well as e.g. recurring bill payments. Finally it will also cover micro-payments (low value payments) in different cases (P2P in international remittances or B2C/B2B for very small value goods such as press articles).\n\nThe tasks that the Interest Group will undertake include:\n* Identification of problems, barriers and challenges that currently exists or may appear in the domain of Web Payments. This includes technology aspects as well as business aspects (incentives, etc.) and covers the different stakeholders, in particular customers (more generally payers), merchants (more generally payees), web application developers, and payment system providers. It also includes legal aspects and the IG will have to ensure that the proposed architecture is flexible enough to cope with varieties of regulations that exist across the globe.\n* Identification of use-cases and scenarios of payment transactions using Web technologies that need to be addressed. This will cover both online payments, off-line payments and payments at physical shops or face-to-face. Issues such as \"floor-limits\" and \"stand-in\" for specific transaction scenarios should be considered. Different categories of use-cases should be identified to highlight different dimensions such as the role of regulations on technologies, the case of international low-value remittances, general retail payments, bill payments, utility payments etc.\n* Identifying ways to improve the usability, security, uptake, and trust of Web payments\n* Identification of requirements for more secure and interoperable management of payment transactions on the Web. This includes the identification of areas and places where standards are needed to ensure interoperable interfaces between Web applications and payment systems.\n* Identification of the issues related to user privacy protection, user data protection, as well as provision of user data required for regulation or for anti-fraud detection process. This covers also rules, regulations and APIs related to access to accounts.\n* Identification of gaps in Web Technologies that do not allow the identified requirements to be met.\n* Identification of the role and place of regulations in the overall payment process, and the requirements that regulations impose on technologies to ensure that they are usable all over the world under different regulatory regimes. Different use-cases from different regions of the World should highlight the implication of the different regulations, and the best way to ensure that technologies can be flexible enough to cope with these regulations. Different use-cases and dimensions will be investigated including terms of the payment service between payers, payees and intermediaries, or cross-border payments.\n* Priorization of the work items to resolve the identified gaps.\n* Review of deliverables under development by other W3C groups that are relevant to the IG scope and report bugs as appropriate.\n* Liaison with other organizations in the payment industry that are using Web Technologies for their technical specifications and/or their services to foster alignment and interoperability on a global scale.\n\nNote:\n* Development of technical standards is not in scope for the Interest Group. However, this group will encourage the development or adaption of technical standards to bridge the gaps that are identified. This includes the provisions of requirements and liaisons with relevant W3C and external groups and organizations. See the Dependencies and Liaison section.\n* The Group will consider the security, privacy and accessibility implications of its use cases and requirements, and seek appropriate review.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1504,7 +1632,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "https://www.w3.org/payments/wg/"
+      "url": "https://www.w3.org/payments/wg/",
+      "description": "Payment is an essential element of trade and commerce, and \"digital interactions are expected to influence 64 cents of every dollar spent in retail stores by the end of 2015. However, behind these impressive numbers, the payment landscape is quickly changing, and new challenges are appearing. For instance, the average shopping cart abandonment rate is 69% across all devices, and even higher on mobile. A variety of factors are limiting the potential of ecommerce, from the high level fraud related to credit card payments, to the fragmentation of payment solutions available on the Web but not available on all merchant sites or on all devices.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1516,7 +1645,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.w3.org/webplatform/wg/"
+      "url": "https://www.w3.org/webplatform/wg/",
+      "description": "We continue the development of the HTML language, providing specifications that enable improved client-side application development on the Web, including application programming interfaces (APIs) for client-side development and markup vocabularies for describing and controlling client-side application behavior.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1527,7 +1657,8 @@
       "category": [
         "Discussion Group"
       ],
-      "url": "https://www.w3.org/security/wiki/ig"
+      "url": "https://www.w3.org/security/wiki/ig",
+      "description": "The mission of the Web Security Interest Group is to serve as a forum for discussions on improving standards and implementations to advance the security of the Web. To participate in the group, please join the public-web-security mailing list.\n\nThe group is designed as a forum for interested members of the broader Web community -- technology designers, implementors, and other interested parties -- to work toward improving specifications and implementations to advance security of the Web overall.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1538,7 +1669,8 @@
       "parentOrg": "OECD (The Organisation for Economic Co-operation and Development)",
       "category": [
         "Discussion Group"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1549,7 +1681,8 @@
       "parentOrg": "OECD (The Organisation for Economic Co-operation and Development)",
       "category": [
         "Discussion Group"
-      ]
+      ],
+      "description": "\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1561,7 +1694,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/xacml/"
+      "url": "https://www.oasis-open.org/committees/xacml/",
+      "description": "We are pleased to announce the publication of eXtensible Access Control Markup Language (XACML) Version 3.0 OASIS Standard. A pdf version is available at the following link: \neXtensible Access Control Markup Language (XACML) Version 3.0 \nOASIS Standard \n22 January 2013 \nFurther info is below in the XACML 3.0 section.\n\nXACML 3.0 received the Influential Standardization Efforts Award at the European Identity Conference in Munich, May 2011.\n\n\n\n"
     },
     {
       "@context": "https://goodtech.wiki/",
@@ -1573,7 +1707,8 @@
       "category": [
         "Specification Work"
       ],
-      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xdi"
+      "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xdi",
+      "description": "The purpose of the XDI TC is to define a format and protocol for semantic data interchange using a standard addressable semantic graph model serialized in JSON.\n\nFor more information, see the TC Charter and FAQ.\n\nThe TC operates under a standing rule approved 17 July 2008 under which the TC does not hold regular official meetings and conducts all business by electronic ballot only. Unofficial weekly meetings are held to enable discussion among members but no business is conducted nor actions taken at those meetings.\n\n\n\n"
     }
   ]
 }
