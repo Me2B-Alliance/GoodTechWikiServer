@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://goodtech.wiki/schemas/Product.json",
+  "title": "Product",
+  "description": "A product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "uuid": {
+      "title": "Uuid",
+      "type": "string"
+    },
+    "parentOrg": {
+      "title": "Parent Org",
+      "type": "string"
+    },
+    "category": {
+      "title": "Category",
+      "type": "array"
+    },
+    "purpose": {
+      "title": "Purpose",
+      "type": "array"
+    },
+    "url": {
+      "title": "Url",
+      "type": "string"
+    },
+    "githubProfile": {
+      "title": "Github Profile",
+      "type": "string"
+    },
+    "tags": {
+      "title": "Tags",
+      "type": "array"
+    },
+    "people": {
+      "title": "People",
+      "type": "array"
+    },
+    "activities": {
+      "title": "Activities",
+      "type": "array"
+    },
+    "me2bParticipation": {
+      "title": "Me2b Participation",
+      "type": "string"
+    },
+    "relevantPublications": {
+      "title": "Relevant Publications",
+      "type": "string"
+    },
+    "status": {
+      "title": "Status",
+      "type": "string"
+    },
+    "partners": {
+      "title": "Partners",
+      "type": "string"
+    },
+    "workingGroup": {
+      "title": "Working Group",
+      "type": "string"
+    },
+    "digitalHarmsAddressed": {
+      "title": "Digital Harms Addressed",
+      "type": "string"
+    },
+    "dateBegun": {
+      "title": "Date Begun",
+      "type": "string"
+    },
+    "dateEnded": {
+      "title": "Date Ended",
+      "type": "string"
+    }
+  }
+}
