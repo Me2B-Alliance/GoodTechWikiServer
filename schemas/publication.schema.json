@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://goodtech.wiki/schemas/Publication.json",
+  "title": "Publication",
+  "description": "A publication",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "title": "Uuid",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "publicationType": {
+      "title": "Publication Type",
+      "type": "string"
+    },
+    "sector": {
+      "title": "Sector",
+      "type": "string"
+    },
+    "tags": {
+      "title": "Tags",
+      "type": "array"
+    },
+    "url": {
+      "title": "Url",
+      "type": "string"
+    },
+    "sponsoringOrg": {
+      "title": "Sponsoring Org",
+      "type": "string"
+    },
+    "authorsEditors": {
+      "title": "Authors Editors",
+      "type": "array"
+    },
+    "githubProfile": {
+      "title": "Github Profile",
+      "type": "string"
+    },
+    "purpose": {
+      "title": "Purpose",
+      "type": "array"
+    },
+    "audience": {
+      "title": "Audience",
+      "type": "string"
+    },
+    "jurisdiction": {
+      "title": "Jurisdiction",
+      "type": "string"
+    },
+    "workingGroup": {
+      "title": "Working Group",
+      "type": "string"
+    },
+    "versionOrEdition": {
+      "title": "Version Or Edition",
+      "type": "string"
+    }
+  }
+}

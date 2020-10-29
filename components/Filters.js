@@ -14,18 +14,24 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '10px',
     paddingLeft: '15px',
     paddingRight: '15px',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   filterGrid: {
     display: 'flex',
-    alignItems: 'center',
+    flexDirection: 'column',
     justifyContent: 'space-between'
   },
   filterButton: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end'
+    flexDirection: 'column'
   },
+  formControl: {
+    width: '450px'
+  },
+  inputLabel: {
+    paddingLeft: '17px'
+  }
+
 }))
 
 export default function Filters(props) {
@@ -33,8 +39,8 @@ export default function Filters(props) {
 
   const { filters, type } = props
 
-  const [ selectedEngagement, setSelectedEngagement ] = React.useState('')
-  const [ textSearch, setTextSearch ] = React.useState('')
+  const [selectedEngagement, setSelectedEngagement] = React.useState('')
+  const [textSearch, setTextSearch] = React.useState('')
 
   let filter = {}
 
@@ -52,20 +58,19 @@ export default function Filters(props) {
       'Regulation, Legal, Policy', 'Consumer Advocacy and Education', 'Other'
     ]
 
-    return engagements.map(engagement => {
+    return engagements.map((engagement) => {
       if (engagement === 'None') {
         return (
-          <MenuItem value="" key={'menu-item-activity-none'}>
+          <MenuItem value="" key="menu-item-activity-none">
             <em>None</em>
           </MenuItem>
         )
-      } else {
-        return (
-          <MenuItem value={engagement} key={`menu-item-activity-${engagement}`} >
-            {engagement}
-          </MenuItem >
-        )
       }
+      return (
+        <MenuItem value={engagement} key={`menu-item-activity-${engagement}`}>
+          {engagement}
+        </MenuItem>
+      )
     })
   }
 
@@ -78,14 +83,18 @@ export default function Filters(props) {
   }
 
   const handleSearch = () => {
-    window.location.href = window.location.href + `/s?eng=${selectedEngagement}&text=${textSearch}`
+    window.location.href = `${window.location.href}/s?eng=${selectedEngagement}&text=${textSearch}`
   }
 
-  function buildfilters(type) {
-
+  function buildfilters() {
     const InitialText = () => (
       <Grid item xs={12} md>
-        <Typography variant="body1">
+        <Typography variant="subtitle1" style={{ textAlign: 'left', paddingTop: '80px' }}>
+          This wiki was developed by the Me2B Alliance and is offered
+          as a public utility to help people find organizations who
+          are working on more respectfull technology.
+        </Typography>
+        <Typography style={{ paddingTop: '30px' }} variant="body1">
           Enter a category or search string
         </Typography>
       </Grid>
@@ -93,13 +102,13 @@ export default function Filters(props) {
 
     const SearchButton = () => (
       <Grid className={classes.filterButton} item xs={12} md={2}>
-        <Button onClick={handleSearch} variant="outlined" >Search</Button>
+        <Button onClick={handleSearch} variant="outlined">Search</Button>
       </Grid>
     )
 
     if (type === 'organizations') {
       return (
-        <React.Fragment>
+        <>
           <InitialText />
           <Grid item xs={12} md>
             <FormControl fullWidth className={classes.formControl}>
@@ -108,6 +117,7 @@ export default function Filters(props) {
                 labelId="engagement-select-label"
                 id="engagement-select"
                 value={selectedEngagement}
+                variant="outlined"
                 fullWidth
                 onChange={handleEngagementSelect}
               >
@@ -120,38 +130,33 @@ export default function Filters(props) {
               <TextField
                 label="Text Search"
                 id="search-text-input"
-                InputLabelProps={{ shrink: true }}
+                variant="outlined"
                 value={textSearch}
                 onChange={handleTextSearchChange}
               />
             </FormControl>
           </Grid>
           <SearchButton />
-        </React.Fragment>
-      )
-    } else {
-      return (
-        <React.Fragment>
-          <Grid item xs={12} md={2}>
-            <Typography variant="body1">
-              Enter search string
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={8}>
-            <FormControl fullWidth className={classes.formControl}>
-              <TextField
-                label="Text Search"
-                id="search-text-input"
-                InputLabelProps={{ shrink: true }}
-                value={textSearch}
-                onChange={handleTextSearchChange}
-              />
-            </FormControl>
-          </Grid>
-          <SearchButton />
-        </React.Fragment>
+        </>
       )
     }
+    return (
+      <>
+        <InitialText />
+        <Grid item xs={12} md={8}>
+          <FormControl fullWidth className={classes.formControl}>
+            <TextField
+              label="Text Search"
+              id="search-text-input"
+              InputLabelProps={{ shrink: true }}
+              value={textSearch}
+              onChange={handleTextSearchChange}
+            />
+          </FormControl>
+        </Grid>
+        <SearchButton />
+      </>
+    )
   }
 
   return (
@@ -165,5 +170,5 @@ export default function Filters(props) {
 
 Filters.propTypes = {
   filters: PropTypes.object,
-  type: PropTypes.string,
+  type: PropTypes.string
 }

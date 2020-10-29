@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://goodtech.wiki/schemas/WorkingGroup.json",
+  "title": "WorkingGroup",
+  "description": "A workinggroup",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "title": "Uuid",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "parentOrg": {
+      "title": "Parent Org",
+      "type": "string"
+    },
+    "category": {
+      "title": "Category",
+      "type": "array"
+    },
+    "url": {
+      "title": "Url",
+      "type": "string"
+    },
+    "dateFounded": {
+      "title": "Date Founded",
+      "type": "string"
+    },
+    "purpose": {
+      "title": "Purpose",
+      "type": "array"
+    }
+  }
+}

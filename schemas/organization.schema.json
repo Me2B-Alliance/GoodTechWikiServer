@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://goodtech.wiki/schemas/Organization.json",
+  "title": "Organization",
+  "description": "A organization",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "title": "Uuid",
+      "type": "string"
+    },
+    "orgName": {
+      "title": "Org Name",
+      "type": "string"
+    },
+    "linkMatch": {
+      "title": "Link Match",
+      "type": "string"
+    },
+    "lisa": {
+      "title": "Lisa",
+      "type": "string"
+    },
+    "organizationType": {
+      "title": "Organization Type",
+      "type": "string"
+    },
+    "parentOrg": {
+      "title": "Parent Org",
+      "type": "string"
+    },
+    "website": {
+      "title": "Website",
+      "type": "string"
+    },
+    "partners": {
+      "title": "Partners",
+      "type": "string"
+    },
+    "tags": {
+      "title": "Tags",
+      "type": "array"
+    },
+    "activities": {
+      "title": "Activities",
+      "type": "array"
+    },
+    "purpose": {
+      "title": "Purpose",
+      "type": "array"
+    },
+    "twitterProfile": {
+      "title": "Twitter Profile",
+      "type": "string"
+    },
+    "linkedinProfile": {
+      "title": "Linkedin Profile",
+      "type": "string"
+    },
+    "locations": {
+      "title": "Locations",
+      "type": "array"
+    },
+    "scope": {
+      "title": "Scope",
+      "type": "string"
+    },
+    "sector": {
+      "title": "Sector",
+      "type": "string"
+    },
+    "digitalHarmsAddressed": {
+      "title": "Digital Harms Addressed",
+      "type": "string"
+    },
+    "dateFounded": {
+      "title": "Date Founded",
+      "type": "string"
+    },
+    "me2bRelationship": {
+      "title": "Me2b Relationship",
+      "type": "string"
+    },
+    "status": {
+      "title": "Status",
+      "type": "string"
+    },
+    "techFocus": {
+      "title": "Tech Focus",
+      "type": "string"
+    },
+    "githubProfile": {
+      "title": "Github Profile",
+      "type": "string"
+    },
+    "relevantPublications": {
+      "title": "Relevant Publications",
+      "type": "string"
+    },
+    "keyPeople": {
+      "title": "Key People",
+      "type": "string"
+    },
+    "funding": {
+      "title": "Funding",
+      "type": "string"
+    },
+    "dateEnded": {
+      "title": "Date Ended",
+      "type": "string"
+    }
+  }
+}

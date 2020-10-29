@@ -1,4 +1,3 @@
-import Button from '@material-ui/core/Button'
 import Link from '@material-ui/core/Link'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -11,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingBottom: '15px'
+    paddingTop: '40px',
+    paddingBottom: '10px'
   },
   itemHeaderText: {
     fontWeight: 'bold',
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   itemButtonMore: {
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   itemInfoSplit: {
     display: 'flex',
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   itemType: {
     color: '#f58a0b',
     paddingBottom: '10px'
-  },
+  }
 }))
 
 export default function ItemCard(props) {
@@ -40,57 +40,54 @@ export default function ItemCard(props) {
 
   function ItemHeader(doc, type) {
     return (
-      <React.Fragment>
+      <>
         <div className={classes.itemHeader}>
           <Typography className={classes.itemHeaderText} variant="h6" component="h2">
             {type === 'Organization' ? doc.orgName : doc.name}
           </Typography>
-          <div className={classes.itemButtonMore}>
-            <Button variant="outlined" color="secondary" size="small">Learn More</Button>
-          </div>
         </div>
         <Typography className={classes.itemType} variant="subtitle2">
-          {doc[ '@type' ]}
+          {doc.lisa}
         </Typography>
-      </React.Fragment>
+      </>
     )
   }
 
   function buildEventItem(doc) {
     return (
-      <React.Fragment>
+      <>
         {ItemHeader(doc)}
         <Typography variant="body1">
           {doc.description}
         </Typography>
-        <div className={classes.itemInfoEnd} >
+        <div className={classes.itemInfoEnd}>
           <Link variant="body2" color={doc.hasOwnProperty('website') ? 'initial' : 'error'} href={doc.website}>
             Website
-        </Link>
+          </Link>
         </div>
-      </React.Fragment>
+      </>
     )
   }
 
   function buildOrganizationItem(doc) {
     return (
-      <React.Fragment>
-        {ItemHeader(doc, doc[ '@type' ])}
+      <>
+        {ItemHeader(doc, doc['@type'])}
         <Typography variant="body1">
           {doc.description}
         </Typography>
         <Typography className={classes.itemInfoEnd} variant="subtitle2">
           <Link variant="body2" color={doc.hasOwnProperty('website') ? 'initial' : 'error'} href={doc.website}>
             Website
-        </Link>
+          </Link>
         </Typography>
-      </React.Fragment>
+      </>
     )
   }
 
   function buildProductItem(doc) {
     return (
-      <React.Fragment>
+      <>
         {ItemHeader(doc)}
         <Typography variant="body1">
           {doc.description}
@@ -98,59 +95,62 @@ export default function ItemCard(props) {
         <Typography className={classes.itemInfoEnd} variant="subtitle2">
           <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
             Website
-        </Link>
+          </Link>
         </Typography>
-      </React.Fragment>
+      </>
     )
   }
 
   function buildPublicationItem(doc) {
     return (
-      <React.Fragment>
+      <>
         {ItemHeader(doc)}
+
         <Typography variant="body1">
           {doc.description}
         </Typography>
 
-        <div className={classes.itemInfoEnd} >
-          {doc.publicationType !== 'to be determined' &&
-            <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
-              {doc.publicationType}
-            </Link>
-            ||
-            <Typography variant="subtitle2">
+        <div className={classes.itemInfoEnd}>
+          {doc.publicationType !== 'to be determined'
+            && (
               <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
-                Website
-            </Link>
-            </Typography>
-          }
+                {doc.publicationType}
+              </Link>
+            )
+            || (
+              <Typography variant="subtitle2">
+                <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
+                  Website
+                </Link>
+              </Typography>
+            )}
         </div>
 
-      </React.Fragment>
+      </>
     )
   }
 
   function buildWorkingGroupItem(doc) {
-    return <React.Fragment>
-      {ItemHeader(doc)}
-      <Typography variant="body1">
-        {doc.description}
-      </Typography>
-      <Typography className={classes.itemInfoEnd} variant="subtitle2">
-        <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
-          {doc.category}
-        </Link>
-      </Typography>
-    </React.Fragment>
+    return (
+      <>
+        {ItemHeader(doc)}
+        <Typography variant="body1">
+          {doc.description}
+        </Typography>
+        <Typography className={classes.itemInfoEnd} variant="subtitle2">
+          <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
+            {doc.category}
+          </Link>
+        </Typography>
+      </>
+    )
   }
-
-
 
   const { doc } = props
 
-  var item = {}
+  let item = {}
 
-  switch (doc[ '@type' ]) {
+  switch (doc['@type']) {
     case 'Event':
       item = buildEventItem(doc)
       break
@@ -176,5 +176,5 @@ export default function ItemCard(props) {
 }
 
 ItemCard.propTypes = {
-  doc: PropTypes.object,
+  doc: PropTypes.object
 }
