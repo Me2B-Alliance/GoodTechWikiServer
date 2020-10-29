@@ -53,7 +53,7 @@ export default function HomePage(props) {
             </Grid>
           </Hidden>
           <Grid xs={12} md={10} item>
-            {documentType !== undefined
+            {documentType !== ''
               && (
                 <div className={classes.body}>
                   <Filters filters={filters} type={documentType} />
