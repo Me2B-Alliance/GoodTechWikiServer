@@ -5,31 +5,26 @@ import HomePage from './HomePage'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: '#f5f5f5',
-  },
+    backgroundColor: '#f5f5f5'
+  }
 }))
 
 export async function getServerSideProps(ctx) {
   // Fetch data from external API
-  //const res = await fetch(`https://.../data`)
-  //const data = await res.json()
+  // const res = await fetch(`https://.../data`)
+  // const data = await res.json()
 
   // Pass data to the page via props
-  return { props: { type: ctx.query } }
+  return { props: { type: ctx.query, documents: ctx.query } }
 }
 
-export default function App({ filters, type }) {
-  const classes = useStyles()
-
-  console.log(type)
-
+export default function App({ filters, documents }) {
   return (
-    <HomePage type={type.type} />
+    <HomePage filters={filters} documents={documents.docs} />
   )
 }
 
-
 App.propTypes = {
   filters: PropTypes.object,
-  type: PropTypes.object
+  documents: PropTypes.object
 }

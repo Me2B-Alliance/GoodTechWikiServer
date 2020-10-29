@@ -16,13 +16,13 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column'
   },
   footer: {
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
-    backgroundColor: theme.palette.grey[ 400 ],
-  },
+    backgroundColor: theme.palette.grey[400]
+  }
 }))
 
 export default function StickyFooter() {

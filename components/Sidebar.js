@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Sidebar(props) {
   const classes = useStyles()
 
-  const { type } = props
+  const { documentType } = props
 
   const handleTypeSelect = (item) => {
     window.location.href = `/${item}`
@@ -34,80 +34,79 @@ export default function Sidebar(props) {
     <div className={classes.root}>
       <List
         component="nav"
-        subheader={
+        subheader={(
           <div className={classes.listSubHeader}>
             <ListSubheader disableSticky>
               Browse by Type
-          </ListSubheader>
-            {type !== undefined &&
-              <Link href="/">Clear</Link>
-            }
+            </ListSubheader>
+            {documentType !== ''
+              && <Link href="/">Clear</Link>}
           </div>
-        }
+        )}
       >
         <ListItem
           button
           key={0}
-          selected={type === 'organizations'}
+          selected={documentType === 'Organization'}
           onClick={() => handleTypeSelect('organizations')}
         >
           <ListItemText
-            style={{ color: type === 'organizations' ? '#ff9900' : 'black' }}
-            primary={'Organizations'}
+            style={{ color: documentType === 'Organization' ? '#ff9900' : 'black' }}
+            primary="Organizations"
           />
         </ListItem>
         <ListItem
           button
           key={1}
-          selected={type === 'events'}
+          selected={documentType === 'Event'}
           onClick={() => handleTypeSelect('events')}
         >
           <ListItemText
-            style={{ color: type === 'events' ? '#ff9900' : 'black' }}
-            primary={'Events'}
+            style={{ color: documentType === 'Event' ? '#ff9900' : 'black' }}
+            primary="Events"
           />
         </ListItem>
         <ListItem
           button
           key={2}
-          selected={type === 'products'}
+          selected={documentType === 'Product'}
           onClick={() => handleTypeSelect('products')}
         >
           <ListItemText
-            style={{ color: type === 'products' ? '#ff9900' : 'black' }}
-            primary={'Products'}
+            style={{ color: documentType === 'Product' ? '#ff9900' : 'black' }}
+            primary="Products"
           />
         </ListItem>
         <ListItem
           button
           key={3}
-          selected={type === 'publications'}
+          selected={documentType === 'Publication'}
           onClick={() => handleTypeSelect('publications')}
         >
           <ListItemText
-            style={{ color: type === 'publications' ? '#ff9900' : 'black' }}
-            primary={'Publications'}
+            style={{ color: documentType === 'Publication' ? '#ff9900' : 'black' }}
+            primary="Publications"
           />
         </ListItem>
         <ListItem
           button
           key={4}
-          selected={type === 'workinggroups'}
+          selected={documentType === 'WorkingGroup'}
           onClick={() => handleTypeSelect('workinggroups')}
         >
           <ListItemText
-            style={{ color: type === 'workinggroups' ? '#ff9900' : 'black' }}
-            primary={'Working Groups'}
+            style={{ color: documentType === 'WorkingGroup' ? '#ff9900' : 'black' }}
+            primary="Working Groups"
           />
         </ListItem>
       </List>
       <Divider />
       <List>
         <ListItem button>
-          <ListItemText primary={'Create New Document'} />
+          <ListItemText primary="Create New Document" />
         </ListItem>
         <ListItem button>
-          <ListItemText primary={'History'} />
+          <ListItemText primary="History" />
         </ListItem>
         <ListItem
           button
@@ -115,7 +114,7 @@ export default function Sidebar(props) {
           target="_blank"
           href="https://github.com/Me2B-Alliance/GoodTechWikiServer/issues"
         >
-          <ListItemText primary='Feedback' />
+          <ListItemText primary="Feedback" />
         </ListItem>
       </List>
     </div>
@@ -123,6 +122,5 @@ export default function Sidebar(props) {
 }
 
 Sidebar.propTypes = {
-  selectType: PropTypes.func,
-  type: PropTypes.string
+  documentType: PropTypes.string
 }

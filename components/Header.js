@@ -7,6 +7,8 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import MenuIcon from '@material-ui/icons/Menu'
 
+import Image from 'next/image'
+
 const useStyles = makeStyles((theme) => ({
   headerRoot: {
     boxShadow: '0 0 2px 1px #686868'
@@ -17,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   avatarLarge: {
     width: '',
     height: '70px',
-    paddingLeft: '10px'
+    marginLeft: '20px'
   },
   toolbarTitle: {
     flex: 1,
@@ -27,14 +29,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'flex-end',
     alignSelf: 'center',
-    paddingTop: '5px',
+    paddingTop: '5px'
   },
   toolbarLoginButton: {
     backgroundColor: '#ff9900',
     color: 'white'
-  },
+  }
 }))
-
 
 export default function Header(props) {
   const classes = useStyles()
@@ -44,8 +45,8 @@ export default function Header(props) {
       <Toolbar position="fixed" disableGutters className={classes.toolbar}>
         <Grid alignItems="center" container>
           <Hidden smDown>
-            <Grid item xs={3} sm={2}>
-              <img className={classes.avatarLarge} src="/header_logo.png"></img>
+            <Grid item xs={3} sm={2} style={{ paddingLeft: '10px' }}>
+              <Image width="130" height="80" src="/header_logo.png" />
             </Grid>
           </Hidden>
           <Hidden mdUp>
@@ -62,7 +63,7 @@ export default function Header(props) {
               className={classes.toolbarTitle}
               color="textSecondary"
             >
-              {'Good Tech Wiki'}
+              Good Tech Wiki
             </Typography>
 
           </Grid>

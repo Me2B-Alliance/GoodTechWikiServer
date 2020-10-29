@@ -4,31 +4,31 @@ import { createMuiTheme } from '@material-ui/core/styles'
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#6802bf',
+      main: '#6802bf'
     },
     secondary: {
-      main: '#f58a0b',
+      main: '#f58a0b'
     },
     error: {
-      main: '#fc2803',
+      main: '#fc2803'
     },
     background: {
-      default: '#ffffff',
+      default: '#ffffff'
     },
     text: {
       primary: '#000000',
-      secondary: '#999999',
+      secondary: '#999999'
     }
   },
   typography: {
     fontFamily: 'Encode Sans Condensed',
-    fontSize: 14,
+    fontSize: 17,
     fontWeightBold: 800,
     fontWeightLight: 200,
     fontWeightMedium: 400,
     fontWeightRegular: 300,
     h4: {
-      fontWeight: 700,
+      fontWeight: 700
     }
   },
   breakpoints: {
@@ -37,9 +37,9 @@ const theme = createMuiTheme({
       sm: 600,
       md: 960,
       lg: 1280,
-      xl: 1920,
-    },
-  },
+      xl: 1920
+    }
+  }
 })
 
 export default theme

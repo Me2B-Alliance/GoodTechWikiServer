@@ -17,24 +17,24 @@ export default function App(props) {
   }, [])
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Good Tech Wiki</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Helmet>
 
-      <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap" rel="stylesheet" />
 
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Component {...pageProps} />
-        </ThemeProvider>
-    </React.Fragment>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   )
 }
 
 App.propTypes = {
-        Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.object.isRequired,
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired
 }
