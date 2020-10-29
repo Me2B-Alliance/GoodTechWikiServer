@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     width: '450px'
   },
   inputLabel: {
-    paddingLeft: '17px'
+    backgroundColor: 'white'
   }
 
 }))
@@ -87,38 +87,32 @@ export default function Filters(props) {
   }
 
   function buildfilters() {
-    const InitialText = () => (
-      <Grid item xs={12} md>
-        <Typography variant="subtitle1" style={{ textAlign: 'left', paddingTop: '80px' }}>
-          This wiki was developed by the Me2B Alliance and is offered
-          as a public utility to help people find organizations who
-          are working on more respectfull technology.
-        </Typography>
-        <Typography style={{ paddingTop: '30px' }} variant="body1">
-          Enter a category or search string
-        </Typography>
-      </Grid>
-    )
-
     const SearchButton = () => (
       <Grid className={classes.filterButton} item xs={12} md={2}>
         <Button onClick={handleSearch} variant="outlined">Search</Button>
       </Grid>
     )
 
-    if (type === 'organizations') {
+    if (type === 'Organization') {
       return (
         <>
-          <InitialText />
           <Grid item xs={12} md>
-            <FormControl fullWidth className={classes.formControl}>
+            <Typography variant="subtitle1" style={{ textAlign: 'left', paddingTop: '80px' }}>
+              This wiki was developed by the Me2B Alliance and is offered
+              as a public utility to help people find organizations who
+              are working on more respectfull technology.
+            </Typography>
+            <Typography style={{ paddingTop: '30px' }} variant="body1">
+              Enter a category or search string
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md>
+            <FormControl variant="outlined" className={classes.formControl}>
               <InputLabel className={classes.inputLabel} id="engagement-select-label">Engagement</InputLabel>
               <Select
                 labelId="engagement-select-label"
                 id="engagement-select"
                 value={selectedEngagement}
-                variant="outlined"
-                fullWidth
                 onChange={handleEngagementSelect}
               >
                 {buildEngagements()}
@@ -130,8 +124,8 @@ export default function Filters(props) {
               <TextField
                 label="Text Search"
                 id="search-text-input"
-                variant="outlined"
                 value={textSearch}
+                variant="outlined"
                 onChange={handleTextSearchChange}
               />
             </FormControl>
@@ -142,12 +136,22 @@ export default function Filters(props) {
     }
     return (
       <>
-        <InitialText />
+        <Grid item xs={12} md>
+          <Typography variant="subtitle1" style={{ textAlign: 'left', paddingTop: '80px' }}>
+            This wiki was developed by the Me2B Alliance and is offered
+            as a public utility to help people find organizations who
+            are working on more respectfull technology.
+          </Typography>
+          <Typography style={{ paddingTop: '30px' }} variant="body1">
+            Enter a search string
+          </Typography>
+        </Grid>
         <Grid item xs={12} md={8}>
           <FormControl fullWidth className={classes.formControl}>
             <TextField
               label="Text Search"
               id="search-text-input"
+              variant="outlined"
               InputLabelProps={{ shrink: true }}
               value={textSearch}
               onChange={handleTextSearchChange}
