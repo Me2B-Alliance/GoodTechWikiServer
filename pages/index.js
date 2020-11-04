@@ -20,7 +20,7 @@ export async function getServerSideProps(ctx) {
 
 export default function App({ documents }) {
   return (
-    <HomePage documents={documents} />
+    <HomePage documents={documents.docs} />
   )
 }
 

@@ -30,17 +30,17 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
+const Sidebar = dynamic(() => import('../components/Sidebar'))
+
 export default function HomePage(props) {
   const classes = useStyles()
 
   const { documents } = props
 
-  const Sidebar = dynamic(() => import('../components/Sidebar'))
-
   let documentType = ''
 
-  if (documents.docs) {
-    documentType = documents.docs[0]['@type']
+  if (documents) {
+    documentType = documents[0]['@type']
   }
 
   return (
@@ -59,7 +59,7 @@ export default function HomePage(props) {
               && (
                 <div className={classes.body}>
                   <Filters type={documentType} />
-                  <ItemList documents={documents.docs} type={documentType} />
+                  <ItemList documents={documents} type={documentType} />
                 </div>
               )
               || (
