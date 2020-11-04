@@ -1,11 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
-
-// import { default as events } from '../data/events.json'
-// import { default as organizations } from '../data/organizations.json'
-// import { default as products } from '../data/products.json'
-// import { default as publications } from '../data/publications.json'
-// import { default as workingGroups } from '../data/workingGroups.json'
+import Pagination from '@material-ui/lab/Pagination'
+import { useRouter } from 'next/router'
 import ItemCard from './ItemCard'
 
 const useStyles = makeStyles((theme) => ({
@@ -30,21 +26,43 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
+const docsPerPage = 10
+
 export default function ItemList(props) {
   const classes = useStyles()
 
   const { documents } = props
 
+  const router = useRouter()
+  const { text, cat } = router.query
+
+  let pageCount = Math.round(documents.length / docsPerPage)
+  if (pageCount === 0) {
+    pageCount = 1
+  }
+
+  const [currentPage, setCurrentPage] = React.useState(1)
+
+  const handlePageChange = (event, value) => {
+    setCurrentPage(value)
+  }
+
+
   function buildItemList(items) {
-    return items.slice(0, 15).map((item, index) => (
-      <div key={`item-card-fragment-${item['@id']}`}>
-        <ItemCard doc={item} />
-      </div>
-    ))
+    return items.slice(
+      (currentPage - 1) * docsPerPage,
+      currentPage * docsPerPage
+    )
+      .map((item) => (
+        <div key={`item-card-fragment-${item['@id']}`}>
+          <ItemCard doc={item} />
+        </div>
+      ))
   }
 
   return (
     <div className={classes.listRoot}>
+      <Pagination count={pageCount} page={currentPage} onChange={handlePageChange} color="secondary" />
       <div className={classes.itemList}>
         {documents && buildItemList(documents)}
       </div>

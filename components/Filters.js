@@ -8,6 +8,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
   filterRoot: {
@@ -37,18 +39,13 @@ const useStyles = makeStyles((theme) => ({
 export default function Filters(props) {
   const classes = useStyles()
 
-  const { filters, type } = props
+  const router = useRouter()
+  const { cat: category } = router.query
 
-  const [selectedEngagement, setSelectedEngagement] = React.useState('')
+  const { type } = props
+
+  const [selectedEngagement, setSelectedEngagement] = React.useState(category || '')
   const [textSearch, setTextSearch] = React.useState('')
-
-  let filter = {}
-
-  if (filters === undefined || JSON.stringify(filters) === '{}') {
-    filter = { engagement: 'Engagement 1', text: 'test' }
-  } else {
-    filter = filters
-  }
 
   function buildEngagements() {
     const engagements = [
@@ -82,14 +79,12 @@ export default function Filters(props) {
     setTextSearch(event.target.value)
   }
 
-  const handleSearch = () => {
-    window.location.href = `${window.location.href}/s?eng=${selectedEngagement}&text=${textSearch}`
-  }
-
   function buildfilters() {
     const SearchButton = () => (
       <Grid className={classes.filterButton} item xs={12} md={2}>
-        <Button onClick={handleSearch} variant="outlined">Search</Button>
+        <Link href={{ pathname: '/organizations', query: { cat: selectedEngagement, text: textSearch } }}>
+          <Button variant="outlined">Search</Button>
+        </Link>
       </Grid>
     )
 
@@ -174,5 +169,6 @@ export default function Filters(props) {
 
 Filters.propTypes = {
   filters: PropTypes.object,
-  type: PropTypes.string
+  type: PropTypes.string,
+  category: PropTypes.string
 }

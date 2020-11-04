@@ -3,12 +3,12 @@ import Grid from '@material-ui/core/Grid'
 import Hidden from '@material-ui/core/Hidden'
 import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
+import dynamic from 'next/dynamic'
 
 import Filters from '../components/Filters'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ItemList from '../components/ItemList'
-import Sidebar from '../components/Sidebar'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,12 +33,14 @@ const useStyles = makeStyles((theme) => ({
 export default function HomePage(props) {
   const classes = useStyles()
 
-  const { filters, documents } = props
+  const { documents } = props
+
+  const Sidebar = dynamic(() => import('../components/Sidebar'))
 
   let documentType = ''
 
-  if (documents) {
-    documentType = documents[0]['@type']
+  if (documents.docs) {
+    documentType = documents.docs[0]['@type']
   }
 
   return (
@@ -56,8 +58,8 @@ export default function HomePage(props) {
             {documentType !== ''
               && (
                 <div className={classes.body}>
-                  <Filters filters={filters} type={documentType} />
-                  <ItemList documents={documents} type={documentType} />
+                  <Filters type={documentType} />
+                  <ItemList documents={documents.docs} type={documentType} />
                 </div>
               )
               || (
@@ -82,6 +84,5 @@ export default function HomePage(props) {
 }
 
 HomePage.propTypes = {
-  filters: PropTypes.object,
-  documents: PropTypes.array
+  documents: PropTypes.object
 }
