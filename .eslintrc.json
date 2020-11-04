@@ -18,9 +18,12 @@
     "plugins": [
         "react"
     ],
+    "globals": {
+        "React": "writable"
+    },
     "rules": {
         "react/jsx-filename-extension": 0,
-        "react/react-in-jsx-scope": 0,
+        "react/react-in-jsx-scope": "off",
         "react/forbid-prop-types": 0,
         "react/jsx-props-no-spreading": 0,
         "react/require-default-props": 0,
