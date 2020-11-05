@@ -44,6 +44,7 @@ export default function ItemList(props) {
   const [currentPage, setCurrentPage] = React.useState(1)
 
   const handlePageChange = (event, value) => {
+    window.scrollTo(0, 0)
     setCurrentPage(value)
   }
 
