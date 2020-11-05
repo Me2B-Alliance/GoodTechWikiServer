@@ -24,7 +24,7 @@ export default function App(props) {
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Helmet>
 
-      <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap" rel="stylesheet" />
 
       <ThemeProvider theme={theme}>
         <CssBaseline />
