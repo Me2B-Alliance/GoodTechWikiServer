@@ -12,18 +12,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
-  filterRoot: {
-    justifyContent: 'space-between'
-  },
-  filterGrid: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between'
-  },
-  filterButton: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
   formControl: {
     width: '450px'
   },
@@ -33,16 +21,14 @@ const useStyles = makeStyles((theme) => ({
 
 }))
 
-export default function Filters(props) {
+export default function EngagementSelect(props) {
   const classes = useStyles()
 
   const router = useRouter()
-  const { cat: category } = router.query
 
-  const { type } = props
+  const { cat: category, width } = props
 
   const [selectedEngagement, setSelectedEngagement] = React.useState(category || '')
-  const [textSearch, setTextSearch] = React.useState('')
 
   function buildEngagements() {
     const engagements = [
@@ -73,46 +59,22 @@ export default function Filters(props) {
     router.push({ pathname: '/organizations', query: { cat: event.target.value } })
   }
 
-  const handleTextSearchChange = (event) => {
-    setTextSearch(event.target.value)
-  }
-
-  function buildfilters() {
-    if (type === 'Organization') {
-      return (
-        <>
-          <Grid item xs={12} md>
-            <FormControl variant="outlined" className={classes.formControl}>
-              <InputLabel className={classes.inputLabel} id="engagement-select-label">Select a Category</InputLabel>
-              <Select
-                labelId="engagement-select-label"
-                id="engagement-select"
-                value={selectedEngagement}
-                onChange={handleEngagementSelect}
-              >
-                {buildEngagements()}
-              </Select>
-            </FormControl>
-          </Grid>
-        </>
-      )
-    }
-    return (
-      <>
-        <Grid item xs={12} md />
-      </>
-    )
-  }
-
   return (
-    <div className={classes.filterRoot}>
-      <Grid className={classes.filterGrid} container spacing={4}>
-        {buildfilters(type)}
-      </Grid>
-    </div>
+    <FormControl variant="outlined" style={{ width }} className={classes.formControl}>
+      <InputLabel className={classes.inputLabel} id="engagement-select-label">Select a Category</InputLabel>
+      <Select
+        labelId="engagement-select-label"
+        id="engagement-select"
+        value={selectedEngagement}
+        onChange={handleEngagementSelect}
+      >
+        {buildEngagements()}
+      </Select>
+    </FormControl>
   )
 }
 
-Filters.propTypes = {
-  type: PropTypes.string,
+EngagementSelect.propTypes = {
+  cat: PropTypes.string,
+  width: PropTypes.string
 }

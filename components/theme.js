@@ -17,18 +17,25 @@ const theme = createMuiTheme({
     },
     text: {
       primary: '#000000',
-      secondary: '#999999'
+      secondary: '##999999'
     }
   },
   typography: {
-    fontFamily: 'Encode Sans Condensed',
-    fontSize: 17,
+    fontFamily: 'Encode Sans',
+    fontSize: 16,
     fontWeightBold: 800,
     fontWeightLight: 200,
-    fontWeightMedium: 400,
-    fontWeightRegular: 300,
+    fontWeightMedium: 600,
+    fontWeightRegular: 400,
+    h5: {
+      fontWeight: 600
+    },
     h4: {
-      fontWeight: 700
+      fontWeight: 700,
+      fontSize: 'calc(1.2em + 1vw)'
+    },
+    h3: {
+      fontSize: 'calc(2em + 1vw)'
     }
   },
   breakpoints: {

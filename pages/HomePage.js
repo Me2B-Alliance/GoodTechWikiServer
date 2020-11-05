@@ -4,6 +4,7 @@ import Hidden from '@material-ui/core/Hidden'
 import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
+import Container from '@material-ui/core/Container'
 
 import Filters from '../components/Filters'
 import Footer from '../components/Footer'
@@ -24,9 +25,10 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
-    paddingLeft: '110px',
-    paddingRight: '150px'
+    alignItems: 'flex-start'
+  },
+  homeText: {
+    paddingLeft: '80px'
   }
 }))
 
@@ -48,34 +50,35 @@ export default function HomePage(props) {
       <Header />
 
       <div className={classes.main}>
-        <Grid container>
-          <Hidden smDown>
-            <Grid item xs={12} md={2}>
-              <Sidebar documentType={documentType} />
+        <Container className={classes.body}>
+          <Grid container>
+            <Hidden smDown>
+              <Grid item xs={12} md={2}>
+                <Sidebar documentType={documentType} />
+              </Grid>
+            </Hidden>
+            <Grid xs={12} md={10} item>
+              {documentType !== ''
+                && (
+                  <div style={{ paddingLeft: '80px' }}>
+                    <ItemList documents={documents} type={documentType} />
+                  </div>
+                )
+                || (
+                  <div className={classes.homeText}>
+                    <Typography variant="subtitle1" style={{ textAlign: 'left', paddingTop: '80px' }}>
+                      This wiki was developed by the Me2b Alliance and is offered
+                      as a public utility to help people find organizations who
+                      are working on more ethical technology.
+                    </Typography>
+                    <Typography style={{ paddingTop: '20px' }}>
+                      Start browsing the wiki by selecting a type in the sidebar
+                    </Typography>
+                  </div>
+                )}
             </Grid>
-          </Hidden>
-          <Grid xs={12} md={10} item>
-            {documentType !== ''
-              && (
-                <div className={classes.body}>
-                  <Filters type={documentType} />
-                  <ItemList documents={documents} type={documentType} />
-                </div>
-              )
-              || (
-                <div className={classes.body}>
-                  <Typography variant="subtitle1" style={{ textAlign: 'left', paddingTop: '80px' }}>
-                    This wiki was developed by the Me2b Alliance and is offered
-                    as a public utility to help people find organizations who
-                    are working on more ethical technology.
-                  </Typography>
-                  <Typography style={{ textAlign: 'center', paddingTop: '20px' }}>
-                    Start browsing the wiki by selecting a type in the sidebar
-                  </Typography>
-                </div>
-              )}
           </Grid>
-        </Grid>
+        </Container>
       </div>
 
       <Footer />

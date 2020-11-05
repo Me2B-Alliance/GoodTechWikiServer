@@ -30,8 +30,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end'
   },
   itemType: {
-    color: '#f58a0b',
-    paddingBottom: '10px'
+    color: '#f58a0b'
   }
 }))
 
@@ -46,9 +45,11 @@ export default function ItemCard(props) {
             {type === 'Organization' ? doc.orgName : doc.name}
           </Typography>
         </div>
-        <Typography className={classes.itemType} variant="subtitle2">
-          {doc.lisa}
-        </Typography>
+        <div style={{ paddingBottom: '10px' }}>
+          <Typography className={classes.itemType} variant="button">
+            {doc.lisa}
+          </Typography>
+        </div>
       </>
     )
   }
@@ -60,7 +61,7 @@ export default function ItemCard(props) {
         <Typography variant="body1">
           {doc.description}
         </Typography>
-        <div className={classes.itemInfoEnd}>
+        <div style={{ paddingTop: '20px' }}>
           <Link variant="body2" color={doc.hasOwnProperty('website') ? 'initial' : 'error'} href={doc.website}>
             Website
           </Link>
@@ -76,10 +77,12 @@ export default function ItemCard(props) {
         <Typography variant="body1">
           {doc.description}
         </Typography>
-        <Typography className={classes.itemInfoEnd} variant="subtitle2">
-          <Link variant="body2" color={doc.hasOwnProperty('website') ? 'initial' : 'error'} href={doc.website}>
-            Website
+        <Typography style={{ paddingTop: '20px' }} variant="body2">
+          {doc.website &&
+            <Link variant="body2" color={doc.hasOwnProperty('website') ? 'initial' : 'error'} href={doc.website}>
+              Website
           </Link>
+          }
         </Typography>
       </>
     )
@@ -92,7 +95,7 @@ export default function ItemCard(props) {
         <Typography variant="body1">
           {doc.description}
         </Typography>
-        <Typography className={classes.itemInfoEnd} variant="subtitle2">
+        <Typography style={{ paddingTop: '20px' }} variant="subtitle2">
           <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
             Website
           </Link>
@@ -110,7 +113,7 @@ export default function ItemCard(props) {
           {doc.description}
         </Typography>
 
-        <div className={classes.itemInfoEnd}>
+        <div style={{ paddingTop: '20px' }}>
           {doc.publicationType !== 'to be determined'
             && (
               <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
@@ -137,10 +140,12 @@ export default function ItemCard(props) {
         <Typography variant="body1">
           {doc.description}
         </Typography>
-        <Typography className={classes.itemInfoEnd} variant="subtitle2">
-          <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
-            {doc.category}
-          </Link>
+        <Typography style={{ paddingTop: '20px' }} variant="subtitle2">
+          {doc.url &&
+            <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
+              {doc.category}
+            </Link>
+          }
         </Typography>
       </>
     )

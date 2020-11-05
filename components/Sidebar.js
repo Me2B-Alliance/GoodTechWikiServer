@@ -1,23 +1,19 @@
-import Divider from '@material-ui/core/Divider'
-import Link from '@material-ui/core/Link'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
-import ListSubheader from '@material-ui/core/ListSubheader'
+import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
+import Link from '@material-ui/core/Link'
 import PropTypes from 'prop-types'
+import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: 'white',
-    padding: '0px 10px 10px 0px',
-    height: '100%',
-    marginTop: '5px'
-  },
-  listSubHeader: {
+    paddingTop: '300px',
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
+    flexDirection: 'column',
+    alignItems: 'flex-start'
+  },
+  item: {
+    paddingBottom: '15px',
+    color: '#999999'
   }
 }))
 
@@ -26,97 +22,100 @@ export default function Sidebar(props) {
 
   const { documentType } = props
 
-  const handleTypeSelect = (item) => {
-    window.location.href = `/${item}`
-  }
+  const router = useRouter()
 
   return (
     <div className={classes.root}>
-      <List
-        component="nav"
-        subheader={(
-          <div className={classes.listSubHeader}>
-            <ListSubheader disableSticky>
-              Browse by Type
-            </ListSubheader>
-            {documentType !== ''
-              && <Link href="/">Clear</Link>}
-          </div>
-        )}
+      <Link
+        component="button"
+        className={classes.item}
+        style={{ color: !documentType ? '#f58a0b' : '#999999' }}
+        variant="h6"
+        onClick={() => {
+          router.push({
+            pathname: '/'
+          })
+        }}
       >
-        <ListItem
-          button
-          key={0}
-          selected={documentType === 'Organization'}
-          onClick={() => handleTypeSelect('organizations')}
-        >
-          <ListItemText
-            style={{ color: documentType === 'Organization' ? '#ff9900' : 'black' }}
-            primary="Organizations"
-          />
-        </ListItem>
-        <ListItem
-          button
-          key={1}
-          selected={documentType === 'Event'}
-          onClick={() => handleTypeSelect('events')}
-        >
-          <ListItemText
-            style={{ color: documentType === 'Event' ? '#ff9900' : 'black' }}
-            primary="Events"
-          />
-        </ListItem>
-        <ListItem
-          button
-          key={2}
-          selected={documentType === 'Product'}
-          onClick={() => handleTypeSelect('products')}
-        >
-          <ListItemText
-            style={{ color: documentType === 'Product' ? '#ff9900' : 'black' }}
-            primary="Products"
-          />
-        </ListItem>
-        <ListItem
-          button
-          key={3}
-          selected={documentType === 'Publication'}
-          onClick={() => handleTypeSelect('publications')}
-        >
-          <ListItemText
-            style={{ color: documentType === 'Publication' ? '#ff9900' : 'black' }}
-            primary="Publications"
-          />
-        </ListItem>
-        <ListItem
-          button
-          key={4}
-          selected={documentType === 'WorkingGroup'}
-          onClick={() => handleTypeSelect('workinggroups')}
-        >
-          <ListItemText
-            style={{ color: documentType === 'WorkingGroup' ? '#ff9900' : 'black' }}
-            primary="Working Groups"
-          />
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem button>
-          <ListItemText primary="Create New Document" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="History" />
-        </ListItem>
-        <ListItem
-          button
-          component="a"
-          target="_blank"
-          href="https://github.com/Me2B-Alliance/GoodTechWikiServer/issues"
-        >
-          <ListItemText primary="Feedback" />
-        </ListItem>
-      </List>
+        Home
+      </Link>
+
+      <Link
+        component="button"
+        className={classes.item}
+        style={{ color: documentType === 'Organization' ? '#f58a0b' : '#999999' }}
+        variant="h6"
+        onClick={() => {
+          router.push({
+            pathname: '/organizations'
+          })
+        }}
+      >
+        Organizations
+      </Link>
+
+      <Link
+        component="button"
+        className={classes.item}
+        style={{ color: documentType === 'Event' ? '#f58a0b' : '#999999' }}
+        variant="h6"
+        onClick={() => {
+          router.push({
+            pathname: '/events'
+          })
+        }}
+      >
+        Events
+      </Link>
+
+      <Link
+        component="button"
+        className={classes.item}
+        style={{ color: documentType === 'Publication' ? '#f58a0b' : '#999999' }}
+        variant="h6"
+        onClick={() => {
+          router.push({
+            pathname: '/publications'
+          })
+        }}
+      >
+        Publications
+      </Link>
+
+      <Link
+        component="button"
+        className={classes.item}
+        style={{ color: documentType === 'Product' ? '#f58a0b' : '#999999' }}
+        variant="h6"
+        onClick={() => {
+          router.push({
+            pathname: '/products'
+          })
+        }}
+      >
+        Products
+      </Link>
+
+      <Link
+        component="button"
+        className={classes.item}
+        style={{ color: documentType === 'WorkingGroup' ? '#f58a0b' : '#999999' }}
+        variant="h6"
+        onClick={() => {
+          router.push({
+            pathname: '/workinggroups'
+          })
+        }}
+      >
+        Working Group
+      </Link>
+
+      <Typography variant="caption" style={{ textAlign: 'left', paddingTop: '20px' }}>
+        This wiki was developed by the Me2B Alliance and is offered
+        as a public utility to help people find organizations who
+        are working on more respectfull technology.
+      </Typography>
+
     </div>
   )
 }

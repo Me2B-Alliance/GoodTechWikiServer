@@ -1,4 +1,3 @@
-import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Hidden from '@material-ui/core/Hidden'
 import IconButton from '@material-ui/core/IconButton'
@@ -23,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarTitle: {
     flex: 1,
-    textAlign: 'center'
+    textAlign: 'center',
+    color: '#777f88'
   },
   toolbarLoginButtonRoot: {
     display: 'flex',
@@ -46,7 +46,9 @@ export default function Header(props) {
         <Grid alignItems="center" container>
           <Hidden smDown>
             <Grid item xs={3} sm={2} style={{ paddingLeft: '10px' }}>
-              <Image width="130" height="80" src="/header_logo.png" />
+              <a href="/">
+                <Image width="130" height="80" src="/header_logo.png" />
+              </a>
             </Grid>
           </Hidden>
           <Hidden mdUp>
@@ -58,20 +60,21 @@ export default function Header(props) {
           </Hidden>
           <Grid item xs={6} sm={8}>
             <Typography
-              variant="h4"
+              variant="h5"
               noWrap
               className={classes.toolbarTitle}
               color="textSecondary"
             >
-              Good Tech Wiki
+              {'Good Tech Wiki'.toUpperCase()}
             </Typography>
 
           </Grid>
-          <Grid item className={classes.toolbarLoginButtonRoot} xs={3} sm={2}>
+          { /* <Grid item className={classes.toolbarLoginButtonRoot} xs={3} sm={2}>
             <Button className={classes.toolbarLoginButton} variant="text" size="medium">
               Login
             </Button>
           </Grid>
+          */}
         </Grid>
       </Toolbar>
     </div>
