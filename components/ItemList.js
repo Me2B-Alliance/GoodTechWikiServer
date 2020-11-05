@@ -71,29 +71,31 @@ export default function ItemList(props) {
       }}
       >
         <Grid container spacing={4} direction="row">
-          <Hidden smDown>
+          <Hidden smDown initialWidth="md">
             <Grid item sm style={{ display: 'flex', alignItems: 'center' }}>
               <Typography>
-                Showing {lowerLimit}-{checkUpper} out of {max}
+                Showing {lowerLimit}-{checkUpper} out of {max} results
               </Typography>
             </Grid>
           </Hidden>
-          <Hidden smDown>
+          <Hidden smDown initialWidth="md">
             <Grid item sm style={{ display: 'flex', justifyContent: 'flex-end' }}>
               {documents[0]['@type'] === 'Organization'
                 && <EngagementSelect width="450px" cat={category} />}
             </Grid>
           </Hidden>
           <Hidden mdUp>
-            <Grid item sm style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Grid item sm={12} style={{ display: 'flex', justifyContent: 'flex-start' }}>
               {documents[0]['@type'] === 'Organization'
                 && <EngagementSelect width="250px" cat={category} />}
             </Grid>
           </Hidden>
           <Hidden mdUp>
-            <Typography style={{ paddingLeft: '17px' }}>
-              Showing {lowerLimit}-{checkUpper} out of {max}
-            </Typography>
+            <Grid item sm={12} style={{ display: 'flex', justifyContent: 'flex-start' }}>
+              <Typography style={{ paddingLeft: '17px' }}>
+                Showing {lowerLimit}-{checkUpper} out of {max} results
+              </Typography>
+            </Grid>
           </Hidden>
         </Grid>
       </div>

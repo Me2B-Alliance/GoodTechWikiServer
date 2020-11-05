@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const Sidebar = dynamic(() => import('../components/Sidebar'))
+const Sidebar = dynamic(() => import('../components/Sidebar'), { ssr: false })
 
 export default function HomePage(props) {
   const classes = useStyles()
@@ -52,7 +52,7 @@ export default function HomePage(props) {
       <div className={classes.main}>
         <Container className={classes.body}>
           <Grid container>
-            <Hidden smDown>
+            <Hidden initialWidth="md" smDown>
               <Grid item xs={12} md={2}>
                 <Sidebar documentType={documentType} />
               </Grid>

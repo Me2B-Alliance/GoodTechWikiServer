@@ -44,7 +44,7 @@ export default function Header(props) {
     <div className={classes.headerRoot}>
       <Toolbar position="fixed" disableGutters className={classes.toolbar}>
         <Grid alignItems="center" container>
-          <Hidden smDown>
+          <Hidden smDown initialWidth="md">
             <Grid item xs={3} sm={2} style={{ paddingLeft: '10px' }}>
               <a href="/">
                 <Image width="130" height="80" src="/header_logo.png" />
