@@ -107,7 +107,7 @@ export default function Sidebar(props) {
           })
         }}
       >
-        Working Group
+        Working Groups
       </Link>
 
       <Typography variant="caption" style={{ textAlign: 'left', paddingTop: '20px', paddingBottom: '80px' }}>
