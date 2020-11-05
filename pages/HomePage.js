@@ -67,9 +67,9 @@ export default function HomePage(props) {
                 || (
                   <div className={classes.homeText}>
                     <Typography variant="subtitle1" style={{ textAlign: 'left', paddingTop: '80px' }}>
-                      This wiki was developed by the Me2b Alliance and is offered
+                      This wiki was developed by the Me2B Alliance and is offered
                       as a public utility to help people find organizations who
-                      are working on more ethical technology.
+                      are working on more respectful technology.
                     </Typography>
                     <Typography style={{ paddingTop: '20px' }}>
                       Start browsing the wiki by selecting a type in the sidebar
