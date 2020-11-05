@@ -110,7 +110,7 @@ export default function Sidebar(props) {
         Working Group
       </Link>
 
-      <Typography variant="caption" style={{ textAlign: 'left', paddingTop: '20px' }}>
+      <Typography variant="caption" style={{ textAlign: 'left', paddingTop: '20px', paddingBottom: '80px' }}>
         This wiki was developed by the Me2B Alliance and is offered
         as a public utility to help people find organizations who
         are working on more respectful technology.
