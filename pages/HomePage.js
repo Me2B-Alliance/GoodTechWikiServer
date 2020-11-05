@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const Sidebar = dynamic(() => import('../components/Sidebar'), { ssr: false })
+const Sidebar = dynamic(() => import('../components/Sidebar'))
 
 export default function HomePage(props) {
   const classes = useStyles()
