@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
 import Container from '@material-ui/core/Container'
 
-import Filters from '../components/Filters'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ItemList from '../components/ItemList'
@@ -87,5 +86,5 @@ export default function HomePage(props) {
 }
 
 HomePage.propTypes = {
-  documents: PropTypes.object
+  documents: PropTypes.array
 }
