@@ -47,7 +47,7 @@ export default function Header(props) {
           <Hidden smDown initialWidth="md">
             <Grid item xs={3} sm={2} style={{ paddingLeft: '10px' }}>
               <a href="/">
-                <Image width="130" height="80" src="/header_logo.png" />
+                <Image priority width="130" height="80" src="/header_logo.png" />
               </a>
             </Grid>
           </Hidden>
