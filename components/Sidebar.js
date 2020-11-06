@@ -27,85 +27,55 @@ export default function Sidebar(props) {
   return (
     <div className={classes.root}>
       <Link
-        component="button"
         className={classes.item}
         style={{ color: !documentType ? '#f58a0b' : '#999999' }}
         variant="h6"
-        onClick={() => {
-          router.push({
-            pathname: '/'
-          })
-        }}
+        href="/"
       >
         Home
       </Link>
 
       <Link
-        component="button"
         className={classes.item}
         style={{ color: documentType === 'Organization' ? '#f58a0b' : '#999999' }}
         variant="h6"
-        onClick={() => {
-          router.push({
-            pathname: '/organizations'
-          })
-        }}
+        href="/organizations"
       >
         Organizations
       </Link>
 
       <Link
-        component="button"
         className={classes.item}
         style={{ color: documentType === 'Event' ? '#f58a0b' : '#999999' }}
         variant="h6"
-        onClick={() => {
-          router.push({
-            pathname: '/events'
-          })
-        }}
+        href="/events"
       >
         Events
       </Link>
 
       <Link
-        component="button"
         className={classes.item}
         style={{ color: documentType === 'Publication' ? '#f58a0b' : '#999999' }}
         variant="h6"
-        onClick={() => {
-          router.push({
-            pathname: '/publications'
-          })
-        }}
+        href="/publications"
       >
         Publications
       </Link>
 
       <Link
-        component="button"
         className={classes.item}
         style={{ color: documentType === 'Product' ? '#f58a0b' : '#999999' }}
         variant="h6"
-        onClick={() => {
-          router.push({
-            pathname: '/products'
-          })
-        }}
+        href="/products"
       >
         Products
       </Link>
 
       <Link
-        component="button"
         className={classes.item}
         style={{ color: documentType === 'WorkingGroup' ? '#f58a0b' : '#999999' }}
         variant="h6"
-        onClick={() => {
-          router.push({
-            pathname: '/workinggroups'
-          })
-        }}
+        href="/workinggroups"
       >
         Working Groups
       </Link>
