@@ -6,8 +6,6 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import MenuIcon from '@material-ui/icons/Menu'
 
-import Image from 'next/image'
-
 const useStyles = makeStyles((theme) => ({
   headerRoot: {
     boxShadow: '0 0 2px 1px #686868'
@@ -45,7 +43,7 @@ export default function Header(props) {
       <Toolbar position="fixed" disableGutters className={classes.toolbar}>
         <Grid alignItems="center" container>
           <Hidden smDown initialWidth="md">
-            <Grid item xs={3} sm={2} style={{ paddingLeft: '10px' }}>
+            <Grid item xs={3} sm={2} style={{ paddingLeft: '20px' }}>
               <a href="/">
                 <img height="85px" alt="" src="https://me2ba.org/wp-content/uploads/2020/07/logo-color.png" />
               </a>
