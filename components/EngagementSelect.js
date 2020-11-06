@@ -56,7 +56,11 @@ export default function EngagementSelect(props) {
 
   const handleEngagementSelect = (event) => {
     setSelectedEngagement(event.target.value)
-    router.push({ pathname: '/organizations', query: { cat: event.target.value } })
+    if (event.target.value === '') {
+      router.push({ pathname: '/organizations' })
+    } else {
+      router.push({ pathname: '/organizations', query: { cat: event.target.value } })
+    }
   }
 
   return (
