@@ -1,0 +1,232 @@
+body {
+}
+
+#js-cookie-consent-box {
+  background-color: #fff;
+  min-width: 200px;
+  max-width: 400px;
+  width: 94%;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 10px;
+  z-index: 1500;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 5px #eee;
+  -webkit-transition: height 1s ease;
+  -moz-transition: height 1s ease;
+  -o-transition: height 1s ease;
+  transition: height 1s ease;
+}
+
+#js-cookie-consent-box.slide-up {
+  height: 285px;
+}
+
+#js-cookie-consent-box.slide-down {
+  height: 95%;
+}
+
+@keyframes slide-in {
+  100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes slide-in {
+  100% { -webkit-transform: translateY(0%); }
+}
+
+@keyframes slide-out {
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+  0% { -webkit-transform: translateY(0%); }
+  100% { -webkit-transform: translateY(-100%); }
+}
+
+.js-cookie-consent-main-text-box {
+  color: #999;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.js-cookie-consent-main-text-box .title {
+  font-size: 14px;
+}
+
+.js-cookie-consent-main-text-box .cookie-consent-learn-more {
+  color: #999;
+  text-decoration: underline;
+  outline: none;
+  position: relative;
+}
+
+.js-cookie-consent-main-text-box .cookie-consent-learn-more svg {
+  position: absolute;
+  width: 20px;
+  right: -16px;
+}
+
+.js-cookie-consent-toogle-box {
+  color: #999;
+  padding: 0 20px 20px 20px;
+  font-size: 13px;
+  overflow-y: scroll;
+  height: calc(100% - 330px);
+}
+
+.js-cookie-consent-toogle-box::-webkit-scrollbar {
+  display: none;
+}
+
+.js-cookie-consent-toogle-box {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.js-cookie-consent-toogle-box-inner {
+  position: relative;
+  margin-top: 40px;
+}
+
+.cookie-consent-settings-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+  width: 78%;
+}
+
+.cookie-consent-learn-more-box {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.cookie-consent-btn-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+}
+
+.cookie-consent-button {
+  font-size: 13px !important;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.cookie-consent-button.accept {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  background-color: #42ab9e;
+  color: #fff;
+  border-radius: 200px;
+}
+
+.cookie-consent-button.open-settings {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  background-color: transparent;
+  color: #999;
+  text-decoration: underline;
+}
+
+.save-cookie-consent-btn-box {
+  margin-top: 30px;
+}
+
+.cookie-consent-button.save-cookies {
+  left: 15px;
+  background-color: #42ab9e;
+  color: #fff;
+  border-radius: 200px;
+}
+
+.js-cookie-consent-toogle-box-inner .switch {
+  position: absolute;
+  right: 0;
+  top: -7px;
+  width: 60px;
+  height: 34px;
+}
+
+.js-cookie-consent-toogle-box-inner .switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.js-cookie-consent-toogle-box-inner .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.js-cookie-consent-toogle-box-inner .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.js-cookie-consent-toogle-box-inner .slider.checked {
+  background-color: #42ab9e;
+}
+
+.js-cookie-consent-toogle-box-inner input:checked + .slider.disabled {
+  opacity: 0.6;
+}
+
+.js-cookie-consent-toogle-box-inner input:focus + .slider {
+  box-shadow: 0 0 1px #42ab9e;
+}
+
+.js-cookie-consent-toogle-box-inner input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.js-cookie-consent-toogle-box-inner .slider.round {
+  border-radius: 34px;
+}
+
+.js-cookie-consent-toogle-box-inner .slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 480px) {
+  #js-cookie-consent-box {
+    width: 100%;
+    bottom: 50px;
+    left: 50px;
+  }
+
+  #js-cookie-consent-box.slide-down {
+    height: 80%;
+  }
+
+  #js-cookie-consent-box.slide-up {
+    height: 300px;
+  }
+}

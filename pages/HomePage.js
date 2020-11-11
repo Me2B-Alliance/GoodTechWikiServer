@@ -9,6 +9,7 @@ import Container from '@material-ui/core/Container'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ItemList from '../components/ItemList'
+import cookieConsent from '../components/CookieConsent'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,6 +43,32 @@ export default function HomePage(props) {
 
   if (documents) {
     documentType = documents[0]['@type']
+  }
+
+  if (process.browser) {
+    cookieConsent({
+      cookieName: 'cookie_consent',
+      message: 'Ideally, we do not collect cookies. However, if we cannot avoid them altogether, then we take steps to limit their tracking behaviors. Given the prevalence of unauthorized tracking agents online, we regularly audit our website, alert you to their presence, and make it easy for you to opt out of cookies without losing any of this site’s functionality. By clicking “Accept all”, you consent to the use of ALL the cookies.',
+      options: [
+        {
+          title: 'Necessary',
+          description: 'Necessary cookies are absolutely essential for the website to function properly. This category only includes cookies that ensures basic functionalities and security features of the website. These cookies do not store any personal information.',
+          key: 'essential',
+          disabled: true,
+          checked: true
+        },
+        {
+          title: 'Non-Necessary',
+          description: 'Any cookies that may not be particularly necessary for the website to function and is used specifically to collect user personal data via analytics, ads, other embedded contents are termed as non-necessary cookies. It is mandatory to procure user consent prior to running these cookies on your website.',
+          key: 'marketing',
+          disabled: false,
+          checked: false
+        }
+      ],
+      learnMore: 'https://www.cookie.com/gdpr',
+      expiration: 1,
+      color: '#f58a0b'
+    })
   }
 
   return (

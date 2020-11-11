@@ -2,6 +2,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
+import '../public/CookieConsent.css'
 
 import theme from '../components/theme'
 
