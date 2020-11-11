@@ -43,9 +43,9 @@ export default function Header(props) {
       <Toolbar position="fixed" disableGutters className={classes.toolbar}>
         <Grid alignItems="center" container>
           <Hidden smDown initialWidth="md">
-            <Grid item xs={3} sm={2} style={{ paddingLeft: '20px' }}>
+            <Grid item xs={3} sm={2} style={{ padding: '15px 0px 15px 20px' }}>
               <a href="/">
-                <img height="85px" alt="" src="https://me2ba.org/wp-content/uploads/2020/07/logo-color.png" />
+                <img height="55px" alt="" src="/Me2B_Logo-RGB-web.jpg" />
               </a>
             </Grid>
           </Hidden>
