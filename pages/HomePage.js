@@ -53,14 +53,14 @@ export default function HomePage(props) {
         {
           title: 'Necessary',
           description: 'Necessary cookies are absolutely essential for the website to function properly. This category only includes cookies that ensures basic functionalities and security features of the website. These cookies do not store any personal information.',
-          key: 'essential',
+          key: 'necessary',
           disabled: true,
           checked: true
         },
         {
           title: 'Non-Necessary',
           description: 'Any cookies that may not be particularly necessary for the website to function and is used specifically to collect user personal data via analytics, ads, other embedded contents are termed as non-necessary cookies. It is mandatory to procure user consent prior to running these cookies on your website.',
-          key: 'marketing',
+          key: 'non-necessary',
           disabled: false,
           checked: false
         }
