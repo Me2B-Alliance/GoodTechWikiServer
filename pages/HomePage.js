@@ -45,7 +45,7 @@ export default function HomePage(props) {
     documentType = documents[0]['@type']
   }
 
-  if (process.browser) {
+  if (false) {
     cookieConsent({
       cookieName: 'cookie_consent',
       message: 'Ideally, we do not collect cookies. However, if we cannot avoid them altogether, then we take steps to limit their tracking behaviors. Given the prevalence of unauthorized tracking agents online, we regularly audit our website, alert you to their presence, and make it easy for you to opt out of cookies without losing any of this site’s functionality. By clicking “Accept all”, you consent to the use of ALL the cookies.',
