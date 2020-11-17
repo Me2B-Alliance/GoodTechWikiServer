@@ -19,9 +19,14 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column'
   },
   footer: {
+    display: 'flex',
+    flexDirection: 'column',
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
-    backgroundColor: theme.palette.grey[400]
+    backgroundColor: theme.palette.grey[400],
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyItems: 'flex-start'
   }
 }))
 
@@ -30,9 +35,16 @@ export default function StickyFooter() {
 
   return (
     <div className={classes.root}>
+      <div style={{ backgroundColor: '#686868', height: '50px', color: '#f9f5fd', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingLeft: '15px' }}>
+        <Typography variant="body1">
+          The Me2B Alliance avoids the use of cookies.  Currently, this site doesn’t include the use of any cookies.
+        </Typography>
+      </div>
       <footer className={classes.footer}>
-        <Typography variant="body1">Powered by NextJs, React and Material UI</Typography>
-        <Copyright />
+        <div>
+          <Typography variant="body1">Powered by NextJs, Express and Material UI</Typography>
+          <Copyright />
+        </div>
       </footer>
     </div>
   )
