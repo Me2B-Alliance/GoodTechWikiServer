@@ -43,20 +43,20 @@ app.prepare()
     const server = express()
 
     server.use(compression())
-    server.use(session({ secret: 'a secret', cookie: { maxAge: 24000 } }))
-    server.use(passport.initialize())
-    server.use(passport.session())
+    // server.use(session({ secret: 'a secret', cookie: { maxAge: 24000 } }))
+    // server.use(passport.initialize())
+    // server.use(passport.session())
 
-    passport.use(new GitHubStrategy({
-      clientID: process.env.GH_CLIENT_ID,
-      clientSecret: process.env.GH_CLIENT_SECRET,
-      callbackURL: process.env.GH_CLIENT_CALLBACKURL
-    },
-    (accessToken, refreshToken, profile, done) => {
-      process.nextTick(function () {
-        return done(null, profile)
-      })
-    }))
+    // passport.use(new GitHubStrategy({
+    //   clientID: process.env.GH_CLIENT_ID,
+    //   clientSecret: process.env.GH_CLIENT_SECRET,
+    //   callbackURL: process.env.GH_CLIENT_CALLBACKURL
+    // },
+    // (accessToken, refreshToken, profile, done) => {
+    //   process.nextTick(function () {
+    //     return done(null, profile)
+    //   })
+    // }))
 
     server.get('/', (req, res) => {
       const actualPage = '/'
