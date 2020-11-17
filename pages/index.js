@@ -15,15 +15,15 @@ export async function getServerSideProps(ctx) {
   // const data = await res.json()
 
   // Pass data to the page via props
-  return { props: { documents: ctx.query } }
+  return { props: { query: ctx.query } }
 }
 
-export default function App({ documents }) {
+export default function App({ query }) {
   return (
-    <HomePage documents={documents.docs} />
+    <HomePage documents={query.docs} userInfo={query.userInfo} />
   )
 }
 
 App.propTypes = {
-  documents: PropTypes.object
+  query: PropTypes.object
 }

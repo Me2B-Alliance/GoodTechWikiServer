@@ -37,7 +37,7 @@ const Sidebar = dynamic(() => import('../components/Sidebar'))
 export default function HomePage(props) {
   const classes = useStyles()
 
-  const { documents } = props
+  const { documents, userInfo } = props
 
   let documentType = ''
 
@@ -73,7 +73,7 @@ export default function HomePage(props) {
 
   return (
     <div className={classes.root}>
-      <Header />
+      <Header userInfo={userInfo} />
 
       <div className={classes.main}>
         <Container className={classes.body}>
@@ -113,5 +113,6 @@ export default function HomePage(props) {
 }
 
 HomePage.propTypes = {
-  documents: PropTypes.array
+  documents: PropTypes.array,
+  userInfo: PropTypes.string
 }

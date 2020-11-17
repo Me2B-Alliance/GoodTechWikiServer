@@ -1,10 +1,13 @@
 import Grid from '@material-ui/core/Grid'
+import Button from '@material-ui/core/Button'
 import Hidden from '@material-ui/core/Hidden'
 import IconButton from '@material-ui/core/IconButton'
 import { makeStyles } from '@material-ui/core/styles'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import MenuIcon from '@material-ui/icons/Menu'
+import { useRouter } from 'next/router'
+import PropTypes from 'prop-types'
 
 const useStyles = makeStyles((theme) => ({
   headerRoot: {
@@ -31,12 +34,26 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarLoginButton: {
     backgroundColor: '#ff9900',
-    color: 'white'
+    color: 'white',
+    '&:hover': {
+      background: '#ffd699'
+    }
   }
 }))
 
 export default function Header(props) {
   const classes = useStyles()
+
+  const { userInfo } = props
+
+  const router = useRouter()
+
+  const handleButtonLogin = () => {
+    // Disable for now
+    // router.push({
+    //   pathname: '/oauth/github'
+    // })
+  }
 
   return (
     <div className={classes.headerRoot}>
@@ -67,14 +84,29 @@ export default function Header(props) {
             </Typography>
 
           </Grid>
-          { /* <Grid item className={classes.toolbarLoginButtonRoot} xs={3} sm={2}>
-            <Button className={classes.toolbarLoginButton} variant="text" size="medium">
-              Login
-            </Button>
+          <Grid item className={classes.toolbarLoginButtonRoot} xs={3} sm={2}>
+            {userInfo !== ''
+              && (
+                <Typography>Logged in as {userInfo.username}
+                  (<a href="/logout">logout</a>)
+                </Typography>
+              )
+              || (
+                <Button
+                  className={classes.toolbarLoginButton}
+                  size="medium"
+                  onClick={handleButtonLogin}
+                >
+                  Login with Github
+                </Button>
+              )}
           </Grid>
-          */}
         </Grid>
       </Toolbar>
     </div>
   )
+}
+
+Header.propTypes = {
+  userInfo: PropTypes.string
 }
