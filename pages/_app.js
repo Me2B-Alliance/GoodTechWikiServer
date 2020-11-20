@@ -1,11 +1,19 @@
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { ThemeProvider } from '@material-ui/core/styles'
+/**
+ * Dependencies
+ */
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import '../public/CookieConsent.css'
 
-import theme from '../components/theme'
+/**
+ * Local Styles
+ */
+import '../styles/bootstrap.scss'
+import '../styles/App.scss'
+import '../styles/CookieConsent.css'
 
+/**
+ * App
+ */
 export default function App(props) {
   const { Component, pageProps } = props
 
@@ -25,12 +33,7 @@ export default function App(props) {
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Helmet>
 
-      <link href="https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap" rel="stylesheet" />
-
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Component {...pageProps} />
     </>
   )
 }

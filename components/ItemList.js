@@ -1,53 +1,32 @@
-import Grid from '@material-ui/core/Grid'
-import Hidden from '@material-ui/core/Hidden'
-import Typography from '@material-ui/core/Typography'
-import Pagination from '@material-ui/lab/Pagination'
-import { makeStyles } from '@material-ui/core/styles'
+/**
+ * Dependencies
+ */
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Pagination from 'react-bootstrap-4-pagination'
 
-import EngagementSelect from './EngagementSelect'
+/**
+ * Local Dependencies
+ */
 import ItemCard from './ItemCard'
+import EngagementSelect from './EngagementSelect'
 
-const useStyles = makeStyles((theme) => ({
-  listRoot: {
-    borderRadius: '5px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    width: '100%',
-    paddingTop: '70px'
-  },
-  itemList: {
-    width: '100%',
-    paddingTop: '10px'
-  },
-  itemListBreak: {
-    margin: '15px 0px 25px 0px',
-    border: 'none',
-    backgroundColor: '#6700be',
-    height: '2px'
-  }
-}))
-
-const docsPerPage = 10
-
+/**
+ * ItemList
+ */
 export default function ItemList(props) {
-  const classes = useStyles()
   const router = useRouter()
 
   const { documents } = props
 
   const { cat: category } = router.query
 
+  const docsPerPage = 10
   const pageCount = Math.floor((documents.length / docsPerPage) + 1)
 
   const [currentPage, setCurrentPage] = React.useState(1)
-
-  const handlePageChange = (event, value) => {
-    window.scrollTo(0, 0)
-    setCurrentPage(value)
-  }
 
   const buildItemList = (items) => items.slice(
     (currentPage - 1) * docsPerPage,
@@ -55,7 +34,7 @@ export default function ItemList(props) {
   )
     .map((item) => (
       <div key={`item-card-fragment-${item['@id']}`}>
-        <ItemCard doc={item} />
+        <ItemCard document={item} />
       </div>
     ))
 
@@ -67,52 +46,37 @@ export default function ItemList(props) {
     const checkUpper = upperLimit > max ? max : upperLimit
 
     return (
-      <div style={{
-        width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'
-      }}
-      >
-        <Grid container spacing={4} direction="row">
-          <Hidden smDown initialWidth="md">
-            <Grid item sm style={{ display: 'flex', alignItems: 'center' }}>
-              <Typography>
-                Showing {lowerLimit}-{checkUpper} out of {max} results
-              </Typography>
-            </Grid>
-          </Hidden>
-          <Hidden smDown initialWidth="md">
-            <Grid item sm style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              {documents[0]['@type'] === 'Organization'
-                && <EngagementSelect width="450px" cat={category} />}
-            </Grid>
-          </Hidden>
-          <Hidden mdUp>
-            <Grid item sm={12} style={{ display: 'flex', justifyContent: 'flex-start' }}>
-              {documents[0]['@type'] === 'Organization'
-                && <EngagementSelect width="250px" cat={category} />}
-            </Grid>
-          </Hidden>
-          <Hidden mdUp>
-            <Grid item sm={12} style={{ display: 'flex', justifyContent: 'flex-start' }}>
-              <Typography style={{ paddingLeft: '17px' }}>
-                Showing {lowerLimit}-{checkUpper} out of {max} results
-              </Typography>
-            </Grid>
-          </Hidden>
-        </Grid>
-      </div>
+      <Row>
+        <Col>
+          <p className="small">
+            Showing {lowerLimit}-{checkUpper} out of {max} results
+          </p>
+        </Col>
+        <Col>
+          {documents[0]['@type'] === 'Organization'
+            && <EngagementSelect width="450px" cat={category} />}
+        </Col>
+      </Row>
     )
   }
 
   return (
-    <div className={classes.listRoot}>
-      <Typography variant="h3" style={{ paddingBottom: '50px', color: '#6700be' }}>
+    <div>
+      <h1 className="display-4">
         {documents[0]['@type']}s
-      </Typography>
+      </h1>
       {ItemListStatsHeader()}
-      <div className={classes.itemList}>
+      <div>
         {documents && buildItemList(documents)}
       </div>
-      <Pagination style={{ paddingBottom: '100px', paddingTop: '50px' }} count={pageCount} page={currentPage} onChange={handlePageChange} color="secondary" />
+      <Pagination
+        threeDots
+        totalPages={pageCount}
+        currentPage={currentPage}
+        showMax={7}
+        prevNext
+        onClick={setCurrentPage}
+      />
     </div>
   )
 }

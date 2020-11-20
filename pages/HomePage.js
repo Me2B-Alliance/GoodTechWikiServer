@@ -1,114 +1,130 @@
-import { Typography } from '@material-ui/core'
-import Grid from '@material-ui/core/Grid'
-import Hidden from '@material-ui/core/Hidden'
-import { makeStyles } from '@material-ui/core/styles'
-import PropTypes from 'prop-types'
+/**
+ * Dependencies
+ */
+import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
-import Container from '@material-ui/core/Container'
+import PropTypes from 'prop-types'
+import { Col, Container, Row } from 'react-bootstrap'
+import Pagination from 'react-bootstrap-4-pagination'
 
+/**
+ * Local Dependencies
+ */
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import ItemList from '../components/ItemList'
-import cookieConsent from '../components/CookieConsent'
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh'
-  },
-  main: {
-    marginBottom: theme.spacing(2),
-    flexGrow: 1
-  },
-  body: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start'
-  },
-  homeText: {
-    paddingLeft: '80px'
-  }
-}))
+import ItemCard from '../components/ItemCard'
+import EngagementSelect from '../components/EngagementSelect'
 
 const Sidebar = dynamic(() => import('../components/Sidebar'))
 
+/**
+ * HomePage
+ */
 export default function HomePage(props) {
-  const classes = useStyles()
+  const router = useRouter()
 
   const { documents, userInfo } = props
+  const [currentPage, setCurrentPage] = React.useState(1)
+
+  const { cat: category } = router.query
+
+  const docsPerPage = 10
+  let pageCount
 
   let documentType = ''
 
   if (documents) {
     documentType = documents[0]['@type']
+    pageCount = Math.floor((documents.length / docsPerPage) + 1)
   }
 
-  if (false) {
-    cookieConsent({
-      cookieName: 'cookie_consent',
-      message: 'Ideally, we do not collect cookies. However, if we cannot avoid them altogether, then we take steps to limit their tracking behaviors. Given the prevalence of unauthorized tracking agents online, we regularly audit our website, alert you to their presence, and make it easy for you to opt out of cookies without losing any of this site’s functionality. By clicking “Accept all”, you consent to the use of ALL the cookies.',
-      options: [
-        {
-          title: 'Necessary',
-          description: 'Necessary cookies are absolutely essential for the website to function properly. This category only includes cookies that ensures basic functionalities and security features of the website. These cookies do not store any personal information.',
-          key: 'necessary',
-          disabled: true,
-          checked: true
-        },
-        {
-          title: 'Non-Necessary',
-          description: 'Any cookies that may not be particularly necessary for the website to function and is used specifically to collect user personal data via analytics, ads, other embedded contents are termed as non-necessary cookies. It is mandatory to procure user consent prior to running these cookies on your website.',
-          key: 'non-necessary',
-          disabled: false,
-          checked: false
-        }
-      ],
-      learnMore: 'https://www.cookie.com/gdpr',
-      expiration: 1,
-      color: '#f58a0b'
-    })
+  const buildItemList = (items) => items.slice(
+    (currentPage - 1) * docsPerPage,
+    currentPage * docsPerPage
+  )
+    .map((item) => (
+      <div key={`item-card-fragment-${item['@id']}`}>
+        <ItemCard document={item} />
+      </div>
+    ))
+
+  const ItemListHeader = () => {
+    const lowerLimit = (currentPage - 1) * docsPerPage
+    const upperLimit = currentPage * docsPerPage
+    const max = documents.length
+
+    const checkUpper = upperLimit > max ? max : upperLimit
+
+    return (
+      <>
+        <h1 id="item-list-header-title" className="display-4">
+          {documents[0]['@type']}s
+        </h1>
+        <Row>
+          <Col id="item-list-results-stats">
+            <p>
+              Showing {lowerLimit}-{checkUpper} out of {max} results
+            </p>
+          </Col>
+          <Col>
+            {documents[0]['@type'] === 'Organization'
+              && <EngagementSelect width="450px" cat={category} />}
+          </Col>
+        </Row>
+      </>
+    )
   }
 
   return (
-    <div className={classes.root}>
+    <>
       <Header userInfo={userInfo} />
 
-      <div className={classes.main}>
-        <Container className={classes.body}>
-          <Grid container>
-            <Hidden initialWidth="md" smDown>
-              <Grid item xs={12} md={2}>
-                <Sidebar documentType={documentType} />
-              </Grid>
-            </Hidden>
-            <Grid xs={12} md={10} item>
-              {documentType !== ''
+      <div id="body">
+        <Container>
+          <Row>
+            <Col md={3} className="d-none d-md-block" style={{ paddingTop: '180px' }}>
+              <Sidebar documentType={documentType} />
+            </Col>
+            <Col>
+              {documents
                 && (
-                  <div style={{ paddingLeft: '80px' }}>
-                    <ItemList documents={documents} type={documentType} />
-                  </div>
+                  <>
+                    <ItemListHeader />
+                    <div id="item-list">
+                      <div>
+                        {buildItemList(documents)}
+                      </div>
+                      <Pagination
+                        threeDots
+                        totalPages={pageCount}
+                        currentPage={currentPage}
+                        showMax={5}
+                        prevNext
+                        onClick={setCurrentPage}
+                      />
+                    </div>
+                  </>
                 )
                 || (
-                  <div className={classes.homeText}>
-                    <Typography variant="subtitle1" style={{ textAlign: 'left', paddingTop: '80px' }}>
+                  <div>
+                    <p>
                       This wiki was developed by the Me2B Alliance and is offered
                       as a public utility to help people find organizations who
                       are working on more respectful technology.
-                    </Typography>
-                    <Typography style={{ paddingTop: '20px' }}>
+                    </p>
+                    <p>
                       Start browsing the wiki by selecting a type in the sidebar
-                    </Typography>
+                    </p>
                   </div>
                 )}
-            </Grid>
-          </Grid>
+            </Col>
+          </Row>
+
         </Container>
       </div>
 
       <Footer />
-    </div>
+    </>
   )
 }
 

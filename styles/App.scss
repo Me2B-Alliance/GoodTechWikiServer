@@ -1,0 +1,101 @@
+@import "theme";
+
+@font-face {
+  font-family: "Encode Sans";
+  src: url("/fonts/EncodeSans-VariableFont_wdth,wght.ttf");
+  font-display: swap;
+}
+
+* {
+  font-family: 'Encode Sans';
+  font-weight: 300;
+  line-height: 30px;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-weight: 400;
+}
+
+li {
+  padding: 2px;
+}
+
+#body {
+  font-size: 18px;
+  padding-top: 70px ;
+  padding-bottom: 10px ;
+  min-height: 80vh;
+}
+
+#header-title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#item-list {
+padding-top: 20px ;
+}
+
+#item-list h3 {
+  color: $purple;
+  font-weight: 500;
+}
+
+#item-list h5 {
+  color: $orange;
+  font-weight: 500;
+}
+
+#item-list p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+#item-list-stats-header {
+  padding-top: 25px;
+}
+
+#item-list-header-title {
+  color: $purple;
+  font-weight: 400;
+  padding-bottom: 25px;
+}
+
+#item-list-results-stats {
+  display: flex;
+  align-items: center;
+}
+
+#item-card {
+  padding-bottom: 25px;
+}
+
+#sidebar-about-text {
+  text-align: left;
+  padding: 10px 30px 0px 0px;
+}
+
+#sidebar li {
+padding-bottom: 7px;
+}
+
+#sidebar p {
+  line-height: 22px;
+}
+
+#footer {
+  background: #43474d ;
+  text-align: center ;
+  padding-top: 10px ;
+  color: white ;
+}
+
+#footer-cookie-notice {
+  background: #686868;
+  text-align: center ;
+  padding-top: 10px ;
+  color: white ;
+}
+
+

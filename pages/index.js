@@ -1,13 +1,12 @@
-import { makeStyles } from '@material-ui/core/styles'
+/**
+ * Dependencies
+ */
 import PropTypes from 'prop-types'
 
+/**
+ * Local Dependencies
+ */
 import HomePage from './HomePage'
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: '#f5f5f5'
-  }
-}))
 
 export async function getServerSideProps(ctx) {
   // Fetch data from external API
@@ -18,6 +17,9 @@ export async function getServerSideProps(ctx) {
   return { props: { query: ctx.query } }
 }
 
+/**
+ * App
+ */
 export default function App({ query }) {
   return (
     <HomePage documents={query.docs} userInfo={query.userInfo} />

@@ -1,29 +1,17 @@
-import FormControl from '@material-ui/core/FormControl'
-import InputLabel from '@material-ui/core/InputLabel'
-import MenuItem from '@material-ui/core/MenuItem'
-import Select from '@material-ui/core/Select'
-import { makeStyles } from '@material-ui/core/styles'
-import PropTypes from 'prop-types'
+/**
+ * Dependencies
+ */
 import { useRouter } from 'next/router'
+import PropTypes from 'prop-types'
+import Form from 'react-bootstrap/Form'
 
-const useStyles = makeStyles((theme) => ({
-  formControl: {
-    width: '450px'
-  },
-  inputLabel: {
-    backgroundColor: 'white'
-  }
-
-}))
-
+/**
+ * EngagementSelect
+ */
 export default function EngagementSelect(props) {
-  const classes = useStyles()
-
   const router = useRouter()
 
-  const { cat: category, width } = props
-
-  const [selectedEngagement, setSelectedEngagement] = React.useState(category || '')
+  const { cat: category } = props
 
   function buildEngagements() {
     const engagements = [
@@ -36,22 +24,24 @@ export default function EngagementSelect(props) {
     return engagements.map((engagement) => {
       if (engagement === 'None') {
         return (
-          <MenuItem value="" key="menu-item-activity-none">
-            <em>None</em>
-          </MenuItem>
+          <option key="menu-item-activity-All">
+            All
+          </option>
         )
       }
       return (
-        <MenuItem value={engagement} key={`menu-item-activity-${engagement}`}>
+        <option key={`menu-item-activity-${engagement}`}>
           {engagement}
-        </MenuItem>
+        </option>
       )
     })
   }
 
   const handleEngagementSelect = (event) => {
-    setSelectedEngagement(event.target.value)
-    if (event.target.value === '') {
+    if (event.target.value === 'Select a Category') {
+      return
+    }
+    if (event.target.value === 'All') {
       router.push({ pathname: '/organizations' })
     } else {
       router.push({ pathname: '/organizations', query: { cat: event.target.value } })
@@ -59,21 +49,25 @@ export default function EngagementSelect(props) {
   }
 
   return (
-    <FormControl variant="outlined" style={{ width }} className={classes.formControl}>
-      <InputLabel className={classes.inputLabel} id="engagement-select-label">Select a Category</InputLabel>
-      <Select
-        labelId="engagement-select-label"
-        id="engagement-select"
-        value={selectedEngagement}
-        onChange={handleEngagementSelect}
-      >
-        {buildEngagements()}
-      </Select>
-    </FormControl>
+    <Form>
+      <Form.Group controlId="filterForm.SelectCategory">
+        <Form.Control
+          id="select-category"
+          as="select"
+          defaultValue={category}
+          custom
+          onChange={handleEngagementSelect}
+        >
+          <option key="menu-item-activity-label">
+            Select a Category
+          </option>
+          {buildEngagements()}
+        </Form.Control>
+      </Form.Group>
+    </Form>
   )
 }
 
 EngagementSelect.propTypes = {
-  cat: PropTypes.string,
-  width: PropTypes.string
+  cat: PropTypes.string
 }

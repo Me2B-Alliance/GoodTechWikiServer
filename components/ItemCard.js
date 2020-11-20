@@ -1,71 +1,49 @@
-import Link from '@material-ui/core/Link'
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
+/**
+ * Dependencies
+ */
 import PropTypes from 'prop-types'
 
-const useStyles = makeStyles((theme) => ({
-  itemRoot: {
-  },
-  itemHeader: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingTop: '40px',
-    paddingBottom: '10px'
-  },
-  itemHeaderText: {
-    fontWeight: 'bold',
-    color: '#6700be'
-  },
-  itemButtonMore: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  itemInfoSplit: {
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
-  itemInfoEnd: {
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  itemType: {
-    color: '#f58a0b'
-  }
-}))
-
+/**
+ * ItemCard
+ */
 export default function ItemCard(props) {
-  const classes = useStyles()
+  const { document } = props
 
-  function ItemHeader(doc, type) {
-    return (
-      <>
-        <div className={classes.itemHeader}>
-          <Typography className={classes.itemHeaderText} variant="h6" component="h2">
-            {type === 'Organization' ? doc.orgName : doc.name}
-          </Typography>
-        </div>
-        <div style={{ paddingBottom: '10px' }}>
-          <Typography className={classes.itemType} variant="button">
-            {doc.lisa}
-          </Typography>
-        </div>
-      </>
-    )
-  }
+  /**
+   * ItemHeader
+   * @param {Object} doc Document object
+   * @param {String} type Type of document we're building
+   */
+  const ItemHeader = (doc, type) => (
+    <>
+      <div>
+        <h3>
+          {type === 'Organization' ? doc.orgName : doc.name}
+        </h3>
+      </div>
+      <div>
+        <h5>
+          {doc.lisa}
+        </h5>
+      </div>
+    </>
+  )
 
   function buildEventItem(doc) {
     return (
       <>
         {ItemHeader(doc)}
-        <Typography variant="body1">
+        <p>
           {doc.description}
-        </Typography>
-        <div style={{ paddingTop: '20px' }}>
-          <Link variant="body2" color={doc.hasOwnProperty('website') ? 'initial' : 'error'} href={doc.website}>
-            Website
-          </Link>
-        </div>
+        </p>
+        <p>
+          {doc.website
+            && (
+              <a href={doc.website}>
+                Website
+              </a>
+            )}
+        </p>
       </>
     )
   }
@@ -74,16 +52,17 @@ export default function ItemCard(props) {
     return (
       <>
         {ItemHeader(doc, doc['@type'])}
-        <Typography variant="body1">
+        <p>
           {doc.description}
-        </Typography>
-        <Typography style={{ paddingTop: '20px' }} variant="body2">
-          {doc.website &&
-            <Link variant="body2" color={doc.hasOwnProperty('website') ? 'initial' : 'error'} href={doc.website}>
-              Website
-          </Link>
-          }
-        </Typography>
+        </p>
+        <p>
+          {doc.website
+            && (
+              <a href={doc.website}>
+                Website
+              </a>
+            )}
+        </p>
       </>
     )
   }
@@ -92,14 +71,17 @@ export default function ItemCard(props) {
     return (
       <>
         {ItemHeader(doc)}
-        <Typography variant="body1">
+        <p>
           {doc.description}
-        </Typography>
-        <Typography style={{ paddingTop: '20px' }} variant="subtitle2">
-          <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
-            Website
-          </Link>
-        </Typography>
+        </p>
+        <p>
+          {doc.url
+            && (
+              <a href={doc.url}>
+                Website
+              </a>
+            )}
+        </p>
       </>
     )
   }
@@ -108,27 +90,17 @@ export default function ItemCard(props) {
     return (
       <>
         {ItemHeader(doc)}
-
-        <Typography variant="body1">
+        <p>
           {doc.description}
-        </Typography>
-
-        <div style={{ paddingTop: '20px' }}>
-          {doc.publicationType !== 'to be determined'
+        </p>
+        <p>
+          {doc.url && doc.publicationType !== 'to be determined'
             && (
-              <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
+              <a href={doc.url}>
                 {doc.publicationType}
-              </Link>
-            )
-            || (
-              <Typography variant="subtitle2">
-                <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
-                  Website
-                </Link>
-              </Typography>
+              </a>
             )}
-        </div>
-
+        </p>
       </>
     )
   }
@@ -137,49 +109,50 @@ export default function ItemCard(props) {
     return (
       <>
         {ItemHeader(doc)}
-        <Typography variant="body1">
+        <p>
           {doc.description}
-        </Typography>
-        <Typography style={{ paddingTop: '20px' }} variant="subtitle2">
-          {doc.url &&
-            <Link variant="body2" color={doc.hasOwnProperty('url') ? 'initial' : 'error'} href={doc.url}>
-              {doc.category}
-            </Link>
-          }
-        </Typography>
+        </p>
+        <p>
+          {doc.url
+            && (
+              <a href={doc.url}>
+                {doc.category}
+              </a>
+            )}
+        </p>
       </>
     )
   }
 
-  const { doc } = props
-
   let item = {}
 
-  switch (doc['@type']) {
+  switch (document['@type']) {
     case 'Event':
-      item = buildEventItem(doc)
+      item = buildEventItem(document)
       break
     case 'Organization':
-      item = buildOrganizationItem(doc)
+      item = buildOrganizationItem(document)
       break
     case 'Product':
-      item = buildProductItem(doc)
+      item = buildProductItem(document)
       break
     case 'Publication':
-      item = buildPublicationItem(doc)
+      item = buildPublicationItem(document)
       break
     case 'WorkingGroup':
-      item = buildWorkingGroupItem(doc)
+      item = buildWorkingGroupItem(document)
+      break
+    default:
       break
   }
 
   return (
-    <div className={classes.itemRoot}>
+    <div id="item-card">
       {item}
     </div>
   )
 }
 
 ItemCard.propTypes = {
-  doc: PropTypes.object
+  document: PropTypes.object
 }

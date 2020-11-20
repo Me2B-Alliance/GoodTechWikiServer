@@ -10,10 +10,15 @@
     "update": "npm i && npm run build && npx pm2 restart app"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.12",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -25,8 +30,11 @@
     "pouchdb": "^7.2.2",
     "pouchdb-find": "^7.2.2",
     "react": "16.13.1",
+    "react-bootstrap": "^1.4.0",
+    "react-bootstrap-4-pagination": "^1.0.3",
     "react-dom": "16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "sass": "^1.29.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
