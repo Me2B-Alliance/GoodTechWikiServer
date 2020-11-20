@@ -45,7 +45,7 @@ export default function Header(props) {
             )
             || (
               <Button onClick={handleButtonLogin} variant="warning">
-                Sign up with github
+                Sign in with github
                 {' '}<FontAwesomeIcon size="lg" icon={faGithub} />
               </Button>
             )}
