@@ -52,7 +52,6 @@ export default function EngagementSelect(props) {
     <Form>
       <Form.Group controlId="filterForm.SelectCategory">
         <Form.Control
-          id="select-category"
           as="select"
           defaultValue={category}
           custom
