@@ -18,10 +18,9 @@ export default function Header(props) {
   const router = useRouter()
 
   const handleButtonLogin = () => {
-    // Disable for now
-    // router.push({
-    //   pathname: '/oauth/github'
-    // })
+    router.push({
+      pathname: '/oauth/github'
+    })
   }
 
   return (
