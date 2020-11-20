@@ -23,7 +23,7 @@ export default function ItemCard(props) {
       </div>
       <div>
         <h5>
-          {doc.lisa}
+          {(doc.lisa).toUpperCase()}
         </h5>
       </div>
     </>
