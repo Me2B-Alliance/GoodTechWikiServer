@@ -158,7 +158,7 @@ app.prepare()
       })
     })
 
-    server.get('/oauth/github', passport.authenticate('github', { scope: ['user:email'] }))
+    server.get('/oauth/github', passport.authenticate('github', { scope: ['read:user'] }))
 
     server.get('/oauth/callback/github',
       passport.authenticate('github', { failureRedirect: '/' }),
