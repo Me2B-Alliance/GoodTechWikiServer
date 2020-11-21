@@ -2,6 +2,7 @@
  * Dependencies
  */
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
 /**
  * Sidebar
@@ -15,61 +16,67 @@ export default function Sidebar(props) {
         <ul className="list-unstyled">
 
           <li>
-            <a
-              style={{ color: !documentType ? '#f58a0b' : '#999999' }}
-              href="/"
-            >
-              <h5>Home</h5>
-            </a>
+            <Link href="/" as="/">
+              <a
+                style={{ color: !documentType ? '#f58a0b' : '#999999' }}
+              >
+                <h5>Home</h5>
+              </a>
+            </Link>
           </li>
 
           <li>
-            <a
-              style={{ color: documentType === 'Organization' ? '#f58a0b' : '#999999' }}
-              variant="h5"
-              href="/organizations"
-            >
-              <h5>Organizations</h5>
-            </a>
+            <Link href="/organizations" as="/organizations">
+              <a
+                style={{ color: documentType === 'Organization' ? '#f58a0b' : '#999999' }}
+                variant="h5"
+              >
+                <h5>Organizations</h5>
+              </a>
+            </Link>
           </li>
 
           <li>
-            <a
-              style={{ color: documentType === 'Event' ? '#f58a0b' : '#999999' }}
-              variant="h5"
-              href="/events"
-            >
-              <h5>Events</h5>
-            </a>
+            <Link href="/events" as="/events">
+              <a
+                style={{ color: documentType === 'Event' ? '#f58a0b' : '#999999' }}
+                variant="h5"
+              >
+                <h5>Events</h5>
+              </a>
+            </Link>
           </li>
 
           <li>
-            <a
-              style={{ color: documentType === 'Publication' ? '#f58a0b' : '#999999' }}
-              variant="h6"
-              href="/publications"
-            >
-              <h5>Publications</h5>
-            </a>
+            <Link href="/publications" as="/publications">
+              <a
+                style={{ color: documentType === 'Publication' ? '#f58a0b' : '#999999' }}
+                variant="h6"
+              >
+                <h5>Publications</h5>
+              </a>
+            </Link>
           </li>
 
           <li>
-            <a
-              style={{ color: documentType === 'Product' ? '#f58a0b' : '#999999' }}
-              variant="h6"
-              href="/products"
-            >
-              <h5>Products</h5>
-            </a>
+            <Link href="/products" as="/products">
+              <a
+                style={{ color: documentType === 'Product' ? '#f58a0b' : '#999999' }}
+                variant="h6"
+              >
+                <h5>Products</h5>
+              </a>
+            </Link>
           </li>
           <li>
-            <a
-              style={{ color: documentType === 'WorkingGroup' ? '#f58a0b' : '#999999' }}
-              variant="h6"
-              href="/workinggroups"
-            >
-              <h5>Working Groups</h5>
-            </a>
+            <Link href="/workinggroups" as="/workinggroups">
+              <a
+                style={{ color: documentType === 'WorkingGroup' ? '#f58a0b' : '#999999' }}
+                variant="h6"
+              >
+                <h5>Working Groups</h5>
+              </a>
+            </Link>
           </li>
         </ul>
 

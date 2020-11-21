@@ -39,22 +39,18 @@ export default function Header(props) {
         <Nav>
           {userInfo !== '' && userInfo
             && (
-              <p>Logged in as {userInfo.username}
+              <p id="header-logged-in-text">Logged in as {userInfo.username}
                 (<a href="/logout">logout</a>)
               </p>
             )
             || (
               <Button onClick={handleButtonLogin} variant="warning">
                 Sign in with github
-                {' '}<FontAwesomeIcon size="lg" icon={faGithub} />
+                {' '}<FontAwesomeIcon size="lg" width={20} icon={faGithub} />
               </Button>
             )}
         </Nav>
       </Navbar>
     </div>
   )
-}
-
-Header.propTypes = {
-  userInfo: PropTypes.string
 }
