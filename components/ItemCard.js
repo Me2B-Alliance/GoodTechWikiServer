@@ -1,146 +1,162 @@
 /**
  * Dependencies
  */
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 
 /**
- * ItemCard
+ * ItemCard Component
  */
 export default function ItemCard(props) {
-  const { document } = props
+  const router = useRouter()
+
+  const { type } = router.query
+
+  const { document: doc } = props
 
   /**
    * ItemHeader
-   * @param {Object} doc Document object
-   * @param {String} type Type of document we're building
    */
-  const ItemHeader = (doc, type) => (
+  const ItemHeader = () => {
+    const name = doc['@type'] === 'Organization' ? doc.orgName : doc.name
+    return (
+      <>
+        <div>
+          <Link passHref href={`${type}/${encodeURIComponent(name)}`}>
+            <a>
+              <h3>
+                {name}
+              </h3>
+            </a>
+          </Link>
+        </div>
+        <div>
+          <h5>
+            {doc.lisa && (doc.lisa).toUpperCase()}
+          </h5>
+        </div>
+      </>
+    )
+  }
+
+  /**
+   * buildEventItem
+   */
+  const buildEventItem = () => (
     <>
-      <div>
-        <h3>
-          {type === 'Organization' ? doc.orgName : doc.name}
-        </h3>
-      </div>
-      <div>
-        <h5>
-          {doc.lisa && (doc.lisa).toUpperCase()}
-        </h5>
-      </div>
+      {ItemHeader()}
+      <p>
+        {doc.description}
+      </p>
+      <p>
+        {doc.website
+          && (
+            <a href={doc.website}>
+              Website
+            </a>
+          )}
+      </p>
     </>
   )
 
-  function buildEventItem(doc) {
-    return (
-      <>
-        {ItemHeader(doc)}
-        <p>
-          {doc.description}
-        </p>
-        <p>
-          {doc.website
-            && (
-              <a href={doc.website}>
-                Website
-              </a>
-            )}
-        </p>
-      </>
-    )
-  }
+  /**
+   * buildOrganizationItem
+   */
+  const buildOrganizationItem = () => (
+    <>
+      {ItemHeader()}
+      <p>
+        {doc.description}
+      </p>
+      <p>
+        {doc.website
+          && (
+            <a href={doc.website}>
+              Website
+            </a>
+          )}
+      </p>
+    </>
+  )
 
-  function buildOrganizationItem(doc) {
-    return (
-      <>
-        {ItemHeader(doc, doc['@type'])}
-        <p>
-          {doc.description}
-        </p>
-        <p>
-          {doc.website
-            && (
-              <a href={doc.website}>
-                Website
-              </a>
-            )}
-        </p>
-      </>
-    )
-  }
+  /**
+   * buildProductItem
+   */
+  const buildProductItem = () => (
+    <>
+      {ItemHeader()}
+      <p>
+        {doc.description}
+      </p>
+      <p>
+        {doc.url
+          && (
+            <a href={doc.url}>
+              Website
+            </a>
+          )}
+      </p>
+    </>
+  )
 
-  function buildProductItem(doc) {
-    return (
-      <>
-        {ItemHeader(doc)}
-        <p>
-          {doc.description}
-        </p>
-        <p>
-          {doc.url
-            && (
-              <a href={doc.url}>
-                Website
-              </a>
-            )}
-        </p>
-      </>
-    )
-  }
+  /**
+   * buildPublicationItem
+   */
+  const buildPublicationItem = () => (
+    <>
+      {ItemHeader()}
+      <p>
+        {doc.description}
+      </p>
+      <p>
+        {doc.url && doc.publicationType !== 'to be determined'
+          && (
+            <a href={doc.url}>
+              {doc.publicationType}
+            </a>
+          )}
+      </p>
+    </>
+  )
 
-  function buildPublicationItem(doc) {
-    return (
-      <>
-        {ItemHeader(doc)}
-        <p>
-          {doc.description}
-        </p>
-        <p>
-          {doc.url && doc.publicationType !== 'to be determined'
-            && (
-              <a href={doc.url}>
-                {doc.publicationType}
-              </a>
-            )}
-        </p>
-      </>
-    )
-  }
-
-  function buildWorkingGroupItem(doc) {
-    return (
-      <>
-        {ItemHeader(doc)}
-        <p>
-          {doc.description}
-        </p>
-        <p>
-          {doc.url
-            && (
-              <a href={doc.url}>
-                {doc.category}
-              </a>
-            )}
-        </p>
-      </>
-    )
-  }
+  /**
+   * buildWorkingGroupItem
+   */
+  const buildWorkingGroupItem = () => (
+    <>
+      {ItemHeader()}
+      <p>
+        {doc.description}
+      </p>
+      <p>
+        {doc.url
+          && (
+            <a href={doc.url}>
+              {doc.category}
+            </a>
+          )}
+      </p>
+    </>
+  )
 
   let item = {}
 
-  switch (document['@type']) {
+  switch (doc['@type']) {
     case 'Event':
-      item = buildEventItem(document)
+      item = buildEventItem(doc)
       break
     case 'Organization':
-      item = buildOrganizationItem(document)
+      item = buildOrganizationItem(doc)
       break
     case 'Product':
-      item = buildProductItem(document)
+      item = buildProductItem(doc)
       break
     case 'Publication':
-      item = buildPublicationItem(document)
+      item = buildPublicationItem(doc)
       break
     case 'WorkingGroup':
-      item = buildWorkingGroupItem(document)
+      item = buildWorkingGroupItem(doc)
       break
     default:
       break

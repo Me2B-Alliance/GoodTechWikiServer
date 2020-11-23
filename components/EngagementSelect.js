@@ -6,14 +6,17 @@ import PropTypes from 'prop-types'
 import Form from 'react-bootstrap/Form'
 
 /**
- * EngagementSelect
+ * EngagementSelect Component
  */
 export default function EngagementSelect(props) {
   const router = useRouter()
 
-  const { cat: category } = props
+  const { category } = props
 
-  function buildEngagements() {
+  /**
+   * buildEngagements
+   */
+  const buildEngagements = () => {
     const engagements = [
       'None', 'Product Design & Dev Practices', 'Technology Standards',
       'Industry Advocacy and Education', 'Tools/Infrastructure/Services Development for B-s',
@@ -37,14 +40,19 @@ export default function EngagementSelect(props) {
     })
   }
 
+  /**
+   * handleEngagementSelect
+   */
   const handleEngagementSelect = (event) => {
+    const cat = encodeURIComponent(event.target.value)
+
     if (event.target.value === 'Select a Category') {
       return
     }
     if (event.target.value === 'All') {
       router.push({ pathname: '/organizations' })
     } else {
-      router.push({ pathname: '/organizations', query: { cat: event.target.value } })
+      router.push({ pathname: '/organizations', query: { category: cat } })
     }
   }
 
@@ -68,5 +76,5 @@ export default function EngagementSelect(props) {
 }
 
 EngagementSelect.propTypes = {
-  cat: PropTypes.string
+  category: PropTypes.string
 }

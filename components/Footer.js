@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 /**
- * Footer
+ * Footer Component
  */
 export default function Footer() {
   const Copyright = () => (

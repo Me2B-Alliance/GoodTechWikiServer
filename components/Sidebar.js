@@ -1,11 +1,11 @@
 /**
  * Dependencies
  */
-import PropTypes from 'prop-types'
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 
 /**
- * Sidebar
+ * Sidebar Component
  */
 export default function Sidebar(props) {
   const { documentType } = props

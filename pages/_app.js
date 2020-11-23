@@ -1,18 +1,26 @@
 /**
  * Dependencies
  */
+import React from 'react'
+import { Provider } from 'next-auth/client'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 /**
- * Local Styles
+ * Dependencies
  */
-import '../styles/bootstrap.scss'
-import '../styles/App.scss'
-import '../styles/CookieConsent.css'
+import Footer from 'components/Footer'
+import HeaderLayout from 'components/HeaderLayout'
 
 /**
- * App
+ * Local Styles
+ */
+import 'styles/bootstrap.scss'
+import 'styles/CookieConsent.css'
+import 'styles/App.scss'
+
+/**
+ * App Page
  */
 export default function App(props) {
   const { Component, pageProps } = props
@@ -33,7 +41,13 @@ export default function App(props) {
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Helmet>
 
-      <Component {...pageProps} />
+      <Provider session={pageProps.session}>
+        <HeaderLayout>
+          <Component {...pageProps} />
+          <Footer />
+        </HeaderLayout>
+      </Provider>
+
     </>
   )
 }

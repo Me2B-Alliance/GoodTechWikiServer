@@ -1,31 +1,38 @@
 /**
  * Dependencies
  */
-import PropTypes from 'prop-types'
+import { Container, Row, Col } from 'react-bootstrap'
 
 /**
  * Local Dependencies
  */
-import HomePage from './HomePage'
-
-export async function getServerSideProps(ctx) {
-  // Fetch data from external API
-  // const res = await fetch(`https://.../data`)
-  // const data = await res.json()
-
-  // Pass data to the page via props
-  return { props: { query: ctx.query } }
-}
+import Sidebar from 'components/Sidebar'
 
 /**
- * App
+ * App Index Page
  */
-export default function App({ query }) {
+export default function Page() {
   return (
-    <HomePage documents={query.docs} userInfo={query.userInfo} />
+    <div id="body">
+      <Container>
+        <Row>
+          <Col md={3} className="d-none d-md-block" style={{ paddingTop: '180px' }}>
+            <Sidebar />
+          </Col>
+          <Col>
+            <div>
+              <p>
+                This wiki was developed by the Me2B Alliance and is offered
+                as a public utility to help people find organizations who
+                are working on more respectful technology.
+              </p>
+              <p>
+                Start browsing the wiki by selecting a type in the sidebar
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   )
-}
-
-App.propTypes = {
-  query: PropTypes.object
 }

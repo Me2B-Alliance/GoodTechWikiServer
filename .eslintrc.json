@@ -1,4 +1,11 @@
 {
+    "settings": {
+        "import/resolver": {
+          "node": {
+            "moduleDirectory": ["node_modules", ""]
+            }
+        }
+    },
     "env": {
         "browser": true,
         "es2021": true,
@@ -36,6 +43,7 @@
         "no-prototype-builtins": 0,
         "no-unused-vars" : "warn",
         "no-mixed-operators": 0,
+        "eslint react/prop-types": 0,
         "comma-dangle": [ "error", {
             "arrays": "never",
             "objects": "never",

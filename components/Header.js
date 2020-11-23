@@ -3,28 +3,20 @@
  */
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useRouter } from 'next/router'
+import { signIn, signOut } from 'next-auth/client'
 import PropTypes from 'prop-types'
 import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 
 /**
- * Header
+ * Header Component
  */
 export default function Header(props) {
   const { userInfo } = props
 
-  const router = useRouter()
-
-  const handleButtonLogin = () => {
-    router.push({
-      pathname: '/oauth/github'
-    })
-  }
-
   return (
-    <div style={{ boxShadow: '0 0 2px 1px #686868' }}>
+    <div id="header">
       <Navbar bg="light" variant="light">
         <Navbar.Brand>
           <a href="/">
@@ -37,14 +29,16 @@ export default function Header(props) {
           </Navbar.Text>
         </Nav>
         <Nav>
-          {userInfo !== '' && userInfo
+          {userInfo.name
             && (
-              <p id="header-logged-in-text">Logged in as {userInfo.username}
-                (<a href="/logout">logout</a>)
+              <p id="header-logged-in-text">Logged in as {userInfo.name}
+                (
+                <Button variant="link" onClick={() => signOut()}>logout</Button>
+                )
               </p>
             )
             || (
-              <Button onClick={handleButtonLogin} variant="warning">
+              <Button onClick={() => signIn('github')} variant="warning">
                 Sign in with github
                 {' '}<FontAwesomeIcon size="lg" width={20} icon={faGithub} />
               </Button>
@@ -53,4 +47,8 @@ export default function Header(props) {
       </Navbar>
     </div>
   )
+}
+
+Header.propTypes = {
+  userInfo: PropTypes.object
 }
