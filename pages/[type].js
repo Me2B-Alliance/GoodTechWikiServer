@@ -56,7 +56,8 @@ export default function Page(props) {
 
   useEffect(() => {
     setDocs(documents)
-  }, [documents])
+    setCurrentPage(1)
+  }, [type])
 
   useEffect(() => {
     setCurrentPage(1)
