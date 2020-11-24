@@ -19,6 +19,10 @@ import 'styles/bootstrap.scss'
 import 'styles/CookieConsent.css'
 import 'styles/App.scss'
 
+const description = `This wiki was developed by the Me2B Alliance and is
+offered as a public utility to help people find organizations who are working
+on more respectful technology.`
+
 /**
  * App Page
  */
@@ -39,6 +43,7 @@ export default function App(props) {
         <title>Good Tech Wiki</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <meta name="description" content={description} />
       </Helmet>
 
       <Provider session={pageProps.session}>
