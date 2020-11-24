@@ -55,9 +55,14 @@ export default function Page(props) {
   const documentType = documents[0]['@type']
 
   useEffect(() => {
+    console.log('hmm')
     setDocs(documents)
     setCurrentPage(1)
   }, [type])
+
+  useEffect(() => {
+    setDocs(documents)
+  }, [documents])
 
   useEffect(() => {
     setCurrentPage(1)
