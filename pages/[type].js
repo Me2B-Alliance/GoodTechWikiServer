@@ -23,7 +23,7 @@ export async function getServerSideProps(ctx) {
   const { category } = ctx.query
   const { page } = ctx.query
 
-  const { docs, count } = await getDocsByType(type, { category, page })
+  const { docs, count } = await getDocsByType(type, { category, page: page || 1 })
 
   if (!docs) {
     return {
