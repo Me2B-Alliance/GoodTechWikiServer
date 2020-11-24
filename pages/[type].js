@@ -63,7 +63,6 @@ export default function Page(props) {
   }, [category])
 
   const handlePageChange = (value) => {
-    setCurrentPage(value)
     const query = {
       page: value
     }
@@ -73,6 +72,7 @@ export default function Page(props) {
 
     router.push({ pathname: `/${type}`, query })
     window.scrollTo(0, 0)
+    setCurrentPage(value)
   }
 
   /**
@@ -87,7 +87,6 @@ export default function Page(props) {
         <ItemCard document={item} />
       </div>
     ))
-
 
   /**
    * buildItemList
@@ -122,6 +121,17 @@ export default function Page(props) {
     )
   }
 
+  const Pager = () => (
+    <div id="item-list-pagination">
+      <Pagination
+        count={pageCount}
+        size="large"
+        page={currentPage}
+        onChange={(_event, value) => handlePageChange(value)}
+      />
+    </div>
+  )
+
   return (
     <div id="body">
       <Container>
@@ -132,27 +142,13 @@ export default function Page(props) {
           <Col>
             <>
               <ItemListHeader />
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px 0 5px 0' }}>
-                <Pagination
-                  count={pageCount}
-                  size="large"
-                  page={currentPage}
-                  onChange={(_event, value) => handlePageChange(value)}
-                />
-              </div>
+              <Pager />
               <div id="item-list">
                 <div>
                   {buildItemList(docs)}
                 </div>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: '10px' }}>
-                <Pagination
-                  count={pageCount}
-                  size="large"
-                  page={currentPage}
-                  onChange={(_event, value) => { setCurrentPage(value); window.scrollTo(0, 0) }}
-                />
-              </div>
+              <Pager />
             </>
           </Col>
         </Row>
@@ -162,5 +158,6 @@ export default function Page(props) {
 }
 
 Page.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.array,
+  count: PropTypes.number
 }

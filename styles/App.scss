@@ -79,6 +79,13 @@ p {
   align-items: center;
 }
 
+#item-list-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 5px 0;
+}
+
 // ItemCard
 #item-card {
   padding-bottom: 25px;
