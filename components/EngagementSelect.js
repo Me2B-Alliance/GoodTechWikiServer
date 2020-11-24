@@ -52,7 +52,7 @@ export default function EngagementSelect(props) {
     if (event.target.value === 'All') {
       router.push({ pathname: '/organizations' })
     } else {
-      router.push({ pathname: '/organizations', query: { category: cat } })
+      router.push({ pathname: '/organizations', query: { category: cat, page: 1 } })
     }
   }
 

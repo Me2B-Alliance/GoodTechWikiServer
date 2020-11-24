@@ -13,17 +13,30 @@ import { FixType } from 'lib/helpers'
  * @returns {Promise<Object>} Object array of searched results
  */
 export async function getDocsByType(type, options = {}) {
-  let dbQuery = { '@type': FixType(type) }
+  const dbQuery = {
+    selector: { '@type': FixType(type) }
+  }
 
   if (options.category) {
-    dbQuery.lisa = decodeURIComponent(options.category)
+    dbQuery.selector.lisa = decodeURIComponent(options.category)
   }
 
   if (type === 'workinggroups') {
-    dbQuery = { '@type': 'WorkingGroup' }
+    dbQuery.selector['@type'] = 'WorkingGroup'
   }
 
-  return wiki.find({ selector: { ...dbQuery } })
+  let { docs: results } = await wiki.find(dbQuery)
+  const count = results.length
+
+  // If a page has been passed only return paged documents
+  if (options.page) {
+    const lower = options.page === 1 ? 0 : (options.page * 10) - 10
+    const upper = options.page === 1 ? 10 : options.page * 10
+
+    results = results.slice(lower, upper)
+  }
+
+  return { docs: results, count }
 }
 
 /**

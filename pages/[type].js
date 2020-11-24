@@ -1,11 +1,11 @@
 /**
  * Dependencies
  */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 import { Container, Row, Col } from 'react-bootstrap'
-import Pagination from 'react-bootstrap-4-pagination'
+import Pagination from '@material-ui/lab/Pagination'
 
 /**
  * Local Dependencies
@@ -21,8 +21,9 @@ import EngagementSelect from 'components/EngagementSelect'
 export async function getServerSideProps(ctx) {
   const { type } = ctx.params
   const { category } = ctx.query
+  const { page } = ctx.query
 
-  const docs = await getDocsByType(type, { category })
+  const { docs, count } = await getDocsByType(type, { category, page })
 
   if (!docs) {
     return {
@@ -30,7 +31,7 @@ export async function getServerSideProps(ctx) {
     }
   }
 
-  return { props: { data: docs } }
+  return { props: { data: docs, count } }
 }
 
 /**
@@ -42,15 +43,37 @@ export default function Page(props) {
   // Initial
   const router = useRouter()
   const { type, category } = router.query
-  const { data: { docs: documents } } = props
+  const { data: documents, count } = props
 
   // Setup Hooks
   const [currentPage, setCurrentPage] = React.useState(1)
+  const [docs, setDocs] = React.useState(documents)
 
   const docsPerPage = 10
-  const pageCount = Math.floor((documents.length / docsPerPage) + 1)
+  const pageCount = Math.floor((count / docsPerPage) + 1)
 
   const documentType = documents[0]['@type']
+
+  useEffect(() => {
+    setDocs(documents)
+  }, [documents])
+
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [category])
+
+  const handlePageChange = (value) => {
+    setCurrentPage(value)
+    const query = {
+      page: value
+    }
+    if (category) {
+      query.category = category
+    }
+
+    router.push({ pathname: `/${type}`, query })
+    window.scrollTo(0, 0)
+  }
 
   /**
    * buildItemList
@@ -58,15 +81,13 @@ export default function Page(props) {
    *
    * @param {Array} items List of documents
    */
-  const buildItemList = (items) => items.slice(
-    (currentPage - 1) * docsPerPage,
-    currentPage * docsPerPage
-  )
+  const buildItemList = (items) => items
     .map((item) => (
       <div key={`item-card-fragment-${item['@id']}`}>
         <ItemCard document={item} />
       </div>
     ))
+
 
   /**
    * buildItemList
@@ -77,7 +98,7 @@ export default function Page(props) {
   const ItemListHeader = () => {
     const lowerLimit = (currentPage - 1) * docsPerPage
     const upperLimit = currentPage * docsPerPage
-    const max = documents.length
+    const max = count
 
     const checkUpper = upperLimit > max ? max : upperLimit
 
@@ -111,17 +132,25 @@ export default function Page(props) {
           <Col>
             <>
               <ItemListHeader />
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px 0 5px 0' }}>
+                <Pagination
+                  count={pageCount}
+                  size="large"
+                  page={currentPage}
+                  onChange={(_event, value) => handlePageChange(value)}
+                />
+              </div>
               <div id="item-list">
                 <div>
-                  {buildItemList(documents)}
+                  {buildItemList(docs)}
                 </div>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: '10px' }}>
                 <Pagination
-                  threeDots
-                  totalPages={pageCount}
-                  currentPage={currentPage}
-                  showMax={5}
-                  prevNext
-                  onClick={setCurrentPage}
+                  count={pageCount}
+                  size="large"
+                  page={currentPage}
+                  onChange={(_event, value) => { setCurrentPage(value); window.scrollTo(0, 0) }}
                 />
               </div>
             </>
