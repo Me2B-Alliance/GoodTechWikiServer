@@ -75,7 +75,7 @@ export default function CookiePolicy() {
     setCookie(null, name, value, {
       maxAge: 1 * 24 * 60 * 60,
       path: '/',
-      sameSite: 'None'
+      sameSite: 'Lax'
     })
   }
 
