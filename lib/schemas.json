@@ -1,0 +1,534 @@
+{
+  "Event": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://goodtech.wiki/schemas/Event.json",
+    "title": "Event",
+    "description": "A event",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "uuid": {
+        "title": "Uuid",
+        "type": "string"
+      },
+      "audience": {
+        "title": "Audience",
+        "type": "string"
+      },
+      "category": {
+        "title": "Category",
+        "type": "array"
+      },
+      "date": {
+        "title": "Date",
+        "type": "string"
+      },
+      "frequency": {
+        "title": "Frequency",
+        "type": "string"
+      },
+      "github": {
+        "title": "Github",
+        "type": "string"
+      },
+      "hostOrganization": {
+        "title": "Host Organization",
+        "type": "string"
+      },
+      "locations": {
+        "title": "Locations",
+        "type": "array"
+      },
+      "partners": {
+        "title": "Partners",
+        "type": "string"
+      },
+      "people": {
+        "title": "People",
+        "type": "array"
+      },
+      "relevantPublications": {
+        "title": "Relevant Publications",
+        "type": "string"
+      },
+      "tags": {
+        "title": "Tags",
+        "type": "array"
+      },
+      "website": {
+        "title": "Website",
+        "type": "string"
+      },
+      "workingGroup": {
+        "title": "Working Group",
+        "type": "string"
+      },
+      "about": {
+        "title": "About",
+        "type": "string"
+      }
+    }
+  },
+  "Organization": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://goodtech.wiki/schemas/Organization.json",
+    "title": "Organization",
+    "description": "A organization",
+    "properties": {
+      "uuid": {
+        "title": "Uuid",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "linkMatch": {
+        "title": "Link Match",
+        "type": "string"
+      },
+      "lisa": {
+        "title": "Lisa",
+        "type": "string"
+      },
+      "organizationType": {
+        "title": "Organization Type",
+        "type": "string"
+      },
+      "parentOrg": {
+        "title": "Parent Org",
+        "type": "string"
+      },
+      "activities": {
+        "title": "Activities",
+        "type": "array"
+      },
+      "annualBudget": {
+        "title": "Annual Budget",
+        "type": "string"
+      },
+      "audience": {
+        "title": "Audience",
+        "type": "string"
+      },
+      "dateEnded": {
+        "title": "Date Ended",
+        "type": "string"
+      },
+      "dateFounded": {
+        "title": "Date Founded",
+        "type": "string"
+      },
+      "digitalHarmsAddressed": {
+        "title": "Digital Harms Addressed",
+        "type": "array"
+      },
+      "funding": {
+        "title": "Funding",
+        "type": "string"
+      },
+      "github": {
+        "title": "Github",
+        "type": "string"
+      },
+      "keyPeople": {
+        "title": "Key People",
+        "type": "array"
+      },
+      "linkedin": {
+        "title": "Linkedin",
+        "type": "string"
+      },
+      "locations": {
+        "title": "Locations",
+        "type": "array"
+      },
+      "me2bRelationship": {
+        "title": "Me2b Relationship",
+        "type": "string"
+      },
+      "partners": {
+        "title": "Partners",
+        "type": "string"
+      },
+      "productsAndOrServices": {
+        "title": "Products And Or Services",
+        "type": "string"
+      },
+      "purpose": {
+        "title": "Purpose",
+        "type": "array"
+      },
+      "relevantPublications": {
+        "title": "Relevant Publications",
+        "type": "string"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "sector": {
+        "title": "Sector",
+        "type": "string"
+      },
+      "status": {
+        "title": "Status",
+        "type": "string"
+      },
+      "tags": {
+        "title": "Tags",
+        "type": "array"
+      },
+      "techFocus": {
+        "title": "Tech Focus",
+        "type": "string"
+      },
+      "twitter": {
+        "title": "Twitter",
+        "type": "string"
+      },
+      "website": {
+        "title": "Website",
+        "type": "string"
+      },
+      "about": {
+        "title": "About",
+        "type": "string"
+      },
+      "facebook": {
+        "title": "Facebook",
+        "type": "string"
+      },
+      "wikipedia": {
+        "title": "Wikipedia",
+        "type": "string"
+      }
+    }
+  },
+  "Person": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://goodtech.wiki/schemas/Person.json",
+    "title": "Person",
+    "description": "A person",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "uuid": {
+        "title": "Uuid",
+        "type": "string"
+      },
+      "organization": {
+        "title": "Organization",
+        "type": "string"
+      },
+      "github": {
+        "title": "Github",
+        "type": "string"
+      },
+      "linkedin": {
+        "title": "Linkedin",
+        "type": "string"
+      },
+      "location": {
+        "title": "Location",
+        "type": "string"
+      },
+      "tags": {
+        "title": "Tags",
+        "type": "array"
+      },
+      "twitter": {
+        "title": "Twitter",
+        "type": "string"
+      },
+      "website": {
+        "title": "Website",
+        "type": "string"
+      },
+      "workingGroup": {
+        "title": "Working Group",
+        "type": "string"
+      },
+      "about": {
+        "title": "About",
+        "type": "string"
+      }
+    }
+  },
+  "Product": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://goodtech.wiki/schemas/Product.json",
+    "title": "Product",
+    "description": "A product",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "uuid": {
+        "title": "Uuid",
+        "type": "string"
+      },
+      "parentOrg": {
+        "title": "Parent Org",
+        "type": "string"
+      },
+      "activities": {
+        "title": "Activities",
+        "type": "array"
+      },
+      "audience": {
+        "title": "Audience",
+        "type": "string"
+      },
+      "category": {
+        "title": "Category",
+        "type": "array"
+      },
+      "dateBegun": {
+        "title": "Date Begun",
+        "type": "string"
+      },
+      "dateEnded": {
+        "title": "Date Ended",
+        "type": "string"
+      },
+      "digitalHarmsAddressed": {
+        "title": "Digital Harms Addressed",
+        "type": "array"
+      },
+      "github": {
+        "title": "Github",
+        "type": "string"
+      },
+      "license": {
+        "title": "License",
+        "type": "string"
+      },
+      "me2bParticipation": {
+        "title": "Me2b Participation",
+        "type": "string"
+      },
+      "partners": {
+        "title": "Partners",
+        "type": "string"
+      },
+      "people": {
+        "title": "People",
+        "type": "array"
+      },
+      "purpose": {
+        "title": "Purpose",
+        "type": "array"
+      },
+      "relevantPublications": {
+        "title": "Relevant Publications",
+        "type": "string"
+      },
+      "status": {
+        "title": "Status",
+        "type": "string"
+      },
+      "supportedIdentityTechnologies": {
+        "title": "Supported Identity Technologies",
+        "type": "string"
+      },
+      "tags": {
+        "title": "Tags",
+        "type": "array"
+      },
+      "termsOfService": {
+        "title": "Terms Of Service",
+        "type": "string"
+      },
+      "url": {
+        "title": "Url",
+        "type": "string"
+      },
+      "versionOrEdition": {
+        "title": "Version Or Edition",
+        "type": "string"
+      },
+      "workingGroup": {
+        "title": "Working Group",
+        "type": "string"
+      },
+      "about": {
+        "title": "About",
+        "type": "string"
+      }
+    }
+  },
+  "Publication": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://goodtech.wiki/schemas/Publication.json",
+    "title": "Publication",
+    "description": "A publication",
+    "properties": {
+      "uuid": {
+        "title": "Uuid",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "publicationType": {
+        "title": "Publication Type",
+        "type": "string"
+      },
+      "sponsoringOrg": {
+        "title": "Sponsoring Org",
+        "type": "string"
+      },
+      "audience": {
+        "title": "Audience",
+        "type": "string"
+      },
+      "authorsEditors": {
+        "title": "Authors Editors",
+        "type": "array"
+      },
+      "date": {
+        "title": "Date",
+        "type": "string"
+      },
+      "digitalHarmsAddressed": {
+        "title": "Digital Harms Addressed",
+        "type": "array"
+      },
+      "github": {
+        "title": "Github",
+        "type": "string"
+      },
+      "jurisdiction": {
+        "title": "Jurisdiction",
+        "type": "string"
+      },
+      "license": {
+        "title": "License",
+        "type": "string"
+      },
+      "purpose": {
+        "title": "Purpose",
+        "type": "array"
+      },
+      "sector": {
+        "title": "Sector",
+        "type": "string"
+      },
+      "tags": {
+        "title": "Tags",
+        "type": "array"
+      },
+      "techFocus": {
+        "title": "Tech Focus",
+        "type": "string"
+      },
+      "url": {
+        "title": "Url",
+        "type": "string"
+      },
+      "versionOrEdition": {
+        "title": "Version Or Edition",
+        "type": "string"
+      },
+      "volumeFrequency": {
+        "title": "Volume Frequency",
+        "type": "string"
+      },
+      "workingGroup": {
+        "title": "Working Group",
+        "type": "string"
+      },
+      "about": {
+        "title": "About",
+        "type": "string"
+      }
+    }
+  },
+  "WorkingGroup": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://goodtech.wiki/schemas/WorkingGroup.json",
+    "title": "WorkingGroup",
+    "description": "A workinggroup",
+    "properties": {
+      "uuid": {
+        "title": "Uuid",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "parentOrg": {
+        "title": "Parent Org",
+        "type": "string"
+      },
+      "activities": {
+        "title": "Activities",
+        "type": "array"
+      },
+      "category": {
+        "title": "Category",
+        "type": "array"
+      },
+      "dateEnded": {
+        "title": "Date Ended",
+        "type": "string"
+      },
+      "dateFounded": {
+        "title": "Date Founded",
+        "type": "string"
+      },
+      "digitalHarmsAddressed": {
+        "title": "Digital Harms Addressed",
+        "type": "array"
+      },
+      "github": {
+        "title": "Github",
+        "type": "string"
+      },
+      "ipr": {
+        "title": "Ipr",
+        "type": "string"
+      },
+      "meetingFrequency": {
+        "title": "Meeting Frequency",
+        "type": "string"
+      },
+      "people": {
+        "title": "People",
+        "type": "array"
+      },
+      "purpose": {
+        "title": "Purpose",
+        "type": "array"
+      },
+      "relevantStandards": {
+        "title": "Relevant Standards",
+        "type": "string"
+      },
+      "status": {
+        "title": "Status",
+        "type": "string"
+      },
+      "techFocus": {
+        "title": "Tech Focus",
+        "type": "string"
+      },
+      "url": {
+        "title": "Url",
+        "type": "string"
+      },
+      "about": {
+        "title": "About",
+        "type": "string"
+      }
+    }
+  }
+}

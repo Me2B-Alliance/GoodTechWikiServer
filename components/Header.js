@@ -12,9 +12,7 @@ import Navbar from 'react-bootstrap/Navbar'
 /**
  * Header Component
  */
-export default function Header(props) {
-  const { userInfo } = props
-
+export default function Header({ userInfo }) {
   return (
     <div id="header">
       <Navbar bg="light" variant="light">
@@ -38,7 +36,7 @@ export default function Header(props) {
               </p>
             )
             || (
-              <Button onClick={() => signIn('github')} variant="warning">
+              <Button style={{ color: 'white' }} onClick={() => signIn('github')} variant="secondary">
                 Sign in with github
                 {' '}<FontAwesomeIcon size="lg" width={20} icon={faGithub} />
               </Button>

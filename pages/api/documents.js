@@ -4,27 +4,27 @@
 import wiki from 'lib/wiki'
 
 /**
- * getDocs
- * Get all documents
- *
- * @returns {Promise<Object>} Promise containing object array of all documents
- */
-export async function getDocs() {
-  return wiki.find({ selector: {} })
-}
-
-/**
  * API Endpoint
  *
  * "/documents"
  *
- * @returns {Response} HTML Response with a json object array of all documents
+ * @returns {Promise<JSON>} Promise response with a json object array of all documents
  */
-export default (req, res) => {
-  getDocs.then((results) => {
+export default (req, res) => new Promise((resolve, reject) => {
+  wiki.getAll().then((results) => {
     const out = {
-      docs: results.docs
+      results
     }
-    res.status(200).json(out)
+    res.status(200)
+    res.json(out)
+    res.end()
+
+    resolve()
+  }).catch((error) => {
+    res.status(400)
+    res.json(error)
+    res.end()
+
+    resolve()
   })
-}
+})

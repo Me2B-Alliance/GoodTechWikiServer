@@ -1,35 +1,45 @@
 /**
  * Dependencies
  */
+import React from 'react'
 import { useRouter } from 'next/router'
-import { AutoForm, SubmitField, AutoField } from 'uniforms-bootstrap4'
-import { Container, Button } from 'react-bootstrap'
+import {
+  Container, Button, OverlayTrigger, Popover, Row
+} from 'react-bootstrap'
 import PropTypes from 'prop-types'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import {
+  faArrowLeft, faEdit, faTrash, faBan
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useSession } from 'next-auth/client'
+import { getSession } from 'next-auth/client'
 
 /**
  * Local Dependencies
  */
-import OrganizationSchema from 'lib/schemas/OrganizationSchema'
-import { getDoc } from '../api/documents/[type]/[slug]'
+import wiki from 'lib/wiki'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import Form from 'components/Form'
+import Document from 'components/Document'
 
 /**
  * getServerSideProps
  */
 export async function getServerSideProps(ctx) {
   const { title, type } = ctx.params
+  const { req } = ctx
 
-  const doc = await getDoc(title, decodeURIComponent(type))
+  const session = await getSession({ req })
 
-  if (!doc) {
+  const doc = await wiki.getDoc(title, decodeURIComponent(type))
+
+  if (!doc || doc.err) {
     return {
       notFound: true
     }
   }
 
-  return { props: { query: ctx.query, doc: doc || null } }
+  return { props: { query: ctx.query, doc: doc || null, session } }
 }
 
 /**
@@ -38,38 +48,131 @@ export async function getServerSideProps(ctx) {
  * "/[type]/[Title]"
  */
 export default function Page(props) {
-  // Initial
   const router = useRouter()
-  const [session, loading] = useSession()
-  const { doc } = props
+  const { type } = router.query
+  const { doc: _doc, session } = props
 
-  // const { slug, type } = router.query
-  const editing = session
+  const [doc, setDoc] = React.useState(_doc)
+  const [editing, setEditing] = React.useState(false)
+  const [deletePopoverVisible, setDeletePopoverVisible] = React.useState(false)
+
+  const addDocFetch = async (docToAdd) => {
+    const results = await fetch(
+      `/api/documents/${type}/${docToAdd.name}?`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ doc: docToAdd })
+      }
+    )
+      .then((res) => res.json())
+    return results
+  }
+
+  const deleteDocFetch = async (docToDelete) => {
+    const results = await fetch(
+      `/api/documents/${type}/${docToDelete.name}?`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ doc: docToDelete, delete: true })
+      }
+    )
+      .then((res) => res.json())
+    return results
+  }
+
+  const handleSubmit = async (docToAdd) => {
+    if (docToAdd !== doc) {
+      const res = await addDocFetch(docToAdd)
+      setDoc(res.updatedDoc)
+      setEditing(false)
+    } else {
+      // TODO: do something if nothing needs to change
+    }
+  }
+
+  const handleEditClick = () => {
+    if (session) {
+      if (editing) {
+        setEditing(false)
+      } else {
+        setEditing(true)
+      }
+    }
+  }
+
+  const handleDeleteClick = async () => {
+    if (session) {
+      await deleteDocFetch(doc)
+      router.push(`/${type}`)
+    }
+  }
+
+  const handlePopoverToggle = () => {
+    setDeletePopoverVisible(!deletePopoverVisible)
+  }
+
+  const popover = (
+    <Popover id="popover-basic">
+      <Popover.Title as="h3">Delete?</Popover.Title>
+      <Popover.Content>
+        Are you sure you want to delete
+        <p>&quot;{doc.name}&quot;?</p>
+        <div style={{ display: 'flex', justifyContent: 'space-around', paddingTop: '5px' }}>
+          <Button size="sm" variant="success" onClick={() => handleDeleteClick()}>Yes</Button>
+          <Button size="sm" variant="danger" onClick={() => handlePopoverToggle()}>No</Button>
+        </div>
+      </Popover.Content>
+    </Popover>
+  )
 
   return (
-    <div id="body">
-      <Container>
+    <>
+      <Header userInfo={session ? session.user : {}} />
+      <div id="body">
         <div id="document-container">
-          <Button variant="secondary" onClick={() => { router.back() }}>
-            <FontAwesomeIcon size="lg" width={20} icon={faArrowLeft} />{' '}
-            Back
-          </Button>
-          <AutoForm schema={OrganizationSchema} model={doc}>
-            <AutoField disabled={!editing} name="orgName" />
-            <AutoField disabled={!editing} name="description" />
-            <AutoField disabled={!editing} name="lisa" />
-            <AutoField disabled={!editing} name="website" />
-            {
-              editing
-              && <SubmitField />
-            }
-          </AutoForm>
+          <Container>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <Button variant="secondary" style={{ color: 'white' }} onClick={() => { router.back() }}>
+                <FontAwesomeIcon size="lg" width={20} icon={faArrowLeft} />
+                &nbsp; Back
+              </Button>
+              {session
+                && (
+                  <div>
+                    { !editing
+                      && (
+                        <OverlayTrigger show={deletePopoverVisible} trigger="click" placement="bottom" overlay={popover}>
+                          <Button variant="danger" style={{ marginRight: '20px' }} onClick={() => setDeletePopoverVisible(true)}>
+                            <FontAwesomeIcon size="lg" width={20} icon={faTrash} />
+                          &nbsp; Delete
+                          </Button>
+                        </OverlayTrigger>
+                      )}
+                    <Button variant="primary" onClick={() => handleEditClick()}>
+                      <FontAwesomeIcon size="lg" width={20} icon={editing && faBan || faEdit} />
+                      &nbsp; {editing && 'Cancel' || 'Edit'}
+                    </Button>
+                  </div>
+                )}
+            </div>
+            {editing
+              && <Form type={type} doc={doc} handleSubmit={handleSubmit} />
+              || <Document doc={doc} />}
+          </Container>
         </div>
-      </Container>
-    </div>
+      </div>
+      <Footer />
+    </>
   )
 }
 
 Page.propTypes = {
-  doc: PropTypes.object
+  doc: PropTypes.object,
+  session: PropTypes.object
 }

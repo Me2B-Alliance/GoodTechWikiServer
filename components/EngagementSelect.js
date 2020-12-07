@@ -8,13 +8,12 @@ import Form from 'react-bootstrap/Form'
 /**
  * EngagementSelect Component
  */
-export default function EngagementSelect(props) {
+export default function EngagementSelect({ category }) {
   const router = useRouter()
-
-  const { category } = props
 
   /**
    * buildEngagements
+   * Build the select options
    */
   const buildEngagements = () => {
     const engagements = [
@@ -52,7 +51,7 @@ export default function EngagementSelect(props) {
     if (event.target.value === 'All') {
       router.push({ pathname: '/organizations' })
     } else {
-      router.push({ pathname: '/organizations', query: { category: cat, page: 1 } })
+      router.push({ pathname: '/organizations', query: { page: 1, category: cat } })
     }
   }
 

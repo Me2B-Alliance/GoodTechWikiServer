@@ -1,37 +1,55 @@
 /**
  * Dependencies
  */
-import React, { useEffect } from 'react'
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Pagination from '@material-ui/lab/Pagination'
+import { getSession } from 'next-auth/client'
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
-import { Container, Row, Col } from 'react-bootstrap'
-import Pagination from '@material-ui/lab/Pagination'
+import React, { useEffect } from 'react'
+import {
+  Button, Col, Container, Row
+} from 'react-bootstrap'
 
 /**
  * Local Dependencies
  */
-import { getDocsByType } from 'pages/api/documents/[type]'
-import Sidebar from 'components/Sidebar'
-import ItemCard from 'components/ItemCard'
 import EngagementSelect from 'components/EngagementSelect'
+import Footer from 'components/Footer'
+import Header from 'components/Header'
+import ItemCard from 'components/ItemCard'
+import Sidebar from 'components/Sidebar'
+import wiki from 'lib/wiki'
 
 /**
  * getServerSideProps
  */
 export async function getServerSideProps(ctx) {
   const { type } = ctx.params
-  const { category } = ctx.query
-  const { page } = ctx.query
+  const { category, page } = ctx.query
+  const { req } = ctx
 
-  const { docs, count } = await getDocsByType(type, { category, page: page || 1 })
+  const newPage = Number(page) || 1
 
-  if (!docs) {
+  const { docs, count } = await wiki.getDocsByType(type, { category, page: newPage })
+
+  const session = await getSession({ req })
+
+  if (!docs || count === 0) {
     return {
       notFound: true
     }
   }
 
-  return { props: { data: docs, count } }
+  return {
+    props: {
+      documents: docs,
+      count,
+      page: newPage,
+      session
+    }
+  }
 }
 
 /**
@@ -40,22 +58,32 @@ export async function getServerSideProps(ctx) {
  * "/[type]"
  */
 export default function Page(props) {
-  // Initial
   const router = useRouter()
   const { type, category } = router.query
-  const { data: documents, count } = props
+  const {
+    documents,
+    count,
+    page,
+    session
+  } = props
 
-  // Setup Hooks
-  const [currentPage, setCurrentPage] = React.useState(1)
+  const [currentPage, setCurrentPage] = React.useState(page || 1)
   const [docs, setDocs] = React.useState(documents)
 
+  // const fetcher = async (params = {}) => {
+  //   const results = await fetch(`/api/documents/${type}?${new URLSearchParams(params)}`)
+  //     .then((res) => res.json())
+  //   return results
+  // }
+
+  // Maximum documents per page
   const docsPerPage = 10
-  const pageCount = Math.floor((count / docsPerPage) + 1)
+  // Total page count
+  const pageCount = Math.ceil(count / docsPerPage)
 
   const documentType = documents[0]['@type']
 
   useEffect(() => {
-    console.log('hmm')
     setDocs(documents)
     setCurrentPage(1)
   }, [type])
@@ -68,7 +96,11 @@ export default function Page(props) {
     setCurrentPage(1)
   }, [category])
 
-  const handlePageChange = (value) => {
+  useEffect(() => {
+    setCurrentPage(page || 1)
+  }, [page])
+
+  const handlePageChange = async (value) => {
     const query = {
       page: value
     }
@@ -79,6 +111,10 @@ export default function Page(props) {
     router.push({ pathname: `/${type}`, query })
     window.scrollTo(0, 0)
     setCurrentPage(value)
+  }
+
+  const handleNewClick = () => {
+    router.push(`/${type}/newDocument`)
   }
 
   /**
@@ -95,10 +131,8 @@ export default function Page(props) {
     ))
 
   /**
-   * buildItemList
+   * ItemListHeader
    * Header title for the item list
-   *
-   * @param {Array} items List of documents
    */
   const ItemListHeader = () => {
     const lowerLimit = (currentPage - 1) * docsPerPage
@@ -109,16 +143,35 @@ export default function Page(props) {
 
     return (
       <>
-        <h1 id="item-list-header-title" className="display-4">
-          {documents[0]['@type']}s
-        </h1>
         <Row>
-          <Col id="item-list-results-stats">
+          <Col md={6}>
+            <h1 id="item-list-header-title" className="display-4">
+              {documents[0]['@type']}s
+            </h1>
+          </Col>
+          {session
+            && (
+              <Col md={6} id="item-list-header-new">
+                <div>
+                  <Button
+                    variant="secondary"
+                    style={{ color: 'white' }}
+                    onClick={() => handleNewClick()}
+                  >
+                    New &nbsp;
+                    <FontAwesomeIcon size="lg" width={20} icon={faPlusCircle} />
+                  </Button>
+                </div>
+              </Col>
+            )}
+        </Row>
+        <Row>
+          <Col md={6} id="item-list-results-stats">
             <p>
               Showing {lowerLimit}-{checkUpper} out of {max} results
             </p>
           </Col>
-          <Col>
+          <Col md={6}>
             {documents[0]['@type'] === 'Organization'
               && <EngagementSelect width="450px" category={decodeURIComponent(category)} />}
           </Col>
@@ -127,6 +180,10 @@ export default function Page(props) {
     )
   }
 
+  /**
+   * Pager
+   * Pagination Component
+   */
   const Pager = () => (
     <div id="item-list-pagination">
       <Pagination
@@ -139,31 +196,37 @@ export default function Page(props) {
   )
 
   return (
-    <div id="body">
-      <Container>
-        <Row>
-          <Col md={3} className="d-none d-md-block" style={{ paddingTop: '180px' }}>
-            <Sidebar documentType={documentType} />
-          </Col>
-          <Col>
-            <>
-              <ItemListHeader />
-              <Pager />
-              <div id="item-list">
-                <div>
-                  {buildItemList(docs)}
+    <>
+      <Header userInfo={session ? session.user : {}} />
+      <div id="body">
+        <Container>
+          <Row>
+            <Col md={3} className="d-none d-md-block" style={{ paddingTop: '180px' }}>
+              <Sidebar documentType={documentType} />
+            </Col>
+            <Col>
+              <>
+                <ItemListHeader />
+                <Pager />
+                <div id="item-list">
+                  <div>
+                    {buildItemList(docs)}
+                  </div>
                 </div>
-              </div>
-              <Pager />
-            </>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+                <Pager />
+              </>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <Footer />
+    </>
   )
 }
 
 Page.propTypes = {
-  data: PropTypes.array,
-  count: PropTypes.number
+  documents: PropTypes.array,
+  count: PropTypes.number,
+  page: PropTypes.number,
+  session: PropTypes.object
 }

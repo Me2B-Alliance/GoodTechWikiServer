@@ -20,6 +20,7 @@ export default function Footer() {
 
   return (
     <>
+      {/*
       <div id="footer-cookie-notice">
         <Container>
           <Row>
@@ -32,6 +33,7 @@ export default function Footer() {
           </Row>
         </Container>
       </div>
+      */}
       <div id="footer">
         <Container>
           <Row>

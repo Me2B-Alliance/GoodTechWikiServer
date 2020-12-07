@@ -8,18 +8,16 @@ import PropTypes from 'prop-types'
 /**
  * ItemCard Component
  */
-export default function ItemCard(props) {
+export default function ItemCard({ document: doc }) {
   const router = useRouter()
 
   const { type } = router.query
-
-  const { document: doc } = props
 
   /**
    * ItemHeader
    */
   const ItemHeader = () => {
-    const name = doc['@type'] === 'Organization' ? doc.orgName : doc.name
+    const { name } = doc
     return (
       <>
         <div>
@@ -47,7 +45,7 @@ export default function ItemCard(props) {
     <>
       {ItemHeader()}
       <p>
-        {doc.description}
+        {doc.about}
       </p>
       <p>
         {doc.website
@@ -67,7 +65,7 @@ export default function ItemCard(props) {
     <>
       {ItemHeader()}
       <p>
-        {doc.description}
+        {doc.about}
       </p>
       <p>
         {doc.website
@@ -87,7 +85,7 @@ export default function ItemCard(props) {
     <>
       {ItemHeader()}
       <p>
-        {doc.description}
+        {doc.about}
       </p>
       <p>
         {doc.url
@@ -107,7 +105,7 @@ export default function ItemCard(props) {
     <>
       {ItemHeader()}
       <p>
-        {doc.description}
+        {doc.about}
       </p>
       <p>
         {doc.url && doc.publicationType !== 'to be determined'
@@ -127,7 +125,7 @@ export default function ItemCard(props) {
     <>
       {ItemHeader()}
       <p>
-        {doc.description}
+        {doc.about.length >= 1200 ? `${doc.about.slice(0, 1200)}......` : doc.about}
       </p>
       <p>
         {doc.url
