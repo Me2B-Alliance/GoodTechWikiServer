@@ -69,6 +69,7 @@ export default function Page(props) {
 
   const [currentPage, setCurrentPage] = React.useState(page || 1)
   const [docs, setDocs] = React.useState(documents)
+  const [renderPager, setRenderPager] = React.useState(false)
 
   // const fetcher = async (params = {}) => {
   //   const results = await fetch(`/api/documents/${type}?${new URLSearchParams(params)}`)
@@ -82,6 +83,10 @@ export default function Page(props) {
   const pageCount = Math.ceil(count / docsPerPage)
 
   const documentType = documents[0]['@type']
+
+  useEffect(() => {
+    setRenderPager(true)
+  }, [])
 
   useEffect(() => {
     setDocs(documents)
@@ -207,13 +212,17 @@ export default function Page(props) {
             <Col>
               <>
                 <ItemListHeader />
-                <Pager />
+                {renderPager
+                  && <Pager />
+                  || <Row> <p /> </Row>
+                }
                 <div id="item-list">
                   <div>
                     {buildItemList(docs)}
                   </div>
                 </div>
-                <Pager />
+                {renderPager
+                  && <Pager />}
               </>
             </Col>
           </Row>
