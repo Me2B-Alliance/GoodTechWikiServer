@@ -4,6 +4,7 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { signIn, signOut } from 'next-auth/client'
+import Image from 'next/image'
 import PropTypes from 'prop-types'
 import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
@@ -18,7 +19,7 @@ export default function Header({ userInfo }) {
       <Navbar bg="light" variant="light">
         <Navbar.Brand>
           <a href="/">
-            <img height="40px" alt="" src="/Me2B_Logo-RGB-web.jpg" />
+            <Image priority height={38} width={112} src="/Me2B_Logo-RGB-web.jpg" />
           </a>
         </Navbar.Brand>
         <Nav className="mr-auto ml-auto">
