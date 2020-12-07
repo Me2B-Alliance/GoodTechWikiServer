@@ -2,7 +2,7 @@
  * Dependencies
  */
 import { parseCookies, setCookie } from 'nookies'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button, Container, Modal } from 'react-bootstrap'
 
 /**
@@ -11,9 +11,14 @@ import { Button, Container, Modal } from 'react-bootstrap'
 export default function CookiePolicy() {
   const [modalShow, setModalShow] = useState(false)
   const [cookieShown, setCookieShown] = useState(false)
+  const [loaded, setLoaded] = useState(false)
 
   const handleClose = () => setModalShow(false)
   const handleShow = () => setModalShow(true)
+
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
 
   function CookieModal() {
     return (
@@ -86,7 +91,7 @@ export default function CookiePolicy() {
 
   const cookie = readCookieValue('viewed_cookie_policy')
 
-  if (!cookieShown && cookie !== 'yes') {
+  if (!cookieShown && cookie !== 'yes' && loaded) {
     setCookieShown(true)
   }
 
