@@ -55,7 +55,7 @@ export default function Page(props) {
   }
 
   const handleSubmit = async (docToAdd) => {
-    if (docToAdd) {
+    if (docToAdd && docToAdd.name !== '') {
       await addDocFetch(docToAdd)
       router.push(`/${type}/${docToAdd.name}`)
     } else {
