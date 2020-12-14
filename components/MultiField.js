@@ -6,29 +6,33 @@ import { useEffect, useState } from 'react'
 import { connectField } from 'uniforms'
 
 /**
+ * Local Dependencies
+ */
+import { Fetcher } from 'lib/helpers'
+
+/**
  * MultiField Component
  */
-function MultiField({ onChange: onChangee, value, label, name }) {
+function MultiField({ onChange: onChangeUniform, value, label, name }) {
   const [tags, setTags] = useState(value || [])
   const [tagifyProps, setTagifyProps] = useState({})
 
-  const fetchTags = async () => {
-    const results = await fetch(`/api/documents/tags?type=${name}`)
-      .then((res) => res.json())
-    const _tags = results.map((tag) => tag.key)
-    return _tags
-  }
-
   const handleChange = (changedTags) => {
+    // Fix tagify returning an empty string when no tags exist
     if (changedTags === '') {
       setTags([])
-      onChangee([])
+      onChangeUniform([])
     }
     if (changedTags) {
+      // Parse tagify tags string
       const parsedTags = JSON.parse(changedTags)
+
       setTags(changedTags)
+
       const newTags = parsedTags.map((tag) => tag.value)
-      onChangee(newTags)
+
+      // Return the updated tags to uniform
+      onChangeUniform(newTags)
     } else {
       setTags([])
     }
@@ -44,24 +48,8 @@ function MultiField({ onChange: onChangee, value, label, name }) {
       maxItems: 10
     },
     callbacks: {
-      // add: callback,
-      // remove: callback,
-      // input: callback,
-      // edit: callback,
-      // invalid: callback,
-      // click: callback,
-      // keydown: callback,
-      // focus: callback,
-      // blur: callback,
-      // "edit:input": callback,
-      // "edit:updated": callback,
-      // "edit:start": callback,
-      // "edit:keydown": callback,
-      // "dropdown:show": callback,
-      // "dropdown:hide": callback,
-      // "dropdown:select": callback
     },
-    addTagOnBlur: false,
+    addTagOnBlur: true, // add tag when clicking off field
     editTags: {
       clicks: 1
     },
@@ -74,9 +62,14 @@ function MultiField({ onChange: onChangee, value, label, name }) {
   // When component mounts
   useEffect(async () => {
     setTagifyProps({ loading: true })
-    const serverTags = await fetchTags()
-    setTagifyProps((lastProps) => ({
-      ...lastProps,
+
+    // Fetch tags
+    const _tags = await Fetcher('getTags', { name })
+    const serverTags = _tags.map((tag) => tag.key)
+
+    // Update tagify props with fetched tags
+    setTagifyProps((previousProps) => ({
+      ...previousProps,
       loading: false,
       whitelist: serverTags,
       showFilteredDropdown: 'a'

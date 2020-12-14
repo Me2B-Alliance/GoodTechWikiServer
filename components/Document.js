@@ -30,6 +30,7 @@ export default function Document({ doc }) {
   let out = []
   const ignored = ['@context', '@id', 'uuid', '_rev', '_id']
 
+  // Iterate over document keys and build html elements for them
   for (const [key, value] of Object.entries(doc)) {
     if (!ignored.includes(key)) {
       if (Array.isArray(value) && typeof value[0] === 'object') {
@@ -60,10 +61,13 @@ export default function Document({ doc }) {
         out = addToArray(out, 0, <h2 id="document-view-name">{value}</h2>)
       } else if (key === '@type') {
         out = addToArray(out, 1, <h4 id="document-view-type">{value}</h4>)
-      } else if (key === 'about') {
-        out = addToArray(out, 2, (<><h4>About</h4> <p id="document-view-key">{value}</p></>))
-      } else if (value === '') {
-        // do nothing
+      } else if (key === 'about' && value) {
+        out = addToArray(out, 2, (
+          <>
+            <h4>About</h4>
+            <p id="document-view-key">{value}</p>
+          </>
+        ))
       } else if (key === 'lisa') {
         out.push(
           <>
@@ -71,6 +75,8 @@ export default function Document({ doc }) {
             <p id="document-view-key">{value}</p>
           </>
         )
+      } else if (value === '') {
+        // do nothing
       } else {
         out.push(
           <div>

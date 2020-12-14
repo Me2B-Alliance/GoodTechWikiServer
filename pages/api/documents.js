@@ -8,10 +8,9 @@ import wiki from 'lib/wiki'
  *
  * "/documents"
  *
- * @returns {Promise<JSON>} Promise response with a json object array of all documents
  */
-export default (req, res) => new Promise((resolve, reject) => {
-  wiki.getAll().then((results) => {
+export default (_req, res) => new Promise((resolve) => {
+  wiki.getAllDocs().then((results) => {
     const out = {
       results
     }

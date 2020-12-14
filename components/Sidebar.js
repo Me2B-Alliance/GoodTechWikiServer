@@ -18,7 +18,7 @@ export default function Sidebar(props) {
           <li>
             <Link href="/" as="/">
               <a
-                style={{ color: !documentType ? '#f58a0b' : '#999999' }}
+                id={!documentType ? 'sidebar-item-selected' : 'sidebar-item'}
               >
                 <h5>Home</h5>
               </a>
@@ -28,7 +28,7 @@ export default function Sidebar(props) {
           <li>
             <Link href="/organizations" as="/organizations">
               <a
-                style={{ color: documentType === 'Organization' ? '#f58a0b' : '#999999' }}
+                id={documentType === 'Organization' ? 'sidebar-item-selected' : 'sidebar-item'}
                 variant="h5"
               >
                 <h5>Organizations</h5>
@@ -39,7 +39,7 @@ export default function Sidebar(props) {
           <li>
             <Link href="/events" as="/events">
               <a
-                style={{ color: documentType === 'Event' ? '#f58a0b' : '#999999' }}
+                id={documentType === 'Event' ? 'sidebar-item-selected' : 'sidebar-item'}
                 variant="h5"
               >
                 <h5>Events</h5>
@@ -50,7 +50,7 @@ export default function Sidebar(props) {
           <li>
             <Link href="/publications" as="/publications">
               <a
-                style={{ color: documentType === 'Publication' ? '#f58a0b' : '#999999' }}
+                id={documentType === 'Publication' ? 'sidebar-item-selected' : 'sidebar-item'}
                 variant="h6"
               >
                 <h5>Publications</h5>
@@ -61,17 +61,18 @@ export default function Sidebar(props) {
           <li>
             <Link href="/products" as="/products">
               <a
-                style={{ color: documentType === 'Product' ? '#f58a0b' : '#999999' }}
+                id={documentType === 'Product' ? 'sidebar-item-selected' : 'sidebar-item'}
                 variant="h6"
               >
                 <h5>Products</h5>
               </a>
             </Link>
           </li>
+
           <li>
             <Link href="/workinggroups" as="/workinggroups">
               <a
-                style={{ color: documentType === 'WorkingGroup' ? '#f58a0b' : '#999999' }}
+                id={documentType === 'WorkingGroup' ? 'sidebar-item-selected' : 'sidebar-item'}
                 variant="h6"
               >
                 <h5>Working Groups</h5>

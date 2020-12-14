@@ -25,7 +25,7 @@ const MultiField = dynamic(() => import('components/MultiField'), {
 /**
  * Form component
  */
-export default function Form({ type, doc, handleSubmit }) {
+export default function DocumentForm({ type, doc, handleSubmit }) {
   let schema
   switch (type) {
     case 'organizations':
@@ -59,11 +59,14 @@ export default function Form({ type, doc, handleSubmit }) {
   return (
     <div id="document-view-autoform">
       <AutoForm schema={schema} model={doc} onSubmit={(formData) => handleSubmit(formData)}>
-        <p>* &nbsp; &nbsp; Indicates required fields</p>
-        <AutoField name="name" />
-        <AutoField name="about" />
-        {schemaProps.lisa && <AutoField placeholder="Select a Category" name="lisa" />}
 
+        {doc && <h2 id="document-view-name">{doc.name}</h2>}
+        <p>* &nbsp; &nbsp; Indicates required fields</p>
+
+        {!doc && <AutoField name="name" />}
+        <AutoField name="about" />
+
+        {schemaProps.lisa && <AutoField placeholder="Select a Category" name="lisa" />}
         {schemaProps.category && <MultiField name="category" type="category" />}
         {schemaProps.people && <MultiField name="people" type="people" />}
         {schemaProps.locations && <MultiField name="locations" type="locations" />}

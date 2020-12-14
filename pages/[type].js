@@ -71,12 +71,6 @@ export default function Page(props) {
   const [docs, setDocs] = React.useState(documents)
   const [renderPager, setRenderPager] = React.useState(false)
 
-  // const fetcher = async (params = {}) => {
-  //   const results = await fetch(`/api/documents/${type}?${new URLSearchParams(params)}`)
-  //     .then((res) => res.json())
-  //   return results
-  // }
-
   // Maximum documents per page
   const docsPerPage = 10
   // Total page count
@@ -85,6 +79,7 @@ export default function Page(props) {
   const documentType = documents[0]['@type']
 
   useEffect(() => {
+    // Only render pager when component loads
     setRenderPager(true)
   }, [])
 
@@ -149,14 +144,14 @@ export default function Page(props) {
     return (
       <>
         <Row>
-          <Col md={6}>
+          <Col md={6} sm="auto">
             <h1 id="item-list-header-title" className="display-4">
               {documents[0]['@type']}s
             </h1>
           </Col>
           {session
             && (
-              <Col md={6} id="item-list-header-new">
+              <Col md={6} sm="auto" id="item-list-header-new" style={{ display: 'flex', alignItems: 'center' }}>
                 <div>
                   <Button
                     variant="secondary"
@@ -213,9 +208,7 @@ export default function Page(props) {
               <>
                 <ItemListHeader />
                 {renderPager
-                  && <Pager />
-                  || <Row> <p /> </Row>
-                }
+                  && <Pager />}
                 <div id="item-list">
                   <div>
                     {buildItemList(docs)}

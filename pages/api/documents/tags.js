@@ -5,7 +5,6 @@ import wiki from 'lib/wiki'
  *
  * "/documents/tags"
  *
- * @returns {Promise<JSON>} Promise response with json object array of all tags
  */
 export default async (req, res) => new Promise((resolve, reject) => {
   const { query: { type } } = req

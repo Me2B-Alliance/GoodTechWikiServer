@@ -1,12 +1,12 @@
 /**
  * Dependencies
  */
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import {
-  Container, Button
+  Container, Button, Modal
 } from 'react-bootstrap'
-import { faArrowLeft, faEdit, faUndo } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { getSession } from 'next-auth/client'
 
@@ -15,7 +15,8 @@ import { getSession } from 'next-auth/client'
  */
 import Header from 'components/Header'
 import Footer from 'components/Footer'
-import Form from 'components/Form'
+import DocumentForm from 'components/DocumentForm'
+import { Fetcher } from 'lib/helpers'
 
 /**
  * getServerSideProps
@@ -39,27 +40,20 @@ export default function Page(props) {
   const { type } = router.query
   const { session } = props
 
-  const addDocFetch = async (docToAdd) => {
-    const results = await fetch(
-      `/api/documents/${type}/${docToAdd.name}`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ doc: docToAdd })
-      }
-    )
-      .then((res) => res.json())
-    return results
-  }
+  const [modalVisible, setModalVisible] = useState(false)
+  const [existingDoc, setExistingDoc] = useState({})
 
   const handleSubmit = async (docToAdd) => {
     if (docToAdd && docToAdd.name !== '') {
-      await addDocFetch(docToAdd)
-      router.push(`/${type}/${docToAdd.name}`)
-    } else {
-      // TODO: do something if nothing needs to change
+      const checkDock = await Fetcher('getDoc', { name: docToAdd.name, type })
+      // If the document already exists show modal
+      if (!checkDock.error) {
+        setExistingDoc(checkDock)
+        setModalVisible(true)
+      } else {
+        await Fetcher('addDoc', { name: docToAdd.name, type, doc: docToAdd })
+        router.push(`/${type}/${docToAdd.name}`, `/${type}/${docToAdd.name}`)
+      }
     }
   }
 
@@ -68,6 +62,25 @@ export default function Page(props) {
       <Header userInfo={session ? session.user : {}} />
       <div id="body">
         <div id="document-container">
+          <Modal
+            size="sm"
+            show={modalVisible}
+            onHide={() => setModalVisible(false)}
+            aria-labelledby="document-exists-modal"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="document-exists-modal">
+                Document exists
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              A document with this name already exists. Navigate to it?
+            </Modal.Body>
+            <Modal.Footer style={{ display: 'flex', justifyContent: 'space-around' }}>
+              <Button variant="success" size="sm" onClick={() => router.push(`/${type}/${existingDoc.name}`)}>Yes</Button>
+              <Button variant="danger" size="sm" onClick={() => setModalVisible(false)}>No</Button>
+            </Modal.Footer>
+          </Modal>
           <Container>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <Button variant="secondary" style={{ color: 'white' }} onClick={() => { router.back() }}>
@@ -75,7 +88,7 @@ export default function Page(props) {
                 {' '}Back
               </Button>
             </div>
-            <Form type={type} handleSubmit={handleSubmit} />
+            <DocumentForm type={type} handleSubmit={handleSubmit} />
           </Container>
         </div>
       </div>

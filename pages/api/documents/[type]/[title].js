@@ -13,73 +13,48 @@ import wiki from 'lib/wiki'
  *
  * "/documents/[type]/[title]"
  *
- * @returns {Promise<JSON>} Promise response with a json object of a single document
  */
 export default async (req, res) => {
-  const { query: { type, title } } = req
+  try {
+    const { type, title } = req.query
 
-  if (req.method === 'POST') {
-    const session = await getSession({ req })
+    if (req.method === 'POST') {
+      const session = await getSession({ req })
 
-    return new Promise((resolve, reject) => {
+      // Only allow posts from logged in users
       if (session) {
+        // Delete document if delete is passed as a param in body
         if (req.body.delete) {
-          return wiki.deleteDoc(req.body.doc).then(async (result) => {
-            res.status(200)
-            res.json({ result })
-            res.end()
+          const docToDelete = req.body.doc
+          const result = await wiki.deleteDoc(docToDelete)
 
-            resolve()
-          })
+          // Create a log of the deletion
+          await wiki.addLog({ username: session.user.name, doc: docToDelete, type: 'delete' })
+
+          return res.status(200).json(result)
         }
-        return wiki.addDoc(req.body.doc, type).then(async (result) => {
-          // Get the newly updated doc and add to response
-          const updatedDoc = await wiki.getDocByID(result.id)
 
-          res.status(200)
-          res.json({ result, updatedDoc })
-          res.end()
+        // Adding/Updating a document
+        const docToAdd = req.body.doc
 
-          resolve()
-        }).catch((error) => {
-          res.status(400)
-          res.json(error)
-          res.end()
+        const result = await wiki.addDoc(docToAdd, type)
+        const updatedDoc = await wiki.getDocByID(result.id)
 
-          resolve()
-        })
+        // Create a log of the change
+        await wiki.addLog({ username: session.user.name, doc: docToAdd })
+
+        return res.status(200).json({ result, updatedDoc })
       }
-      res.status(401)
-      res.end()
+      return res.status(401).end('Unauthorized')
+    }
 
-      resolve()
-    })
+    if (req.method === 'GET') {
+      const results = await wiki.getDoc(title, type)
+      return res.status(200).json({ docs: results })
+    }
+
+    return res.status(400).end('Unsupported Method')
+  } catch (err) {
+    return res.status(500).end(`An error occurred: ${err.message}`)
   }
-
-  if (req.method === 'GET') {
-    return new Promise((resolve, reject) => {
-      wiki.getDoc(title, type).then((results) => {
-        const out = {
-          docs: results
-        }
-        res.status(200)
-        res.json(out)
-        res.end()
-
-        resolve()
-      }).catch((error) => {
-        res.status(400)
-        res.json(error)
-        res.end()
-
-        resolve()
-      })
-    })
-  }
-
-  return new Promise((resolve, reject) => {
-    res.status(405)
-    res.end()
-    reject(new Error('Unsupported method'))
-  })
 }

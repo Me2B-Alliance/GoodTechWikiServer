@@ -8,12 +8,11 @@ import wiki from 'lib/wiki'
  *
  * "/documents/[type]"
  *
- * @returns {Promise<JSON>} Promise response with json object array of filtered documents
  */
 export default async (req, res) => {
   const { query: { type, page, category } } = req
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     wiki.getDocsByType(type, { category, page }).then((result) => {
       const out = {
         docs: result.docs,

@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet'
 import CookiePolicy from 'components/CookiePolicy'
 
 /**
- * Local Styles
+ * Styles
  */
 import 'styles/bootstrap.scss'
 import 'styles/App.scss'
