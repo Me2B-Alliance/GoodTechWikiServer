@@ -48,7 +48,7 @@ export default function Page(props) {
                   are working on more respectful technology.
                 </p>
                 <p>
-                  Start browsing the wiki by selecting a type in the sidebar
+                  Start browsing the wiki by navigating to a type
                 </p>
               </div>
             </Col>
