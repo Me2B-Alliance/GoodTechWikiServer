@@ -137,35 +137,37 @@ export default function Page(props) {
         <div id="document-container">
           <Container>
             <div id="document-header-buttons">
-              <Row>
-                <Col md={4} xs="auto" style={{ display: 'flex', alignItems: 'flex-center', justifyContent: 'flex-start' }}>
+              <div className="form-group d-flex">
+                <div>
                   <Button variant="secondary" style={{ color: 'white' }} onClick={() => { router.back() }}>
                     <FontAwesomeIcon size="lg" width={20} icon={faArrowLeft} />
-                &nbsp; Back
-                  </Button>
-                </Col>
-                <Col md={4} xs="auto" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start' }}>
+                    &nbsp; Back
+                  </Button>{' '}
                   {!editing
-                    && <Button variant="success" onClick={() => handleHistoryClick()}>{historyVisible ? 'Document' : 'History'}</Button>}
-                </Col>
-                <Col md={4} xs="auto">
-                  {session
                     && (
-                      <div style={{ display: 'flex', flexDirection: 'row' }}>
-                        <OverlayTrigger show={deletePopoverVisible} trigger="click" placement="bottom" overlay={popover}>
-                          <Button variant="danger" style={{ marginRight: '20px' }} onClick={() => setDeletePopoverVisible(true)}>
-                            <FontAwesomeIcon size="lg" width={20} icon={faTrash} />
-                          &nbsp; Delete
-                          </Button>
-                        </OverlayTrigger>
-                        <Button variant="primary" onClick={() => handleEditClick()}>
-                          <FontAwesomeIcon size="lg" width={20} icon={editing && faBan || faEdit} />
-                          {editing && 'Cancel' || 'Edit'}
-                        </Button>
-                      </div>
+                    <Button
+                      variant="success"
+                      onClick={() => handleHistoryClick()}
+                    >{historyVisible ? 'Document' : 'History'}
+                    </Button>
                     )}
-                </Col>
-              </Row>
+                </div>
+                {session
+                  && (
+                    <div className="ml-auto text-right">
+                      <OverlayTrigger show={deletePopoverVisible} trigger="click" placement="bottom" overlay={popover}>
+                        <Button variant="danger" onClick={() => setDeletePopoverVisible(true)}>
+                          <FontAwesomeIcon size="lg" width={20} icon={faTrash} />
+                            &nbsp; Delete
+                        </Button>
+                      </OverlayTrigger>{' '}
+                      <Button variant="primary" onClick={() => handleEditClick()}>
+                        <FontAwesomeIcon size="lg" width={20} icon={editing && faBan || faEdit} />
+                        {editing && 'Cancel' || 'Edit'}
+                      </Button>
+                    </div>
+                  )}
+              </div>
             </div>
             {editing
               && <DocumentForm type={type} doc={doc} handleSubmit={handleSubmit} />}
