@@ -59,8 +59,10 @@ export default function DocumentForm({ type, doc, handleSubmit }) {
   return (
     <div id="document-view-autoform">
       <AutoForm schema={schema} model={doc} onSubmit={(formData) => handleSubmit(formData)}>
-
-        {doc && <h2 id="document-view-name">{doc.name}</h2>}
+        <SubmitField className="text-end mb-2 d-flex justify-content-end" />
+        <div className="form-group d-flex">
+          {doc && <h2 id="document-view-name">{doc.name}</h2>}
+        </div>
         <p>* &nbsp; &nbsp; Indicates required fields</p>
 
         {!doc && <AutoField name="name" />}
@@ -80,6 +82,7 @@ export default function DocumentForm({ type, doc, handleSubmit }) {
         <AutoFields omitFields={autoIgnored} />
 
         <SubmitField />
+
       </AutoForm>
     </div>
   )
