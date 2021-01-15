@@ -99,19 +99,34 @@ export default function CookiePolicy() {
     <>
       {cookieShown
         && (
-          <div id="cookie-info-bar">
-            <Container>
-              <h5>Me2b Cookie Policy</h5>
-              <div id="cookie-info-bar-content">
-                <a> We only use cookies that are absolutely necessary to provide our service.</a>
-                <div>
-                  <Button variant="link" onClick={() => handleShow()}>Cookie Details</Button>
-                  <Button size="sm" variant="success" onClick={() => onPolicyRead()}>OK</Button>
+          <>
+            <div id="cookie-info-bar" className="d-none d-sm-block">
+              <Container>
+                <h5 className="pt-2">Me2B Cookie Policy</h5>
+                <div id="cookie-info-bar-content">
+                  <a> We only use cookies that are absolutely necessary to provide our service.</a>
+                  <div>
+                    <Button variant="link" onClick={() => handleShow()}>Cookie Details</Button>
+                    <Button size="sm" variant="success" onClick={() => onPolicyRead()}>OK</Button>
+                  </div>
                 </div>
-              </div>
-            </Container>
-            <CookieModal />
-          </div>
+              </Container>
+              <CookieModal />
+            </div>
+
+            <div id="cookie-info-bar-mobile" className="d-md-none">
+              <Container>
+                <h5>Me2B Cookie Policy</h5>
+                <div id="cookie-info-bar-content">
+                  <a> We only use cookies that are absolutely necessary to provide our service.</a>
+                  <div className="d-flex row justify-content-center">
+                    <Button variant="link" onClick={() => handleShow()}>Cookie Details</Button>
+                    <Button size="sm" variant="success" onClick={() => onPolicyRead()}>OK</Button>
+                  </div>
+                </div>
+              </Container>
+            </div>
+          </>
         )}
     </>
   )
