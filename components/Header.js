@@ -33,11 +33,11 @@ export default function Header({ userInfo }) {
               <div className="d-none d-md-block">
                 {userInfo.name
                   && (
-                    <NavDropdown.Item id="header-logged-in-text">Logged in as {userInfo.name}
+                    <Nav.Item id="header-logged-in-text">Logged in as {userInfo.name}
                       (
                       <Button variant="link" onClick={() => signOut()}>logout</Button>
                       )
-                    </NavDropdown.Item>
+                    </Nav.Item>
                   )
                   || (
                     <NavDropdown.Item onClick={() => signIn('github')} variant="secondary">
