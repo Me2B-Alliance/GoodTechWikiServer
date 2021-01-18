@@ -40,10 +40,10 @@ export default function Header({ userInfo }) {
                     </Nav.Item>
                   )
                   || (
-                    <NavDropdown.Item onClick={() => signIn('github')} variant="secondary">
+                    <Nav.Link onClick={() => signIn('github')} variant="secondary">
                       Sign in with github
                       {' '}<FontAwesomeIcon size="lg" width={20} icon={faGithub} />
-                    </NavDropdown.Item>
+                    </Nav.Link>
                   )}
               </div>
               <div className="d-block d-md-none" title="Navigate" id="collapsible-nav-dropdown">
