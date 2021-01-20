@@ -43,12 +43,16 @@ export default function Page(props) {
             <Col>
               <div>
                 <p>
-                  This wiki was developed by the Me2B Alliance and is offered
-                  as a public utility to help people find organizations who
-                  are working on more respectful technology.
+                  Welcome!
                 </p>
                 <p>
-                  Start browsing the wiki by navigating to a type
+                  This wiki was developed by the Me2B Alliance and is offered
+                  as a public utility to help people edit, explore and share
+                  organizations that are working to make technology more
+                  respectful.
+                </p>
+                <p>
+                  Start browsing the wiki by selecting or navigating to a type
                 </p>
               </div>
             </Col>

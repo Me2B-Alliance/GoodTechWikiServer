@@ -4,7 +4,6 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { signIn, signOut } from 'next-auth/client'
-import Image from 'next/image'
 import PropTypes from 'prop-types'
 import { NavDropdown } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
@@ -18,10 +17,7 @@ export default function Header({ userInfo }) {
   return (
     <div id="header">
       <Navbar collapseOnSelect expand="md" bg="light" variant="light">
-        <Navbar.Brand href="/" className="d-md-block">
-          <Image priority height={38} width={112} src="/Me2B_Logo-RGB-web.jpg" />
-        </Navbar.Brand>
-        <Nav className="mr-auto ml-auto d-none d-md-block">
+        <Nav className="mr-auto">
           <Navbar.Text id="header-title">
             Good Tech Wiki
           </Navbar.Text>
@@ -55,10 +51,8 @@ export default function Header({ userInfo }) {
                 <NavDropdown.Item href="/workinggroups">Working Groups</NavDropdown.Item>
                 {userInfo.name
                   && (
-                    <NavDropdown.Item id="header-logged-in-text">Logged in as {userInfo.name}
-                      (
-                      <Button variant="link" onClick={() => signOut()}>logout</Button>
-                      )
+                    <NavDropdown.Item onClick={() => signOut()} id="header-logged-in-text">
+                      Sign out ({userInfo.name})
                     </NavDropdown.Item>
                   )
                   || (

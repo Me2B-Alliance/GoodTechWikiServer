@@ -44,7 +44,6 @@ function EventForm({ doc, handleSubmit }) {
           </Row>
           <Row>
             <Col xs={12} md={6}>
-              <AutoField name="partners" />
               <AutoField name="relevantPublications" />
               <AutoField name="hostOrganization" />
             </Col>

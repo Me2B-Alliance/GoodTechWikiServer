@@ -9,11 +9,14 @@ import { connectField } from 'uniforms'
  * Local Dependencies
  */
 import { Fetcher } from 'lib/helpers'
+import regions from 'config/regions'
 
 /**
  * MultiField Component
  */
-function MultiField({ onChange: onChangeUniform, value, label, name }) {
+function MultiField({
+  onChange: onChangeUniform, value, label, name
+}) {
   const [tags, setTags] = useState(value || [])
   const [tagifyProps, setTagifyProps] = useState({})
 
@@ -63,9 +66,17 @@ function MultiField({ onChange: onChangeUniform, value, label, name }) {
   useEffect(async () => {
     setTagifyProps({ loading: true })
 
+    let _tags
+    let serverTags
     // Fetch tags
-    const _tags = await Fetcher('getTags', { name })
-    const serverTags = _tags.map((tag) => tag.key)
+    if (name === 'scope') {
+      serverTags = regions
+    } else if (name === 'productsAndOrServices') {
+      serverTags = []
+    } else {
+      _tags = await Fetcher('getTags', { name })
+      serverTags = _tags.map((tag) => tag.key)
+    }
 
     // Update tagify props with fetched tags
     setTagifyProps((previousProps) => ({

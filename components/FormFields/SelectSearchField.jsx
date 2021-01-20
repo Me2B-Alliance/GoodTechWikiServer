@@ -30,13 +30,15 @@ function SelectSearchField({
   // When component mounts
   useEffect(async () => {
     // Fetch tags
-    if (name !== 'lisa') {
+    if (name === 'lisa') {
+      setTags(engagements.map((eng) => ({ value: eng, label: eng })))
+    } else if (name === 'sector') {
+      setTags([])
+    } else {
       const _tags = await Fetcher('getTags', { name })
       const serverTags = _tags.map((tag) => ({ value: tag.key, label: tag.key }))
 
       setTags(serverTags)
-    } else {
-      setTags(engagements.map((eng) => ({ value: eng, label: eng })))
     }
     if (value) {
       setSelectedTag({ value, label: value })

@@ -54,7 +54,6 @@ function ProductForm({ doc, handleSubmit }) {
             <Col>
               <AutoField name="workingGroup" />
               <AutoField name="audience" />
-              <AutoField name="partners" />
               <AutoField name="versionOrEdition" />
               <AutoField name="license" />
             </Col>

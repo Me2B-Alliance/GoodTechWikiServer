@@ -101,6 +101,7 @@ export default function Page(props) {
   }
 
   const handleHistoryClick = () => {
+    setEditing(false)
     setHistoryVisible(!historyVisible)
   }
 
@@ -139,31 +140,28 @@ export default function Page(props) {
             <div id="document-header-buttons">
               <div className="form-group d-flex">
                 <div>
-                  <Button variant="secondary" style={{ color: 'white' }} onClick={() => { router.back() }}>
+                  <Button variant="secondary" className="text-white mr-1" onClick={() => { router.back() }}>
                     <FontAwesomeIcon size="lg" width={20} icon={faArrowLeft} />
                     &nbsp; Back
                   </Button>{' '}
-                  {!editing
-                    && (
-                    <Button
-                      variant="success"
-                      onClick={() => handleHistoryClick()}
-                    >{historyVisible ? 'Document' : 'History'}
-                    </Button>
-                    )}
+                  <Button
+                    variant="success"
+                    onClick={() => handleHistoryClick()}
+                  >{historyVisible ? 'Document' : 'History'}
+                  </Button>
                 </div>
                 {session
                   && (
                     <div className="ml-auto text-right">
                       <OverlayTrigger show={deletePopoverVisible} trigger="click" placement="bottom" overlay={popover}>
-                        <Button variant="danger" onClick={() => setDeletePopoverVisible(true)}>
+                        <Button className="mr-md-2 mr-1" variant="danger" onClick={() => setDeletePopoverVisible(true)}>
                           <FontAwesomeIcon size="lg" width={20} icon={faTrash} />
                             &nbsp; Delete
                         </Button>
-                      </OverlayTrigger>{' '}
+                      </OverlayTrigger>
                       <Button variant="primary" onClick={() => handleEditClick()}>
                         <FontAwesomeIcon size="lg" width={20} icon={editing && faBan || faEdit} />
-                        {editing && 'Cancel' || 'Edit'}
+                        {editing && '\u00A0  Cancel' || '\u00A0 Edit'}
                       </Button>
                     </div>
                   )}

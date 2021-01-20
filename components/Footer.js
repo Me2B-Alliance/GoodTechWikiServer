@@ -1,9 +1,10 @@
 /**
  * Dependencies
  */
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
+import Link from 'next/link'
+import {
+  Image, Col, Row, Container
+} from 'react-bootstrap'
 
 /**
  * Footer Component
@@ -12,7 +13,7 @@ export default function Footer() {
   const Copyright = () => (
     <p variant="body2">
       {`© ${new Date().getFullYear()} Good Tech Wiki. `}
-      <a href="https://github.com/Me2B-Alliance">
+      <a href="https://me2ba.org/">
         Me2b Alliance
       </a>
     </p>
@@ -20,10 +21,13 @@ export default function Footer() {
 
   return (
     <>
-      <div id="footer">
+      <div id="footer" className="bg-light text-muted">
         <Container>
           <Row>
-            <Col>
+            <Col className="align-middle">
+              <a href="https://me2ba.org">
+                <Image className="my-3" priority height={60} width={160} src="/Me2B_Logo-RGB-web.jpg" />
+              </a>
               <p>Powered by NextJs and React Bootstrap</p>
               <Copyright />
             </Col>

@@ -52,9 +52,16 @@ export default function Document({ doc }) {
         }
       } else if (Array.isArray(value)) {
         if (value.length > 0) {
-          out.push(<h4 id="document-view-key-title">{capitalCase(key)}</h4>)
-          for (const item of value) {
-            out.push(<p id="document-view-sub-key">{item}</p>)
+          if (key === 'scope') {
+            out.push(<h4 id="document-view-key-title">{capitalCase('Region')}</h4>)
+            for (const item of value) {
+              out.push(<p id="document-view-sub-key">{item}</p>)
+            }
+          } else {
+            out.push(<h4 id="document-view-key-title">{capitalCase(key)}</h4>)
+            for (const item of value) {
+              out.push(<p id="document-view-sub-key">{item}</p>)
+            }
           }
         }
       } else if (key === 'name') {
