@@ -3,6 +3,8 @@
  */
 import { capitalCase } from 'change-case'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
 
 /**
  * Document Component
@@ -72,7 +74,8 @@ export default function Document({ doc }) {
         out = addToArray(out, 2, (
           <>
             <h4>About</h4>
-            <p id="document-view-key">{value}</p>
+            {/* eslint-disable-next-line react/no-children-prop */}
+            <ReactMarkdown plugins={[gfm]} children={value} />
           </>
         ))
       } else if (key === 'lisa') {
