@@ -18,9 +18,9 @@ export default function Header({ userInfo }) {
     <div id="header">
       <Navbar collapseOnSelect expand="md" bg="light" variant="light">
         <Nav className="mr-auto">
-          <Navbar.Text id="header-title">
+          <Navbar.Brand href="/" id="header-title">
             Good Tech Wiki
-          </Navbar.Text>
+          </Navbar.Brand>
         </Nav>
         <Navbar.Toggle aria-controls="navbar-nav-collapse" />
         <Nav style={{ width: '220px' }}>
