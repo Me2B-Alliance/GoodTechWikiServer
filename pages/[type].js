@@ -185,7 +185,7 @@ export default function Page(props) {
    * Pagination Component
    */
   const Pager = () => (
-    <div id="item-list-pagination" className="mb-5">
+    <div id="item-list-pagination">
       <Pagination
         count={pageCount}
         size="large"
@@ -215,7 +215,12 @@ export default function Page(props) {
                   </div>
                 </div>
                 {renderPager
-                  && <Pager />}
+                  && (
+                  <>
+                    <Pager />
+                    <div className="mb-5" />
+                  </>
+                  )}
               </>
             </Col>
           </Row>
