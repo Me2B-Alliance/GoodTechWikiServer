@@ -26,7 +26,7 @@ export default function Footer() {
           <Row>
             <Col className="align-middle">
               <a href="https://me2ba.org">
-                <Image className="my-3" priority height={60} width={160} src="/Me2B_Logo-RGB-web.jpg" />
+                <Image className="my-3" height={60} width={160} src="/Me2B_Logo-RGB-web.jpg" />
               </a>
               <p>Powered by NextJs and React Bootstrap</p>
               <Copyright />
