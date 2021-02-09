@@ -37,14 +37,11 @@ export default function Page(props) {
       <div id="body">
         <Container>
           <Row>
-            <Col md={3} className="d-none d-md-block" style={{ paddingTop: '180px' }}>
-              <Sidebar />
-            </Col>
             <Col>
               <div>
-                <p>
+                <h4 className="text-warning">
                   Welcome!
-                </p>
+                </h4>
                 <p>
                   This wiki was developed by the Me2B Alliance and is offered
                   as a public utility to help people edit, explore and share
@@ -56,6 +53,12 @@ export default function Page(props) {
                 </p>
               </div>
             </Col>
+          </Row>
+          <Row>
+            <Col md={3} className="d-none d-md-block pt-5">
+              <Sidebar />
+            </Col>
+
           </Row>
         </Container>
       </div>

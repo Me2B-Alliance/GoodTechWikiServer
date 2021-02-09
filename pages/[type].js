@@ -201,7 +201,7 @@ export default function Page(props) {
       <div id="body">
         <Container>
           <Row>
-            <Col md={3} className="d-none d-md-block" style={{ paddingTop: '180px' }}>
+            <Col md={3} className="d-none d-md-block mt-3" style={{ paddingTop: '181px' }}>
               <Sidebar documentType={documentType} />
             </Col>
             <Col>
@@ -210,9 +210,7 @@ export default function Page(props) {
                 {renderPager
                   && <Pager />}
                 <div id="item-list">
-                  <div>
-                    {buildItemList(docs)}
-                  </div>
+                  {buildItemList(docs)}
                 </div>
                 {renderPager
                   && (

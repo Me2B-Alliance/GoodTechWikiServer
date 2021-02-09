@@ -43,8 +43,11 @@ $primary:       $purple !default;
 $secondary:     $orange !default;
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       $yellow !default;
+$warning:       $orange !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $gray:          $gray-600 !default;
 $dark:          $gray-800 !default;
+
+// $dropdown-bg:                       $dark;
+$dropdown-link-color:               $light;

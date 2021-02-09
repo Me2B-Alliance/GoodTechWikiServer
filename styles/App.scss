@@ -15,10 +15,13 @@
 p {
   font-weight: 400;
 }
-
-.navbar-nav .nav-link {
+h4 {
+  font-weight: 600;
+}
+h5 {
   font-weight: 500;
 }
+
 
 // Body
 #body {
@@ -59,7 +62,6 @@ p {
 
 #item-list h5 {
   color: $orange;
-  font-weight: 500;
 }
 
 #item-list p {
@@ -101,7 +103,11 @@ p {
 
 // Sidebar
 #sidebar li {
-padding-bottom: 7px;
+  padding-bottom: 7px;
+}
+
+#sidebar h5 {
+  font-weight: 500;
 }
 
 #sidebar p {
@@ -123,7 +129,7 @@ padding-bottom: 7px;
 
 // Footer
 #footer {
-  background: #43474d ;
+  background: #e6e7e8 ;
   text-align: center ;
   padding-top: 10px ;
   color: white ;
@@ -140,6 +146,10 @@ padding-bottom: 7px;
 #document-view-name {
   color: $primary;
   padding-bottom: 10px;
+}
+
+#document-container h4 {
+  font-weight: 500;
 }
 
 #document-view-type {
