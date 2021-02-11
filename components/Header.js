@@ -22,7 +22,7 @@ export default function Header({ userInfo }) {
           <Nav className="mr-auto">
             <Navbar.Brand href="/" id="header-title">
               <div className="row d-flex align-items-center">
-                <div className="column pr-3 pl-2 pt-md-1 justify-content-center align-self-center">
+                <div className="column pr-3 pl-3 pt-md-1">
                   <Image height={30} width={30} src="/Me2B_logo_white.png" />
                 </div>
                 <div className="column">
@@ -60,7 +60,7 @@ export default function Header({ userInfo }) {
                     </Nav.Link>
                   )}
                 </div>
-                <div className="d-block d-md-none text-light" title="Navigate" id="collapsible-nav-dropdown">
+                <div className="d-block d-md-none" title="Navigate" id="collapsible-nav-dropdown">
                   <NavDropdown.Item href="/">Home</NavDropdown.Item>
                   <NavDropdown.Item href="/organizations">Organizations</NavDropdown.Item>
                   <NavDropdown.Item href="/events">Events</NavDropdown.Item>

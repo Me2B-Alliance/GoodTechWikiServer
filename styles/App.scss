@@ -36,6 +36,10 @@ h5 {
   box-shadow: 0 0 2px 1px $gray;
 }
 
+#header .dropdown-item {
+padding-left: 0px;
+}
+
 #header-title {
   color: $gray;
   font-size: 30px;
