@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="row d-flex justify-content-center align-items-center">
             <p className="pr-2 mb-0 text-dark">Provided by the</p>
             <a href="https://me2ba.org">
-              <Image className="my-3" height={60} width={160} src="/Me2B_Logo-RGB-web.jpg" />
+              <Image className="my-3" height={40} width={110} src="/Me2B_Logo.png" />
             </a>
           </div>
         </Container>
