@@ -32,8 +32,6 @@ function SelectSearchField({
     // Fetch tags
     if (name === 'lisa') {
       setTags(engagements.map((eng) => ({ value: eng, label: eng })))
-    } else if (name === 'sector') {
-      setTags([])
     } else {
       const _tags = await Fetcher('getTags', { name })
       const serverTags = _tags.map((tag) => ({ value: tag.key, label: tag.key }))
