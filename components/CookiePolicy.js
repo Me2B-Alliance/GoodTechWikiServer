@@ -34,36 +34,29 @@ export default function CookiePolicy() {
             </p>
             <h4>Mandatory</h4>
             <p>
-              Mandatory Cookies: The Me2BA uses mandatory cookies in two scenarios:
+              Mandatory Cookies: The Good Tech Wiki uses mandatory cookies in two scenarios:
               (1) We track if you’ve viewed the Cookie Policy, in order to be
               compliant with the world’s most rigorous cookie consent practices
               from the European Union and the GDPR. So you will see a field
-              (CookieLawInfoConsent) that may look like a unique identifier, but
-              it isn’t.
-              (2) When you sign in and when you are in the membership
-              portal. The membership portal is built off of Salesforce, and
-              Salesforce requires these cookies to secure the login
-              process/session and provide their services. These cookies are for
-              security and for remembering you when you log in. We have reviewed
-              these cookies and don't see any risks with them. You can learn
-              more about the cookies used here. Note that the Salesforce Google
-              Analytics cookie [_ga] has been disabled; we have mandated our 3rd
-              party partner, Virtual Inc., who provides the membership portal,
-              to disable the _ga cookie.
+              (viewed_cookie_policy).
+              (2) When you sign in. The Good Tech Wiki uses github OAuth to login
+              and use the site, this set's a cookie for remembering you when you log
+              in to maintain a logged-in session.
             </p>
             <h4>Non-Mandatory</h4>
             <p>
-              Functional Cookies: The Me2BA currently doesn't use any other cookies to
+              Functional Cookies: The Good Tech Wiki currently doesn't use any other cookies to
               improve the usability of the website, or personalize your
               experience.
             </p>
             <p>
-              Analytics Cookies: The Me2BA does not use any analytics cookies. These can be a
-              key way for information to be shared across sites, so we don't
-              use them.
+              Analytics Cookies: The Good Tech Wiki does not use any analytics
+              cookies. These can be a key way for information to be shared
+              across sites, so we don't use them.
             </p>
-            Advertising Cookies: The Me2BA doesn't use advertising cookies. These are
-            another key way information can be shared across sites.
+            Advertising Cookies: The Good Tech Wiki doesn't use advertising
+            cookies. These are another key way information can be shared
+            across sites.
             <p />
           </Modal.Body>
         </Modal>
@@ -102,7 +95,7 @@ export default function CookiePolicy() {
           <>
             <div id="cookie-info-bar" className="d-none d-sm-block">
               <Container>
-                <h5 className="pt-2">Me2B Cookie Policy</h5>
+                <h5 className="pt-2">Good Tech Wiki Cookie Policy</h5>
                 <div id="cookie-info-bar-content">
                   <a> We only use cookies that are absolutely necessary to provide our service.</a>
                   <div>
@@ -116,7 +109,7 @@ export default function CookiePolicy() {
 
             <div id="cookie-info-bar-mobile" className="d-md-none">
               <Container>
-                <h5>Me2B Cookie Policy</h5>
+                <h5>Good Tech Wiki Cookie Policy</h5>
                 <div id="cookie-info-bar-content">
                   <a> We only use cookies that are absolutely necessary to provide our service.</a>
                   <div className="d-flex row justify-content-center">
