@@ -39,7 +39,7 @@ export default function CookiePolicy() {
               compliant with the world’s most rigorous cookie consent practices
               from the European Union and the GDPR. So you will see a field
               (viewed_cookie_policy).
-              (2) When you sign in. The Good Tech Wiki uses github OAuth to login
+              (2) When you sign in. The Good Tech Wiki uses GitHub OAuth to login
               and use the site, this set's a cookie for security and
               remembering you when you log in to maintain a logged-in session.
             </p>

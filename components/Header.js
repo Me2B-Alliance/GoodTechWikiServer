@@ -55,7 +55,7 @@ export default function Header({ userInfo }) {
                   )
                   || (
                     <Nav.Link className="text-white font-weight-normal" onClick={() => signIn('github')} variant="secondary">
-                      Sign in with github
+                      Sign in with GitHub
                       {' '}<FontAwesomeIcon size="lg" width={20} icon={faGithub} />
                     </Nav.Link>
                   )}
