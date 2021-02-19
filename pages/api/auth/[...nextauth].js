@@ -26,7 +26,10 @@ const GithubProvider = {
 const options = {
   providers: [
     GithubProvider
-  ]
+  ],
+  jwt: {
+    secret: process.env.JWT_SECRET
+  }
 
   // A database is optional, but required to persist accounts in a database
   // database: process.env.DATABASE_URL
